@@ -1,5 +1,6 @@
 # MATLAB
 *.mat
+*.slx
 *.slxc
 *.mexw64
 *.mexa64
