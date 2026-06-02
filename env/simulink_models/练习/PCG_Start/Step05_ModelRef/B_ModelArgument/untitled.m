@@ -1,0 +1,1 @@
+struct('gain',0.8,'coeff',1.02)

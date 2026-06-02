@@ -1,0 +1,1 @@
+Simulink.defineIntEnumType('sldemo_FuelModes',{'LOW','RICH','DISABLED'},[1;2;3],'DataScope','Exported')
