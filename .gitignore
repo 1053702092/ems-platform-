@@ -1,0 +1,33 @@
+# MATLAB
+*.mat
+*.slxc
+*.mexw64
+*.mexa64
+slprj/
+sldata/
+*.asv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+*.swp
+*.bak
+Thumbs.db
+
+# Results (version the code, not the data)
+results/*.csv
+results/*.mat
+results/figures/
+
+# Config override (keep template, ignore local)
+config/local_override.yaml
