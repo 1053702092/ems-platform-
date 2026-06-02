@@ -20,7 +20,7 @@ import argparse
 REPO_MEMORY = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.claude-memory')
 # 系统记忆目录
 SYS_MEMORY = os.path.expanduser(
-    '~/.claude/projects/F--CLAUDE-research/memory'
+    '~/.claude/projects/D--CHAT-EMS-paltform/memory'
 )
 
 

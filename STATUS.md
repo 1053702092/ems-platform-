@@ -16,7 +16,7 @@
     - [ ] Day4-5: Simulink复盘+接口 (已完成)
     - [x] ✅ VS Code 1.122.1 已安装
     - [x] ✅ MATLAB-Python桥接已测试通过
-    - [x] ✅ Energy.slx 模型已分析
+    - [x] ✅ Simulink 模型已分析
     - [x] ✅ GitHub 仓库已推送
     - [x] ✅ 双设备同步配置完成 (sync_memory.py + STATUS.md)
     - [x] ✅ .slx 已从 Git 移除
