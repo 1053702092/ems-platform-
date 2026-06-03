@@ -32,3 +32,4 @@ results/figures/
 
 # Config override (keep template, ignore local)
 config/local_override.yaml
+~
