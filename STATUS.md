@@ -1,8 +1,8 @@
 # EMS-PLAN 进度跟踪
 
 > 更新日期：2026-06-03
-> 当前阶段：第1个月 第1周（Day1完成）
-> 最后会话：EMS-PLAN（完成Day1 pandas+matplotlib练习）
+> 当前阶段：第1个月 第1周（Day1-2完成）
+> 最后会话：EMS-PLAN（完成Day2 Git工作流）
 
 > 备注：2026年秋招（8-10月）期间边学边投，不赶进度，先投再看。
 
@@ -13,7 +13,8 @@
 - [ ] **第1个月：工程底座 + DP入门**
   - [ ] 第1周：Python/Git/环境复盘
     - [x] ✅ Day1: pandas+matplotlib
-    - [ ] Day2: Git工作流 ← **下次开始**
+    - [x] ✅ Day2: Git工作流
+    - [ ] Day3: Python-MATLAB接口 ← **下次开始**
     - [ ] Day3: Python-MATLAB接口
     - [ ] Day4-5: Simulink复盘+接口
     - [x] ✅ VS Code 1.122.1 已安装
