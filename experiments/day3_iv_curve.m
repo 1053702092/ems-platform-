@@ -88,7 +88,13 @@ fprintf('图已保存\n');
 fprintf('\n关键数据:\n');
 fprintf('  开路电压: %.4f V\n', voltages(1));
 fprintf('  最大功率: %.1f W (%.0fA时)\n', pmax, currents(idx));
-fprintf('  0.6V时电流: %.0f A\n', interp1(voltages, currents, 0.6));
+% 找电压降到0.6V时的电流（用find跳过重复值）
+idx_06 = find(voltages < 0.6, 1, 'first');
+if ~isempty(idx_06)
+    fprintf('  0.6V时电流: %.0f A\n', currents(idx_06));
+else
+    fprintf('  电压未降到0.6V以下\n');
+end
 
 fprintf('\nPython->MATLAB->CSV->画图 全链路测试完成!\n');
 quit;
