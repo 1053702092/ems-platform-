@@ -1,9 +1,9 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-06-02
-> 当前阶段：第1个月 第1周（90%）
-> 最后会话：EMS-PLAN（市场数据验证 + 方案A-M校招校准版定稿）
-> 
+> 更新日期：2026-06-03
+> 当前阶段：第1个月 第1周（Day1-3完成）
+> 最后会话：EMS-PLAN（完成Day3 Python-MATLAB接口）
+
 > 备注：2026年秋招（8-10月）期间边学边投，不赶进度，先投再看。
 
 ---
@@ -12,15 +12,17 @@
 
 - [ ] **第1个月：工程底座 + DP入门**
   - [ ] 第1周：Python/Git/环境复盘
-    - [ ] Day1-3: Python数据处理+Git (已完成)
-    - [ ] Day4-5: Simulink复盘+接口 (已完成)
+    - [x] ✅ Day1: pandas+matplotlib
+    - [x] ✅ Day2: Git工作流
+    - [x] ✅ Day3: Python-MATLAB接口
+    - [ ] Day4-5: Simulink复盘+接口 ← **下次开始**
     - [x] ✅ VS Code 1.122.1 已安装
     - [x] ✅ MATLAB-Python桥接已测试通过
-    - [x] ✅ Energy.slx 模型已分析
+    - [x] ✅ Simulink 模型已分析
     - [x] ✅ GitHub 仓库已推送
     - [x] ✅ 双设备同步配置完成 (sync_memory.py + STATUS.md)
     - [x] ✅ .slx 已从 Git 移除
-    - [ ] Day6: 写 run_simulation.py 跑通一次完整仿真 ← **下次开始**
+    - [ ] Day6: 跑通一次完整仿真链路
   - [ ] 第2周：Simulink环境标准化
   - [ ] 第3周：Rule-based + DP手写
   - [ ] 第4周：DP深度分析
