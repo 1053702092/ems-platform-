@@ -64,6 +64,42 @@
 
 > ⚠️ 注意：I-V 曲线在 0-20A 区间有非单调行为，可能是模型热动态未稳定。后续需延长仿真时间或检查模型参数。
 
+## 文件索引
+
+### Day1 — Python数据处理
+| 文件 | 说明 |
+|------|------|
+| `experiments/day1_pandas_intro.py` | pandas + matplotlib 入门练习 |
+| `results/day1_wltc_sample.csv` | 生成的 WLTC 模拟数据 |
+| `results/day1_wltc_sample_plot.png` | 工况曲线图 |
+| `results/day1_wltc_dual_axis.png` | 车速+功率双y轴图 |
+
+### Day2 — Git工作流 + 文档
+| 文件 | 说明 |
+|------|------|
+| `docs/Day2学习总结.docx` | 学习笔记 |
+
+### Day3 — Python-MATLAB接口
+| 文件 | 说明 |
+|------|------|
+| `experiments/day3_call_matlab.py` | Python 调 MATLAB 总入口 |
+| `experiments/day3_iv_curve.m` | I-V 曲线 MATLAB 计算脚本 |
+| `results/day3_cell_model_iv_curve.csv` | I-V 数据 |
+| `results/day3_cell_model_iv_curve.png` | I-V 曲线图 (MATLAB 出图) |
+| `results/day3_cell_model_iv_curve_py.png` | I-V 曲线图 (Python 出图) |
+
+### Day6 — 完整仿真链路打通
+| 文件 | 说明 | 阅读顺序 |
+|------|------|----------|
+| `experiments/run_simulation.py` | 总入口脚本 (`python run_simulation.py`) | ① |
+| `env/simulink_models/cell_model_iv_sweep.m` | I-V 扫描 MATLAB 脚本 | ② |
+| `env/simulink_models/setup_cell_model_logging.m` | 创建 Cell_model_v10_lit（加 To Workspace） | ③ |
+| `env/simulink_models/Cell_model_v10_lit.slx` | 带数据记录的模型副本 | — |
+| `env/simulink_models/Cell_model_v10.slx` | 原始模型（供对比） | — |
+| `experiments/plot_iv_curve.py` | 可视化脚本 | ④ |
+| `results/cell_model_iv_sweep.csv` | I-V 扫描数据（51点） | — |
+| `results/cell_model_iv_curve.png` | I-V + 功率曲线图 | — |
+
 ## 环境
 
 - MATLAB R2024b + Simulink ✅ (F:\Matlab)

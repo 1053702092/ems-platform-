@@ -28,7 +28,7 @@ os.makedirs(RESULTS_DIR, exist_ok=True)
 
 
 def run_iv_sweep():
-    """调用 MATLAB 执行 I-V 扫描"""
+    """调用 MATLAB 执行 I-V 扫描，PIPE把matlab输出行内容输出到python"""
     matlab_script = os.path.join(PROJECT_ROOT, 'env', 'simulink_models',
                                   'cell_model_iv_sweep.m')
     print('=' * 50)
