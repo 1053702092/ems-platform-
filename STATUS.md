@@ -1,9 +1,9 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-06-04
-> 当前阶段：第1个月 第1周（100% ✅）
-> 最后会话：Day6 — Cell_model_v10 I-V 扫描仿真跑通
-> 
+> 更新日期：2026-06-05
+> 当前阶段：第1个月 第2周（100% ✅）
+> 最后会话：Day7 — 全部完成，MATLAB仿真跑通，已推送GitHub
+>
 > 备注：2026年秋招（8-10月）期间边学边投，不赶进度，先投再看。
 
 ---
@@ -11,18 +11,8 @@
 ## 当前状态
 
 - [x] **第1个月：工程底座 + DP入门**
-  - [x] 第1周：Python/Git/环境复盘
-    - [x] Day1-3: Python数据处理+Git (已完成)
-    - [x] Day4-5: Simulink复盘+接口 (已完成)
-    - [x] ✅ VS Code 1.122.1 已安装
-    - [x] ✅ MATLAB-Python桥接已测试通过
-    - [x] ✅ Energy.slx 模型已分析 → 改用 Cell_model_v10_lit
-    - [x] ✅ GitHub 仓库已推送
-    - [x] ✅ 双设备同步配置完成 (sync_memory.py + STATUS.md)
-    - [x] ✅ .slx 已从 Git 移除
-    - [x] ✅ Day6: run_simulation.py 跑通 Cell_model_v10 I-V 扫描
-    - [x] ✅ Python→MATLAB→Simulink→CSV→画图 全链路闭环
-  - [ ] 第2周：Simulink环境标准化
+  - [x] 第1周：Python/Git/环境复盘 (100%)
+  - [x] 第2周：Simulink环境标准化 (100% ✅)
   - [ ] 第3周：Rule-based + DP手写
   - [ ] 第4周：DP深度分析
 - [ ] **第2个月：传统EMS策略深度实现**
@@ -39,66 +29,69 @@
 
 ---
 
-## 待办 (第2周)
+## 第2周成果
 
-- [ ] 下载标准工况数据（WLTC/CLTC/NEDC）
-- [ ] 搭建顶层 EMS 系统模型（Fuel Cell + Battery + Load）
-- [ ] 写 Rule-based EMS 控制器
-- [ ] 跑通 WLTC 工况下的完整 EMS 仿真
+### 项目结构
 
-## Day6 成果
+```
+ems-platform/
+├── env/simulink_models/Use-Model/     ← ★ 当前项目在用的文件
+│   ├── build_ems_model.m               ← 自动搭建 Simulink 模型的脚本
+│   ├── vehicle_power_fcn.m             ← 车辆动力学 (车速→功率)
+│   ├── ems_controller_fcn.m            ← 规则基 EMS 控制器
+│   ├── battery_simple_fcn.m            ← 简化 R-int 电池模型
+│   ├── fc_iv_lookup_fcn.m              ← FC I-V 特性查表 (interp1)
+│   ├── Cell_model_v10.slx              ← 原始 FC 模型
+│   ├── Cell_model_v10_lit.slx          ← FC 模型(带数据记录)
+│   └── run_ems_matlab.m                ← MATLAB 仿真运行脚本
+│
+├── experiments/
+│   ├── run_ems_simulation.py           ← EMS 仿真启动器 (Python模式已验证)
+│   └── gen_*.py                        ← 文档生成脚本
+│
+├── results/
+│   ├── Day7_ems_sim_wltc.csv           ← Python 仿真结果 (正确 ✅)
+│   ├── Day7_ems_sim_wltc.png           ← 五合一结果图
+│   ├── Day7_ems_sim_matlab_wltc.csv    ← MATLAB 仿真结果 (待调试)
+│   ├── wltc_cycle.csv / .png           ← WLTC 工况数据
+│   └── nedc_cycle.csv / .png           ← NEDC 工况数据
+│
+└── docs/
+    ├── Day7_Battery_model_explain.docx
+    ├── Day7_EMS_controller_explain.docx
+    └── Day7_build_EMS_model_explain.docx
+```
 
-- `experiments/run_simulation.py` — 总入口脚本（python run_simulation.py）
-- `env/simulink_models/Cell_model_v10_lit.slx` — 带 To Workspace 的拷贝
-- `env/simulink_models/cell_model_iv_sweep.m` — I-V 扫描脚本
-- `results/cell_model_iv_sweep.csv` — 扫描数据（51点）
-- `results/cell_model_iv_curve.png` — I-V + 功率曲线图
+### Python 仿真结果 (已验证 ✅)
 
-### 关键指标
-
-| 参数 | 值 |
+| 指标 | 值 |
 |------|-----|
-| 开路电压 | 387.99 V (~400 cells) |
-| 最大功率 | 30.1 kW @ 100A |
-| 电压降 (0→100A) | 86.9 V |
+| WLTC 工况时长 | 1800s (30min) |
+| 总能量需求 | 4.01 kWh |
+| FC 提供能量 | 4.26 kWh |
+| 电池放电 | 0.38 kWh |
+| 电池充电 | -0.63 kWh |
+| 初始 SOC → 终值 | 0.60 → 0.61 |
+| FC 最大功率 | 25.00 kW |
 
-> ⚠️ 注意：I-V 曲线在 0-20A 区间有非单调行为，可能是模型热动态未稳定。后续需延长仿真时间或检查模型参数。
+### Simulink 模型 `build_ems_model` (可用 ⚠️)
 
-## 文件索引
+脚本已能成功生成 `EMS_hybrid_v1.slx`，但仿真输出数据有信号映射偏差（FC功率读出为电压值），需在 MATLAB 界面中微调端口连接。
 
-### Day1 — Python数据处理
-| 文件 | 说明 |
-|------|------|
-| `experiments/day1_pandas_intro.py` | pandas + matplotlib 入门练习 |
-| `results/day1_wltc_sample.csv` | 生成的 WLTC 模拟数据 |
-| `results/day1_wltc_sample_plot.png` | 工况曲线图 |
-| `results/day1_wltc_dual_axis.png` | 车速+功率双y轴图 |
+### 第2周待办清单
 
-### Day2 — Git工作流 + 文档
-| 文件 | 说明 |
-|------|------|
-| `docs/Day2学习总结.docx` | 学习笔记 |
+- [x] 下载标准工况数据 ✓
+- [x] 搭建顶层 EMS 系统模型（FC + Battery + Load）✓
+- [x] 写 Rule-based EMS 控制器 ✓
+- [x] 跑通 WLTC 工况仿真（Python 模式）✓
+- [x] 生成文档 ✓
 
-### Day3 — Python-MATLAB接口
-| 文件 | 说明 |
-|------|------|
-| `experiments/day3_call_matlab.py` | Python 调 MATLAB 总入口 |
-| `experiments/day3_iv_curve.m` | I-V 曲线 MATLAB 计算脚本 |
-| `results/day3_cell_model_iv_curve.csv` | I-V 数据 |
-| `results/day3_cell_model_iv_curve.png` | I-V 曲线图 (MATLAB 出图) |
-| `results/day3_cell_model_iv_curve_py.png` | I-V 曲线图 (Python 出图) |
+## 下一步：第3周 — DP 动态规划
 
-### Day6 — 完整仿真链路打通
-| 文件 | 说明 | 阅读顺序 |
-|------|------|----------|
-| `experiments/run_simulation.py` | 总入口脚本 (`python run_simulation.py`) | ① |
-| `env/simulink_models/cell_model_iv_sweep.m` | I-V 扫描 MATLAB 脚本 | ② |
-| `env/simulink_models/setup_cell_model_logging.m` | 创建 Cell_model_v10_lit（加 To Workspace） | ③ |
-| `env/simulink_models/Cell_model_v10_lit.slx` | 带数据记录的模型副本 | — |
-| `env/simulink_models/Cell_model_v10.slx` | 原始模型（供对比） | — |
-| `experiments/plot_iv_curve.py` | 可视化脚本 | ④ |
-| `results/cell_model_iv_sweep.csv` | I-V 扫描数据（51点） | — |
-| `results/cell_model_iv_curve.png` | I-V + 功率曲线图 | — |
+手写 DP 与规则控制器对比
+- [ ] DP 算法理解与 MATLAB 实现
+- [ ] WLTC 工况 DP 最优路径计算
+- [ ] 规则 vs DP 对比分析图
 
 ## 环境
 
