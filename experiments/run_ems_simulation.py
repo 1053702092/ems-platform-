@@ -294,6 +294,10 @@ def plot_ems_results(df, drive_cycle='wltc'):
     ax2 = ax.twinx()
     ax2.plot(t, df['I_bat'], 'c-', linewidth=0.8, label='Current')
     ax2.set_ylabel('I_bat (A)', color='c')
+    # twinx 的图例要合并两条线的 handle
+    lines1, labels1 = ax.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax.legend(lines1 + lines2, labels1 + labels2, loc='upper right', fontsize=8)
     ax.grid(True, alpha=0.3)
 
     # (5) 工作模式
@@ -406,7 +410,7 @@ if __name__ == '__main__':
         sys.exit(0)
 
     if args.plot_only:
-        csv_path = os.path.join(RESULTS_DIR, f'ems_sim_{args.cycle}.csv')
+        csv_path = os.path.join(RESULTS_DIR, f'Day7_ems_sim_{args.cycle}.csv')
         if os.path.exists(csv_path):
             df = pd.read_csv(csv_path)
             plot_ems_results(df, args.cycle)

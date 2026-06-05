@@ -13,7 +13,7 @@
 %   build_ems_model('rebuild')   % 删除重建
 
 function build_ems_model(action)
-if nargin < 1, action = 'build'; end
+if nargin < 1, action = 'build'; end   %检测输入，如果没用输入，直接给action赋值build
 
 mdl = 'EMS_hybrid_v1';
 SCRIPT_DIR = fileparts(mfilename('fullpath'));          % 脚本所在目录: .../d/
@@ -136,9 +136,13 @@ set_param([mdl '/log_status'], 'VariableName', 'sim_status', ...
 
 %% 8. 信号路由
 % From Workspace 输出已经是单列速度信号 (1st列=时间用于插值, 输出只有数据列)
-% 加速度: Derivative 模块 (dv/dt)
-add_block('simulink/Continuous/Derivative', [mdl '/Acceleration']);
-set_param([mdl '/Acceleration'], 'Position', [170, 145, 200, 175]);
+% 加速度: 使用 Transfer Fcn 做滤波微分 (s/(tau*s+1)), 比 Derivative 更稳定
+% tau=0.1s, 滤掉高频噪声同时保留加速度趋势
+add_block('simulink/Continuous/Transfer Fcn', [mdl '/Acceleration']);
+set_param([mdl '/Acceleration'], ...
+    'Numerator', '[1, 0]', ...
+    'Denominator', '[0.1, 1]');
+set_param([mdl '/Acceleration'], 'Position', [170, 145, 210, 175]);
 
 %% 9. 连线
 % WLTC Data (速度) → Vehicle Power/1 (v_kmh)

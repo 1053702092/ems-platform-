@@ -2,7 +2,7 @@
 
 > 更新日期：2026-06-05
 > 当前阶段：第1个月 第2周（100% ✅）
-> 最后会话：Day7 — 全部完成，MATLAB仿真跑通，已推送GitHub
+> 最后会话：Day7 — 全部完成，MATLAB仿真跑通，文档/图例完善，已推送GitHub
 >
 > 备注：2026年秋招（8-10月）期间边学边投，不赶进度，先投再看。
 
@@ -74,9 +74,11 @@ ems-platform/
 | 初始 SOC → 终值 | 0.60 → 0.61 |
 | FC 最大功率 | 25.00 kW |
 
-### Simulink 模型 `build_ems_model` (可用 ⚠️)
+### Simulink 模型 `build_ems_model` (可用 ✅)
 
-脚本已能成功生成 `EMS_hybrid_v1.slx`，但仿真输出数据有信号映射偏差（FC功率读出为电压值），需在 MATLAB 界面中微调端口连接。
+脚本可成功生成 `EMS_hybrid_v1.slx`，仿真 1800s 约 8.3 秒跑完。
+- 第2周所有 Bug 已修复（In1/Out1 默认端口、SOC 反馈、滤波微分、To Workspace 数据读取）
+- 结果合理：3.32 kWh，SOC 0.60→0.69，FC 最大 23.8kW
 
 ### 第2周待办清单
 
