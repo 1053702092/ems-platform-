@@ -1,8 +1,8 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-06-05
-> 当前阶段：第1个月 第2周（100% ✅）
-> 最后会话：Day7 — 全部完成，MATLAB仿真跑通，文档/图例完善，已推送GitHub
+> 更新日期：2026-06-06
+> 当前阶段：第1个月 第3周（进行中 🟡）
+> 最后会话：DP原理文档 + 入门笔记完成，网络资源整理完毕
 >
 > 备注：2026年秋招（8-10月）期间边学边投，不赶进度，先投再看。
 
@@ -60,6 +60,8 @@ ems-platform/
     ├── Day7_Battery_model_explain.docx
     ├── Day7_EMS_controller_explain.docx
     └── Day7_build_EMS_model_explain.docx
+        ├── DP_dynamic_programming_principle.docx    ← DP 原理方案
+        └── DP入门笔记_网络资源精华版.docx              ← DP 通俗入门 + 参考文献
 ```
 
 ### Python 仿真结果 (已验证 ✅)
@@ -91,7 +93,9 @@ ems-platform/
 ## 下一步：第3周 — DP 动态规划
 
 手写 DP 与规则控制器对比
-- [ ] DP 算法理解与 MATLAB 实现
+- [x] DP 原理理解与文档生成 (✅ docs/DP_dynamic_programming_principle.docx)
+- [x] 网络资源整理 & 入门笔记 (✅ docs/DP入门笔记_网络资源精华版.docx)
+- [ ] DP 算法实现 (scripts/dp_ems.py)
 - [ ] WLTC 工况 DP 最优路径计算
 - [ ] 规则 vs DP 对比分析图
 

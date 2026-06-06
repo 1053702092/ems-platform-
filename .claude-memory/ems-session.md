@@ -13,7 +13,7 @@ metadata:
 
 **项目：** F:\CLAUDE\research\ems-platform\
 **GitHub：** https://github.com/1053702092/ems-platform-
-**进度：** 第1个月第1周（90%），下次开始 Day6 仿真脚本
+**进度：** 第1个月第3周（进行中 🟡），DP原理文档+入门笔记已完成
 
 **下次启动后说：** 「继续 EMS-PLAN，看 STATUS.md」
 

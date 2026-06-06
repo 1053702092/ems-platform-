@@ -23,6 +23,7 @@ venv/
 # OS
 *.swp
 *.bak
+~$*
 Thumbs.db
 
 # Local-only simulation scripts
