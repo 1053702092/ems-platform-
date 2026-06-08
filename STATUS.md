@@ -1,8 +1,8 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-06-06
-> 当前阶段：第1个月 第3周（进行中 🟡）
-> 最后会话：DP原理文档 + 入门笔记完成，网络资源整理完毕
+> 更新日期：2026-06-08
+> 当前阶段：第1个月 第3周（完成 ✅）
+> 最后会话：DP 算法实现完成！WLTC 氢耗降低 19.2%（0.283→0.229 kg），SOC 维持 0.574
 >
 > 备注：2026年秋招（8-10月）期间边学边投，不赶进度，先投再看。
 
@@ -13,7 +13,7 @@
 - [x] **第1个月：工程底座 + DP入门**
   - [x] 第1周：Python/Git/环境复盘 (100%)
   - [x] 第2周：Simulink环境标准化 (100% ✅)
-  - [ ] 第3周：Rule-based + DP手写
+  - [x] 第3周：Rule-based + DP手写 (100% ✅)
   - [ ] 第4周：DP深度分析
 - [ ] **第2个月：传统EMS策略深度实现**
   - [ ] 第5-6周：ECMS
@@ -95,9 +95,10 @@ ems-platform/
 手写 DP 与规则控制器对比
 - [x] DP 原理理解与文档生成 (✅ docs/DP_dynamic_programming_principle.docx)
 - [x] 网络资源整理 & 入门笔记 (✅ docs/DP入门笔记_网络资源精华版.docx)
-- [ ] DP 算法实现 (scripts/dp_ems.py)
-- [ ] WLTC 工况 DP 最优路径计算
-- [ ] 规则 vs DP 对比分析图
+- [x] Bellman 最优性原理深度解析（anysearch 搜索 → 新增插章 + 贪心vs DP 对比场景）
+- [x] DP 算法实现 (✅ scripts/day8_dp_ems.py)
+- [x] WLTC 工况 DP 最优路径计算 (✅ results/dp_ems_wltc.csv)
+- [x] 规则 vs DP 对比分析图 (✅ results/DP_vs_Rule_wltc.png)
 
 ## 环境
 

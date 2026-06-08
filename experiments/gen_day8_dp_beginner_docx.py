@@ -194,6 +194,284 @@ tbl(doc, ['故事中的概念', 'EMS 中的对应'],
  ['导航员推荐的"下一步怎么开"', '最优策略 π_k(SOC_k)']])
 
 # ====================================================================
+# 插章：Bellman 最优性原理深度解析
+# ====================================================================
+h1(doc, '插章 · Bellman 最优性原理深度解析')
+tx(doc, '本章基于网络精选资源（维基百科、NUS 教学论文、知乎、腾讯云等）系统梳理 Bellman 最优性原理，帮助你不仅"会用"，还能"讲清"这个原理。')
+nl(doc)
+
+h2(doc, '0. 一句话说清 Bellman 最优性原理')
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.5)
+r = p.add_run('"最优路径上的任何一段，就其起点和终点而言，本身也是最优的。"')
+r.bold = True; r.font.size = Pt(12); r.font.color.rgb = RGBColor(0x2F, 0x54, 0x96)
+nl(doc)
+
+tx(doc, '或者用更白话的方式表述：')
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.5)
+r = p.add_run('"一个最优策略有这样的性质——无论初始状态和初始决策如何，对由初始决策所形成的后续状态而言，后续的决策也必须构成一个最优策略。"')
+r.font.italic = True; r.font.size = Pt(10); r.font.color.rgb = RGBColor(0x44, 0x72, 0xC4)
+nl(doc)
+
+tx(doc, '这个原理由美国应用数学家理查德·贝尔曼（Richard E. Bellman）在 1957 年出版的经典著作 Dynamic Programming 中正式提出。它是动态规划能够达到全局最优的理论基石，也是强化学习中 Q-learning、SARSA 等算法的数学根源。')
+nl(doc)
+
+h2(doc, '0.1 三个等价表述')
+nl(doc)
+
+tbl(doc, ['表述角度', '核心含义', '理解要点'],
+[['子问题最优性', '问题的最优解包含子问题的最优解', '分治思想：大问题拆成小问题，分别求解'],
+ ['无后效性', '未来的最优决策只取决于当前状态，与历史路径无关', '"过去已经过去了，只看现在"'],
+ ['递归结构', '最优解 = 当前最优 + 剩余部分的最优', 'Bellman 方程的直观形式']])
+nl(doc)
+
+h2(doc, '0.2 来源：搜索资料汇总')
+tx(doc, '以下内容整合自以下网络资源：')
+bl(doc, 'Wikipedia — Bellman equation / Bellman optimality principle', bp='① ')
+bl(doc, 'Bohrium 科学百科 — 贝尔曼最优性原理（中文科普）', bp='② ')
+bl(doc, 'NUS Bar Light — The Principle of Optimality in DP: A Pedagogical Note (arXiv 2302.08467)', bp='③ ')
+bl(doc, '知乎/腾讯云 — 强化学习中无处不在的贝尔曼最优性方程', bp='④ ')
+bl(doc, 'CSDN 博客 — 最优控制理论：Bellman 动态规划法', bp='⑤ ')
+nl(doc)
+
+# ====================================================================
+h2(doc, '一、原理的数学形式')
+tx(doc, '给定一个多阶段最优控制问题，Bellman 最优性原理的数学表达是 Bellman 最优性方程：')
+nl(doc)
+
+p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p.paragraph_format.left_indent = Inches(0.5); p.paragraph_format.right_indent = Inches(0.5)
+r = p.add_run('V(s) = max  [ r(s, a) + γ · V(s\') ]')
+r.bold = True; r.font.size = Pt(14); r.font.color.rgb = RGBColor(0x2F, 0x54, 0x96)
+p.add_run('\n')
+r = p.add_run('           a ∈ A')
+r.bold = True; r.font.size = Pt(12); r.font.color.rgb = RGBColor(0x2F, 0x54, 0x96)
+nl(doc)
+
+tbl(doc, ['符号', '含义', '在 EMS 中的对应'],
+[['V(s)', '状态 s 的价值（最大累计回报）', 'J_k(SOC_k)：从该状态到终点的最小氢耗'],
+ ['r(s, a)', '即时代价/回报', 'g_k：当前步氢耗 + SOC 惩罚'],
+ ['γ', '折扣因子（0<γ<1）', '在 EMS 中 γ=1（不折扣，全程权重相同）'],
+ ['V(s\')', '下一状态 s\' 的价值', 'J_{k+1}(SOC_{k+1})：未来最优代价'],
+ ['max/min', '取最大/最小', 'EMS 是最小化问题，用 min']])
+nl(doc)
+
+tx(doc, '对于 EMS 的代价最小化问题，Bellman 方程写成：')
+nl(doc)
+p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p.paragraph_format.left_indent = Inches(0.5); p.paragraph_format.right_indent = Inches(0.5)
+r = p.add_run('Jₖ(xₖ) = min  [ gₖ(xₖ, uₖ) + Jₖ₊₁(xₖ₊₁) ]')
+r.bold = True; r.font.size = Pt(14); r.font.color.rgb = RGBColor(0x2F, 0x54, 0x96)
+nl(doc)
+
+# ====================================================================
+h2(doc, '二、最优性原理的三种解读')
+
+h3(doc, '解读 A：子问题最优性（最直观）')
+tx(doc, '假设你找到了从北京到上海的最优路径，它经过济南。那么：')
+bl(doc, '"从北京到济南"的那一段，不一定是最优的（可能有别的走法到济南更省油）', bp='⚠️ ')
+bl(doc, '"从济南到上海"的那一段，一定是从济南到上海的最优路径', bp='✅ ')
+nl(doc)
+tx(doc, '这就是最优性原理的核心：全局最优路径的"后半段"也是局部最优的。')
+tx(doc, '注意前半段不一定最优——因为前半段的选择服务于全局目标，可能故意"绕路"来调整 SOC。')
+nl(doc)
+
+h3(doc, '解读 B：递归分解（算法视角）')
+tx(doc, 'Bellman 方程本质上是一个递归分解公式：')
+nl(doc)
+tx(doc, '  最优解 = 当前最优决策 + 剩余问题的最优解')
+nl(doc)
+tx(doc, '这个递归结构是 DP 算法的理论基础。它告诉我们：')
+bl(doc, '不需要一次性解决所有问题——可以从后往前，一步步解决', bp='① ')
+bl(doc, '每一步只需要考虑"当前 + 一步之后"的最优，因为再往后已经算好了', bp='② ')
+bl(doc, 'J_{k+1} 作为"查表"使用，这是 DP 用空间换时间的核心', bp='③ ')
+nl(doc)
+
+h3(doc, '解读 C：无后效性（马尔可夫性）')
+tx(doc, '最优策略 π_k(x_k) 只依赖于当前状态 x_k（当前 SOC），而于如何到达这个 SOC 的"历史"无关。')
+nl(doc)
+tx(doc, '这意味着：')
+bl(doc, 'SOC=0.6 时，不管是从 0.8 放电放下来的，还是从 0.4 充电充上来的，', bp='✅ ')
+bl(doc, 'DP 给出的最优 P_fc 是一样的——因为"未来只取决于现在，不取决于过去"。', bp='✅ ')
+nl(doc)
+tx(doc, '这一性质大大简化了问题，否则我们要把整个历史路径也作为状态变量，维度爆炸。')
+nl(doc)
+
+# ====================================================================
+h2(doc, '三、Bellman 原理成立的条件（来自 arXiv 论文）')
+tx(doc, '新加坡国立大学的 Bar Light 在 2023 年的教学论文中严格讨论了 Bellman 最优性原理成立的条件。')
+nl(doc)
+
+tx(doc, '核心条件（两条）：')
+nl(doc)
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.3)
+r = p.add_run('条件 1（可测性保持）：'); r.bold = True; r.font.size = Pt(10)
+p.add_run('Bellman 算子 T 把可测函数空间映射到自身（T(D) ⊆ D）。简单说：状态空间有良好的数学结构，使价值函数保持良好的可测性。')
+nl(doc)
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.3)
+r = p.add_run('条件 2（可测选择）：'); r.bold = True; r.font.size = Pt(10)
+p.add_run('对每个价值函数 f，存在一个可测的策略 λ 能达到 Bellman 方程中的上确界（Λ_f ≠ ∅）。简单说：每个状态都有一个定义良好的最优决策。')
+nl(doc)
+
+tx(doc, '在离散问题（如 EMS）中：')
+bl(doc, '状态空间有限（SOC 网格 100~200 个点）+ 行动空间有限（P_fc 网格 30~60 个点）', bp='• ')
+bl(doc, '→ 两个条件自动满足', bp='• ')
+bl(doc, '→ Bellman 最优性原理严格成立', bp='• ')
+bl(doc, '→ 后向 DP 一定能找到全局最优解', bp='• ')
+nl(doc)
+
+tx(doc, '在连续状态空间的问题中（如库存管理、动态定价），这两个条件的验证需要较深的测度论知识。这也是为什么大多数教材只教离散情况。')
+nl(doc)
+
+# ====================================================================
+h2(doc, '四、Bellman 方程与强化学习的联系')
+tx(doc, 'Bellman 最优性方程在强化学习中无处不在。它是 Q-learning、DQN、SARSA 等算法的数学基础。')
+nl(doc)
+
+tbl(doc, ['概念', 'DP（EMS 中）', '强化学习（RL）'],
+[['模型', '已知工况（P_load 已知）', '环境未知，需探索'],
+ ['状态', 'SOC（连续→离散化）', '任意（连续/离散）'],
+ ['行动', 'P_fc', '任意动作'],
+ ['转移', '电池模型（已知）', '未知，需采样'],
+ ['算法', '后向 DP（离线精确）', 'Q-learning / DQN（在线逼近）'],
+ ['策略', '查表 π_k(SOC)', 'ε-greedy / 策略网络'],
+ ['最优性', '离散精度内全局最优', '渐近收敛到最优']])
+nl(doc)
+
+tx(doc, '核心公式的对应：')
+nl(doc)
+p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p.paragraph_format.left_indent = Inches(0.3); p.paragraph_format.right_indent = Inches(0.3)
+r = p.add_run('DP 的 Bellman 方程：    Jₖ(xₖ) = min [ gₖ + Jₖ₊₁ ]')
+r.font.size = Pt(10); r.font.color.rgb = RGBColor(0x2F, 0x54, 0x96)
+p.add_run('\n')
+r = p.add_run('RL 的 Bellman 方程：     Q(s,a) = r + γ · max Q(s\', a\')')
+r.font.size = Pt(10); r.font.color.rgb = RGBColor(0x44, 0x72, 0xC4)
+p.add_run('\n')
+r = p.add_run('RL 的 Bellman 最优方程： V(s)  = max [ r + γ · V(s\') ]')
+r.font.size = Pt(10); r.font.color.rgb = RGBColor(0x2F, 0x54, 0x96)
+nl(doc)
+
+tx(doc, '区别在于：')
+bl(doc, 'DP 的转移函数 f 是已知的（电池模型），可以直接计算', bp='① ')
+bl(doc, 'RL 的转移函数未知，必须通过与环境交互采样来估计', bp='② ')
+bl(doc, 'DP 给出精确解，RL 给出渐近逼近解', bp='③ ')
+nl(doc)
+
+# ====================================================================
+h2(doc, '五、常见误解澄清')
+nl(doc)
+
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.3)
+r = p.add_run('误解 1：'); r.bold = True; r.font.size = Pt(10); r.font.color.rgb = RGBColor(0xC0, 0x00, 0x00)
+p.add_run('“最优性原理 = 贪心，每一步选当前最优就行”')
+tx(doc, '错。贪心只选当前最优，不考虑未来。Bellman 方程既要考虑当前代价 g_k，也要考虑未来代价 J_{k+1}——“当前最优”不等于“全局最优”。')
+nl(doc)
+tx(doc, '用一个 EMS 的具体场景来理解：')
+nl(doc)
+h3(doc, '场景设置')
+tx(doc, '假设你在 WLTC 工况的第 300 秒：')
+tbl(doc, ['参数', '值', '说明'],
+[['P_load', '5 kW', '当前负载很小（平坦路面低速巡航）'],
+ ['SOC', '0.50', '中等电量'],
+ ['10 秒后（k=310）', '30 kW 大上坡', '需要大功率输出']])
+nl(doc)
+h3(doc, '贪心策略：选当前最省')
+tx(doc, '贪心看到负载只有 5 kW，于是让 FC 出 5 kW，电池不出力：')
+nl(doc)
+tbl(doc, ['时刻', 'P_fc', 'P_bat', 'SOC', '单步氢耗', '备注'],
+[['k=300', '5 kW', '0', '0.50', '低 ✅', '看似很省'],
+ ['k=301', '5 kW', '0', '0.50', '低', ''],
+ ['...', '...', '...', '...', '...', ''],
+ ['k=309', '5 kW', '0', '0.50', '低', '突然大上坡！'],
+ ['k=310', '30 kW（峰值）', '+0（电池没电了）', '0.50→0.35', '非常高 ❌', 'FC 被迫低效区运行']])
+nl(doc)
+tx(doc, '贪心在前面 10 秒确实“省”了，但代价是上坡时：')
+bl(doc, '电池没储备能量，FC 被迫在 30 kW 峰值运行（效率仅 40%）', bp='① ')
+bl(doc, '甚至电池还要深度放电（SOC 0.50→0.35），损害寿命', bp='② ')
+bl(doc, '全程总氢耗反而更高', bp='③ ')
+nl(doc)
+h3(doc, 'Bellman DP：考虑全局')
+tx(doc, 'DP 知道 10 秒后有大上坡，它做了一个看似“不划算”的决定：让 FC 在高效区多发电，提前给电池充电。')
+nl(doc)
+tbl(doc, ['时刻', 'P_fc', 'P_bat', 'SOC', '单步氢耗', '备注'],
+[['k=300', '15 kW（高效区）', '-10 kW（充电）', '0.50→0.52', '高 ❌', '看似浪费！'],
+ ['k=301', '15 kW', '-10 kW', '0.52→0.54', '高', '给电池充电'],
+ ['...', '...', '...', '...', '...', ''],
+ ['k=309', '15 kW', '-10 kW', '0.60', '高', 'SOC 充足准备爬坡'],
+ ['k=310', '20 kW（高效区）', '+10 kW（电池辅助）', '0.60→0.57', '低 ✅', 'FC+电池协同']])
+nl(doc)
+tx(doc, 'DP 的“反常”操作带来的好处：')
+bl(doc, '前 10 秒 FC 工作在 15 kW（效率 ~55%，最高效区）', bp='① ')
+bl(doc, '多余功率给电池充电，SOC 从 0.50→0.60，储备充足', bp='② ')
+bl(doc, '上坡时 FC 只需出 20 kW（效率 ~53%），电池补 10 kW', bp='③ ')
+bl(doc, '全程总氢耗反而更低——前 10 秒多烧的氢，远少于上坡时省下的', bp='④ ')
+nl(doc)
+h3(doc, '公式对比')
+tx(doc, '两者的核心区别体现在公式上：')
+nl(doc)
+p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+p.paragraph_format.left_indent = Inches(0.3); p.paragraph_format.right_indent = Inches(0.3)
+r = p.add_run('贪心：    min  gₖ(xₖ, uₖ)')
+r.bold = True; r.font.size = Pt(11); r.font.color.rgb = RGBColor(0xC0, 0x00, 0x00)
+p.add_run('              ← 只看这一步')
+r = p.add_run('\n\n')
+r = p.add_run('Bellman：  min  [ gₖ(xₖ, uₖ)  +  Jₖ₊₁(xₖ₊₁) ]')
+r.bold = True; r.font.size = Pt(11); r.font.color.rgb = RGBColor(0x2F, 0x54, 0x96)
+p.add_run('   ← 这一步 + 后面总和')
+nl(doc)
+tx(doc, '关键差异就在 Jₖ₊₁(xₖ₊₁) 这一项——它量化了“当前选择对未来造成的后果”。贪心漏掉的正是这个未来代价项。')
+nl(doc)
+tx(doc, '更直白的类比：')
+bl(doc, '贪心 = 一个不想存钱的人，每个月工资全花光 → 突然有大支出时捉襟见苄', bp='🔴 ')
+bl(doc, 'Bellman = 一个有规划的人，平时存钱准备应急 → 大支出时从容应对', bp='🟢 ')
+
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.3)
+r = p.add_run('误解 2：'); r.bold = True; r.font.size = Pt(10); r.font.color.rgb = RGBColor(0xC0, 0x00, 0x00)
+p.add_run('"DP 和穷举法差不多"')
+tx(doc, '错。穷举法要考虑所有可能的 SOC 轨迹组合（指数爆炸），DP 利用最优性原理只对每个状态算一次（O(N×Ns×Nu) = 线性复杂度）。1800 步 × 150 种 SOC × 60 种 P_fc = 1620 万次，而穷举法需要 60¹⁸⁰⁰ 次。')
+nl(doc)
+
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.3)
+r = p.add_run('误解 3：'); r.bold = True; r.font.size = Pt(10); r.font.color.rgb = RGBColor(0xC0, 0x00, 0x00)
+p.add_run('"DP 找到的解是全局最优"')
+tx(doc, '部分对。DP 找到的是"离散精度内的全局最优"——受限于网格分辨率。网格越密越接近真正的最优，但计算量也越大。实践中需要权衡精度和速度。')
+nl(doc)
+
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Inches(0.3)
+r = p.add_run('误解 4：'); r.bold = True; r.font.size = Pt(10); r.font.color.rgb = RGBColor(0xC0, 0x00, 0x00)
+p.add_run('"Bellman 原理只适用于确定性系统"')
+tx(doc, '不。Bellman 方程同样适用于随机系统（如随机动态规划、MDP 中的值迭代）。只需要把确定性转移 f(s,a) 换成期望 E_{s\'~p(·|s,a)}[V(s\')]。arXiv 论文中证明了这一般情况。')
+nl(doc)
+
+# ====================================================================
+h2(doc, '六、拓展阅读与原始文献')
+nl(doc)
+
+tbl(doc, ['编号', '资源', '类型', '链接/引用'],
+[['[A]', 'Wikipedia: Bellman equation', '百科', 'https://en.wikipedia.org/wiki/Bellman_optimality_principle'],
+ ['[B]', 'Bohrium 科学百科: 贝尔曼最优性原理', '中文科普', 'https://www.bohrium.com/sciencepedia/feynman/keyword/bellman_s_principle_of_optimality'],
+ ['[C]', 'Bar Light, "The Principle of Optimality in DP: A Pedagogical Note", arXiv:2302.08467, 2023', '学术论文', 'https://arxiv.org/html/2302.08467v5'],
+ ['[D]', 'CSDN: 最优控制理论—Bellman动态规划法用于最优控制', '中文教程', 'https://blog.csdn.net/NICAI001/article/details/127417277'],
+ ['[E]', '贝尔曼方程 — 维基百科中文版', '中文百科', 'https://zh.wikipedia.org/zh-hans/贝尔曼方程'],
+ ['[F]', '动手学强化学习 — 动态规划算法', '中文教程', 'https://hrl.boyuai.com/chapter/1/动态规划算法']])
+nl(doc)
+
+tx(doc, '建议阅读顺序：')
+bl(doc, '先看 Bohrium 中文科普（[B]）→ 理解直观含义', bp='① ')
+bl(doc, '再看 Wikipedia 英文版（[A]）→ 建立标准术语', bp='② ')
+bl(doc, '然后看 CSDN 文章（[D]）→ 与最优控制理论的联系', bp='③ ')
+bl(doc, '最后读 arXiv 论文（[C]）→ 理解数学严谨性', bp='④ ')
+nl(doc)
+
+# ====================================================================
 # 第三章：DP 的数学框架
 # ====================================================================
 h1(doc, '第三章 · 数学框架——其实就一个方程')
