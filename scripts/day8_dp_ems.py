@@ -61,13 +61,14 @@ DT = 1.0             # 时间步长 (s)
 # 1. FC 氢耗模型
 # ====================================================================
 def fc_efficiency(P_fc):
-    """FC 效率曲线查表"""
+    """FC 效率曲线查表 插值"""
     return np.interp(P_fc, PFC_EFF_BP, ETA_FC)
 
 def fc_hydrogen_flow(P_fc):
     """
     P_fc : float or array (kW)
-    return: mdot_H2 (g/s)
+    return: mdot_H2 (g/s)   
+    氢气流速计算
     """
     is_scalar = np.isscalar(P_fc)
     P_fc = np.atleast_1d(np.asarray(P_fc, dtype=float))
@@ -82,7 +83,14 @@ def fc_hydrogen_flow(P_fc):
 # 2. 车辆动力学 & 电池模型（从 run_ems_simulation.py 移植）
 # ====================================================================
 def vehicle_power(v_kmh, dt=1.0):
-    """车速 -> 功率需求 [kW]"""
+    """车速 -> 功率需求 [kW]
+    •v_ms = v_kmh / 3.6 — 车速单位换算，km/h 转 m/s
+    •中心差分求加速度：a[k] = (v[k+1] - v[k-1]) / (2×dt)，比前后向差分更精确
+    •np.clip(a, -3, 3) — 加速度限幅，防止噪声导致不合理的加速度值
+    •nF_rr/F_aero/F_inertia — 三力模型：滚动阻力+空气阻力+惯性力
+    •P_load = max(P_wheel / η / 1000, 0) — 传动效率折算后取正（无再生制动）
+    •v < 0.5 km/h 时功率归零 — 停车状态下功率需求为 0
+    """
     v_ms = v_kmh / 3.6
     a = np.zeros_like(v_ms)
     a[1:-1] = (v_ms[2:] - v_ms[:-2]) / (2 * dt)
@@ -102,6 +110,7 @@ def state_transition(SOC_k, P_fc, P_load_k, dt=1.0):
     单步状态转移（标量或向量）
     SOC_k: float, P_fc: array, P_load_k: float
     return: SOC_{k+1} (同 P_fc 形状)，clip 到 [SOC_MIN, SOC_MAX]
+    电池soc的变化
     """
     is_scalar = np.isscalar(P_fc)
     P_fc = np.atleast_1d(np.asarray(P_fc, dtype=float))
@@ -138,7 +147,7 @@ def battery_model_vectorized(P_bat_kW, SOC_init, dt=1.0):
         else:
             Delta = V_oc**2 - 4 * R_INT * P_w
             if Delta < 0:
-                soc = SOC_init
+                # 物理不可行：保持当前 SOC 不变（不重置）
                 SOC[i] = soc
                 continue
             I = (V_oc - np.sqrt(Delta)) / (2 * R_INT)
@@ -170,34 +179,35 @@ def backward_dp(P_load, SOC_0=0.6):
     后向 DP（向量化内层循环）
     P_load : array (N,)
     return: J_table, policy_table
+    J[k][i] = min_{p_fc} [ g(p_fc) + α×(SOC_next-SOC_ref)² + J[k+1][lookup(SOC_next)] ]
     """
-    N = len(P_load)
+    N = len(P_load) #N=1800
     SOC_GRID = np.linspace(SOC_MIN, SOC_MAX, N_SOC)
     PFC_GRID = np.linspace(PFC_MIN, PFC_MAX, N_PFC)
 
-    J = np.zeros((N + 1, N_SOC))
-    pi = np.zeros((N, N_SOC))
+    J = np.zeros((N + 1, N_SOC))  #J[k][i] = "时刻k、SOC状态i时，到终点最少还要花多少代价"
+    pi = np.zeros((N, N_SOC))  #pi[k][i] = "时刻k、SOC状态i时，应该输出多少FC功率"
 
     # 预计算氢耗（PFC_GRID -> H2_flow, 向量化）
     H2_flow_grid = fc_hydrogen_flow(PFC_GRID)  # g/s, shape (N_PFC,)
 
-    # 终端惩罚
+    # 终端惩罚   偏离soc=0.6受到的惩罚
     J[N, :] = BETA * (SOC_GRID - SOC_0) ** 2
 
     print(f'[后向 DP] 开始... (N={N}, N_SOC={N_SOC}, N_PFC={N_PFC})')
-    for k in range(N - 1, -1, -1):
+    for k in range(N - 1, -1, -1):   #总共1800s的工况
         P_load_k = P_load[k]
         J_next_k = J[k + 1, :]
 
-        for i in range(N_SOC):
+        for i in range(N_SOC):   # 网格数=150
             soc = SOC_GRID[i]
 
-            # 向量化：一次算所有 PFC_GRID 的 SOC_next
+            # 向量化：一次算所有 PFC_GRID 的 SOC_next  一次试完60种FC功率
             SOC_next_all = state_transition(soc, PFC_GRID, P_load_k, DT)
 
             # 找出可行的控制（SOC_next 在范围内）
             feasible = (SOC_next_all >= SOC_MIN) & (SOC_next_all <= SOC_MAX)
-
+            #feasible 是布尔数组
             if not feasible.any():
                 # 没有可行控制 → 此状态不可达，设置无穷大代价
                 J[k, i] = np.inf
@@ -213,7 +223,7 @@ def backward_dp(P_load, SOC_0=0.6):
 
             # 总代价
             total = np.full(N_PFC, np.inf)
-            total[feasible] = g[feasible] + J_future
+            total[feasible] = g[feasible] + J_future #这一时刻 未来的J值已经确定
 
             # 取最小
             min_idx = np.argmin(total)
