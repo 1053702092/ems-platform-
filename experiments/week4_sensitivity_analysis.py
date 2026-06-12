@@ -63,7 +63,7 @@ def main():
     rule_results = {}
     for name, data in cycles.items():
         rule = run_rule_controller(data['P_load'])
-        rule_results[name] = rule['m_H2_cumul_kg'][-1]
+        rule_results[name] = rule['m_H2_cumul_kg'][-1] #返回三个值  
 
     # ======================================================
     # 1. Alpha (SOC维持惩罚) 敏感性
@@ -135,7 +135,7 @@ def main():
     # ======================================================
     print('\n[画图]...')
     fig, axes = plt.subplots(3, 3, figsize=(15, 12))
-    colors = {'wltc': '#2196F3', 'nedc': '#FF9800', 'cltc': '#4CAF50'}
+    colors = {'wltc':   '#2196F3', 'nedc': '#FF9800', 'cltc': '#4CAF50'}
     markers = {'wltc': 'o', 'nedc': 's', 'cltc': '^'}
 
     def plot_data(ax, x_vals_groups, y_vals_groups, xlabel, ylabel):

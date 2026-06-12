@@ -110,7 +110,7 @@ def state_transition(SOC_k, P_fc, P_load_k, dt=1.0):
     单步状态转移（标量或向量）
     SOC_k: float, P_fc: array, P_load_k: float
     return: SOC_{k+1} (同 P_fc 形状)，clip 到 [SOC_MIN, SOC_MAX]
-    电池soc的变化
+    电池soc的变化，判断当前soc值是否需要更新怎么更新
     """
     is_scalar = np.isscalar(P_fc)
     P_fc = np.atleast_1d(np.asarray(P_fc, dtype=float))
@@ -118,7 +118,7 @@ def state_transition(SOC_k, P_fc, P_load_k, dt=1.0):
     V_oc = np.interp(SOC_k, SOC_BP, OCV_LU)
 
     SOC_next = np.full_like(P_fc, SOC_k)  # 默认 SOC 不变
-
+    #两步循环，第一步先判断pbat有没soc更新的必要，然后判断delta看看符合求解规则不
     mask_large = np.abs(P_bat) >= 0.01
     if mask_large.any():
         P_w = P_bat[mask_large] * 1000
@@ -185,8 +185,8 @@ def backward_dp(P_load, SOC_0=0.6):
     SOC_GRID = np.linspace(SOC_MIN, SOC_MAX, N_SOC)
     PFC_GRID = np.linspace(PFC_MIN, PFC_MAX, N_PFC)
 
-    J = np.zeros((N + 1, N_SOC))  #J[k][i] = "时刻k、SOC状态i时，到终点最少还要花多少代价"
-    pi = np.zeros((N, N_SOC))  #pi[k][i] = "时刻k、SOC状态i时，应该输出多少FC功率"
+    J = np.zeros((N + 1, N_SOC))  #J[k][i] = "时刻 k、SOC状态i时，到终点最少还要花多少代价"
+    pi = np.zeros((N, N_SOC))  #pi[k][i] = "时刻 k、SOC状态i时，应该输出多少FC功率"
 
     # 预计算氢耗（PFC_GRID -> H2_flow, 向量化）
     H2_flow_grid = fc_hydrogen_flow(PFC_GRID)  # g/s, shape (N_PFC,)
