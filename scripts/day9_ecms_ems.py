@@ -37,15 +37,19 @@ from day8_dp_ems import (
 )
 
 # ====================================================================
-# ECMS 参数
+# ECMS 参数 
 # ====================================================================
 SOC_REF = 0.6
-S_FACTOR_DEFAULT = 180.0    # 基准等效因子 [g/kWh]
-S_FACTOR_MIN = 120.0        # 扫描下限
-S_FACTOR_MAX = 250.0        # 扫描上限
-S_FACTOR_STEP = 5.0         # 扫描步长
-KP_ADAPTIVE = 30.0          # 自适应比例增益
-S0_ADAPTIVE = 180.0         # 自适应基准值
+S_FACTOR_DEFAULT = 280.0    # 基准等效因子 [g/kWh]（提高以增强 FC 利用）
+S_FACTOR_MIN = 100.0        # 扫描下限（给自适应更多空间）
+S_FACTOR_MAX = 500.0        # 扫描上限（给自适应更多空间）
+S_FACTOR_STEP = 10.0        # 扫描步长
+KP_ADAPTIVE = 5.0           # 自适应比例增益（降低避免 s 突变）
+S0_ADAPTIVE = 280.0         # 自适应基准值（提高初始 s₀）
+
+# 终端 SOC 惩罚参数（暂不启用：惩罚项对 Pfc 候选一致时不改变 argmin）
+PENALTY_START_RATIO = 0.5    # 从 50% 步数开始加终端惩罚
+PENALTY_COEFF = 0.0          # 设为 0 表示不启用（soc_next_all 依赖的惩罚项无法影响 argmin）
 
 PFC_GRID = np.linspace(PFC_MIN, PFC_MAX, N_PFC)
 H2_GRID = fc_hydrogen_flow(PFC_GRID)  # 预计算氢耗网格
@@ -64,7 +68,6 @@ def ecms_sim(P_load, SOC_0=0.6, s_factor=S_FACTOR_DEFAULT):
     SOC_0  : float — 初始 SOC
     s_factor : float — 等效因子 [g/kWh]
 
-    Returns
     -------
     dict — 仿真结果（SOC, P_fc, P_bat, m_H2, s_history=None）
     """
@@ -79,21 +82,25 @@ def ecms_sim(P_load, SOC_0=0.6, s_factor=S_FACTOR_DEFAULT):
     for k in range(N):
         # ── 瞬时优化：计算所有候选控制的等效氢耗 ──
         H_fc = H2_GRID                              # 实际氢耗 [g/s]
-        P_bat_candidates = P_load[k] - PFC_GRID     # 候选电池功率 [kW]
+        P_bat_candidates = P_load[k] - PFC_GRID   # 候选电池功率 [kW]
         # 单位统一：s [g/kWh] × P_bat [kW] → 需除以 3600 转为 g/s
         H_eq = H_fc + s_factor * P_bat_candidates / 3600.0   # 等效总氢耗 [g/s]
 
-        # SOC 维持惩罚：对偏离 0.6 的 SOC_next 施加强惩罚，防止过充/过放
-        soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
-        soc_penalty = 500.0 * (soc_next_all - SOC_REF) ** 2   # 系数放大5倍
-        H_eq += soc_penalty
+        # ── 终端 SOC 惩罚：只在后 50% 步生效，依赖当前 SOC 偏差 ──
+        penalty_start = int(N * PENALTY_START_RATIO)
+        if k >= penalty_start:
+            # 当前 SOC 偏离惩罚：高 SOC 时让 ECMS 倾向 FC 少出力、电池多放电
+            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
+            H_eq += PENALTY_COEFF * (SOC[k] - SOC_REF) ** 2 / 3600.0
+        else:
+            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
 
         # SOC 约束筛选（复用 soc_next_all）
         feasible = [j for j in range(N_PFC)
                     if SOC_MIN + 0.01 <= soc_next_all[j] <= SOC_MAX - 0.01]
 
         if feasible:
-            best_j = min(feasible, key=lambda j: H_eq[j])
+            best_j = min(feasible, key=lambda j: H_eq[j]) #返回Heq最小值对应的key
             P_fc[k] = PFC_GRID[best_j]
         else:
             # 无可行解 fallback：取中点
@@ -157,10 +164,14 @@ def ecms_adaptive(P_load, SOC_0=0.6, s_0=S0_ADAPTIVE, Kp=KP_ADAPTIVE,
         H_fc = H2_GRID
         P_bat_candidates = P_load[k] - PFC_GRID
         H_eq = H_fc + s_k * P_bat_candidates / 3600.0
-        # SOC 维持惩罚（向量化，对每个候选控制计算 SOC_next）
-        soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
-        soc_penalty = 500.0 * (soc_next_all - SOC_REF) ** 2
-        H_eq += soc_penalty
+
+        # ── 终端 SOC 惩罚：只在后 50% 步生效，依赖当前 SOC 偏差 ──
+        penalty_start = int(N * PENALTY_START_RATIO)
+        if k >= penalty_start:
+            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
+            H_eq += PENALTY_COEFF * (SOC[k] - SOC_REF) ** 2 / 3600.0
+        else:
+            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
 
         # SOC 约束筛选（复用 soc_next_all）
         feasible = [j for j in range(N_PFC)
@@ -169,7 +180,7 @@ def ecms_adaptive(P_load, SOC_0=0.6, s_0=S0_ADAPTIVE, Kp=KP_ADAPTIVE,
         if feasible:
             best_j = min(feasible, key=lambda j: H_eq[j])
             P_fc[k] = PFC_GRID[best_j]
-        else:
+        else:  #没有合适的取负载的一半
             P_fc[k] = np.clip(P_load[k] * 0.5, PFC_MIN, PFC_MAX)
 
         P_bat[k] = P_load[k] - P_fc[k]
@@ -196,6 +207,7 @@ def scan_s_factor(P_load, SOC_0=0.6, cycle_name='wltc'):
     Returns
     -------
     pd.DataFrame — s 值、氢耗、SOC终值、FC平均效率
+    np.arange   隔五个生成一个值一共31个值
     """
     s_values = np.arange(S_FACTOR_MIN, S_FACTOR_MAX + 1, S_FACTOR_STEP)
     results = []
@@ -429,7 +441,7 @@ def plot_s_scan(df, cycle_name='wltc'):
 
     # FC 效率 vs s
     ax = axes[2]
-    ax.plot(df['s_factor'], df['FC_eff_mean'] * 100, 'r-o', markersize=3)
+    ax.plot(df['s_factor'], df['FC_eff_mean'] * 100, 'r-o', markersize=3)  
     ax.set_xlabel('Equivalence Factor s [g/kWh]')
     ax.set_ylabel('FC Avg Efficiency (%)')
     ax.set_title('FC Efficiency vs s')
@@ -511,7 +523,7 @@ def main():
     print('  ECMS 等效消耗最小化策略')
     print(f'  工况: {cycle.upper()}')
     if args.adaptive:
-        print(f'  模式: 自适应 ECMS (s₀={args.s0}, Kp={args.Kp})')
+        print(f'  模式: 自适应 ECMS (s0={args.s0}, Kp={args.Kp})')
     else:
         print(f'  模式: 标准 ECMS (s={args.s_factor})')
     print('=' * 55)
@@ -545,8 +557,9 @@ def main():
         best_s = best['s_factor']
         print(f'  [3/3] ECMS (s={best_s:.0f})...')
         ecms = ecms_sim(P_load, s_factor=best_s)
-        # A-ECMS
-        ecms_adp = ecms_adaptive(P_load, s_0=best_s, Kp=args.Kp) if args.adaptive else None
+        # A-ECMS：用命令行 s₀，不依赖扫描最优 s
+        s0_use = args.s0 if args.adaptive else best_s
+        ecms_adp = ecms_adaptive(P_load, s_0=s0_use, Kp=args.Kp) if args.adaptive else None
         # 打印指标
         print_metrics(rule, dp, ecms, ecms_adp)
         # 绘图
