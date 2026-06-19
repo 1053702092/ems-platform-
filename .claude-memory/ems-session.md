@@ -13,12 +13,18 @@ metadata:
 
 **项目：** F:\CLAUDE\research\ems-platform\
 **GitHub：** https://github.com/1053702092/ems-platform-
-**进度：** 第1个月完成 ✅ → 第2个月即将开始（ECMS + C++）
+**进度：** 第2个月完成 ✅（ECMS + C++ 入门）→ 第3个月即将开始（MPC）
 
-**关键节点（2026-06-11）：**
+**关键节点（2026-06-18）：**
 - 第3周：DP 手写实现完成，WLTC 氢耗↓19.2% ✅
 - 第4周：DP 深度分析完成（CLTC补全、α/β/网格敏感性、三工况对比）
-- 练习文件已创建，5个核心函数中前2个已填写验证通过
+- 第5周：ECMS 原理+实现 + 五项学习笔记 ✅
+- 第6周（本周）：
+  - ✅ ECMS SOC 过充 BUGFIX（`abs(P_bat)` 公式修正）
+  - ✅ A-ECMS 参数调优（s0/Kp 扫描）
+  - ✅ DP 反推标定 s₀（理论 55 + 经验 130 g/kWh）
+  - ✅ 三工况 ECMS 验证（WLTC +0.2%, NEDC +4.5%, CLTC -13.4%）
+  - ✅ C++ 入门：3x LeetCode Easy + 2x EMS 算法实现
 - 就业市场调研完成，定位 A（EMS/BMS）+ C（AI+新能源）
 - 面试表达训练计划已加入 STATUS.md
 

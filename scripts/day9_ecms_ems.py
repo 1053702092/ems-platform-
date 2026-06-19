@@ -40,16 +40,21 @@ from day8_dp_ems import (
 # ECMS 参数 
 # ====================================================================
 SOC_REF = 0.6
-S_FACTOR_DEFAULT = 280.0    # 基准等效因子 [g/kWh]（提高以增强 FC 利用）
-S_FACTOR_MIN = 100.0        # 扫描下限（给自适应更多空间）
-S_FACTOR_MAX = 500.0        # 扫描上限（给自适应更多空间）
+# ── 标准 ECMS 等效因子（用 abs 修正后，s 在 50-250 范围合理） ──
+S_FACTOR_DEFAULT = 160.0    # 基准等效因子 [g/kWh]
+S_FACTOR_MIN = 50.0         # 扫描下限
+S_FACTOR_MAX = 300.0        # 扫描上限
 S_FACTOR_STEP = 10.0        # 扫描步长
-KP_ADAPTIVE = 5.0           # 自适应比例增益（降低避免 s 突变）
-S0_ADAPTIVE = 280.0         # 自适应基准值（提高初始 s₀）
 
-# 终端 SOC 惩罚参数（暂不启用：惩罚项对 Pfc 候选一致时不改变 argmin）
-PENALTY_START_RATIO = 0.5    # 从 50% 步数开始加终端惩罚
-PENALTY_COEFF = 0.0          # 设为 0 表示不启用（soc_next_all 依赖的惩罚项无法影响 argmin）
+# ── A-ECMS 自适应参数 ──
+KP_ADAPTIVE = 3.0           # 自适应比例增益（SOC 偏差的反馈强度）
+S0_ADAPTIVE = 160.0         # 自适应基准等效因子（≈DP 反推最优值）
+S_ADAPTIVE_MIN = 50.0       # 等效因子下限（不等于放电时仍有效）
+S_ADAPTIVE_MAX = 350.0      # 等效因子上限
+
+# 终端 SOC 惩罚（辅助 SOC 维持，仅在末端生效）
+PENALTY_START_RATIO = 0.7   # 从 70% 步数开始加终端惩罚
+PENALTY_COEFF = 500.0       # SOC 偏差惩罚系数
 
 PFC_GRID = np.linspace(PFC_MIN, PFC_MAX, N_PFC)
 H2_GRID = fc_hydrogen_flow(PFC_GRID)  # 预计算氢耗网格
@@ -82,20 +87,30 @@ def ecms_sim(P_load, SOC_0=0.6, s_factor=S_FACTOR_DEFAULT):
     for k in range(N):
         # ── 瞬时优化：计算所有候选控制的等效氢耗 ──
         H_fc = H2_GRID                              # 实际氢耗 [g/s]
-        P_bat_candidates = P_load[k] - PFC_GRID   # 候选电池功率 [kW]
-        # 单位统一：s [g/kWh] × P_bat [kW] → 需除以 3600 转为 g/s
-        H_eq = H_fc + s_factor * P_bat_candidates / 3600.0   # 等效总氢耗 [g/s]
+        P_bat_candidates = P_load[k] - PFC_GRID   # 候选电池功率 [kW]（正=放电，负=充电）
+        # ★ 修正：用 abs(P_bat) 确保充放电都产生正成本，避免充电时等效氢耗虚假降低
+        #   单位：s [g/kWh] × |P_bat| [kW] ÷ 3600 → g/s
+        H_eq = H_fc + s_factor * np.abs(P_bat_candidates) / 3600.0
 
-        # ── 终端 SOC 惩罚：只在后 50% 步生效，依赖当前 SOC 偏差 ──
+        # ── SOC 约束筛选（预计算所有候选的下一时刻 SOC）──
+        soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
+
+        # ── 终端 SOC 惩罚：后段辅助 SOC 维持 ──
         penalty_start = int(N * PENALTY_START_RATIO)
         if k >= penalty_start:
-            # 当前 SOC 偏离惩罚：高 SOC 时让 ECMS 倾向 FC 少出力、电池多放电
-            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
-            H_eq += PENALTY_COEFF * (SOC[k] - SOC_REF) ** 2 / 3600.0
-        else:
-            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
+            # SOC 偏离惩罚：高 SOC 时放电（P_fc 小），低 SOC 时充电（P_fc 大）
+            soc_dev = SOC[k] - SOC_REF
+            if soc_dev > 0.05:
+                # SOC 偏高：额外惩罚大 P_fc（充电会进一步推高 SOC）
+                penalty = PENALTY_COEFF * soc_dev**2 * (PFC_GRID / PFC_MAX) / 3600.0
+            elif soc_dev < -0.05:
+                # SOC 偏低：额外惩罚小 P_fc（放电会进一步拉低 SOC）
+                penalty = PENALTY_COEFF * soc_dev**2 * (1 - PFC_GRID / PFC_MAX) / 3600.0
+            else:
+                penalty = 0.0
+            H_eq += penalty
 
-        # SOC 约束筛选（复用 soc_next_all）
+        # SOC 约束筛选
         feasible = [j for j in range(N_PFC)
                     if SOC_MIN + 0.01 <= soc_next_all[j] <= SOC_MAX - 0.01]
 
@@ -125,7 +140,7 @@ def ecms_sim(P_load, SOC_0=0.6, s_factor=S_FACTOR_DEFAULT):
 # 2. 自适应 ECMS（SOC 反馈调整等效因子）
 # ====================================================================
 def ecms_adaptive(P_load, SOC_0=0.6, s_0=S0_ADAPTIVE, Kp=KP_ADAPTIVE,
-                  SOC_ref=SOC_REF, s_min=S_FACTOR_MIN, s_max=S_FACTOR_MAX):
+                  SOC_ref=SOC_REF, s_min=S_ADAPTIVE_MIN, s_max=S_ADAPTIVE_MAX):
     """
     自适应 ECMS — SOC 反馈调整等效因子
 
@@ -163,17 +178,25 @@ def ecms_adaptive(P_load, SOC_0=0.6, s_0=S0_ADAPTIVE, Kp=KP_ADAPTIVE,
         # ── 瞬时优化（同标准 ECMS，但用自适应 s_k） ──
         H_fc = H2_GRID
         P_bat_candidates = P_load[k] - PFC_GRID
-        H_eq = H_fc + s_k * P_bat_candidates / 3600.0
+        # ★ 用 abs(P_bat) 修正
+        H_eq = H_fc + s_k * np.abs(P_bat_candidates) / 3600.0
 
-        # ── 终端 SOC 惩罚：只在后 50% 步生效，依赖当前 SOC 偏差 ──
+        # ── SOC 约束筛选（预计算）──
+        soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
+
+        # ── 终端 SOC 惩罚 ──
         penalty_start = int(N * PENALTY_START_RATIO)
         if k >= penalty_start:
-            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
-            H_eq += PENALTY_COEFF * (SOC[k] - SOC_REF) ** 2 / 3600.0
-        else:
-            soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
+            soc_dev = SOC[k] - SOC_REF
+            if soc_dev > 0.05:
+                penalty = PENALTY_COEFF * soc_dev**2 * (PFC_GRID / PFC_MAX) / 3600.0
+            elif soc_dev < -0.05:
+                penalty = PENALTY_COEFF * soc_dev**2 * (1 - PFC_GRID / PFC_MAX) / 3600.0
+            else:
+                penalty = 0.0
+            H_eq += penalty
 
-        # SOC 约束筛选（复用 soc_next_all）
+        # SOC 约束筛选
         feasible = [j for j in range(N_PFC)
                     if SOC_MIN + 0.01 <= soc_next_all[j] <= SOC_MAX - 0.01]
 

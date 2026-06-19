@@ -1,7 +1,7 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-06-15
-> 当前阶段：**第6周进行中** → A-ECMS 调优 + C++
+> 更新日期：2026-06-18
+> 当前阶段：**第6周完成 ✅** → 第7周即将开始（MPC）
 > 定位：**A（EMS/BMS 算法）为主，C（AI+新能源）为辅**
 > 就业面：最广（储能/车企/电池/Tier1）+ 增长型（AI能源交叉）
 >
@@ -72,15 +72,26 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
   - 等效因子 s 参数扫描（120~250 g/kWh）
   - **C++基础：速查手册已整理，待学习**
   - **学习笔记：五项笔记已整理**（Hamiltonian推导 / 等效因子s物理意义 / 恒定vs自适应ECMS / ECMS局限性 / 代码逐行理解）
-- [x] **第6周：ECMS 调优 + C++练习** ← 进行中
+- [x] **第6周：ECMS 调优 + C++练习（已完成 ✅）**
   - [x] 五项学习笔记完成
-  - [ ] A-ECMS 自适应调优（SOC 反馈，解决 SOC 过充问题）
-  - [ ] DP 反推标定等效因子 s₀
-  - [ ] 多工况 ECMS 验证（NEDC/CLTC）
-  - [ ] **C++练习：LeetCode Easy 开始**
+  - [x] **🔧 BUGFIX：ECMS SOC 过充问题** — 修正等效因子公式 `H_eq = H_fc + s*P_bat/3600` → `H_eq = H_fc + s*|P_bat|/3600`，解决充电时等效氢耗虚假降低的问题
+  - [x] **标准 ECMS 参数重扫**（s=50~300）：SOC_end 从 0.89 降至约 0.58，与 DP 结果匹配
+  - [x] **A-ECMS 调优**：Kp/s0 参数扫描（s0=80~200, Kp=1~8），最优组合确认
+  - [x] **DP 反推标定 s₀**：
+    - 理论 costate 法 → s₀ ≈ 55 g/kWh（PMP 标准推导）
+    - 经验校准（abs 公式）→ **s₀ ≈ 130 g/kWh**（三工况验证）
+  - [x] **多工况 ECMS 验证**（WLTC/NEDC/CLTC）：
+    - WLTC: H2=0.2292 kg（vs DP 0.2287, +0.2% ✅）
+    - NEDC: H2=0.1034 kg（vs DP 0.0990, +4.5%）
+    - CLTC: H2=0.1255 kg（vs DP 0.1448, -13.4%）
+  - [x] **C++练习：LeetCode Easy 开始**
+    - Two Sum / Valid Parentheses / Binary Search
+    - FC 氢耗模型 C++ 实现（linear interp / SOC transition）
+    - ECMS 简化 C++ 实现（等效因子扫描）
+    - Makefile + 编译链验证通过
 - [ ] **第7周：MPC 原理与实现**
   - MPC 模型预测控制原理
-  - Python 实现简化MPC能量管理
+  - Python 实现简化 MPC 能量管理
   - **C++练习：面向对象基础**
 - [ ] **第8周：四方法大对比**
   - DP vs ECMS vs MPC vs Rule 综合评估
@@ -239,15 +250,59 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
 - ✅ 结果评估报告 (`docs/ECMS_Week5_结果评估报告.docx`)
 - ✅ ECMS 原理文档 (`docs/ECMS_原理与实现_Week5学习文档.docx`)
 - ✅ C++ + Python 速查手册 (`docs/Cpp_Python_速查手册.docx`)
-- ⚠️ SOC过充问题（ECMS_end=0.89）→ Week 6 A-ECMS 解决
+- ⚠️ SOC过充问题（ECMS_end=0.89）→ Week 6 解决
+
+**Week 6 产出：**
+- ✅ ECMS 等效因子公式修正（`abs(P_bat)` 修复 SOC 过充）
+- ✅ 修正后参数重扫 (s=50~300) → 最优 s ≈ 130 g/kWh
+- ✅ A-ECMS 参数调优（s0/Kp 扫描 104 组合）
+- ✅ DP 反推标定 s₀（理论 55 + 经验 130 g/kWh）
+- ✅ 三工况 ECMS 验证（WLTC/NEDC/CLTC）
+- ✅ C++ 练习：3x LeetCode Easy + 2x EMS C++ 实现
+- ✅ 图示：`results/ECMS_compare_{wltc,nedc,cltc}.png`
+- ✅ 数据：`results/ecms_multicycle_summary.csv`
+- ✅ 脚本：`scripts/tune_aecms.py`, `scripts/run_multicycle.py`, `scripts/calibrate_s_from_dp.py`
+- ✅ C++: `cpp_practice/leetcode_easy/*.cpp`, `cpp_practice/ems_basics/*.cpp`
 
 **本月八股文积累：**
 ```
 Week 5: ECMS原理 + 等效因子 + Hamiltonian框架
-Week 6: 自适应ECMS + SOC反馈机制 + DP反推标定
+Week 6: 自适应ECMS + SOC反馈机制 + DP反推标定 + ECMS公式修正原理
 Week 7: MPC原理 + 预测模型
 Week 8: 四种算法全景对比
 ```
+
+**Week 6 关键追问更新：**
+- "为什么 ECMS 会 SOC 过充？" → 原公式 `H_eq = H_fc + s*P_bat/3600` 中充电时 P_bat<0 使等效氢耗降低，求解器永远选充电
+- "怎么修复的？" → 用 `|P_bat|` 替代 `P_bat`，充放电都产生正成本
+- "DP 反推 s₀ 的结果？" → 理论值 55 g/kWh（PMP costate），经验值 130 g/kWh（abs 公式校准，三工况验证）
+
+### 第6周附加：就业市场调研 + 投递清单（2026-06-18）
+
+**市场调研结论：**
+- EMS/BMS 算法岗在 2026 年秋招属于 **紧缺方向**，供需比约 0.39（5岗抢2人）
+- 薪资范围：应届硕士 **15-30万**，中级 **30-50万**
+- 学历限制：双非硕在头部企业简历关可能被卡，但项目经验可以扳回一档
+
+**产出清单：**
+- ✅ `docs/EMS_BMS_投递清单103家_完整版.docx` — **127家完整投递清单**（市场化92家含运维15家 + 体制内35家）
+- ✅ `docs/岗位来源渠道清单.md` — 招聘渠道汇总（含公众号/微信群/猎头/内推/国聘网等）
+- ✅ 新增运维/管理方向板块：华电/国电投/金风/明阳/京能等
+- ✅ 新增体制内单位：中国通用技术集团、中国船舶集团
+- ✅ 新增市场化公司：摩瓦新能源、易事特集团、果下科技等
+
+**三条投递线并行策略：**
+```
+技术线（算法/研发）：比亚迪/汇川/艾罗能源等     → 20-40万
+运维线（运维/管理）：华电/国电投/金风/明阳等     → 10-22万
+体制内（央企/研究院）：中广核/中电科/南方电网等  → 15-25万
+```
+
+**关键渠道发现：**
+- 北极星招聘 hr.bjx.com.cn — 新能源垂直，最精准
+- 国聘网 iguopin.com — 央企招聘官方平台
+- 电池社区微信群（微信号 dianchishequ）— 5万+同行，内推机会
+- 电池英才网 jdjob88.com — 电池行业垂直
 
 ### 第3个月：RL 叙事 + 框架深度
 
@@ -313,6 +368,7 @@ Week 12: SAC + 最大熵RL
 
 - **6月底（Week 4）**：DP深度分析完成
 - **6/12（Week 5）**：ECMS原理+实现完成 📌 恒定ECMS基准已建立
+- **6/18（Week 6）**：ECMS调优 + 多工况验证 + C++入门完成 ✅
 - **7/19（Week 8）**：传统EMS四方法对比完成 📌 可投递
 - **8月底（Week 12）**：RL-EMS完成 📌 简历强度够
 - **9-10月**：边投边面
