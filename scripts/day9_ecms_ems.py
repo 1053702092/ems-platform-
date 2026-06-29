@@ -87,7 +87,8 @@ def ecms_sim(P_load, SOC_0=0.6, s_factor=S_FACTOR_DEFAULT):
     for k in range(N):
         # ── 瞬时优化：计算所有候选控制的等效氢耗 ──
         H_fc = H2_GRID                              # 实际氢耗 [g/s]
-        P_bat_candidates = P_load[k] - PFC_GRID   # 候选电池功率 [kW]（正=放电，负=充电）
+        P_bat_candidates = P_load[k] - PFC_GRID   
+        # 候选电池功率 [kW]（正=放电，负=充电）
         # ★ 修正：用 abs(P_bat) 确保充放电都产生正成本，避免充电时等效氢耗虚假降低
         #   单位：s [g/kWh] × |P_bat| [kW] ÷ 3600 → g/s
         H_eq = H_fc + s_factor * np.abs(P_bat_candidates) / 3600.0

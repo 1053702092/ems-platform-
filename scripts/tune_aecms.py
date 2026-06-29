@@ -21,11 +21,11 @@ def main():
 
     # 参数网格
     s0_grid = np.arange(80, 201, 10)   # 80~200, 步长 10
-    Kp_grid = np.arange(1.0, 8.1, 1.0) # 1~8, 步长 1
+    Kp_grid = np.arange(1.0, 8.1, 1.0) # 1~8, 步长 1  13*8=104
 
     results = []
     total = len(s0_grid) * len(Kp_grid)
-    idx = 0
+    idx = 0  
 
     for s0, Kp in itertools.product(s0_grid, Kp_grid):
         idx += 1
@@ -43,7 +43,8 @@ def main():
             'SOC_end': res['SOC'][-1],
             'SOC_dev': soc_dev,
             'FC_eff_mean': eff.mean(),
-            'FC_eff_gt50': (eff > 0.50).mean(),
+            'FC_eff_gt50': (eff > 0.50).mean(),   
+            #效率 > 50% 的步数占比。燃料电池在 >50% 效率区间的运行时间越长，说明策略越优（氢→电转换效率高）
         })
 
     df = pd.DataFrame(results)
