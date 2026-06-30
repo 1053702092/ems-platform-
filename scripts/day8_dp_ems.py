@@ -162,11 +162,17 @@ def battery_model_vectorized(P_bat_kW, SOC_init, dt=1.0):
 # ====================================================================
 def load_drive_cycle(name='wltc'):
     csv_map = {'wltc': 'wltc_cycle.csv', 'nedc': 'nedc_cycle.csv', 'cltc': 'cltc_cycle.csv'}
+    data_csv_map = {'wltc': 'WLTC.csv', 'nedc': 'NEDC.csv', 'cltc': 'CLTC.csv'}
     csv_path = os.path.join(RESULTS_DIR, csv_map.get(name, 'wltc_cycle.csv'))
     if not os.path.exists(csv_path):
-        raise FileNotFoundError(f'工况数据未找到: {csv_path}\n请先运行: python scripts/download_drive_cycles.py')
+        csv_path = os.path.join(PROJECT_ROOT, 'data', 'cycles', data_csv_map.get(name, 'WLTC.csv'))
+    if not os.path.exists(csv_path):
+        raise FileNotFoundError(
+            f'工况数据未找到: {csv_path}\n请先运行: python scripts/download_drive_cycles.py'
+        )
     df = pd.read_csv(csv_path)
-    t = df['time'].values
+    time_col = 'time' if 'time' in df.columns else 'time_s'
+    t = df[time_col].values
     v = df['speed_kmh'].values
     print(f'[载入] {name.upper()} 工况: {len(t)} 点, {t[-1]:.0f}s')
     return t, v

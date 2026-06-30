@@ -100,38 +100,65 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
   - [x] MPC 原理文档（`docs/MPC_原理与实现_第7周学习笔记.md`）
   - [x] Python 实现 MPC（网格搜索 + receding horizon + 能量平衡惩罚）
     - 关键发现：MPC 需要等效因子 s 才能正确平衡电池能量
-    - s=130 时，MPC WLTC 氢耗 0.2011 kg（vs DP 0.2287）
-  - [x] N_p 敏感性扫描（10→200）：N_p 越大氢耗越低，N_p→∞ 时 MPC ≈ 全局 ECMS
+    - 旧版 s=130 时，MPC WLTC 原始氢耗 0.2011 kg（vs DP 0.2287），但 SOC_end≈0.55，存在电池能量透支，不能直接解释为优于 DP
+  - [x] N_p 敏感性扫描（10→200）：N_p 越大原始氢耗越低，但需要同步检查 SOC_end 和 SOC 修正后等效氢耗；当前实现是“预测期恒定 P_fc”的简化 MPC，不能宣称 N_p→∞ 时趋近 DP
   - [x] 四方法对比（Rule vs DP vs ECMS vs MPC）
     - Rule: 0.2831 kg (+23.8% vs DP)
     - DP: 0.2287 kg（基准）
     - ECMS: 0.2292 kg (+0.2% vs DP) ← 最接近 DP！
-    - MPC (N_p=50, s=130): 0.2011 kg (-12.1% vs DP)
+    - MPC 旧版 (N_p=50, s=130): 原始氢耗 0.2011 kg，但因 SOC 终值更低，需用 charge-sustaining 公平指标重算排序
+  - [x] **MPC 优化更新（2026-06-30）**
+    - 结论：问题不是 MPC 算法本身失败，而是前一版代价函数对终端 SOC 约束偏弱，且评价只看原始氢耗会放大“电池透支省氢”的假象
+    - 版本安排：`scripts/mpc_ems.py` 保留旧版；新建 `scripts/mpc_ems_optimized.py` 存放优化版，便于对照
+    - 代码优化：终端 SOC 惩罚全程生效、加入 SOC 软下限 `SOC_SOFT_MIN=0.57`、真实终点 SOC 欠差惩罚、FC 功率变化惩罚 `W_PFC_SLEW`
+    - 环境补齐：bundled Python 已安装 `matplotlib 3.11.0`，`numpy/pandas/matplotlib` 导入与图片保存验证通过
+    - 优化版四方法重跑结果：
+      - WLTC：MPC `H2_raw=0.2432 kg, SOC_end=0.576, H2_eq=0.2976 kg`；相对 DP 原始氢耗 `+1.8%`，SOC修正氢耗 `-1.9%`
+      - NEDC：MPC `H2_raw=0.0812 kg, SOC_end=0.574, H2_eq=0.1403 kg`；相对 DP 原始氢耗 `-14.0%`，SOC修正氢耗 `-15.7%`
+    - 输出优化：优化版结果输出到 `results/mpc_ems_optimized_*`，包含 `H2_raw_kg / SOC_end / H2_eq_kg / summary.csv`
+    - 已保存结果图：
+      - `results/FourWay_compare_optimized_wltc.png`
+      - `results/FourWay_compare_optimized_nedc.png`
+    - 已保存结果数据：
+      - `results/mpc_ems_optimized_wltc_np50.csv`
+      - `results/mpc_ems_optimized_wltc_np50_summary.csv`
+      - `results/mpc_ems_optimized_nedc_np50.csv`
+      - `results/mpc_ems_optimized_nedc_np50_summary.csv`
+      - `results/FourWay_compare_optimized_metrics.csv`
   - [x] BUGFIX：修复 day9_ecms_ems.py 中的 `abs(P_bat_candidates)` 语法错误
-  - [x] 产出：`scripts/mpc_ems.py`, `results/MPC_np_sensitivity_wltc.png`, `results/FourWay_compare_wltc.png`
+  - [x] 产出：`scripts/mpc_ems.py`（旧版保留）, `scripts/mpc_ems_optimized.py`（优化版）, `results/FourWay_compare_optimized_wltc.png`, `results/FourWay_compare_optimized_nedc.png`
   - [ ] **C++练习：面向对象基础**（待后续补充）
 - [ ] **第8周：四方法大对比报告**
   - 统一指标框架 + 可视化
+  - 必须加入公平口径：原始氢耗 `H2_raw`、终端 SOC、SOC 偏差、SOC 修正后等效氢耗 `H2_eq`
+  - 结论口径：DP 是同目标同约束下的离线全局最优；若某策略原始氢耗低于 DP，优先检查终端 SOC/约束/目标函数是否一致
+  - 优化版 MPC 的 WLTC/NEDC 图、CSV、summary 和四方法 metrics 已生成；下一步写四方法报告，不要沿用“旧 MPC 原始氢耗低于 DP”的结论
+  - [x] **面试项目包第一版（2026-06-30）**
+    - 项目定位：燃料电池混合动力系统 EMS 能量管理策略对比与优化平台
+    - 已生成 `docs/EMS_面试项目_README.md`
+    - 已生成 `docs/EMS_简历与面试话术_第一版.md`
+    - 已生成 `docs/EMS_面试项目报告_第一版.docx`（含 WLTC/NEDC 对比图和四方法结果表）
+    - 面试叙事重点：不是宣称 MPC 超过 DP，而是强调发现 SOC 透支问题、建立公平评价口径、完成优化版 MPC 工程修正
   - 产出：**传统EMS策略对比报告** ← 项目亮点1
 
-### 第3个月 — PyTorch + 强化学习（A→C过渡）
+### 第3个月 — PyTorch + 强化学习（A→C过渡，PPO为主）
 
 - [ ] **第9周：PyTorch 入门**
   - Tensor/Autograd/nn.Module
   - 用 PyTorch 重写简单 MLP 做功率预测
   - **并行：强化学习基础（MDP/Bellman/策略迭代）**
-- [ ] **第10周：DQN + PyTorch 实现**
-  - DQN 原理（经验回放/目标网络）
-  - PyTorch 实现 DQN，在 Gym 验证
-  - **迁移：将 DQN 应用于简化EMS环境**
-- [ ] **第11周：PPO + PyTorch 实现**
+- [ ] **第10周：RL基础 + DQN/SAC概念对照**
+  - DQN 原理（经验回放/目标网络）只学概念和面试表达，不做完整项目
+  - SAC 原理只学最大熵思想和适用场景，不做完整项目
+  - 目标：能讲清楚为什么 EMS 连续动作更适合 PPO/SAC，而本项目选择 PPO 落地
+- [ ] **第11周：PPO + PyTorch 实现（主实现）**
   - Policy Gradient → PPO 原理
   - PyTorch 实现 PPO
   - **迁移：PPO 在 EMS 环境训练**
-- [ ] **第12周：SAC + 三种RL算法对比**
-  - SAC 原理 + PyTorch 实现
-  - DQN/PPO/SAC 在 EMS 环境对比
-  - 产出：**RL-EMS 算法对比报告** ← 项目亮点2
+- [ ] **第12周：PPO-EMS 小闭环 + 对比报告**
+  - PPO 在简化 EMS 环境完成训练、验证和可视化
+  - 与 Rule/ECMS/MPC 做轻量对比，重点检查 SOC 约束和奖励函数
+  - 产出：**PPO-EMS 小项目报告** ← 项目亮点2
 
 ### 第4个月 — RL调优 + EMS场景落地
 
@@ -145,7 +172,7 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
   - 结果分析
 - [ ] **第15周：RL-EMS 综合项目**
   - 完整 RL-EMS 仿真链路
-  - DP / ECMS / MPC / RL 全景对比
+  - DP / ECMS / MPC / PPO 全景对比
   - **产出：EMS算法全景对比报告** ← 项目亮点3
 - [ ] **第16周：秋招启动**
   - 项目汇总 + 简历初稿
@@ -507,20 +534,21 @@ CATL 和 ATL 是两家独立公司，CATL 在福建宁德做动力电池+储能�
 **第9-12周 — RL 项目叙事**
 
 ```markdown
-练习目标：能讲清楚 DQN → PPO → SAC 的演进逻辑
+练习目标：能讲清楚 MDP/RL 基础、DQN/SAC概念，以及为什么本项目选择 PPO 落地
 ```
 
 - **关键追问准备**：
   - "为什么用RL做能量管理？"→ 不需要已知工况，可在线学习
-  - "PPO为什么比DQN好？"→ 连续动作空间 + 稳定性
+  - "为什么选PPO而不是DQN？"→ EMS动作接近连续控制，PPO更适合连续/离散化动作且训练稳定
+  - "SAC为什么不做完整实现？"→ SAC适合连续控制但实现和调参成本更高，当前秋招时间线优先跑通PPO闭环
   - "RL和DP比差多少？"→ 需要实验数据支撑
 
 **本月新增八股文：**
 ```
 Week 9:  MDP五元组 + Bellman方程
-Week 10: DQN + 经验回放 + 目标网络
+Week 10: DQN + 经验回放 + 目标网络（概念）
 Week 11: PPO + clipped surrogate objective
-Week 12: SAC + 最大熵RL
+Week 12: PPO-EMS奖励函数 + SAC最大熵思想（概念）
 ```
 
 ### 第4个月：综合表达 + 模拟面试

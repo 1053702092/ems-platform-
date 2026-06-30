@@ -1,0 +1,2 @@
+cycle,N_p,H2_raw_kg,SOC_end,SOC_delta_ref_minus_end,H2_eq_kg,s_factor,w_soc,beta_term,soc_deadband,soc_soft_min,w_soc_low,soc_final_tol,w_final_soc,w_pfc_slew
+nedc,50,0.08122080036174306,0.5740699136025613,0.025930086397438656,0.14026792876977712,130.0,1200.0,5000.0,0.015,0.57,20000.0,0.01,80000.0,0.001

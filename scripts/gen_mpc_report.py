@@ -9,8 +9,9 @@ import os
 import pandas as pd
 import numpy as np
 
-DOCS_DIR = r'F:\CLAUDE\research\ems-platform\docs'
-RESULTS_DIR = r'F:\CLAUDE\research\ems-platform\results'
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DOCS_DIR = os.path.join(PROJECT_ROOT, 'docs')
+RESULTS_DIR = os.path.join(PROJECT_ROOT, 'results')
 
 # ── helpers ──
 def h(doc, text, level=1):
@@ -97,8 +98,14 @@ day9 = importlib.util.module_from_spec(spec2)
 spec2.loader.exec_module(day9)
 ecms_sim = day9.ecms_sim
 
+def read_result_csv(cycle, n_p=50):
+    optimized_path = os.path.join(RESULTS_DIR, f'mpc_ems_optimized_{cycle}_np{n_p}.csv')
+    baseline_path = os.path.join(RESULTS_DIR, f'mpc_ems_{cycle}_np{n_p}.csv')
+    path = optimized_path if os.path.exists(optimized_path) else baseline_path
+    return pd.read_csv(path)
+
 # WLTC
-mpc = pd.read_csv(os.path.join(RESULTS_DIR, 'mpc_ems_wltc_np50.csv'))
+mpc = read_result_csv('wltc', 50)
 dp = pd.read_csv(os.path.join(RESULTS_DIR, 'dp_ems_wltc.csv'))
 rule = pd.read_csv(os.path.join(RESULTS_DIR, 'Day7_ems_sim_wltc.csv'))
 
@@ -107,7 +114,7 @@ P_load_wltc = vehicle_power(v_wltc, DT)
 ecms = ecms_sim(P_load_wltc, SOC_0=0.6, s_factor=130.0)
 
 # NEDC
-mpc_nedc = pd.read_csv(os.path.join(RESULTS_DIR, 'mpc_ems_nedc_np50.csv'))
+mpc_nedc = read_result_csv('nedc', 50)
 dp_nedc = pd.read_csv(os.path.join(RESULTS_DIR, 'dp_ems_nedc.csv'))
 v_nedc = pd.read_csv(os.path.join(RESULTS_DIR, 'nedc_cycle.csv'))['speed_kmh'].values
 P_load_nedc = vehicle_power(v_nedc, DT)
@@ -131,17 +138,46 @@ def fc_gt50(P_fc_arr):
     eff = [np.interp(p, [0,2,5,8,10,15,20,25,30], [0,0.28,0.40,0.48,0.50,0.55,0.53,0.48,0.40]) if p > 0 else 0 for p in P_fc_arr]
     return f'{sum(1 for e in eff if e > 0.50) / len(eff):.1%}'
 
+def soc_equiv_h2(raw_h2_kg, soc_end, soc_ref=0.6, s_factor=130.0):
+    """SOC 等效修正氢耗，用于 charge-sustaining 公平比较。"""
+    delta_soc = soc_ref - soc_end
+    e_bat_kwh = day8.Q_BAT * np.mean(day8.OCV_LU) * delta_soc / 1000.0
+    return raw_h2_kg + s_factor * e_bat_kwh / 1000.0
+
+def read_summary(cycle, n_p=50):
+    optimized_path = os.path.join(RESULTS_DIR, f'mpc_ems_optimized_{cycle}_np{n_p}_summary.csv')
+    baseline_path = os.path.join(RESULTS_DIR, f'mpc_ems_{cycle}_np{n_p}_summary.csv')
+    path = optimized_path if os.path.exists(optimized_path) else baseline_path
+    if os.path.exists(path):
+        return pd.read_csv(path).iloc[0].to_dict()
+    return None
+
+def gap_text(value, base, signed=True):
+    gap = (value / base - 1.0) * 100
+    return f'{gap:+.1f}%' if signed else f'{gap:.1f}%'
+
 # WLTC 指标
+mpc_summary_wltc = read_summary('wltc', 50)
+mpc_summary_nedc = read_summary('nedc', 50)
+using_optimized_wltc = mpc_summary_wltc is not None
 rule_wltc_h2 = calc_h2(rule['P_fc_kW'])[-1]
 dp_wltc_h2 = dp['m_H2_cumul_kg'].iloc[-1]
 ecms_wltc_h2 = ecms['m_H2_cumul_kg'][-1]
-mpc_wltc_h2 = mpc['m_H2_cumul_kg'].iloc[-1]
+mpc_wltc_h2 = mpc_summary_wltc['H2_raw_kg'] if mpc_summary_wltc else mpc['m_H2_cumul_kg'].iloc[-1]
+rule_soc_end = rule["SOC"].iloc[-1]
+dp_soc_end = dp["SOC"].iloc[-1]
+ecms_soc_end = ecms["SOC"][-1]
+mpc_soc_end = mpc_summary_wltc['SOC_end'] if mpc_summary_wltc else mpc["SOC"].iloc[-1]
+rule_wltc_h2_eq = soc_equiv_h2(rule_wltc_h2, rule_soc_end)
+dp_wltc_h2_eq = soc_equiv_h2(dp_wltc_h2, dp_soc_end)
+ecms_wltc_h2_eq = soc_equiv_h2(ecms_wltc_h2, ecms_soc_end)
+mpc_wltc_h2_eq = mpc_summary_wltc['H2_eq_kg'] if mpc_summary_wltc else soc_equiv_h2(mpc_wltc_h2, mpc_soc_end)
 
 # NEDC 指标
 rule_nedc_h2 = calc_h2(__import__('pandas').read_csv(os.path.join(RESULTS_DIR, 'Day7_ems_sim_nedc.csv'))['P_fc_kW'].values) if False else 0.1444
 dp_nedc_h2 = dp_nedc['m_H2_cumul_kg'].iloc[-1]
 ecms_nedc_h2 = ecms_nedc['m_H2_cumul_kg'][-1]
-mpc_nedc_h2 = mpc_nedc['m_H2_cumul_kg'].iloc[-1]
+mpc_nedc_h2 = mpc_summary_nedc['H2_raw_kg'] if mpc_summary_nedc else mpc_nedc['m_H2_cumul_kg'].iloc[-1]
 
 
 # ================================================================
@@ -179,20 +215,21 @@ h(doc, '1. 总体结论', level=1)
 
 p(doc, '本周完成 MPC 理论学习 + Python 实现 + N_p 敏感性分析 + 四方法对比。', bold=True)
 
-p(doc, 'MPC 在已知工况 + 能量平衡惩罚下表现优异，WLTC 氢耗 0.2011 kg，'
-       '比 ECMS (0.2292 kg, +0.2% vs DP) 和 DP (0.2287 kg) 都低。')
+p(doc, f'MPC 在已知工况 + 能量平衡惩罚下完成了可运行闭环。WLTC 原始氢耗为 {mpc_wltc_h2:.4f} kg，'
+       f'终端 SOC 为 {mpc_soc_end:.3f}；因此必须结合 SOC 修正后等效氢耗 H2_eq={mpc_wltc_h2_eq:.4f} kg 判断。'
+       '本次优化已加入 SOC 软下限、真实终点 SOC 欠差惩罚和 FC 功率变化惩罚，后续报告应以优化版结果复算排序。')
 
 tbl(doc,
     ['评估维度', '评分', '说明'],
     [
         ['MPC 理论理解',   '⭐⭐⭐⭐⭐  (5/5)', '掌握了 receding horizon、预测模型、终端代价、N_p 影响'],
-        ['算法正确性',     '⭐⭐⭐⭐☆  (4/5)', '发现并修复了"无等效因子导致电池放电作弊"的 bug'],
-        ['与 DP 接近度',   '⭐⭐⭐⭐⭐  (5/5)', 'MPC(0.2011) < DP(0.2287)，在已知工况下等价于全局 ECMS'],
-        ['N_p 敏感性分析', '⭐⭐⭐⭐⭐  (5/5)', '扫描 N_p=10→200，发现 N_p 越大氢耗越低，N_p≥50 后收敛'],
+        ['算法正确性',     '⭐⭐⭐⭐☆  (4/5)', '已修正电池能量透支口径，并加入 SOC 软约束/终点约束'],
+        ['与 DP 接近度',   '⭐⭐⭐☆☆  (3/5)', '需以 H2_raw + SOC_end + H2_eq 三指标复核，不能只看原始氢耗'],
+        ['N_p 敏感性分析', '⭐⭐⭐⭐☆  (4/5)', '扫描 N_p=10→200，后续应同步输出 H2_eq 曲线'],
         ['代码质量',       '⭐⭐⭐⭐☆  (4/5)', '结构清晰，支持多工况/N_p 扫描/四方法对比'],
         ['可视化',         '⭐⭐⭐⭐⭐  (5/5)', '四方法对比图 + N_p 敏感性图'],
     ])
-p(doc, f'  综合评分：约 4.5 / 5.0 — 理论与实现均完成，C++ 面向对象练习留待补充')
+p(doc, f'  综合评分：约 4.0 / 5.0 — 理论与实现已成型，当前重点是用优化版 MPC 重跑并复算公平指标')
 
 
 # ================================================================
@@ -239,9 +276,12 @@ tbl(doc,
     ['指标', '规则控制器', 'DP（基准）', 'ECMS (s=130)', 'MPC (N_p=50)'],
     [
         ['总氢耗 (kg)', f'{rule_wltc_h2:.4f}', f'{dp_wltc_h2:.4f}', f'{ecms_wltc_h2:.4f}', f'{mpc_wltc_h2:.4f}'],
-        ['相对 DP 差距', '+23.8%', '基准', '+0.2%', '-12.1%'],
-        ['SOC 初→终', f'0.60→{rule["SOC"].iloc[-1]:.3f}', f'0.60→{dp["SOC"].iloc[-1]:.3f}',
-         f'0.60→{ecms["SOC"][-1]:.3f}', f'0.60→{mpc["SOC"].iloc[-1]:.3f}'],
+        ['相对 DP 差距（原始）', gap_text(rule_wltc_h2, dp_wltc_h2), '基准',
+         gap_text(ecms_wltc_h2, dp_wltc_h2), gap_text(mpc_wltc_h2, dp_wltc_h2)],
+        ['SOC 初→终', f'0.60→{rule_soc_end:.3f}', f'0.60→{dp_soc_end:.3f}',
+         f'0.60→{ecms_soc_end:.3f}', f'0.60→{mpc_soc_end:.3f}'],
+        ['SOC修正氢耗 (kg)', f'{rule_wltc_h2_eq:.4f}', f'{dp_wltc_h2_eq:.4f}',
+         f'{ecms_wltc_h2_eq:.4f}', f'{mpc_wltc_h2_eq:.4f}'],
         ['FC 平均效率', f'{calc_eff(rule["P_fc_kW"]):.1%}', f'{calc_eff(dp["P_fc_kW"]):.1%}',
          f'{calc_eff(ecms["P_fc_kW"]):.1%}', f'{calc_eff(mpc["P_fc_kW"]):.1%}'],
         ['FC >50% 占比', fc_gt50(rule['P_fc_kW']), fc_gt50(dp['P_fc_kW']),
@@ -255,14 +295,14 @@ p(doc, '')
 h(doc, '3.1 关键发现', level=2)
 
 p(doc, '① ECMS (s=130) 在 WLTC 上比 DP 只差 0.2%，是最接近 DP 的实时策略。')
-p(doc, '② MPC 在已知工况 + N_p=50 时表现优于 DP，'
-       '这是因为 MPC 有等效因子 s=130 的能量引导，而 DP 的终端惩罚 β=10000 过于严格限制了 SOC 范围。'
-       '在"公平对比"下（去掉 DP 的超强终端惩罚），MPC 和 DP 应接近。')
-p(doc, '③ MPC 的 FC 效率 (24.6%) 低于 DP (30.3%)，说明 MPC 的局部优化不如 DP 全局。')
+p(doc, '② MPC 是否优于其他策略不能只看原始氢耗；如果 SOC_end 更低，说明部分收益来自电池能量透支。'
+       '公平对比应统一终端 SOC 或使用 SOC 等效修正氢耗。')
+p(doc, '③ 优化版 MPC 已把 SOC 软下限、终点 SOC 欠差惩罚、FC 功率变化惩罚写入控制器，'
+       '后续应重跑 WLTC/NEDC 后再给最终排序。')
 p(doc, '④ 规则控制器的 FC 效率最高 (40.4%) 是因为它强制 FC 在高效区间运行，'
        '代价是氢耗最高（+23.8% vs DP），属于"安全优先"策略。')
 
-verdict(doc, 'MPC 在已知工况下表现最优，但实际车辆上工况未知，ECMS 的 0.2% 差距更实用。', 'pass')
+verdict(doc, 'MPC 闭环实现通过；最终结论以优化版 H2_eq 和终端 SOC 复算结果为准。', 'warn')
 
 
 # ================================================================
@@ -284,13 +324,12 @@ tbl(doc,
     ])
 
 h(doc, '4.1 关键发现', level=2)
-p(doc, '① N_p → ∞ 时 MPC 趋近于"全局 ECMS"（带等效因子的全局优化），氢耗继续降低。')
-p(doc, '② N_p ≥ 50 时 SOC_end 稳定在 0.550，N_p=10~20 时 SOC_end=0.533（偏差更大）。')
-p(doc, '③ 这是 MPC + 能量平衡惩罚的特殊现象：MPC 在有 s 引导时等价于"滚动 ECMS"，'
-       'N_p 越大越接近全局最优的 s 分配。')
-p(doc, '④ 经验建议：N_p ≈ 30~60 时性价比最优，覆盖典型功率波动周期。')
+p(doc, '① 当前实现是“预测期内恒定 P_fc”的简化 MPC，不是完整的未来控制序列优化。')
+p(doc, '② N_p 增大时原始氢耗下降，但这必须和 SOC_end 一起解释；若 SOC_end 更低，说明部分收益来自电池能量透支。')
+p(doc, '③ 因此不能写“N_p→∞ 时趋近 DP/全局 ECMS”；只能写“在当前简化策略和当前代价函数下，N_p 增大改善了滚动搜索结果”。')
+p(doc, '④ 优化版扫描应同时画 H2_raw 与 H2_eq：若 H2_raw 下降但 H2_eq 不降，就不能解释为真实节氢。')
 
-verdict(doc, 'N_p=50 是合理选择，兼顾性能和计算量。', 'pass')
+verdict(doc, 'N_p=50 可作为当前实验点；第8周用优化版 SOC 修正指标重新确认。', 'warn')
 
 
 # ================================================================
@@ -310,8 +349,8 @@ tbl(doc,
     ])
 
 p(doc, '')
-p(doc, 'NEDC 上 MPC 比 DP 高约 +14%，主要因为 NEDC 功率较低，MPC 更容易过度依赖电池。'
-       '但在实际应用中，ECMS 在 NEDC 上仅 +4.5%，表现稳定。')
+p(doc, 'NEDC 上 MPC 比 DP 高约 +14%，说明同一组 N_p/s/终端惩罚不能稳定泛化到所有工况。'
+       'ECMS 在 NEDC 上 +4.5%，表现更稳定。')
 
 verdict(doc, 'MPC 在 NEDC 上偏离 DP 较多，说明 N_p 和 s 可能需要针对工况重新标定。', 'warn')
 
@@ -327,6 +366,7 @@ p(doc, '根因：代价函数只算了氢耗，没有能量平衡惩罚。MPC �
        '的氢耗接近 0（因为电池不直接烧氢），而 SOC 偏离惩罚只在 |dev| > 0.05 时触发且权重太小。')
 p(doc, '修复：在代价函数中加入 s×|P_bat|/3600 的能量平衡惩罚，'
        's 取自 ECMS 最优值 130 g/kWh。')
+p(doc, '进一步修正：若候选控制导致电池模型无实数解或 SOC 越界，应直接剔除候选，而不是用 clip 悄悄拉回边界。')
 
 h(doc, '6.2 day9_ecms_ems.py 语法错误', level=2)
 p(doc, '问题：`np.abs(P_b  at_candidates)` 中多出了 `P_b`。')
@@ -390,7 +430,7 @@ h(doc, '实际选择建议', level=2)
 tbl(doc,
     ['场景', '推荐'],
     [
-        ['工况可精确预测（固定路线公交）', 'MPC'],
+        ['工况可精确预测（固定路线公交）', '完整 MPC / 简化 MPC 均可尝试，但必须做 SOC 公平修正'],
         ['工况随机性强（城市配送）', 'ECMS'],
         ['算力充足 + 可加约束', 'MPC'],
         ['算力有限 + 鲁棒性优先', 'ECMS'],
@@ -411,6 +451,7 @@ tbl(doc,
         ['results/FourWay_compare_wltc.png', '图表', 'WLTC 四方法对比图'],
         ['results/MPC_np_sensitivity_wltc.png', '图表', 'N_p 敏感性曲线'],
         ['results/mpc_ems_wltc_np50.csv', '数据', 'WLTC MPC 仿真结果'],
+        ['results/mpc_ems_wltc_np50_summary.csv', '数据', '优化版 MPC 公平比较摘要（H2_raw/SOC_end/H2_eq）'],
         ['results/mpc_ems_nedc_np50.csv', '数据', 'NEDC MPC 仿真结果'],
         ['results/MPC_np_sensitivity_wltc.csv', '数据', 'N_p 扫描原始数据'],
     ])
@@ -420,9 +461,10 @@ tbl(doc,
 # 10. 第8周计划
 # ================================================================
 h(doc, '10. 第8周计划', level=1)
-p(doc, '① 补全 NEDC/CLTC 四方法对比（统一框架）')
-p(doc, '② 生成传统 EMS 策略对比报告（项目亮点1）')
-p(doc, '③ 开始第3个月：PyTorch 入门')
+p(doc, '① 先用优化版 MPC 重跑 WLTC/NEDC：输出 H2_raw、SOC_end、ΔSOC、SOC修正氢耗 H2_eq')
+p(doc, '② 补全 NEDC/CLTC 四方法对比（统一框架），所有方法统一 charge-sustaining 口径')
+p(doc, '③ 生成传统 EMS 策略对比报告（项目亮点1），结论不再只按原始氢耗排序')
+p(doc, '④ 开始第3个月：PyTorch 入门')
 
 # Save
 out_path = os.path.join(DOCS_DIR, 'MPC_第7周学习报告.docx')
