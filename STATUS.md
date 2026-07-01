@@ -1,7 +1,7 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-06-30
-> 当前阶段：**第7周完成 ✅** → 第8周即将开始（四方法对比报告）
+> 更新日期：2026-07-01
+> 当前阶段：**第8周：传统EMS四方法大对比报告 ✅** → 第9周即将开始（PyTorch 入门）
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
 >
@@ -128,17 +128,33 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
   - [x] BUGFIX：修复 day9_ecms_ems.py 中的 `abs(P_bat_candidates)` 语法错误
   - [x] 产出：`scripts/mpc_ems.py`（旧版保留）, `scripts/mpc_ems_optimized.py`（优化版）, `results/FourWay_compare_optimized_wltc.png`, `results/FourWay_compare_optimized_nedc.png`
   - [ ] **C++练习：面向对象基础**（待后续补充）
-- [ ] **第8周：四方法大对比报告**
-  - 统一指标框架 + 可视化
-  - 必须加入公平口径：原始氢耗 `H2_raw`、终端 SOC、SOC 偏差、SOC 修正后等效氢耗 `H2_eq`
-  - 结论口径：DP 是同目标同约束下的离线全局最优；若某策略原始氢耗低于 DP，优先检查终端 SOC/约束/目标函数是否一致
-  - 优化版 MPC 的 WLTC/NEDC 图、CSV、summary 和四方法 metrics 已生成；下一步写四方法报告，不要沿用“旧 MPC 原始氢耗低于 DP”的结论
+- [x] **第8周：四方法大对比报告（已完成 ✅）**
+  - [x] **CLTC 数据补全（2026-07-01）**
+    - 运行 `mpc_ems_optimized.py --cycle cltc --compare` 生成 CLTC 的 MPC 优化版结果
+    - 输出：`FourWay_compare_optimized_cltc.png`、`mpc_ems_optimized_cltc_np50.csv`、`mpc_ems_optimized_cltc_np50_summary.csv`
+  - [x] **统一指标框架 + 报告生成脚本**
+    - 脚本：`scripts/gen_week8_report.py`
+    - 公平口径：原始氢耗 `H2_raw`、终端 SOC、SOC 偏差、SOC 修正后等效氢耗 `H2_eq`
+    - WLTC/NEDC/CLTC 三工况 12 组数据统一计算
+    - 输出：`results/week8_fourway_metrics_complete.csv`
+  - [x] **结论口径校准**
+    - DP 是全局最优基准；旧 MPC 原始氢耗低于 DP 是因 SOC 透支假象
+    - 优化版 MPC 约束更严格后等效氢耗略高于 DP（WLTC +3.5%）
+  - [x] **四方法对比报告 docx**
+    - 输出：`docs/Week8_四方法大对比报告.docx`（1.1MB，含三工况对比图）
+    - 内容：方法论 / 结果总表 / 工况分析 / 关键发现 / 面试叙事要点 / 结论
   - [x] **面试项目包第一版（2026-06-30）**
     - 项目定位：燃料电池混合动力系统 EMS 能量管理策略对比与优化平台
-    - 已生成 `docs/EMS_面试项目_README.md`
-    - 已生成 `docs/EMS_简历与面试话术_第一版.md`
+    - 已生成 `docs/EMS_面试项目_README.docx`
+    - 已生成 `docs/EMS_简历与面试话术_第一版.docx`
     - 已生成 `docs/EMS_面试项目报告_第一版.docx`（含 WLTC/NEDC 对比图和四方法结果表）
-    - 面试叙事重点：不是宣称 MPC 超过 DP，而是强调发现 SOC 透支问题、建立公平评价口径、完成优化版 MPC 工程修正
+  - **三工况对比结果（原始氢耗 kg）：**
+    ```
+    WLTC:  Rule=0.2831 (+23.8%), DP=0.2287, ECMS=0.2292 (+0.2%),  MPC=0.2432 (+6.3%)
+    NEDC:  Rule=0.1444 (+45.9%), DP=0.0990, ECMS=0.1034 (+4.4%),  MPC=0.0812 (-18.0%)
+    CLTC:  Rule=0.2074 (+43.2%), DP=0.1448, ECMS=0.1255 (-13.3%), MPC=0.1042 (-28.0%)
+    ```
+    △DP 为原始氢耗差距，ECMS 不变，MPC 在 NEDC/CLTC 原始氢耗低于 DP 需用等效氢耗公平比较
   - 产出：**传统EMS策略对比报告** ← 项目亮点1
 
 ### 第3个月 — PyTorch + 强化学习（A→C过渡，PPO为主）
@@ -596,7 +612,7 @@ Week 12: PPO-EMS奖励函数 + SAC最大熵思想（概念）
 - **6/12（Week 5）**：ECMS原理+实现完成 📌 恒定ECMS基准已建立
 - **6/18（Week 6）**：ECMS调优 + 多工况验证 + C++入门完成 ✅
 - **7/3（Week 7）**：MPC 原理+实现完成 📌 N_p敏感性分析 + 四方法对比
-- **7/19（Week 8）**：传统EMS四方法对比完成 📌 可投递
+- **7/1（Week 8）**：传统EMS四方法对比报告完成 ✅ 项目亮点1
 - **8月底（Week 12）**：RL-EMS完成 📌 简历强度够
 - **9-10月**：边投边面
 
