@@ -156,6 +156,10 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
     ```
     △DP 为原始氢耗差距，ECMS 不变，MPC 在 NEDC/CLTC 原始氢耗低于 DP 需用等效氢耗公平比较
   - 产出：**传统EMS策略对比报告** ← 项目亮点1
+  - **calibrate_s_from_dp 逐行原理解析文档（2026-07-01）**
+    - 文档：`docs/calibrate_s_from_dp_逐行分析.docx`（45 KB）
+    - 内容：从 PMP Hamiltonian 到等效因子的逐行推导、4 个函数的逐行分析、四张子图解读、A-ECMS 理论意义
+    - 生成脚本：`scripts/gen_calibrate_s_doc.py`
 
 ### 第3个月 — PyTorch + 强化学习（A→C过渡，PPO为主）
 
