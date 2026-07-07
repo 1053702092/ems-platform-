@@ -1,7 +1,7 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-07-01
-> 当前阶段：**第8周：传统EMS四方法大对比报告 ✅** → 第9周即将开始（PyTorch 入门）
+> 更新日期：2026-07-07
+> 当前阶段：**第8周：传统EMS四方法大对比报告 ✅ v2（含 MPC+EKF SOC 估计集成）** → 第9周即将开始（PyTorch 入门）
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
 >
@@ -160,6 +160,37 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
     - 文档：`docs/calibrate_s_from_dp_逐行分析.docx`（45 KB）
     - 内容：从 PMP Hamiltonian 到等效因子的逐行推导、4 个函数的逐行分析、四张子图解读、A-ECMS 理论意义
     - 生成脚本：`scripts/gen_calibrate_s_doc.py`
+  - [x] **MPC+EKF SOC 估计集成（2026-07-07）** ⭐ 新增 v3
+    - 从 `figures/` 文件夹提取 EKF/AEKF 代码，集成到 MPC 主循环
+    - 新文件：`scripts/mpc_ems_ekf.py`（1017 行）
+    - 设计：策略模式（SOCEstimator 基类 + OpenLoop/EKF/AEKF 三个子类）
+    - 保留优化版全部工程改进（SOC软约束、SlewRate惩罚、后备容错）
+    - 新增：三路 SOC 并行追踪（真实/估计/开环）、传感器偏置/噪声仿真、SOC_RMSE 指标
+    - 实测结果（WLTC, N_p=50, 2A 偏置）：
+      - EKF SOC RMSE = 0.0024（开环 0.0116，改进 4.8×）
+      - 终点 SOC 误差 = 0.0015（开环 0.0201，改进 13×）
+      - 计算开销增量 < 0.5%
+  - [x] **三工况 MPC+EKF 验证（2026-07-07）**
+    ```
+      WLTC: H2_raw=0.2198 kg, SOC_end=0.572, SOC_RMSE=0.0024
+      NEDC: H2_raw=0.0714 kg, SOC_end=0.572, SOC_RMSE=0.0024
+      CLTC: H2_raw=0.1033 kg, SOC_end=0.573, SOC_RMSE=0.0024
+    ```
+    - EKF RMSE 三工况稳定 0.0024，不受工况类型影响
+    - 相比 MPC_optimized：氢耗间接降低 3-12%（因 SOC 准确→优化决策正确）
+  - [x] **Week8 报告更新至 v2（含 MPC+EKF）**
+    - `docs/Week8_四方法大对比报告.docx` 更新至 1.5MB（含新图）
+    - 新增：MPC_EKF 作为第 5 种方法、SOC 估计精度章节、EKF 原理简述
+  - [x] **产出 DOCX 文档（3 份）**
+    - `docs/MPC_EMS_EKF集成方案与原理分析.docx`（51 KB，集成+原理+效果总结）
+    - `docs/MPC_EMS_EKF_逐行代码原理分析.docx`（55 KB，mpc_ems_ekf.py 全文件逐行分析）
+    - `docs/MPC_EMS_逐行代码原理分析.docx`（62 KB，基础版+优化版逐行分析）
+  - [x] **所有结果已保存至 GitHub**
+    - CSV 结果、PNG 对比图、summary 汇总文件
+  - [x] **MPC_精细化原理解析 公式修复（2026-07-07）**
+    - 原 docx 中 LaTeX 公式存储为纯文本（Word 显示乱码）
+    - 用 pandoc 3.9 重新生成，所有 253 个公式转为 Word OMML 原生方程式（可编辑）
+    - 工具：pypandoc_binary（内置 pandoc）+ `--mathml` 参数
 
 ### 第3个月 — PyTorch + 强化学习（A→C过渡，PPO为主）
 

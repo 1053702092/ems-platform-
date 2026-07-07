@@ -1,0 +1,2 @@
+cycle,N_p,estimator,current_bias,H2_raw_kg,SOC_end_true,SOC_end_est,SOC_ref_minus_end,H2_eq_kg,SOC_rmse,SOC_open_rmse,s_factor,w_soc,beta_term,soc_deadband,soc_soft_min,w_soc_low,soc_final_tol,w_final_soc,w_pfc_slew,soc_estimator
+wltc,50,ekf,2.0,0.21980497030827256,0.5723796727144342,0.5708392714550418,0.027620327285565738,0.28270105892538666,0.0024430105046383105,0.011595618203681463,130.0,1200.0,5000.0,0.015,0.57,20000.0,0.01,80000.0,0.001,ekf
