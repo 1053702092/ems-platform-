@@ -1,0 +1,479 @@
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - link [ref=e8] [cursor=pointer]:
+        - /url: "#/index"
+        - img [ref=e9]
+      - paragraph [ref=e11] [cursor=pointer]: 招聘网站
+    - menu [ref=e12]:
+      - menuitem "首页" [ref=e13] [cursor=pointer]
+      - menuitem "招聘公告" [ref=e14] [cursor=pointer]
+      - menuitem "校园招聘" [ref=e15] [cursor=pointer]
+      - menuitem "社会招聘" [ref=e16] [cursor=pointer]
+      - menuitem "招聘动态" [ref=e17] [cursor=pointer]
+      - menuitem "应聘指南" [ref=e18] [cursor=pointer]
+      - menuitem "联系我们" [ref=e19] [cursor=pointer]
+    - button "登录/注册" [ref=e20] [cursor=pointer]:
+      - generic: 登录/注册
+  - generic [ref=e67]:
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - combobox [ref=e74] [cursor=pointer]:
+          - generic "学历不限" [ref=e76]
+          - 'generic "图标: down" [ref=e78]':
+            - img [ref=e79]
+        - generic [ref=e84]:
+          - img [ref=e86]
+          - textbox "请输入关键字进行搜索" [ref=e87]
+          - paragraph [ref=e89] [cursor=pointer]: 搜索
+      - generic [ref=e91]: 热门职位：
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - heading "专业筛选" [level=4] [ref=e97]
+          - combobox [ref=e99] [cursor=pointer]:
+            - generic "学历类型" [ref=e101]
+            - 'generic "图标: down" [ref=e103]':
+              - img [ref=e104]
+        - list [ref=e109]:
+          - listitem [ref=e110] [cursor=pointer]:
+            - generic [ref=e111]:
+              - paragraph [ref=e112]: 工学
+              - generic [ref=e113]: 电气类
+              - generic [ref=e114]: 能源动力类
+              - generic [ref=e115]: 计算机类
+          - listitem [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]:
+              - paragraph [ref=e119]: 理学
+              - generic [ref=e120]: 数学类
+              - generic [ref=e121]: 物理学类
+              - generic [ref=e122]: 化学类
+          - listitem [ref=e124] [cursor=pointer]:
+            - generic [ref=e125]:
+              - paragraph [ref=e126]: 经济学
+              - generic [ref=e127]: 经济学类
+              - generic [ref=e128]: 财政学类
+              - generic [ref=e129]: 金融学类
+          - listitem [ref=e131] [cursor=pointer]:
+            - generic [ref=e132]:
+              - paragraph [ref=e133]: 管理学
+              - generic [ref=e134]: 工商管理类
+              - generic [ref=e135]: 公共管理类
+              - generic [ref=e136]: 物流管理与工程类
+          - listitem [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]:
+              - paragraph [ref=e140]: 法学
+              - generic [ref=e141]: 法学类
+              - generic [ref=e142]: 政治学类
+              - generic [ref=e143]: 马克思主义理论类
+          - listitem [ref=e145] [cursor=pointer]:
+            - generic [ref=e146]:
+              - paragraph [ref=e147]: 文学
+              - generic [ref=e148]: 中国语言文学类
+              - generic [ref=e149]: 新闻传播学类
+              - generic [ref=e150]: 外国语言文学类
+          - listitem [ref=e152] [cursor=pointer]:
+            - generic [ref=e153]:
+              - paragraph [ref=e154]: 历史学
+              - generic [ref=e155]: 历史学类
+          - listitem [ref=e157] [cursor=pointer]:
+            - generic [ref=e158]:
+              - paragraph [ref=e159]: 教育学
+              - generic [ref=e160]: 教育学类
+              - generic [ref=e161]: 体育学类
+          - listitem [ref=e163] [cursor=pointer]:
+            - generic [ref=e164]:
+              - paragraph [ref=e165]: 农学
+              - generic [ref=e166]: 植物生产类
+              - generic [ref=e167]: 自然保护与环境生态类
+              - generic [ref=e168]: 动物生产类
+          - listitem [ref=e170] [cursor=pointer]:
+            - generic [ref=e171]:
+              - paragraph [ref=e172]: 哲学
+              - generic [ref=e173]: 哲学类
+          - listitem [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]:
+              - paragraph [ref=e177]: 医学
+              - generic [ref=e178]: 临床医学类
+              - generic [ref=e179]: 中医学类
+              - generic [ref=e180]: 中药学类
+          - listitem [ref=e182] [cursor=pointer]:
+            - generic [ref=e183]:
+              - paragraph [ref=e184]: 艺术学
+              - generic [ref=e185]: 艺术学理论类
+              - generic [ref=e186]: 音乐与舞蹈学类
+              - generic [ref=e187]: 戏剧与影视学类
+          - listitem [ref=e189] [cursor=pointer]:
+            - paragraph [ref=e191]: 其他
+        - paragraph [ref=e194]: 1/4
+      - generic [ref=e207]:
+        - generic [ref=e208] [cursor=pointer]: ←
+        - generic [ref=e215] [cursor=pointer]: →
+        - list [ref=e217]:
+          - listitem [ref=e218]:
+            - button "1" [ref=e219] [cursor=pointer]
+          - listitem [ref=e220]:
+            - button "2" [ref=e221] [cursor=pointer]
+          - listitem [ref=e222]:
+            - button "3" [ref=e223] [cursor=pointer]
+          - listitem [ref=e224]:
+            - button "4" [ref=e225] [cursor=pointer]
+          - listitem [ref=e226]:
+            - button "5" [ref=e227] [cursor=pointer]
+          - listitem [ref=e228]:
+            - button "6" [ref=e229] [cursor=pointer]
+          - listitem [ref=e230]:
+            - button "7" [ref=e231] [cursor=pointer]
+          - listitem [ref=e232]:
+            - button "8" [ref=e233] [cursor=pointer]
+          - listitem [ref=e234]:
+            - button "9" [ref=e235] [cursor=pointer]
+          - listitem [ref=e236]:
+            - button "10" [ref=e237] [cursor=pointer]
+          - listitem [ref=e238]:
+            - button "11" [ref=e239] [cursor=pointer]
+          - listitem [ref=e240]:
+            - button "12" [ref=e241] [cursor=pointer]
+          - listitem [ref=e242]:
+            - button "13" [ref=e243] [cursor=pointer]
+          - listitem [ref=e244]:
+            - button "14" [ref=e245] [cursor=pointer]
+          - listitem [ref=e246]:
+            - button "15" [ref=e247] [cursor=pointer]
+          - listitem [ref=e248]:
+            - button "16" [ref=e249] [cursor=pointer]
+          - listitem [ref=e250]:
+            - button "17" [ref=e251] [cursor=pointer]
+          - listitem [ref=e252]:
+            - button "18" [ref=e253] [cursor=pointer]
+    - generic [ref=e256]:
+      - generic [ref=e257]:
+        - generic [ref=e258]: 公告ANNOUNCEMENT
+        - img [ref=e260]
+      - generic [ref=e263]:
+        - generic [ref=e267]:
+          - generic [ref=e270]:
+            - generic [ref=e271] [cursor=pointer]: 中国南方电网有限责任公司超高压输电公司2026年春季校园招聘公告
+            - generic [ref=e272]: 2026-03-13
+          - generic [ref=e275]:
+            - generic [ref=e276] [cursor=pointer]: 中国南方电网有限责任公司2026年春季校园招聘公告
+            - generic [ref=e277]: 2026-03-13
+          - generic [ref=e280]:
+            - generic [ref=e281] [cursor=pointer]: 广西电网有限责任公司2026年春季校园招聘公告
+            - generic [ref=e282]: 2026-03-13
+          - generic [ref=e285]:
+            - generic [ref=e286] [cursor=pointer]: 贵州电网有限责任公司2026年春季校园招聘公告
+            - generic [ref=e287]: 2026-03-13
+          - generic [ref=e290]:
+            - generic [ref=e291] [cursor=pointer]: 南方电网储能股份有限公司2026年春季校园招聘公告
+            - generic [ref=e292]: 2026-03-13
+          - generic [ref=e295]:
+            - generic [ref=e296] [cursor=pointer]: 中国南方电网有限责任公司超高压输电公司2026年春季校园招聘公告
+            - generic [ref=e297]: 2026-03-13
+          - generic [ref=e300]:
+            - generic [ref=e301] [cursor=pointer]: 中国南方电网有限责任公司2026年春季校园招聘公告
+            - generic [ref=e302]: 2026-03-13
+          - generic [ref=e305]:
+            - generic [ref=e306] [cursor=pointer]: 广西电网有限责任公司2026年春季校园招聘公告
+            - generic [ref=e307]: 2026-03-13
+          - generic [ref=e310]:
+            - generic [ref=e311] [cursor=pointer]: 贵州电网有限责任公司2026年春季校园招聘公告
+            - generic [ref=e312]: 2026-03-13
+          - generic [ref=e315]:
+            - generic [ref=e316] [cursor=pointer]: 南方电网储能股份有限公司2026年春季校园招聘公告
+            - generic [ref=e317]: 2026-03-13
+          - generic [ref=e320]:
+            - generic [ref=e321] [cursor=pointer]: 中国南方电网有限责任公司超高压输电公司2026年春季校园招聘公告
+            - generic [ref=e322]: 2026-03-13
+        - generic [ref=e323]: 了解更多 >
+    - generic [ref=e326]:
+      - generic [ref=e327]:
+        - generic [ref=e328]: 招聘岗位RECRUITMENT
+        - img [ref=e330]
+      - generic [ref=e333]:
+        - generic [ref=e334] [cursor=pointer]:
+          - img [ref=e335]
+          - text: 电气类业务
+        - generic [ref=e336] [cursor=pointer]:
+          - img [ref=e337]
+          - text: 发电业务（非电气类专业）
+        - generic [ref=e338] [cursor=pointer]:
+          - img [ref=e339]
+          - text: 输电业务（非电气类专业）
+        - generic [ref=e340] [cursor=pointer]:
+          - img [ref=e341]
+          - text: 配电业务（非电气类专业）
+        - generic [ref=e342] [cursor=pointer]:
+          - img [ref=e343]
+          - text: 信息通信业务
+        - generic [ref=e344] [cursor=pointer]:
+          - img [ref=e345]
+          - text: 规划基建业务
+        - generic [ref=e346] [cursor=pointer]:
+          - img [ref=e347]
+          - text: 供应链业务
+        - generic [ref=e348] [cursor=pointer]:
+          - img [ref=e349]
+          - text: 机械测控业务
+        - generic [ref=e350] [cursor=pointer]:
+          - img [ref=e351]
+          - text: 环化材料业务
+        - generic [ref=e352] [cursor=pointer]:
+          - img [ref=e353]
+          - text: 安全类业务
+        - generic [ref=e354] [cursor=pointer]:
+          - img [ref=e355]
+          - text: 国际化人才(电力生产方向)
+        - generic [ref=e356] [cursor=pointer]:
+          - img [ref=e357]
+          - text: 行政业务
+        - generic [ref=e358] [cursor=pointer]:
+          - img [ref=e359]
+          - text: 企管业务
+        - generic [ref=e360] [cursor=pointer]:
+          - img [ref=e361]
+          - text: 人力资源业务
+        - generic [ref=e362] [cursor=pointer]:
+          - img [ref=e363]
+          - text: 经济财会业务
+        - generic [ref=e364] [cursor=pointer]:
+          - img [ref=e365]
+          - text: 市场营销业务
+        - generic [ref=e366] [cursor=pointer]:
+          - img [ref=e367]
+          - text: 国际业务
+        - generic [ref=e368] [cursor=pointer]:
+          - img [ref=e369]
+          - text: 法律业务
+        - generic [ref=e370] [cursor=pointer]:
+          - img [ref=e371]
+          - text: 政工业务
+        - generic [ref=e372] [cursor=pointer]:
+          - img [ref=e373]
+          - text: 国际化人才(法律方向)
+        - generic [ref=e374] [cursor=pointer]:
+          - img [ref=e375]
+          - text: 国际化人才(国际业务方向)
+        - generic [ref=e376] [cursor=pointer]:
+          - img [ref=e377]
+          - text: 国际化人才(财会金融方向)
+        - generic [ref=e378] [cursor=pointer]:
+          - img [ref=e379]
+          - text: 其他
+        - generic [ref=e380] [cursor=pointer]:
+          - img [ref=e381]
+          - text: 核保核赔业务
+      - generic [ref=e382]:
+        - paragraph [ref=e395]: 暂无数据
+        - generic [ref=e399] [cursor=pointer]: 查看更多
+    - generic [ref=e402]:
+      - generic [ref=e404]:
+        - generic [ref=e405]: 招聘单位RECRUITMENT UNIT
+        - img [ref=e407]
+      - generic [ref=e408]:
+        - generic [ref=e409]:
+          - generic [ref=e410]:
+            - img [ref=e412]
+            - generic [ref=e413]: 直属机构
+          - generic [ref=e416]:
+            - img [ref=e418]
+            - img [ref=e420]
+            - paragraph [ref=e421]: 中国南方电力调度控制中心
+        - generic [ref=e422]:
+          - generic [ref=e423]:
+            - img [ref=e425]
+            - generic [ref=e426]: 管制业务单位
+          - generic [ref=e428]:
+            - generic [ref=e429]:
+              - img [ref=e431]
+              - img [ref=e433]
+              - paragraph [ref=e434]: 中国南方电网有限责任公司超高压输电公司
+            - generic [ref=e435]:
+              - img [ref=e437]
+              - img [ref=e439]
+              - paragraph [ref=e440]: 广东电网有限责任公司
+            - generic [ref=e441]:
+              - img [ref=e443]
+              - img [ref=e445]
+              - paragraph [ref=e446]: 广西电网有限责任公司
+            - generic [ref=e447]:
+              - img [ref=e449]
+              - img [ref=e451]
+              - paragraph [ref=e452]: 云南电网有限责任公司
+            - generic [ref=e453]:
+              - img [ref=e455]
+              - img [ref=e457]
+              - paragraph [ref=e458]: 贵州电网有限责任公司
+            - generic [ref=e459]:
+              - img [ref=e461]
+              - img [ref=e463]
+              - paragraph [ref=e464]: 海南电网有限责任公司
+            - generic [ref=e465]:
+              - img [ref=e467]
+              - img [ref=e469]
+              - paragraph [ref=e470]: 深圳供电局有限公司
+        - generic [ref=e471]:
+          - generic [ref=e472]:
+            - img [ref=e474]
+            - generic [ref=e475]: 新兴业务单位
+          - generic [ref=e477]:
+            - generic [ref=e478]:
+              - img [ref=e480]
+              - img [ref=e482]
+              - paragraph [ref=e483]: 南方电网储能股份有限公司
+            - generic [ref=e484]:
+              - img [ref=e486]
+              - img [ref=e488]
+              - paragraph [ref=e489]: 南方电网产业发展集团有限责任公司
+            - generic [ref=e490]:
+              - img [ref=e492]
+              - img [ref=e494]
+              - paragraph [ref=e495]: 南方鼎元资产运营有限责任公司
+            - generic [ref=e496]:
+              - img [ref=e498]
+              - img [ref=e500]
+              - paragraph [ref=e501]: 南方电网综合能源股份有限公司
+        - generic [ref=e502]:
+          - generic [ref=e503]:
+            - img [ref=e505]
+            - generic [ref=e506]: 金融业务单位
+          - generic [ref=e508]:
+            - generic [ref=e509]:
+              - img [ref=e511]
+              - img [ref=e513]
+              - paragraph [ref=e514]: 南方电网资本控股有限公司
+            - generic [ref=e515]:
+              - img [ref=e517]
+              - img [ref=e519]
+              - paragraph [ref=e520]:
+                - text: 南方电网财务有限公司
+                - text: （南方电网国际金融有限公司）
+            - generic [ref=e521]:
+              - img [ref=e523]
+              - img [ref=e525]
+              - paragraph [ref=e526]: 鼎和财产保险股份有限公司
+        - generic [ref=e527]:
+          - generic [ref=e528]:
+            - img [ref=e530]
+            - generic [ref=e531]: 国际业务单位
+          - generic [ref=e533]:
+            - generic [ref=e534]:
+              - img [ref=e536]
+              - img [ref=e538]
+              - paragraph [ref=e539]:
+                - text: 南方电网国际有限责任公司
+                - text: （南方电网国际（香港）有限公司）
+            - generic [ref=e540]:
+              - img [ref=e542]
+              - img [ref=e544]
+              - paragraph [ref=e545]: 南方电网澜湄国际能源有限责任公司
+        - generic [ref=e546]:
+          - generic [ref=e547]:
+            - img [ref=e549]
+            - generic [ref=e550]: 共享平台单位
+          - generic [ref=e552]:
+            - generic [ref=e553]:
+              - img [ref=e555]
+              - img [ref=e557]
+              - paragraph [ref=e558]: 中国南方电网有限责任公司人才发展中心
+            - generic [ref=e559]:
+              - img [ref=e561]
+              - img [ref=e563]
+              - paragraph [ref=e564]: 中国南方电网有限责任公司北京分公司
+            - generic [ref=e565]:
+              - img [ref=e567]
+              - img [ref=e569]
+              - paragraph [ref=e570]: 中国南方电网有限责任公司共享运营公司
+            - generic [ref=e571]:
+              - img [ref=e573]
+              - img [ref=e575]
+              - paragraph [ref=e576]:
+                - text: 南网用户生态运营公司
+                - text: （南网客户服务中心）
+            - generic [ref=e577]:
+              - img [ref=e579]
+              - img [ref=e581]
+              - paragraph [ref=e582]: 南方电网数字电网集团有限公司
+            - generic [ref=e583]:
+              - img [ref=e585]
+              - img [ref=e587]
+              - paragraph [ref=e588]: 南方电网供应链集团有限公司
+            - generic [ref=e589]:
+              - img [ref=e591]
+              - img [ref=e593]
+              - paragraph [ref=e594]:
+                - text: 南方电网能源发展研究院有限责任公司
+                - text: （南方电网改革发展研究中心）
+            - generic [ref=e595]:
+              - img [ref=e597]
+              - img [ref=e599]
+              - paragraph [ref=e600]: 南方电网科学研究院有限责任公司
+            - generic [ref=e601]:
+              - img [ref=e603]
+              - img [ref=e605]
+              - paragraph [ref=e606]: 广州电力交易中心有限责任公司
+            - generic [ref=e607]:
+              - img [ref=e609]
+              - img [ref=e611]
+              - paragraph [ref=e612]: 南方电网数字传媒科技有限公司
+            - generic [ref=e613]:
+              - img [ref=e615]
+              - img [ref=e617]
+              - paragraph [ref=e618]: 南方电网新型电力系统（北京）研究院有限公司
+    - generic [ref=e621]:
+      - generic [ref=e623]:
+        - generic [ref=e624]: 招聘流程RECRUITMENT PROCESS
+        - img [ref=e626]
+      - generic [ref=e628]:
+        - generic [ref=e630]:
+          - paragraph [ref=e632]: 系统注册
+          - 'generic "图标: right" [ref=e634]':
+            - img [ref=e635]
+        - generic [ref=e638]:
+          - paragraph [ref=e640]: 简历填写并确认
+          - 'generic "图标: right" [ref=e642]':
+            - img [ref=e643]
+        - generic [ref=e646]:
+          - paragraph [ref=e648]: 投递志愿
+          - 'generic "图标: right" [ref=e650]':
+            - img [ref=e651]
+        - generic [ref=e654]:
+          - paragraph [ref=e656]: 统一笔试
+          - 'generic "图标: right" [ref=e658]':
+            - img [ref=e659]
+        - generic [ref=e662]:
+          - paragraph [ref=e664]: 面试
+          - 'generic "图标: right" [ref=e666]':
+            - img [ref=e667]
+        - generic [ref=e670]:
+          - paragraph [ref=e672]: offer发放
+          - 'generic "图标: right" [ref=e674]':
+            - img [ref=e675]
+        - generic [ref=e678]:
+          - paragraph [ref=e680]: 名单公示
+          - 'generic "图标: right" [ref=e682]':
+            - img [ref=e683]
+        - paragraph [ref=e688]: 签约录用
+  - img [ref=e690] [cursor=pointer]
+  - generic [ref=e692]:
+    - generic [ref=e693]:
+      - generic [ref=e694]:
+        - img [ref=e696]
+        - generic [ref=e697]: 公司首页
+      - generic [ref=e698]:
+        - img [ref=e700]
+        - generic [ref=e701]: 常见问题
+      - generic [ref=e702]:
+        - img [ref=e704]
+        - generic [ref=e705]: 官方微博
+      - generic [ref=e707]:
+        - img [ref=e709]
+        - generic [ref=e710]: 官方微信
+      - generic [ref=e712]:
+        - img [ref=e714]
+        - generic [ref=e715]: APP下载
+    - paragraph [ref=e716]: 中国南方电网有限责任公司版权所有Copyight@2003-2026ChinaSouthernPowerGrid(csg).Allrightsreserved
+    - paragraph [ref=e717]: 技术支持：南方电网数字电网集团有限公司
+    - paragraph [ref=e718] [cursor=pointer]:
+      - text: ICP备：06044847号
+      - img [ref=e719]

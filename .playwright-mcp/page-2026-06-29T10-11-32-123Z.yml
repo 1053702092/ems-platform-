@@ -1,0 +1,525 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e4]:
+    - link "猎聘" [ref=e5] [cursor=pointer]:
+      - /url: https://www.liepin.com
+      - img "猎聘" [ref=e6]
+    - list [ref=e7]:
+      - listitem [ref=e8]:
+        - link "首页" [ref=e9] [cursor=pointer]:
+          - /url: https://www.liepin.com
+      - listitem [ref=e10]:
+        - link "职位" [ref=e11] [cursor=pointer]:
+          - /url: https://www.liepin.com/zhaopin/?inputFrom=head_navigation&scene=init&workYearCode=0&ckId=zspta5g808z4mndgp8jazkcf312muh7a
+      - listitem [ref=e12]:
+        - link "校园" [ref=e13] [cursor=pointer]:
+          - /url: https://www.liepin.com/campus/?t=1
+      - listitem [ref=e14]:
+        - link "海归" [ref=e15] [cursor=pointer]:
+          - /url: https://www.liepin.com/returnee/
+      - listitem [ref=e16]:
+        - link "简历优化" [ref=e18] [cursor=pointer]:
+          - /url: https://vas.liepin.com/v/view-intro?utm_content=pcjuhexiala&imscid=R000014437
+      - listitem [ref=e19]: 猎聘APP
+    - list [ref=e21]:
+      - listitem [ref=e22]:
+        - link "我是猎头" [ref=e23] [cursor=pointer]:
+          - /url: https://h.liepin.com/?imscid=R002017570#sfrom=click-pc_homepage-front_navigation-hunter_new
+      - listitem [ref=e24]:
+        - link "我是招聘方" [ref=e25] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - img [ref=e26]:
+          - generic [ref=e29]: NEW
+      - listitem [ref=e30]: 登录/注册
+  - generic [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e35]: 储能BMS算法工程师
+        - generic [ref=e36]: 15-20k
+      - generic [ref=e37]:
+        - text: 宁德
+        - text: 3年以上
+        - text: 统招本科
+    - generic [ref=e40]:
+      - img "下线图片" [ref=e41]
+      - link "浏览更多优质职位" [ref=e42] [cursor=pointer]:
+        - /url: https://www.liepin.com/zhaopin/?dq=090100010&key=储能BMS算法工程师
+  - main [ref=e43]:
+    - generic [ref=e44]:
+      - generic [ref=e45] [cursor=pointer]: 浏览原职位详情
+      - generic [ref=e46]:
+        - heading "猜你喜欢" [level=3] [ref=e47]
+        - generic [ref=e48]:
+          - generic [ref=e50]:
+            - generic [ref=e52]:
+              - link "BMS算法开发工程师 【 芜湖-弋江区 】 15-28k·15薪" [ref=e53] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1980528355.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_80528355%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e54]:
+                  - generic [ref=e55]:
+                    - generic "BMS算法开发工程师" [ref=e56]
+                    - generic [ref=e57]:
+                      - generic [ref=e58]: 【
+                      - generic [ref=e59]: 芜湖-弋江区
+                      - generic [ref=e60]: 】
+                  - generic [ref=e61]: 15-28k·15薪
+              - link "奇瑞汽车 奇瑞汽车 整车制造 已上市 10000人以上" [ref=e63] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/2171297/
+                - generic [ref=e65]:
+                  - img "奇瑞汽车" [ref=e67]
+                  - generic [ref=e68]: 奇瑞汽车
+                  - generic [ref=e69]: 整车制造 已上市 10000人以上
+            - generic [ref=e73]:
+              - generic [ref=e74]: 罗先生
+              - generic [ref=e75]: HRBP
+          - generic [ref=e77]:
+            - generic [ref=e79]:
+              - link "电池算法工程师 【 北京-朝阳区 】 20-40k·15薪" [ref=e80] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1975974895.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_75974895%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e81]:
+                  - generic [ref=e82]:
+                    - generic "电池算法工程师" [ref=e83]
+                    - generic [ref=e84]:
+                      - generic [ref=e85]: 【
+                      - generic [ref=e86]: 北京-朝阳区
+                      - generic [ref=e87]: 】
+                  - generic [ref=e88]: 20-40k·15薪
+              - link "经纬恒润 经纬恒润 汽车零部件及配件 已上市 5000-10000人" [ref=e90] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/973634/
+                - generic [ref=e92]:
+                  - img "经纬恒润" [ref=e94]
+                  - generic [ref=e95]: 经纬恒润
+                  - generic [ref=e96]: 汽车零部件及配件 已上市 5000-10000人
+            - generic [ref=e100]:
+              - generic [ref=e101]: 杨女士
+              - generic [ref=e102]: HR
+          - generic [ref=e104]:
+            - generic [ref=e106]:
+              - link "应用层软件工程师 【 宁德-蕉城区 】 15-30k·17薪" [ref=e107] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1977073707.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_77073707%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e108]:
+                  - generic [ref=e109]:
+                    - generic "应用层软件工程师" [ref=e110]
+                    - generic [ref=e111]:
+                      - generic [ref=e112]: 【
+                      - generic [ref=e113]: 宁德-蕉城区
+                      - generic [ref=e114]: 】
+                  - generic [ref=e115]: 15-30k·17薪
+              - link "宁德时代 宁德时代 新能源 已上市 10000人以上" [ref=e117] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/8768998/
+                - generic [ref=e119]:
+                  - img "宁德时代" [ref=e121]
+                  - generic [ref=e122]: 宁德时代
+                  - generic [ref=e123]: 新能源 已上市 10000人以上
+            - generic [ref=e127]:
+              - generic [ref=e128]: 丁先生
+              - generic [ref=e129]: HR
+          - generic [ref=e131]:
+            - generic [ref=e133]:
+              - link "储能BMS算法工程师 【 东莞-松山湖 】 30-60k·16薪" [ref=e134] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1978621857.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_78621857%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e135]:
+                  - generic [ref=e136]:
+                    - generic "储能BMS算法工程师" [ref=e137]
+                    - generic [ref=e138]:
+                      - generic [ref=e139]: 【
+                      - generic [ref=e140]: 东莞-松山湖
+                      - generic [ref=e141]: 】
+                  - generic [ref=e142]: 30-60k·16薪
+              - link "华为 华为 通信设备 战略融资 10000人以上" [ref=e144] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/954482/
+                - generic [ref=e146]:
+                  - img "华为" [ref=e148]
+                  - generic [ref=e149]: 华为
+                  - generic [ref=e150]: 通信设备 战略融资 10000人以上
+            - generic [ref=e155]: 吴女士
+          - generic [ref=e157]:
+            - generic [ref=e159]:
+              - link "BMS应用软件/算法工程师 【 无锡 】 15-25k·15薪" [ref=e160] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1972378025.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_72378025%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e161]:
+                  - generic [ref=e162]:
+                    - generic "BMS应用软件/算法工程师" [ref=e163]
+                    - generic [ref=e164]:
+                      - generic [ref=e165]: 【
+                      - generic [ref=e166]: 无锡
+                      - generic [ref=e167]: 】
+                  - generic [ref=e168]: 15-25k·15薪
+              - link "蜂巢能源科技股份有限公司 蜂巢能源科技股份有限公司 新能源 B轮 5000-10000人" [ref=e170] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/9731182/
+                - generic [ref=e172]:
+                  - img "蜂巢能源科技股份有限公司" [ref=e174]
+                  - generic [ref=e175]: 蜂巢能源科技股份有限公司
+                  - generic [ref=e176]: 新能源 B轮 5000-10000人
+            - generic [ref=e180]:
+              - generic [ref=e181]: 顾女士
+              - generic [ref=e182]: HRBP
+          - generic [ref=e184]:
+            - generic [ref=e186]:
+              - link "BMS算法工程师 【 苏州-相城区 】 15-30k·13薪" [ref=e187] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1981533637.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_81533637%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e188]:
+                  - generic [ref=e189]:
+                    - generic "BMS算法工程师" [ref=e190]
+                    - generic [ref=e191]:
+                      - generic [ref=e192]: 【
+                      - generic [ref=e193]: 苏州-相城区
+                      - generic [ref=e194]: 】
+                  - generic [ref=e195]: 15-30k·13薪
+              - link "赣锋锂业集团 赣锋锂业集团 新能源 已上市 5000-10000人" [ref=e197] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/7901694/
+                - generic [ref=e199]:
+                  - img "赣锋锂业集团" [ref=e201]
+                  - generic [ref=e202]: 赣锋锂业集团
+                  - generic [ref=e203]: 新能源 已上市 5000-10000人
+            - generic [ref=e207]:
+              - generic [ref=e208]: 陈先生
+              - generic [ref=e209]: 招聘主管
+          - generic [ref=e211]:
+            - generic [ref=e213]:
+              - link "BMS算法工程师 【 上海-闵行区 】 30-45k·15薪" [ref=e214] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1972774639.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_72774639%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e215]:
+                  - generic [ref=e216]:
+                    - generic "BMS算法工程师" [ref=e217]
+                    - generic [ref=e218]:
+                      - generic [ref=e219]: 【
+                      - generic [ref=e220]: 上海-闵行区
+                      - generic [ref=e221]: 】
+                  - generic [ref=e222]: 30-45k·15薪
+              - link "晶科能源有限公司 晶科能源有限公司 其他制造业 融资未公开 10000人以上" [ref=e224] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/8356280/
+                - generic [ref=e226]:
+                  - img "晶科能源有限公司" [ref=e228]
+                  - generic [ref=e229]: 晶科能源有限公司
+                  - generic [ref=e230]: 其他制造业 融资未公开 10000人以上
+            - generic [ref=e234]:
+              - generic [ref=e235]: 瞿先生
+              - generic [ref=e236]: 招聘主管
+          - generic [ref=e238]:
+            - generic [ref=e240]:
+              - link "储能BMS算法工程师 【 上海-青浦区 】 30-60k·16薪" [ref=e241] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1978621855.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_78621855%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e242]:
+                  - generic [ref=e243]:
+                    - generic "储能BMS算法工程师" [ref=e244]
+                    - generic [ref=e245]:
+                      - generic [ref=e246]: 【
+                      - generic [ref=e247]: 上海-青浦区
+                      - generic [ref=e248]: 】
+                  - generic [ref=e249]: 30-60k·16薪
+              - link "华为 华为 通信设备 战略融资 10000人以上" [ref=e251] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/954482/
+                - generic [ref=e253]:
+                  - img "华为" [ref=e255]
+                  - generic [ref=e256]: 华为
+                  - generic [ref=e257]: 通信设备 战略融资 10000人以上
+            - generic [ref=e262]: 吴女士
+          - generic [ref=e264]:
+            - generic [ref=e266]:
+              - link "BMS软件工程师（武汉） 【 武汉-江夏区 】 15-30k" [ref=e267] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1968746925.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_68746925%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e268]:
+                  - generic [ref=e269]:
+                    - generic "BMS软件工程师（武汉）" [ref=e270]
+                    - generic [ref=e271]:
+                      - generic [ref=e272]: 【
+                      - generic [ref=e273]: 武汉-江夏区
+                      - generic [ref=e274]: 】
+                  - generic [ref=e275]: 15-30k
+              - link "楚能新能源 楚能新能源 新能源 其他 5000-10000人" [ref=e277] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/12938265/
+                - generic [ref=e279]:
+                  - img "楚能新能源" [ref=e281]
+                  - generic [ref=e282]: 楚能新能源
+                  - generic [ref=e283]: 新能源 其他 5000-10000人
+            - generic [ref=e287]:
+              - generic [ref=e288]: 高女士
+              - generic [ref=e289]: HRBP
+          - generic [ref=e291]:
+            - generic [ref=e293]:
+              - link "BMS算法工程师(J10505) 【 深圳-南山区 】 30-50k·15薪" [ref=e294] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1976205075.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_76205075%3A1%3Agw.667e88a0-435488344
+                - generic [ref=e295]:
+                  - generic [ref=e296]:
+                    - generic "BMS算法工程师(J10505)" [ref=e297]
+                    - generic [ref=e298]:
+                      - generic [ref=e299]: 【
+                      - generic [ref=e300]: 深圳-南山区
+                      - generic [ref=e301]: 】
+                  - generic [ref=e302]: 30-50k·15薪
+              - link "芯海科技 芯海科技 电子/半导体/集成电路 已上市 500-999人" [ref=e304] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/2106738/
+                - generic [ref=e306]:
+                  - img "芯海科技" [ref=e308]
+                  - generic [ref=e309]: 芯海科技
+                  - generic [ref=e310]: 电子/半导体/集成电路 已上市 500-999人
+            - generic [ref=e314]:
+              - generic [ref=e315]: 梁女士
+              - generic [ref=e316]: 招聘经理
+        - generic [ref=e317]:
+          - generic [ref=e318] [cursor=pointer]: "1"
+          - generic [ref=e319] [cursor=pointer]: "2"
+          - generic [ref=e320] [cursor=pointer]: "3"
+      - generic [ref=e327]:
+        - textbox "搜索职位、公司" [ref=e328]
+        - generic [ref=e329] [cursor=pointer]: 搜索
+    - complementary [ref=e330]:
+      - generic [ref=e334]:
+        - generic [ref=e338]:
+          - generic [ref=e339] [cursor=pointer]: 登录/注册
+          - generic [ref=e340] [cursor=pointer]: 密码登录
+        - generic [ref=e343]:
+          - generic [ref=e350]:
+            - generic [ref=e354]:
+              - generic [ref=e355]: "+86"
+              - img "down" [ref=e358]:
+                - img [ref=e359]
+            - textbox "手机号" [ref=e361]
+          - generic [ref=e368]:
+            - textbox "短信验证码" [ref=e369]
+            - generic [ref=e371] [cursor=pointer]: 获取验证码
+          - button "登 录" [ref=e372] [cursor=pointer]:
+            - generic [ref=e373]: 登 录
+        - generic [ref=e375]:
+          - generic [ref=e376] [cursor=pointer]:
+            - checkbox "同意猎聘" [ref=e378]
+            - generic [ref=e380]: 同意猎聘
+          - link "《猎聘用户服务协议》" [ref=e381] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0001
+          - text: 及
+          - link "《个人信息保护政策》" [ref=e382] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0002
+      - generic [ref=e383]:
+        - heading "热门职位" [level=2] [ref=e385]
+        - list [ref=e386]:
+          - listitem [ref=e387]:
+            - link "奥迪改装技师" [ref=e389] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E5%A5%A5%E8%BF%AA%E6%94%B9%E8%A3%85%E6%8A%80%E5%B8%88
+          - listitem [ref=e390]:
+            - link "冰吧企划经理" [ref=e392] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E5%86%B0%E5%90%A7%E4%BC%81%E5%88%92%E7%BB%8F%E7%90%86
+          - listitem [ref=e393]:
+            - link "底盘室主任" [ref=e395] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E5%BA%95%E7%9B%98%E5%AE%A4%E4%B8%BB%E4%BB%BB
+          - listitem [ref=e396]:
+            - link "KA市场经理" [ref=e398] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=KA%E5%B8%82%E5%9C%BA%E7%BB%8F%E7%90%86
+          - listitem [ref=e399]:
+            - link "三元前驱体总监" [ref=e401] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E4%B8%89%E5%85%83%E5%89%8D%E9%A9%B1%E4%BD%93%E6%80%BB%E7%9B%91
+          - listitem [ref=e402]:
+            - link "移动优化工程师" [ref=e404] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E7%A7%BB%E5%8A%A8%E4%BC%98%E5%8C%96%E5%B7%A5%E7%A8%8B%E5%B8%88
+          - listitem [ref=e405]:
+            - link "运营支持部总监" [ref=e407] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E8%BF%90%E8%90%A5%E6%94%AF%E6%8C%81%E9%83%A8%E6%80%BB%E7%9B%91
+          - listitem [ref=e408]:
+            - link "驻场机械工程师" [ref=e410] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E9%A9%BB%E5%9C%BA%E6%9C%BA%E6%A2%B0%E5%B7%A5%E7%A8%8B%E5%B8%88
+          - listitem [ref=e411]:
+            - link "综合文员岗" [ref=e413] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E7%BB%BC%E5%90%88%E6%96%87%E5%91%98%E5%B2%97
+          - listitem [ref=e414]:
+            - link "中医药产品经理" [ref=e416] [cursor=pointer]:
+              - /url: https://www.liepin.com/zhaopin/?key=%E4%B8%AD%E5%8C%BB%E8%8D%AF%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86
+      - generic [ref=e417]:
+        - heading "推荐企业" [level=2] [ref=e418]
+        - list [ref=e419]:
+          - listitem [ref=e420]:
+            - link "comp 三一集团" [ref=e421] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/892388/
+              - img "comp" [ref=e422]
+              - generic [ref=e423]: 三一集团
+          - listitem [ref=e424]:
+            - link "comp 浙江吉利控股集团" [ref=e425] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/911622/
+              - img "comp" [ref=e426]
+              - generic [ref=e427]: 浙江吉利控股集团
+          - listitem [ref=e428]:
+            - link "comp 特斯拉中国" [ref=e429] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/8626076/
+              - img "comp" [ref=e430]
+              - generic [ref=e431]: 特斯拉中国
+          - listitem [ref=e432]:
+            - link "comp 海辰储能" [ref=e433] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/12223787/
+              - img "comp" [ref=e434]
+              - generic [ref=e435]: 海辰储能
+          - listitem [ref=e436]:
+            - link "comp 追觅科技" [ref=e437] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/9481287/
+              - img "comp" [ref=e438]
+              - generic [ref=e439]: 追觅科技
+          - listitem [ref=e440]:
+            - link "comp BYD" [ref=e441] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/434237/
+              - img "comp" [ref=e442]
+              - generic [ref=e443]: BYD
+  - generic [ref=e445]:
+    - generic [ref=e446]:
+      - list [ref=e447]:
+        - listitem [ref=e448] [cursor=pointer]: 相关推荐
+        - listitem [ref=e449] [cursor=pointer]: 相关公司
+        - listitem [ref=e450] [cursor=pointer]: 热门城市
+        - listitem [ref=e451] [cursor=pointer]: 热门招聘
+      - generic [ref=e452]:
+        - link "宁德SLAM算法工程师招聘" [ref=e453] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpslamsuanfagongchengshi03/
+        - link "宁德算法高级工程师招聘" [ref=e454] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpsfgjgcs/
+        - link "宁德实习算法工程师招聘" [ref=e455] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpsxsfgcs1i6w/
+        - link "宁德数值算法工程师招聘" [ref=e456] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpszsfgcs9i5q/
+        - link "宁德部署算法工程师招聘" [ref=e457] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpbssfgcs2j7i/
+        - link "宁德算法开发工程师招聘" [ref=e458] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpsfkfgcs/
+        - link "宁德感知算法高级工程师招聘" [ref=e459] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpgzsfgjgcs1o7d/
+        - link "宁德因果推断算法工程师招聘" [ref=e460] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpygtdsfgcsitcaaid/
+        - link "宁德应届算法工程师招聘" [ref=e461] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpyjsfgcsx4y3/
+        - link "宁德CT算法工程师招聘" [ref=e462] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpctsfgcsn4n3/
+        - link "宁德研究算法工程师招聘" [ref=e463] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpyjsfgcs10o5b/
+        - link "宁德AGV系统工程师招聘" [ref=e464] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpagvxtgcsd9j6/
+        - link "宁德机器人规控工程师招聘" [ref=e465] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpjqrgkgcs3t1i/
+        - link "宁德五分类算法工程师招聘" [ref=e466] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpwflsfgcsx1o6/
+        - link "宁德定位跟踪算法工程师招聘" [ref=e467] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpdwgzsfgcs4f7g/
+        - link "宁德规划决策算法工程师招聘" [ref=e468] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpghjcsfgcs4s8d/
+        - link "宁德资深算法研发工程师招聘" [ref=e469] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpzssfyfgcs9kf5/
+        - link "宁德数据处理算法工程师招聘" [ref=e470] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpsjclsfgcs9ce7/
+        - link "宁德融合感知算法工程师招聘" [ref=e471] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zprhgzsfgcs4tm2/
+        - link "宁德异构计算算法工程师招聘" [ref=e472] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpygjssfgcs3vp5/
+        - link "宁德高级SLAM工程师招聘" [ref=e473] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpgjslamgcs1f6o/
+        - link "宁德算法框架开发工程师招聘" [ref=e474] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpsfkjkfgcs1kt5/
+        - link "宁德高级机械臂算法工程师招聘" [ref=e475] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpgjjxbsfgcsy6m5/
+        - link "宁德计算光学招聘" [ref=e476] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpjsgxh2w7g/
+        - link "宁德音乐信息检索算法工程师招聘" [ref=e477] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpylxxjssfgcsf5z8/
+        - link "宁德激光测厚软件工程师招聘" [ref=e478] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpjgchrjgcsjcsysw/
+        - link "宁德隐私计算算法研发工程师招聘" [ref=e479] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpysjssfyfgcso65a/
+        - link "宁德感知算法总监招聘" [ref=e480] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpgzsfzjg5i2/
+        - link "宁德数字人工程师招聘" [ref=e481] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpszrgcsj4r5/
+        - link "宁德高级并网工程师招聘" [ref=e482] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/zpgjbwgcs3m7c/
+    - generic [ref=e483]:
+      - generic [ref=e484]: 当前位置：
+      - generic [ref=e485]:
+        - link "宁德招聘网" [ref=e486] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/
+        - text: ">"
+        - link "宁德算法工程师招聘" [ref=e487] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-ningde/career/suanfakaifa/
+        - text: ">"
+        - link "储能BMS算法工程师招聘" [ref=e488] [cursor=pointer]:
+          - /url: https://www.liepin.com/job/1979831311.shtml
+  - iframe [ref=e489]:
+    - contentinfo [ref=f17e2]:
+      - generic [ref=f17e4]:
+        - generic [ref=f17e7]:
+          - generic [ref=f17e8]: 企业服务热线和算法推荐/未成年人举报渠道：
+          - generic [ref=f17e9]:
+            - strong [ref=f17e10]: 400-6212-266
+            - paragraph [ref=f17e11]: 工作日9:00-19:00
+          - paragraph [ref=f17e12]:
+            - link "jubao@liepin.com" [ref=f17e13] [cursor=pointer]:
+              - /url: mailto:jubao@liepin.com
+              - strong [ref=f17e14]: jubao@liepin.com
+        - generic [ref=f17e15]:
+          - generic [ref=f17e16]:
+            - term [ref=f17e17]: 投资者关系
+            - definition [ref=f17e18]:
+              - link "公司简介" [ref=f17e19] [cursor=pointer]:
+                - /url: //ir.liepin.com/index.html
+            - definition [ref=f17e20]:
+              - link "信息披露" [ref=f17e21] [cursor=pointer]:
+                - /url: //ir.liepin.com/disclosure.html
+            - definition [ref=f17e22]:
+              - link "企业管制" [ref=f17e23] [cursor=pointer]:
+                - /url: //ir.liepin.com/management.html
+            - definition [ref=f17e24]:
+              - link "投资者关系联络" [ref=f17e25] [cursor=pointer]:
+                - /url: //ir.liepin.com/relationalnetwork.html
+          - generic [ref=f17e26]:
+            - term [ref=f17e27]: 共赢
+            - definition [ref=f17e28]:
+              - link "网站合作" [ref=f17e29] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1007623/index.html
+            - definition [ref=f17e30]:
+              - link "加入猎聘" [ref=f17e31] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1006107/index.html?mscid=Favsk7rH
+            - definition [ref=f17e32]:
+              - link "代理加盟" [ref=f17e33] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1014307/index.html
+            - definition [ref=f17e34]:
+              - link "猎聘HRO" [ref=f17e35] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1014857/50159328.html
+          - generic [ref=f17e36]:
+            - term [ref=f17e37]: 产品与服务
+            - definition [ref=f17e38]:
+              - link "香港招聘" [ref=f17e39] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1011439/daf73a6d.html
+            - definition [ref=f17e40]:
+              - link "算法推荐服务说明" [ref=f17e41] [cursor=pointer]:
+                - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0018
+            - definition [ref=f17e42]:
+              - link "算法备案信息" [ref=f17e43] [cursor=pointer]:
+                - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0057
+            - definition [ref=f17e44]:
+              - link "安全防范指南" [ref=f17e45] [cursor=pointer]:
+                - /url: https://wow.liepin.com/t1013881/pc.html?mscid=Fc5P1I2a
+            - definition [ref=f17e46]:
+              - link "企业培训" [ref=f17e47] [cursor=pointer]:
+                - /url: //www.lebanban.com
+        - figure "下载猎聘APP" [ref=f17e49]:
+          - generic [ref=f17e50]: 下载猎聘APP
+          - paragraph [ref=f17e51]:
+            - link "关注猎聘" [ref=f17e52] [cursor=pointer]:
+              - /url: http://weibo.com/lietouwang
+              - text: 关注猎聘
+              - img [ref=f17e53]
+      - separator [ref=f17e60]
+      - generic [ref=f17e62]:
+        - paragraph [ref=f17e63]:
+          - link "津ICP备15007986号-11" [ref=f17e64] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn/#/Integrated/index
+          - link "ICP经营许可证：合字B2-20160007" [ref=f17e65] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0053
+          - link "人力资源服务许可证" [ref=f17e66] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0054
+          - link "营业执照" [ref=f17e67] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0055
+          - link "安备京公网安备 11010502035189号" [ref=f17e68] [cursor=pointer]:
+            - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502035189
+            - img "安备" [ref=f17e69]
+            - text: 京公网安备 11010502035189号
+          - link "个人信息保护政策" [ref=f17e70] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?mscid=Fb1dVVx_&agreementType=A0002
+          - link "猎聘用户服务协议" [ref=f17e71] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?mscid=Fb1dVVx_&agreementType=A0001
+          - link "投诉举报制度" [ref=f17e72] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0056
+        - paragraph [ref=f17e73]:
+          - text: Copyright © 2006-2026 liepin.com All Rights Reserved
+          - link "违法和不良信息举报" [ref=f17e74] [cursor=pointer]:
+            - /url: https://www.12377.cn/

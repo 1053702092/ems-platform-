@@ -1,0 +1,62 @@
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - generic [ref=e9]:
+      - heading "北京理想汽车有限公司" [level=3] [ref=e10]
+      - paragraph [ref=e11]:
+        - text: 其他企业 制造业
+        - text: 北京市顺义区
+    - generic [ref=e13]:
+      - heading "公司简介" [level=4] [ref=e14]
+      - paragraph [ref=e16]: 理想汽车是中国领先的新能源智能汽车制造商，设计、研发、制造和销售豪华智能电动汽车。我们坚持自建智能制造基地，并自建供应链体系，保障核心零部件供应。“创造移动的家，创造幸福的家”是我们的品牌使命，我们致力于为家庭打造更安全、更便捷、更舒适的智能电动车。
+    - generic [ref=e17]:
+      - heading "招聘信息" [level=4] [ref=e18]
+      - list [ref=e19]:
+        - listitem [ref=e20]:
+          - generic [ref=e21]:
+            - heading "产品专家" [level=4] [ref=e22]
+            - paragraph [ref=e23]: 面议 北京市顺义区 全职 本科及以上 200人
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26] [cursor=pointer]: 收藏
+              - button "投递简历" [ref=e28] [cursor=pointer]
+            - paragraph [ref=e29]: 2025-11-06 10:42:33
+        - listitem [ref=e31]:
+          - generic [ref=e32]:
+            - heading "强化学习算法研究员" [level=4] [ref=e33]
+            - paragraph [ref=e34]: 面议 北京市顺义区 全职 硕士 2人
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - generic [ref=e37] [cursor=pointer]: 收藏
+              - button "投递简历" [ref=e39] [cursor=pointer]
+            - paragraph [ref=e40]: 2026-02-14 09:58:40
+        - listitem [ref=e42]:
+          - generic [ref=e43]:
+            - heading "AI算法工程师" [level=4] [ref=e44]
+            - paragraph [ref=e45]: 面议 上海市闵行区 全职 硕士 2人
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - generic [ref=e48] [cursor=pointer]: 收藏
+              - button "投递简历" [ref=e50] [cursor=pointer]
+            - paragraph [ref=e51]: 2026-02-14 09:59:59
+        - listitem [ref=e53]:
+          - generic [ref=e54]:
+            - heading "软硬件协同智能系统研发工程师" [level=4] [ref=e55]
+            - paragraph [ref=e56]: 面议 上海市闵行区 全职 硕士及以上 2人
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59] [cursor=pointer]: 收藏
+              - button "投递简历" [ref=e61] [cursor=pointer]
+            - paragraph [ref=e62]: 2026-02-14 09:59:11
+  - generic [ref=e65]:
+    - generic [ref=e66]:
+      - heading "联系方式" [level=4] [ref=e67]: 联系方式
+      - list [ref=e69]:
+        - listitem [ref=e70]: 联系人：周袁玉
+        - listitem [ref=e71]: 联系电话：
+        - listitem [ref=e72]: 电子邮箱：campus_scs@lixiang.com
+        - listitem [ref=e73]: 传真：
+    - generic [ref=e74]:
+      - heading "公司地址" [level=4] [ref=e75]: 公司地址
+      - list [ref=e77]:
+        - listitem [ref=e78]: 地址：北京市顺义区
+        - listitem [ref=e79]: 邮编：

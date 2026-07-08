@@ -1,0 +1,289 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner:
+      - navigation [ref=e3]:
+        - generic [ref=e4]:
+          - link [ref=e7] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e13] [cursor=pointer]:
+              - text: 选择区域/语言
+              - emphasis [ref=e14]: 
+            - generic [ref=e17] [cursor=pointer]: 
+          - generic [ref=e18]:
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - link "首页" [ref=e22] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e23]:
+                - link "解决方案" [ref=e24]:
+                  - /url: javascript:;
+              - listitem [ref=e25]:
+                - link "研发" [ref=e26]:
+                  - /url: javascript:;
+              - listitem [ref=e27]:
+                - link "新闻" [ref=e28] [cursor=pointer]:
+                  - /url: /news/
+              - listitem [ref=e29]:
+                - link "品牌" [ref=e30]:
+                  - /url: javascript:;
+              - listitem [ref=e31]:
+                - link "关于我们" [ref=e32]:
+                  - /url: javascript:;
+              - listitem [ref=e33]:
+                - link "联系我们" [ref=e34]:
+                  - /url: /message/customer
+              - listitem [ref=e35]:
+                - link "线上商城" [ref=e36]:
+                  - /url: https://catlqbj.com/?userFrom=official
+            - generic [ref=e38]:
+              - link [ref=e39] [cursor=pointer]:
+                - /url: /
+              - listitem [ref=e41]:
+                - link "解决方案" [ref=e42] [cursor=pointer]:
+                  - /url: javascript:;
+              - listitem [ref=e43]:
+                - link "研发" [ref=e44] [cursor=pointer]:
+                  - /url: javascript:;
+              - listitem [ref=e45]:
+                - link "新闻" [ref=e46] [cursor=pointer]:
+                  - /url: /news/
+              - listitem [ref=e47]:
+                - link "品牌" [ref=e48] [cursor=pointer]:
+                  - /url: javascript:;
+              - listitem [ref=e49]:
+                - link "关于我们" [ref=e50] [cursor=pointer]:
+                  - /url: javascript:;
+              - listitem [ref=e51]:
+                - link "联系我们" [ref=e52] [cursor=pointer]:
+                  - /url: /message/customer
+              - listitem [ref=e53]:
+                - link "线上商城" [ref=e54] [cursor=pointer]:
+                  - /url: https://catlqbj.com/?userFrom=official
+    - text:              
+    - list [ref=e59]:
+      - listitem [ref=e60]:
+        - link " 乘用车解决方案 " [ref=e61] [cursor=pointer]:
+          - /url: /solution/passengerEV/
+          - generic:
+            - generic: 
+            - text: 乘用车解决方案
+            - generic: 
+      - listitem [ref=e63]:
+        - link " 商业应用解决方案 " [ref=e64] [cursor=pointer]:
+          - /url: /solution/commercialEV/
+          - generic:
+            - generic: 
+            - text: 商业应用解决方案
+            - generic: 
+      - listitem [ref=e66]:
+        - link " 二轮车解决方案 " [ref=e67] [cursor=pointer]:
+          - /url: /solution/commercialEV/?id=s6
+          - generic:
+            - generic: 
+            - text: 二轮车解决方案
+            - generic: 
+      - listitem [ref=e69]:
+        - link " 电动港口解决方案 " [ref=e70] [cursor=pointer]:
+          - /url: /solution/commercialEV/?id=s7
+          - generic:
+            - generic: 
+            - text: 电动港口解决方案
+            - generic: 
+      - listitem [ref=e72]:
+        - link " 企业简介 " [ref=e73] [cursor=pointer]:
+          - /url: /about/profile/
+          - generic:
+            - generic: 
+            - text: 企业简介
+            - generic: 
+      - listitem [ref=e75]:
+        - link " 工程机械解决方案 " [ref=e76] [cursor=pointer]:
+          - /url: /solution/commercialEV/?id=s5
+          - generic:
+            - generic: 
+            - text: 工程机械解决方案
+            - generic: 
+      - listitem [ref=e78]:
+        - link " 储能系统解决方案 " [ref=e79] [cursor=pointer]:
+          - /url: /ess/
+          - generic:
+            - generic: 
+            - text: 储能系统解决方案
+            - generic: 
+      - listitem [ref=e81]:
+        - link " 储能系统解决方案 " [ref=e82] [cursor=pointer]:
+          - /url: /ess/
+          - generic:
+            - generic: 
+            - text: 储能系统解决方案
+            - generic: 
+      - listitem [ref=e84]:
+        - link " 光储充检智能充电站 " [ref=e85] [cursor=pointer]:
+          - /url: /ess/?id=s3
+          - generic:
+            - generic: 
+            - text: 光储充检智能充电站
+            - generic: 
+      - listitem [ref=e87]:
+        - link " 前沿技术 " [ref=e88] [cursor=pointer]:
+          - /url: /research/technology/
+          - generic:
+            - generic: 
+            - text: 前沿技术
+            - generic: 
+      - listitem [ref=e90]:
+        - link "组合换电解决方案 " [ref=e91] [cursor=pointer]:
+          - /url: /brand/servicebrand/
+          - generic:
+            - text: 组合换电解决方案
+            - generic: 
+    - generic [ref=e93]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - generic:
+            - generic:
+              - generic:
+                - listbox
+        - generic [ref=e98]:
+          - heading "新闻" [level=3] [ref=e99]
+          - link "查看更多 →" [ref=e101] [cursor=pointer]:
+            - /url: /news/
+            - text: 查看更多
+            - generic [ref=e102]: →
+        - list [ref=e104]:
+          - listitem [ref=e105]:
+            - link " 2026-06-28 GECC从愿景到行动：“全球能源循环经济联盟”及《电池可循环设计指南》正式启动 了解更多" [ref=e106] [cursor=pointer]:
+              - /url: /news/10063.html
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - generic [ref=e109]: 
+                  - text: 2026-06-28
+                - generic [ref=e110]: GECC从愿景到行动：“全球能源循环经济联盟”及《电池可循环设计指南》正式启动
+                - generic [ref=e112]: 了解更多
+          - listitem [ref=e114]:
+            - link " 2026-06-26 宁德时代与中国节能再签战略合作协议 了解更多" [ref=e115] [cursor=pointer]:
+              - /url: /news/10062.html
+              - generic [ref=e116]:
+                - generic [ref=e117]:
+                  - generic [ref=e118]: 
+                  - text: 2026-06-26
+                - generic [ref=e119]: 宁德时代与中国节能再签战略合作协议
+                - generic [ref=e121]: 了解更多
+          - listitem [ref=e123]:
+            - link " 2026-06-24 首款搭载宁德时代电池的重载人形机器人上岗 了解更多" [ref=e124] [cursor=pointer]:
+              - /url: /news/10053.html
+              - generic [ref=e125]:
+                - generic [ref=e126]:
+                  - generic [ref=e127]: 
+                  - text: 2026-06-24
+                - generic [ref=e128]: 首款搭载宁德时代电池的重载人形机器人上岗
+                - generic [ref=e130]: 了解更多
+      - text: 
+    - contentinfo [ref=e132]:
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - link [ref=e137] [cursor=pointer]:
+            - /url: ""
+          - generic [ref=e138]:
+            - generic [ref=e140] [cursor=pointer]: 
+            - generic [ref=e142] [cursor=pointer]: 
+        - list [ref=e144]:
+          - listitem [ref=e145]:
+            - link "解决方案" [ref=e146]:
+              - /url: javascript:;
+            - list [ref=e147]:
+              - listitem [ref=e148]:
+                - link "乘用车" [ref=e149] [cursor=pointer]:
+                  - /url: /solution/passengerEV/
+              - listitem [ref=e150]:
+                - link "商业应用" [ref=e151] [cursor=pointer]:
+                  - /url: /solution/commercialEV/
+              - listitem [ref=e152]:
+                - link "储能系统" [ref=e153] [cursor=pointer]:
+                  - /url: /ess/
+              - listitem [ref=e154]:
+                - link "循环回收" [ref=e155] [cursor=pointer]:
+                  - /url: /solution/recycling/
+          - listitem [ref=e156]:
+            - link "研发" [ref=e157]:
+              - /url: javascript:;
+            - list [ref=e158]:
+              - listitem [ref=e159]:
+                - link "创新理念" [ref=e160] [cursor=pointer]:
+                  - /url: /research/concept/
+              - listitem [ref=e161]:
+                - link "前沿技术" [ref=e162] [cursor=pointer]:
+                  - /url: /research/technology/
+          - listitem [ref=e163]:
+            - link "品牌" [ref=e164]:
+              - /url: javascript:;
+            - list [ref=e165]:
+              - listitem [ref=e166]:
+                - link "技术品牌" [ref=e167] [cursor=pointer]:
+                  - /url: /brand/technologybrand/
+              - listitem [ref=e168]:
+                - link "服务品牌" [ref=e169] [cursor=pointer]:
+                  - /url: /brand/servicebrand/
+          - listitem [ref=e170]:
+            - link "关于我们" [ref=e171]:
+              - /url: javascript:;
+            - list [ref=e172]:
+              - listitem [ref=e173]:
+                - link "企业文化" [ref=e174] [cursor=pointer]:
+                  - /url: /about/philosophy/
+              - listitem [ref=e175]:
+                - link "企业战略" [ref=e176] [cursor=pointer]:
+                  - /url: /about/strategy/
+              - listitem [ref=e177]:
+                - link "企业简介" [ref=e178] [cursor=pointer]:
+                  - /url: /about/profile/
+              - listitem [ref=e179]:
+                - link "可持续发展" [ref=e180] [cursor=pointer]:
+                  - /url: /about/sustainability/
+              - listitem [ref=e181]:
+                - link "零碳科普" [ref=e182] [cursor=pointer]:
+                  - /url: /zeroScience/
+              - listitem [ref=e183]:
+                - link "加入我们" [ref=e184] [cursor=pointer]:
+                  - /url: https://talent.catl.com/social-recruitment/catlhr/96144/#/
+          - listitem [ref=e185]:
+            - link "新闻" [ref=e186] [cursor=pointer]:
+              - /url: /news/
+            - link "制造" [ref=e187] [cursor=pointer]:
+              - /url: /manufacture/
+            - link "服务" [ref=e188] [cursor=pointer]:
+              - /url: /service/
+            - link "投资者关系" [ref=e189] [cursor=pointer]:
+              - /url: /inverelations/
+            - link "联系我们" [ref=e190] [cursor=pointer]:
+              - /url: /contactus/
+            - link "线上商城" [ref=e191] [cursor=pointer]:
+              - /url: https://catlqbj.com/?userFrom=official
+            - link "服务代理商申请" [ref=e192] [cursor=pointer]:
+              - /url: /agent_terms/
+            - link "供应商入口" [ref=e193] [cursor=pointer]:
+              - /url: https://dsrm-supplier.catl.com
+            - link "配套车型查询" [ref=e194] [cursor=pointer]:
+              - /url: /supporting_vehicle/
+      - generic [ref=e196]:
+        - paragraph [ref=e198]:
+          - generic [ref=e199]: Copyright © 2020-2023 Contemporary Amperex Technology Co., Limited. All Rights Reserved.
+          - link "闽ICP备14008486号-3" [ref=e200] [cursor=pointer]:
+            - /url: http://beian.miit.gov.cn/
+          - link "闽公网安备 35090202000349号" [ref=e201] [cursor=pointer]:
+            - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35090202000349
+        - generic [ref=e202]:
+          - paragraph [ref=e203]:
+            - link "隐私政策" [ref=e204] [cursor=pointer]:
+              - /url: /privacy/
+          - paragraph [ref=e205]:
+            - link "B2B隐私协议" [ref=e206] [cursor=pointer]:
+              - /url: /b2b/
+          - paragraph [ref=e207]:
+            - link "法律声明" [ref=e208] [cursor=pointer]:
+              - /url: /legal/
+          - paragraph [ref=e209]:
+            - link "除名查询" [ref=e210] [cursor=pointer]:
+              - /url: /terminations/
+  - generic [ref=e212] [cursor=pointer]: 

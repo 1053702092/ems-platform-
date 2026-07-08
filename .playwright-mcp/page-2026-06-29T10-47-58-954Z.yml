@@ -1,0 +1,105 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e10]:
+        - generic [ref=e11] [cursor=pointer]: 登录
+        - generic [ref=e14] [cursor=pointer]: 
+  - generic [ref=e18]:
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: 加入我们
+      - generic [ref=e22]:
+        - paragraph [ref=e23] [cursor=pointer]: 发现理想
+        - paragraph [ref=e24] [cursor=pointer]: 校园招聘与实习
+        - paragraph [ref=e25] [cursor=pointer]: 社会招聘
+        - paragraph [ref=e26] [cursor=pointer]: 我的档案
+    - generic [ref=e27]:
+      - img [ref=e28]
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: 理想汽车2023届校园招聘
+        - generic [ref=e31] [cursor=pointer]: 立即投递
+    - generic [ref=e33]:
+      - paragraph [ref=e34]: 校招与实习职位
+      - paragraph [ref=e35]: 理想汽车期待你的加入
+    - generic [ref=e36]:
+      - paragraph [ref=e37]: 招聘流程
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - img [ref=e42]
+            - paragraph [ref=e43]: 网申/内推
+          - img [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img [ref=e49]
+            - paragraph [ref=e50]: 笔试
+          - img [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - img [ref=e56]
+            - paragraph [ref=e57]: 面试
+          - img [ref=e59]
+        - generic [ref=e61]:
+          - img [ref=e63]
+          - paragraph [ref=e64]: Offer
+      - generic [ref=e65]:
+        - button "查看Q&A" [ref=e66] [cursor=pointer]
+        - button "新人培养" [ref=e67] [cursor=pointer]
+        - button "宣讲动态" [ref=e68] [cursor=pointer]
+  - contentinfo [ref=e71]:
+    - generic [ref=e72]:
+      - paragraph [ref=e75]:
+        - generic [ref=e76] [cursor=pointer]: 在线客服
+        - generic [ref=e77] [cursor=pointer]:
+          - text: "|"
+          - 'link "客服电话: 400-686-0900" [ref=e78]':
+            - /url: tel:4006860900
+        - generic [ref=e79] [cursor=pointer]:
+          - text: "|"
+          - 'link "媒体咨询: press@lixiang.com" [ref=e80]':
+            - /url: mailto:press@lixiang.com
+        - generic [ref=e81] [cursor=pointer]:
+          - text: "|"
+          - 'link "举报邮箱: compliance@lixiang.com" [ref=e82]':
+            - /url: mailto:compliance@lixiang.com
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - link "维修与环保信息 |" [ref=e85] [cursor=pointer]:
+            - /url: javascript:;
+          - link "法律与安全 |" [ref=e86] [cursor=pointer]:
+            - /url: /agreement/legal.html
+          - link "合规与举报 |" [ref=e87] [cursor=pointer]:
+            - /url: /help/compliance/root/1748.html
+          - link "隐私政策 |" [ref=e88] [cursor=pointer]:
+            - /url: /agreement/privacy.html
+          - link "用户协议 |" [ref=e89] [cursor=pointer]:
+            - /url: /agreement/register.html
+          - link "钣喷中心招募 |" [ref=e90] [cursor=pointer]:
+            - /url: /help/topic/spray.html
+          - link "二手车服务商招募 |" [ref=e91] [cursor=pointer]:
+            - /url: /help/topic/esczm10.html
+          - link "备案信息" [ref=e92] [cursor=pointer]:
+            - /url: /manual/sign/webbeian.html
+        - generic [ref=e93]:
+          - link "" [ref=e94] [cursor=pointer]:
+            - /url: javascript:;
+            - generic [ref=e95]: 
+          - link "" [ref=e96] [cursor=pointer]:
+            - /url: javascript:;
+            - generic [ref=e97]: 
+          - link "" [ref=e98] [cursor=pointer]:
+            - /url: https://weibo.com/u/6001272153
+            - generic [ref=e99]: 
+      - generic [ref=e102]:
+        - link "©2026 京ICP备19003172号" [ref=e104] [cursor=pointer]:
+          - /url: https://beian.miit.gov.cn/
+        - link "京公网安备11011302001865号" [ref=e107] [cursor=pointer]:
+          - /url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302001865
+        - generic [ref=e108]: 北京车励行信息技术有限公司@版权所有
+        - generic [ref=e109]: 增值电信业务经营许可证：编号京B2-20191092/编号B2-20196074
+        - link "营业执照" [ref=e111] [cursor=pointer]:
+          - /url: https://www.lixiang.com/picture/preview.html?path=https://p.ampmake.com/fed/image/png/bf2586abadf6d4ce70338b8b3dd6f906.png
+        - link "广播电视节目制作经营许可证（京）字第18667号" [ref=e113] [cursor=pointer]:
+          - /url: https://s.ampmake.com/fed/cdn/Broadcasting-License/1.0.0/20230626-142911.jpeg
+        - generic [ref=e114]: 北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区)

@@ -1,0 +1,12 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - heading "Oops!" [level=1] [ref=e5]
+    - heading "您访问的页面不存在～" [level=3] [ref=e6]
+    - heading "将于2秒后自动跳转首页" [level=4] [ref=e13]
+    - link "首页" [ref=e9] [cursor=pointer]:
+      - /url: /
+  - paragraph [ref=e11]:
+    - text: © copyright BOSS直聘 2026
+    - link "京ICP备14013441号-5" [ref=e12] [cursor=pointer]:
+      - /url: https://beian.miit.gov.cn/
+    - text: 京ICP证150923号

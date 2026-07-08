@@ -1,0 +1,350 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e7]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: ./home.html
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - textbox "输入关键词：如北京市电力公司等" [ref=e14]
+          - button "搜索" [ref=e15] [cursor=pointer]: 搜索
+        - generic [ref=e17]:
+          - link "登录" [ref=e18] [cursor=pointer]:
+            - /url: ./login.html
+          - link "注册" [ref=e19] [cursor=pointer]:
+            - /url: ./register.html
+    - list [ref=e24]:
+      - listitem [ref=e25]:
+        - link "首页" [ref=e26] [cursor=pointer]:
+          - /url: ./home.html
+      - listitem [ref=e27]:
+        - link "单位一览" [ref=e28] [cursor=pointer]:
+          - /url: ./unitList.html
+      - listitem [ref=e29]:
+        - link "应聘指南" [ref=e30] [cursor=pointer]:
+          - /url: ./applicationGuide.html
+      - listitem [ref=e31]:
+        - link "帮助中心" [ref=e32] [cursor=pointer]:
+          - /url: ./helpCenter.html
+  - generic [ref=e33]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - text: 最新通知
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - link "国网北京市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e43] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网北京市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+            - link "国网天津市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e45] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网天津市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+            - link "国网河北省电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e47] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网河北省电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+            - link "国网冀北电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e49] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网冀北电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+          - generic [ref=e51]:
+            - link "国网北京市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e52] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网北京市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+            - link "国网天津市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e54] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网天津市电力公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+            - link "国网河北省电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e56] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网河北省电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+            - link "国网冀北电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27" [ref=e58] [cursor=pointer]:
+              - /url: ./comyAument.html
+              - text: 国网冀北电力有限公司2026年高校毕业生招聘公告（第三批）----2026-04-27
+      - generic [ref=e60]: 技术支持 4001095598 rlzyb@sgcc.com.cn
+    - list [ref=e63]:
+      - listitem [ref=e64]:
+        - link "公司公告" [ref=e66] [cursor=pointer]:
+          - /url: ./comyAument.html
+      - generic [ref=e70]:
+        - list [ref=e71]:
+          - listitem [ref=e72]:
+            - link "国家电网有限公司2026年招聘高校毕业生公告" [ref=e73] [cursor=pointer]:
+              - /url: ./unitPart.html?bullet_id=3fb3d86a52764cc68470295dc75b95b8
+          - listitem [ref=e74]: 2025-10-18
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "国家电网有限公司2026年招聘高校毕业生公告" [ref=e77] [cursor=pointer]:
+              - /url: ./unitPart.html?bullet_id=3fb3d86a52764cc68470295dc75b95b8
+          - listitem [ref=e78]: 2025-10-18
+        - list [ref=e79]:
+          - listitem [ref=e80]:
+            - link "国家电网有限公司2026年招聘高校毕业生公告" [ref=e81] [cursor=pointer]:
+              - /url: ./unitPart.html?bullet_id=3fb3d86a52764cc68470295dc75b95b8
+          - listitem [ref=e82]: 2025-10-18
+      - listitem [ref=e83]:
+        - link "更多>>" [ref=e84] [cursor=pointer]:
+          - /url: ./comyAument.html
+      - listitem [ref=e85]:
+        - link "招聘公告" [ref=e87] [cursor=pointer]:
+          - /url: ./recrAument.html
+      - generic [ref=e91]:
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "国网西藏电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e94] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e95]: 2026-04-27
+        - list [ref=e96]:
+          - listitem [ref=e97]:
+            - link "国网北京市电力公司2026年高校毕业生招聘公告（第三批）" [ref=e98] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e99]: 2026-04-27
+        - list [ref=e100]:
+          - listitem [ref=e101]:
+            - link "国网天津市电力公司2026年高校毕业生招聘公告（第三批）" [ref=e102] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e103]: 2026-04-27
+        - list [ref=e104]:
+          - listitem [ref=e105]:
+            - link "国网河北省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e106] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e107]: 2026-04-27
+        - list [ref=e108]:
+          - listitem [ref=e109]:
+            - link "国网冀北电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e110] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e111]: 2026-04-27
+        - list [ref=e112]:
+          - listitem [ref=e113]:
+            - link "国网山西省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e114] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e115]: 2026-04-27
+        - list [ref=e116]:
+          - listitem [ref=e117]:
+            - link "国网山东省电力公司2026年高校毕业生招聘公告（第三批）" [ref=e118] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e119]: 2026-04-27
+        - list [ref=e120]:
+          - listitem [ref=e121]:
+            - link "国网上海市电力公司2026年高校毕业生招聘公告（第三批）" [ref=e122] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e123]: 2026-04-27
+        - list [ref=e124]:
+          - listitem [ref=e125]:
+            - link "国网江苏省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e126] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e127]: 2026-04-27
+        - list [ref=e128]:
+          - listitem [ref=e129]:
+            - link "国网浙江省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e130] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e131]: 2026-04-27
+        - list [ref=e132]:
+          - listitem [ref=e133]:
+            - link "国网安徽省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e134] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e135]: 2026-04-27
+        - list [ref=e136]:
+          - listitem [ref=e137]:
+            - link "国网福建省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e138] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e139]: 2026-04-27
+        - list [ref=e140]:
+          - listitem [ref=e141]:
+            - link "国网湖北省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e142] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e143]: 2026-04-27
+        - list [ref=e144]:
+          - listitem [ref=e145]:
+            - link "国网湖南省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e146] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e147]: 2026-04-27
+        - list [ref=e148]:
+          - listitem [ref=e149]:
+            - link "国网河南省电力公司2026年高校毕业生招聘公告（第三批）" [ref=e150] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e151]: 2026-04-27
+        - list [ref=e152]:
+          - listitem [ref=e153]:
+            - link "国网江西省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e154] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e155]: 2026-04-27
+        - list [ref=e156]:
+          - listitem [ref=e157]:
+            - link "国网四川省电力公司2026年高校毕业生招聘公告（第三批）" [ref=e158] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e159]: 2026-04-27
+        - list [ref=e160]:
+          - listitem [ref=e161]:
+            - link "国网重庆市电力公司2026年高校毕业生招聘公告（第三批）" [ref=e162] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e163]: 2026-04-27
+        - list [ref=e164]:
+          - listitem [ref=e165]:
+            - link "国网辽宁省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e166] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e167]: 2026-04-27
+        - list [ref=e168]:
+          - listitem [ref=e169]:
+            - link "国网吉林省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e170] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e171]: 2026-04-27
+        - list [ref=e172]:
+          - listitem [ref=e173]:
+            - link "国网黑龙江省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e174] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e175]: 2026-04-27
+        - list [ref=e176]:
+          - listitem [ref=e177]:
+            - link "国网内蒙古东部电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e178] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e179]: 2026-04-27
+        - list [ref=e180]:
+          - listitem [ref=e181]:
+            - link "国网陕西省电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e182] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e183]: 2026-04-27
+        - list [ref=e184]:
+          - listitem [ref=e185]:
+            - link "国网甘肃省电力公司2026年高校毕业生招聘公告（第三批）" [ref=e186] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e187]: 2026-04-27
+        - list [ref=e188]:
+          - listitem [ref=e189]:
+            - link "国网青海省电力公司2026年高校毕业生招聘公告（第三批）" [ref=e190] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e191]: 2026-04-27
+        - list [ref=e192]:
+          - listitem [ref=e193]:
+            - link "国网宁夏电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e194] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e195]: 2026-04-27
+        - list [ref=e196]:
+          - listitem [ref=e197]:
+            - link "国网新疆电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e198] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e199]: 2026-04-27
+        - list [ref=e200]:
+          - listitem [ref=e201]:
+            - link "国网西藏电力有限公司2026年高校毕业生招聘公告（第三批）" [ref=e202] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e203]: 2026-04-27
+        - list [ref=e204]:
+          - listitem [ref=e205]:
+            - link "国网北京市电力公司2026年高校毕业生招聘公告（第三批）" [ref=e206] [cursor=pointer]:
+              - /url: ./unitList.html?bullet_type=2
+          - listitem [ref=e207]: 2026-04-27
+      - listitem [ref=e208]:
+        - link "更多>>" [ref=e209] [cursor=pointer]:
+          - /url: ./recrAument.html
+      - listitem [ref=e210]:
+        - link "调剂公告" [ref=e212] [cursor=pointer]:
+          - /url: ./justAument.html
+      - generic [ref=e216]:
+        - list [ref=e217]:
+          - listitem [ref=e218]:
+            - link "国网英大国际控股集团有限公司2026年高校毕业生招聘调剂公告（第一批）" [ref=e219] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e220]: 2025-12-11
+        - list [ref=e221]:
+          - listitem [ref=e222]:
+            - link "国网青海省电力公司2026年高校毕业生招聘调剂公告(第三批)" [ref=e223] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e224]: 2026-05-20
+        - list [ref=e225]:
+          - listitem [ref=e226]:
+            - link "国网信息通信产业集团有限公司2026年高校毕业生招聘（第二批）调剂公告" [ref=e227] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e228]: 2026-03-18
+        - list [ref=e229]:
+          - listitem [ref=e230]:
+            - link "中共国家电网有限公司党校（国家电网有限公司高级管理人员培训中心）2026年第二批高校毕业生调剂公告" [ref=e231] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e232]: 2026-03-17
+        - list [ref=e233]:
+          - listitem [ref=e234]:
+            - link "国网物资有限公司2026年高校毕业生招聘(第二批)调剂公告" [ref=e235] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e236]: 2026-03-17
+        - list [ref=e237]:
+          - listitem [ref=e238]:
+            - link "国网能源研究院有限公司2026年高校毕业生招聘（第二批）调剂公告" [ref=e239] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e240]: 2026-03-17
+        - list [ref=e241]:
+          - listitem [ref=e242]:
+            - link "国网直流中心2026年高校毕业生招聘（第二批）调剂公告" [ref=e243] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e244]: 2026-03-17
+        - list [ref=e245]:
+          - listitem [ref=e246]:
+            - link "国网电力工程研究院有限公司 2026年高校毕业生招聘（第二批）调剂公告" [ref=e247] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e248]: 2026-03-17
+        - list [ref=e249]:
+          - listitem [ref=e250]:
+            - link "国家电网有限公司特高压建设分公司2026年高校毕业生招聘（第一批）调剂公告" [ref=e251] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e252]: 2025-12-11
+        - list [ref=e253]:
+          - listitem [ref=e254]:
+            - link "国网英大国际控股集团有限公司2026年高校毕业生招聘调剂公告（第一批）" [ref=e255] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e256]: 2025-12-11
+        - list [ref=e257]:
+          - listitem [ref=e258]:
+            - link "国网青海省电力公司2026年高校毕业生招聘调剂公告(第三批)" [ref=e259] [cursor=pointer]:
+              - /url: ./justAument.html
+          - listitem [ref=e260]: 2026-05-20
+      - listitem [ref=e261]:
+        - link "更多>>" [ref=e262] [cursor=pointer]:
+          - /url: ./justAument.html
+    - generic [ref=e263]:
+      - generic:
+        - link "招聘动态" [ref=e267] [cursor=pointer]:
+          - /url: ./dynaAument.html
+        - link "更多>>" [ref=e268] [cursor=pointer]:
+          - /url: ./dynaAument.html
+      - list [ref=e269]:
+        - listitem [ref=e270]:
+          - link "关于高等学校自设专业、交叉专业类别认定的公告" [ref=e272] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=4a420af26ffb4451a017d64c3277be2d
+          - generic [ref=e273]: 2015-11-15
+        - listitem [ref=e274]:
+          - link "国网上海市电力公司关于2026年第三批高校毕业生录用人选的公示（公示已结束）" [ref=e276] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=1600fe98804f42da9708f5c926e1a281
+          - generic [ref=e277]: 2026-06-25
+        - listitem [ref=e278]:
+          - link "国网辽宁省电力有限公司关于2026年第三批高校毕业生录用人选的公示（公示已结束）" [ref=e280] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=d2aef512e78f49d7b1a424ed64025588
+          - generic [ref=e281]: 2026-06-25
+        - listitem [ref=e282]:
+          - link "国网新疆电力有限公司关于2026年第三批高校毕业生录用人选的公示（公示已结束）" [ref=e284] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=96991a23c42a4e84a1979216ee15f9b2
+          - generic [ref=e285]: 2026-06-25
+        - listitem [ref=e286]:
+          - link "国网北京市电力公司关于2026年第三批高校毕业生录用人选的公示（公示已结束）" [ref=e288] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=5473bc70e2d443d09722faa6c15782b1
+          - generic [ref=e289]: 2026-06-25
+        - listitem [ref=e290]:
+          - link "国网甘肃省电力公司关于2026年第三批高校毕业生录用人选的公示（公示已结束）" [ref=e292] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=567353753f014085948e3f3abedb4f71
+          - generic [ref=e293]: 2026-06-25
+        - listitem [ref=e294]:
+          - link "国网四川省电力公司2026年第三批高校毕业生录用人选公示（公示已结束）" [ref=e296] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=491a638c48394585b02a481ea1d4fcb1
+          - generic [ref=e297]: 2026-06-25
+        - listitem [ref=e298]:
+          - link "国网江西省电力有限公司关于2026年第三批高校毕业生录用人选的公示（公示已结束）" [ref=e300] [cursor=pointer]:
+            - /url: ./unitPart.html?bullet_id=e2a0a1c202774f01845be015d2712083
+          - generic [ref=e301]: 2026-06-25
+  - img [ref=e303] [cursor=pointer]
+  - generic [ref=e306]:
+    - list [ref=e308]:
+      - listitem [ref=e309]:
+        - link "国务院国有资产监督管理委员会" [ref=e310] [cursor=pointer]:
+          - /url: http://www.sasac.gov.cn
+      - listitem [ref=e311]:
+        - link "国家电网首页" [ref=e312] [cursor=pointer]:
+          - /url: http://www.sgcc.com.cn
+      - listitem [ref=e313]:
+        - link "国家电网官方微博" [ref=e314] [cursor=pointer]:
+          - /url: http://weibo.com/sgcc
+    - generic [ref=e315]:
+      - generic [ref=e316]: 国家电网公司www.sgcc.com.cn版权所有
+      - generic [ref=e317]: Copyright 2011-2026 State Grid Corporation of China (SGCC). All rights reserved

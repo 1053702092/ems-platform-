@@ -1,0 +1,221 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic "首页" [ref=e12] [cursor=pointer]
+          - link "社会招聘" [ref=e14] [cursor=pointer]:
+            - /url: https://talent.catl.com/social-recruitment/catlhr/98098#/
+          - link "校园招聘" [ref=e16] [cursor=pointer]:
+            - /url: "#/page/校园招聘"
+          - generic [ref=e18]:
+            - generic [ref=e19] [cursor=pointer]: 更多
+            - generic [ref=e20]: 
+        - button "登录" [ref=e23] [cursor=pointer]
+      - textbox "搜索职位" [ref=e24]:
+        - /placeholder: 输入职位关键字
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - generic [ref=e30]:
+          - paragraph [ref=e32]: 让时代，因我不同
+          - paragraph [ref=e34]: 打造世界一流创新科技公司
+        - generic [ref=e36] [cursor=pointer]: 
+      - generic [ref=e40]:
+        - generic [ref=e46]:
+          - img "图片"
+        - generic [ref=e51]:
+          - paragraph [ref=e52]:
+            - strong [ref=e53]: 社会招聘
+          - paragraph [ref=e54]
+          - paragraph [ref=e55]:
+            - strong [ref=e56]: 梦想实现 由此开始
+          - paragraph [ref=e57]
+          - paragraph [ref=e58]: 世界因创新而美好。我们相信，在更大的平台上，每个人都能释放出更多的创造力！
+          - paragraph [ref=e59]: 找准赛道，投递岗位，给我们一个看到你的机会，实现梦想，由此开始。
+        - generic [ref=e65]:
+          - img "图片"
+        - generic [ref=e70]:
+          - paragraph [ref=e71]:
+            - strong [ref=e72]: 校园招聘
+          - paragraph [ref=e73]
+          - paragraph [ref=e74]:
+            - strong [ref=e75]: 时代因我不同
+          - paragraph [ref=e76]
+          - paragraph [ref=e77]: 站上世界级舞台，仰望更高的星空，我们将助力你在这里可持续成长，迸发出属于你的创造力。加入我们，一起开启更美好的能源新未来！
+        - link "全球博士人才招聘 " [ref=e83] [cursor=pointer]:
+          - /url: https://app.mokahr.com/campus-recruitment/catlhr/142992?locale=zh-CN#/jobs
+          - generic [ref=e84]:
+            - generic [ref=e85]: 全球博士人才招聘
+            - generic [ref=e86]: 
+        - link "2026全球校园招聘 " [ref=e92] [cursor=pointer]:
+          - /url: https://app.mokahr.com/campus-recruitment/catlhr/148948?locale=zh-CN#/jobs
+          - generic [ref=e93]:
+            - generic [ref=e94]: 2026全球校园招聘
+            - generic [ref=e95]: 
+        - link "进入社招 " [ref=e101] [cursor=pointer]:
+          - /url: https://talent.catl.com/social-recruitment/catlhr/98098#/
+          - generic [ref=e102]:
+            - generic [ref=e103]: 进入社招
+            - generic [ref=e104]: 
+        - link "专业技术人才招聘 " [ref=e110] [cursor=pointer]:
+          - /url: https://app.mokahr.com/su/FZKuC
+          - generic [ref=e111]:
+            - generic [ref=e112]: 专业技术人才招聘
+            - generic [ref=e113]: 
+        - link "顶尖技术人才项目 " [ref=e119] [cursor=pointer]:
+          - /url: https://app.mokahr.com/campus-recruitment/catlhr/143035#/
+          - generic [ref=e120]:
+            - generic [ref=e121]: 顶尖技术人才项目
+            - generic [ref=e122]: 
+      - generic [ref=e126]:
+        - generic [ref=e132]:
+          - img "图片"
+        - generic [ref=e137]:
+          - paragraph [ref=e138]:
+            - strong [ref=e139]: 在CATL
+            - strong [ref=e140]: 探索
+          - paragraph [ref=e141]
+          - paragraph [ref=e142]:
+            - strong [ref=e143]: 属于你的未来
+          - paragraph [ref=e144]: ——————
+          - paragraph [ref=e145]: 我们以“修己、达人、奋斗、创新”的价值观要求自我，也因此汇集了一批有着共同目标与信仰的时代人。聚全球一流的人才，做全球一流的企业，我们相信，你的到来，会让时代因你不同。
+        - link "工作在CATL " [ref=e151] [cursor=pointer]:
+          - /url: "#/page/工作在CATL"
+          - generic [ref=e152]:
+            - generic [ref=e153]: 工作在CATL
+            - generic [ref=e154]: 
+        - generic [ref=e160]:
+          - img "图片"
+        - generic [ref=e165]:
+          - paragraph [ref=e166]:
+            - strong [ref=e167]: 在CATL
+            - strong [ref=e168]: 收获
+          - paragraph [ref=e169]
+          - paragraph [ref=e170]:
+            - strong [ref=e171]: 充实有保障的生活
+          - paragraph [ref=e172]: ——————
+          - paragraph [ref=e173]: 宁德时代持续落实保障企业及供应链中的劳工权益、人权、职业健康与安全等领域，积极履行社会责任。在这里，我们会竭力保证你的付出均会有对等的回报，并为你搭建资源充沛的奋斗平台，帮助你于专业领域中一展所长。
+        - link "收获在CATL " [ref=e179] [cursor=pointer]:
+          - /url: "#/page/收获在CATL"
+          - generic [ref=e180]:
+            - generic [ref=e181]: 收获在CATL
+            - generic [ref=e182]: 
+      - generic [ref=e186]:
+        - generic [ref=e192]:
+          - generic [ref=e193]: Slide 1 of 2
+          - generic [ref=e195] [cursor=pointer]: 
+          - generic [ref=e197] [cursor=pointer]: 
+          - region "carousel-slider" [ref=e198]
+        - generic [ref=e222]:
+          - paragraph [ref=e223]:
+            - strong [ref=e224]: 在CATL
+            - strong [ref=e225]: 成就
+          - paragraph [ref=e226]
+          - paragraph [ref=e227]:
+            - strong [ref=e228]: 高光时刻
+          - paragraph [ref=e229]: ——————
+          - paragraph [ref=e230]: 宁德时代始终关注员工的职业发展。全面的培养计划、丰富的培训资源、清晰的发展路径，只为让你能在这收获属于自己的人生高光时刻。
+        - generic [ref=e236]:
+          - generic [ref=e237]: Slide 1 of 3
+          - generic [ref=e239] [cursor=pointer]: 
+          - generic [ref=e241] [cursor=pointer]: 
+          - region "carousel-slider" [ref=e242]
+        - generic [ref=e275]:
+          - paragraph [ref=e276]:
+            - strong [ref=e277]: 企业
+            - strong [ref=e278]: 向善
+          - paragraph [ref=e279]
+          - paragraph [ref=e280]:
+            - strong [ref=e281]: 坚持可持续发展
+          - paragraph [ref=e282]: ——————
+          - paragraph [ref=e283]: 公司以推动实现全球与自身的可持续发展为目标，将可持续发展理念融入公司的经营管理，以扎实的 ESG 管理作为实现可持续发展目标的方法与路径。
+          - paragraph [ref=e284]
+          - paragraph [ref=e285]: 公司持续加强利益相关方的沟通，确保公司长期可持续发展的同时，助力实现全球可持续发展。
+        - link "了解更多宁德时代ESG工作 " [ref=e291] [cursor=pointer]:
+          - /url: https://www.catl.com/about/responsibility/
+          - generic [ref=e292]:
+            - generic [ref=e293]: 了解更多宁德时代ESG工作
+            - generic [ref=e294]: 
+      - generic [ref=e298]:
+        - generic [ref=e303]:
+          - paragraph [ref=e305]: “最佳雇主”
+          - paragraph [ref=e307]: 副标题
+        - generic [ref=e313]:
+          - img "图片"
+        - generic [ref=e319]:
+          - img "图片"
+        - generic [ref=e325]:
+          - img "图片"
+        - paragraph [ref=e331]: 2025中国年度最佳雇主
+        - paragraph [ref=e337]: 领英2025全球人才吸引力雇主
+        - generic [ref=e343]:
+          - img "图片"
+        - generic [ref=e348]:
+          - paragraph [ref=e349]
+          - paragraph [ref=e350]: 最受大学生欢迎企业
+          - paragraph [ref=e351]: 最佳雇主品牌奖
+        - paragraph [ref=e357]: 中国好雇主
+        - generic [ref=e363]:
+          - img "图片"
+        - paragraph [ref=e369]: 2025非凡雇主
+        - generic [ref=e375]:
+          - img "图片"
+        - paragraph [ref=e381]: 校招案例奖
+        - generic [ref=e386]:
+          - paragraph [ref=e387]
+          - paragraph [ref=e388]: 2025最具ESG行动力
+          - paragraph [ref=e389]: 青年友好雇主品牌
+        - generic [ref=e395]:
+          - img "图片"
+        - generic [ref=e401]:
+          - img "图片"
+        - paragraph [ref=e407]: 2025年最具影响力雇主
+        - generic [ref=e413]:
+          - img "图片"
+        - generic [ref=e419]:
+          - img "图片"
+        - generic [ref=e424]:
+          - paragraph [ref=e425]
+          - paragraph [ref=e426]: 中国人才管理奖
+          - paragraph [ref=e427]: 人才招聘卓越奖
+        - paragraph [ref=e433]: Power Global Recruiting Employer
+    - generic [ref=e436]:
+      - generic [ref=e437]:
+        - generic [ref=e438]:
+          - img [ref=e440]
+          - generic [ref=e442]:
+            - generic [ref=e443]: 关于我们
+            - generic [ref=e445]:
+              - link "公司简介 公司简介" [ref=e446] [cursor=pointer]:
+                - /url: https://www.catl.com/about/profile/
+                - generic [ref=e447]:
+                  - generic [ref=e449]: 公司简介
+                  - generic [ref=e450]: 公司简介
+              - link "企业文化 企业文化" [ref=e451] [cursor=pointer]:
+                - /url: https://www.catl.com/about/philosophy/
+                - generic [ref=e452]:
+                  - generic [ref=e454]: 企业文化
+                  - generic [ref=e455]: 企业文化
+              - link "社会责任 社会责任" [ref=e456] [cursor=pointer]:
+                - /url: https://www.catl.com/about/responsibility/
+                - generic [ref=e457]:
+                  - generic [ref=e459]: 社会责任
+                  - generic [ref=e460]: 社会责任
+        - generic [ref=e461]:
+          - generic [ref=e462]: 最新招聘信息
+          - generic [ref=e465]:
+            - img [ref=e467]
+            - generic [ref=e468]:
+              - generic [ref=e470]: 微信公众号
+              - generic [ref=e471]: 微信公众号
+      - generic [ref=e472]:
+        - link "© 2021-2022 宁德时代新能源科技股份有限公司" [ref=e473] [cursor=pointer]:
+          - /url: https://www.catl.com/
+        - generic [ref=e474]:
+          - img [ref=e475]
+          - generic [ref=e476]:
+            - link "京公网安备 11010802024479号" [ref=e477] [cursor=pointer]:
+              - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802024479
+            - link "京ICP备15060035号-3" [ref=e478] [cursor=pointer]:
+              - /url: https://beian.miit.gov.cn
+  - text: 

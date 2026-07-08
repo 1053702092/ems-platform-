@@ -1,0 +1,2 @@
+[     104ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://www.zhaopin.com/campust/?t=1:0
+[    6838ms] [LOG] 获取到IP定位city, province 武汉市 湖北省 @ https://fecdn1.zhaopin.cn/www_zhaopin_com/chunk-vendors.web.83afd59672f44e71b459b3c39c556323.js:0

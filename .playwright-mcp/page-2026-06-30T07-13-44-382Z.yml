@@ -1,0 +1,82 @@
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - generic [ref=e9]:
+      - link "北京理想汽车有限公司" [ref=e10] [cursor=pointer]:
+        - /url: /jyxt/sczp/zpztgl/ckZpgwList.zf?dwxxid=JG1210728
+        - heading "北京理想汽车有限公司" [level=3] [ref=e11]
+      - paragraph [ref=e12]:
+        - generic [ref=e13]: 其他企业
+        - generic [ref=e14]: 制造业
+        - generic [ref=e15]: 北京市顺义区
+    - generic [ref=e16]:
+      - heading "招聘信息" [level=4] [ref=e17]
+      - list [ref=e18]:
+        - listitem [ref=e19]:
+          - generic [ref=e20]:
+            - heading "AI算法工程师" [level=4] [ref=e21]
+            - paragraph [ref=e22]:
+              - generic [ref=e23]: 面议
+              - generic [ref=e24]: 上海市闵行区
+              - generic [ref=e25]: 全职
+              - generic [ref=e26]: 硕士
+              - generic [ref=e27]: 2人
+              - generic [ref=e28]: 2027-02-13
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]: 收藏
+              - button "投递简历" [ref=e33] [cursor=pointer]
+            - paragraph [ref=e34]: 2026-02-14 09:59:59
+          - generic [ref=e38]:
+            - heading "职位描述" [level=4] [ref=e39]
+            - generic [ref=e40]:
+              - paragraph [ref=e41]:
+                - text: 职位描述：
+                - text: “理想+”是理想汽车面向全球优秀AI技术人才的校园招聘计划。我们期待你的加入，与理想汽车一起成长、分享收获。通过人工智能技术去改变物理世界的效率和体验，造福我们服务的每一个家庭，以及家庭里的每一位成员。
+              - paragraph [ref=e42]:
+                - text: 【本岗位的主要工作内容】
+                - text: 1. 参与自动驾驶、计算机视觉（CV）、大语言模型（LLM）等AI模型的性能加速工作，协助优化模型训练与推理效率，探索底层硬件与算法的适配方案；
+                - text: 2. 协助分析深度学习模型在训练、推理过程中的性能瓶颈，参与CPU/GPU资源调度、内存优化、并行计算效率提升等相关工作；
+                - text: 3. 学习并应用深度学习框架（TensorFlow/PyTorch）的性能优化技术，包括计算图优化、算子加速、低精度计算等；
+                - text: 4. 跟踪AI系统加速领域的前沿技术（如AI编译器、分布式训练框架），参与技术调研与原型验证；
+                - text: 5. 与算法团队、硬件团队协作，参与高性能AI系统的设计与实现，解决模型落地过程中的工程问题。
+              - paragraph [ref=e43]:
+                - text: 职位要求：
+                - text: 1. 计算机科学、人工智能、电子工程等相关专业硕士及以上应届毕业生；
+                - text: 2. 具备扎实的编程基础，熟悉C/C++/Python编程语言，有CUDA/OpenCL编程经验者优先；
+                - text: 3. 了解深度学习基本原理，熟悉至少一种主流深度学习框架（TensorFlow/PyTorch）的使用；
+                - text: 4. 对计算机体系结构、并行计算、高性能计算有一定了解，有相关课程设计或科研项目经验者优先；
+                - text: 5. 了解LLVM、TVM等AI编译技术，或参与过模型性能优化、分布式训练相关项目者优先；
+                - text: 6. 具备良好的学习能力、逻辑思维和问题分析能力，对AI系统加速技术有浓厚兴趣；
+                - text: 7. 有相关领域学术论文发表、竞赛获奖或开源项目贡献者优先。
+            - generic [ref=e44]:
+              - paragraph [ref=e45]: 职位类别:计算机软、硬件/互联网/IT
+              - paragraph [ref=e46]: 专业要求:不限
+    - generic [ref=e47]:
+      - heading "单位简介" [level=4] [ref=e48]
+      - paragraph [ref=e50]: 理想汽车是中国领先的新能源智能汽车制造商，设计、研发、制造和销售豪华智能电动汽车。我们坚持自建智能制造基地，并自建供应链体系，保障核心零部件供应。“创造移动的家，创造幸福的家”是我们的品牌使命，我们致力于为家庭打造更安全、更便捷、更舒适的智能电动车。
+  - generic [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - heading "联系方式" [level=4] [ref=e54]: 联系方式
+        - list [ref=e56]:
+          - listitem [ref=e57]: 联系人：周袁玉
+          - listitem [ref=e58]: 联系电话：
+          - listitem [ref=e59]: 电子邮箱：campus_scs@lixiang.com
+          - listitem [ref=e60]: 传真：
+      - generic [ref=e61]:
+        - heading "公司地址" [level=4] [ref=e62]: 公司地址
+        - list [ref=e64]:
+          - listitem [ref=e65]: 地址：北京市顺义区
+          - listitem [ref=e66]: 邮编：
+    - generic [ref=e68]:
+      - heading "更多招聘职位" [level=4] [ref=e69]: 更多招聘职位
+      - list [ref=e71]:
+        - listitem [ref=e72]:
+          - link "软硬件协同智能系统研发工程师" [ref=e74] [cursor=pointer]:
+            - /url: /jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=4AAB6B32740C716FE0653A68DD0E9B18
+        - listitem [ref=e75]:
+          - link "强化学习算法研究员" [ref=e77] [cursor=pointer]:
+            - /url: /jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=4AAA63CEE3764357E0653A68DD0E9B18
+        - listitem [ref=e78]:
+          - link "产品专家" [ref=e80] [cursor=pointer]:
+            - /url: /jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=42D7FF4B8C4E6135E0653A68DD0E9B18

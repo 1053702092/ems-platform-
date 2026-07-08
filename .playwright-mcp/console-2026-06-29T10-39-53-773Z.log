@@ -1,0 +1,5 @@
+[     543ms] [LOG] JQMIGRATE: Migrate is installed, version 1.4.1 @ https://www.career.zju.edu.cn/zftal-ui-v5-1.1.1/assets/js/jquery-migrate.min.js?ver=d37be3a86ceffe5660160821429b2d8d:1
+[     748ms] TypeError: Cannot read properties of undefined (reading 'indexOf')
+    at HTMLDocument.<anonymous> (https://www.career.zju.edu.cn/jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=3D28A90E79270B63E0653A68DD0E9B18:154:52)
+    at e (https://www.career.zju.edu.cn/zftal-ui-v5-1.1.1/assets/js/jquery-min.js?ver=d37be3a86ceffe5660160821429b2d8d:2:30038)
+    at t (https://www.career.zju.edu.cn/zftal-ui-v5-1.1.1/assets/js/jquery-min.js?ver=d37be3a86ceffe5660160821429b2d8d:2:30340)

@@ -1,0 +1,183 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e12]:
+        - generic [ref=e13] [cursor=pointer]: 车型
+        - generic [ref=e14] [cursor=pointer]: 技术
+        - generic [ref=e15] [cursor=pointer]: 充电
+        - generic [ref=e16] [cursor=pointer]: 眼镜
+        - generic [ref=e17] [cursor=pointer]: 零售中心
+        - generic [ref=e18] [cursor=pointer]: 服务中心
+        - generic [ref=e19] [cursor=pointer]: 关于我们
+      - generic [ref=e20]:
+        - generic [ref=e21] [cursor=pointer]: 预约试驾
+        - generic [ref=e22] [cursor=pointer]: 登录
+        - generic [ref=e25] [cursor=pointer]: 
+  - generic [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: 加入我们
+      - generic [ref=e33]:
+        - paragraph [ref=e34] [cursor=pointer]: 发现理想
+        - paragraph [ref=e35] [cursor=pointer]: 校园招聘与实习
+        - paragraph [ref=e36] [cursor=pointer]: 社会招聘
+        - paragraph [ref=e37] [cursor=pointer]: 我的档案
+    - img [ref=e39]
+    - generic [ref=e41]:
+      - generic [ref=e42] [cursor=pointer]: 宣讲会
+      - generic [ref=e43] [cursor=pointer]: 招聘流程
+      - generic [ref=e44] [cursor=pointer]: 问题答疑
+      - generic [ref=e45] [cursor=pointer]: 新人培养
+    - generic [ref=e46]:
+      - paragraph [ref=e47]: 理想汽车校园招聘流程
+      - generic [ref=e49]:
+        - list [ref=e214]:
+          - listitem [ref=e215] [cursor=pointer]: 正式批招聘流程
+          - listitem [ref=e216] [cursor=pointer]: “理想+”招聘流程
+        - generic [ref=e55]:
+          - generic [ref=e217]:
+            - paragraph [ref=e218]: 正式批招聘流程
+            - paragraph [ref=e219]: 毕业时间：2025年9月-2026年8月
+            - paragraph [ref=e220]: 工作地点：北京，上海，常州，杭州等
+            - generic [ref=e221]:
+              - generic [ref=e222]:
+                - paragraph [ref=e225]: 网申/内推
+                - paragraph
+              - generic [ref=e226]:
+                - paragraph [ref=e229]: 笔试
+                - paragraph [ref=e230]: （部分岗位）
+              - generic [ref=e231]:
+                - paragraph [ref=e234]: 面试+测评
+                - paragraph
+              - generic [ref=e235]:
+                - paragraph [ref=e238]: Offer
+                - paragraph
+          - generic [ref=e239]:
+            - paragraph [ref=e240]: “理想+”招聘流程
+            - paragraph [ref=e241]: 毕业时间：2025年1月-2026年8月
+            - paragraph [ref=e242]: 工作地点：北京、上海、杭州、香港等
+            - generic [ref=e243]:
+              - generic [ref=e244]:
+                - paragraph [ref=e247]: 网申/内推
+                - paragraph
+              - generic [ref=e248]:
+                - paragraph [ref=e251]: 面试+测评
+                - paragraph
+              - generic [ref=e252]:
+                - paragraph [ref=e255]: Offer
+                - paragraph
+  - generic [ref=e110]:
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - heading "车型" [level=3] [ref=e114]
+        - list [ref=e115] [cursor=pointer]:
+          - listitem [ref=e116]: 理想i6
+          - listitem [ref=e117]: 理想i8
+          - listitem [ref=e118]: 理想MEGA
+          - listitem [ref=e119]: 理想L6
+          - listitem [ref=e120]: 全新理想L8
+          - listitem [ref=e121]: 全新理想L9
+      - generic [ref=e122]:
+        - heading "技术" [level=3] [ref=e123]
+        - list [ref=e124] [cursor=pointer]:
+          - listitem [ref=e125]: 辅助驾驶
+          - listitem [ref=e126]: 智能空间
+          - listitem [ref=e127]: 理想同学
+          - listitem [ref=e128]: 完全体线控底盘
+          - listitem [ref=e129]: 增程技术
+          - listitem [ref=e130]: 纯电技术
+          - listitem [ref=e131]: 堡垒安全车身
+          - listitem [ref=e132]: 电子电气架构
+          - listitem [ref=e133]: 理想OTA
+          - listitem [ref=e134]: 星环OS
+          - listitem [ref=e135]: 理想隐私安全
+      - generic [ref=e136]:
+        - heading "充电" [level=3] [ref=e137]
+        - list [ref=e138] [cursor=pointer]:
+          - listitem [ref=e139]: 充电体验
+          - listitem [ref=e140]: 充电地图
+      - generic [ref=e141]:
+        - heading "眼镜" [level=3] [ref=e142]
+        - list [ref=e143] [cursor=pointer]:
+          - listitem [ref=e144]: 理想AI眼镜 Livis
+      - generic [ref=e145]:
+        - heading "零售与服务" [level=3] [ref=e146]
+        - list [ref=e147] [cursor=pointer]:
+          - listitem [ref=e148]: 零售中心
+          - listitem [ref=e149]: 服务中心
+      - generic [ref=e150]:
+        - heading "共创" [level=3] [ref=e151]
+        - list [ref=e152] [cursor=pointer]:
+          - listitem [ref=e153]: 用户口碑
+      - generic [ref=e154]:
+        - heading "成长" [level=3] [ref=e155]
+        - list [ref=e156] [cursor=pointer]:
+          - listitem [ref=e157]: 关于我们
+          - listitem [ref=e158]: 加入我们
+          - listitem [ref=e159]: 媒体中心
+          - listitem [ref=e160]: 发布会回放
+          - listitem [ref=e161]: 投资者关系
+      - generic [ref=e162]:
+        - heading "帮助" [level=3] [ref=e163]
+        - list [ref=e164] [cursor=pointer]:
+          - listitem [ref=e165]: 帮助中心
+          - listitem [ref=e166]: 金融试算器
+          - listitem [ref=e167]: 置换服务
+          - listitem [ref=e168]: 全景看车
+    - contentinfo [ref=e169]:
+      - generic [ref=e170]:
+        - paragraph [ref=e173]:
+          - generic [ref=e174] [cursor=pointer]: 在线客服
+          - generic [ref=e175] [cursor=pointer]:
+            - text: "|"
+            - 'link "客服电话: 400-686-0900" [ref=e176]':
+              - /url: tel:4006860900
+          - generic [ref=e177] [cursor=pointer]:
+            - text: "|"
+            - 'link "媒体咨询: press@lixiang.com" [ref=e178]':
+              - /url: mailto:press@lixiang.com
+          - generic [ref=e179] [cursor=pointer]:
+            - text: "|"
+            - 'link "举报邮箱: compliance@lixiang.com" [ref=e180]':
+              - /url: mailto:compliance@lixiang.com
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - link "维修与环保信息 |" [ref=e183] [cursor=pointer]:
+              - /url: javascript:;
+            - link "法律与安全 |" [ref=e184] [cursor=pointer]:
+              - /url: /agreement/legal.html
+            - link "合规与举报 |" [ref=e185] [cursor=pointer]:
+              - /url: /help/compliance/root/1748.html
+            - link "隐私政策 |" [ref=e186] [cursor=pointer]:
+              - /url: /agreement/privacy.html
+            - link "用户协议 |" [ref=e187] [cursor=pointer]:
+              - /url: /agreement/register.html
+            - link "钣喷中心招募 |" [ref=e188] [cursor=pointer]:
+              - /url: /help/topic/spray.html
+            - link "二手车服务商招募 |" [ref=e189] [cursor=pointer]:
+              - /url: /help/topic/esczm10.html
+            - link "备案信息" [ref=e190] [cursor=pointer]:
+              - /url: /manual/sign/webbeian.html
+          - generic [ref=e191]:
+            - link "" [ref=e192] [cursor=pointer]:
+              - /url: javascript:;
+              - generic [ref=e193]: 
+            - link "" [ref=e194] [cursor=pointer]:
+              - /url: javascript:;
+              - generic [ref=e195]: 
+            - link "" [ref=e196] [cursor=pointer]:
+              - /url: https://weibo.com/u/6001272153
+              - generic [ref=e197]: 
+        - generic [ref=e200]:
+          - link "©2026 京ICP备19003172号" [ref=e202] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn/
+          - link "京公网安备11011302001865号" [ref=e205] [cursor=pointer]:
+            - /url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302001865
+          - generic [ref=e206]: 北京车励行信息技术有限公司@版权所有
+          - generic [ref=e207]: 增值电信业务经营许可证：编号京B2-20191092/编号B2-20196074
+          - link "营业执照" [ref=e209] [cursor=pointer]:
+            - /url: https://www.lixiang.com/picture/preview.html?path=https://p.ampmake.com/fed/image/png/bf2586abadf6d4ce70338b8b3dd6f906.png
+          - link "广播电视节目制作经营许可证（京）字第18667号" [ref=e211] [cursor=pointer]:
+            - /url: https://s.ampmake.com/fed/cdn/Broadcasting-License/1.0.0/20230626-142911.jpeg
+          - generic [ref=e212]: 北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区)

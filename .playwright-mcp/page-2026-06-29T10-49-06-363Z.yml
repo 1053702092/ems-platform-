@@ -1,0 +1,156 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e10]:
+        - generic [ref=e11] [cursor=pointer]: 登录
+        - generic [ref=e14] [cursor=pointer]: 
+  - generic [ref=e18]:
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: 加入我们
+      - generic [ref=e22]:
+        - paragraph [ref=e23] [cursor=pointer]: 发现理想
+        - paragraph [ref=e24] [cursor=pointer]: 校园招聘与实习
+        - paragraph [ref=e25] [cursor=pointer]: 社会招聘
+        - paragraph [ref=e26] [cursor=pointer]: 我的档案
+    - generic [ref=e27]:
+      - img [ref=e28]
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: 理想汽车2026校园招聘
+        - generic [ref=e31] [cursor=pointer]: 立即投递
+    - generic [ref=e33]:
+      - paragraph [ref=e34]: 校招与实习职位
+      - paragraph [ref=e35]: 理想汽车期待你的加入
+      - generic [ref=e36]:
+        - generic [ref=e39] [cursor=pointer]:
+          - paragraph [ref=e40]: 整车研发
+          - paragraph [ref=e41]: 涉及整车硬件技术前瞻预研、技术开发、方案制定、落地与推进、质量问题解决及商品性能提升等多个方向，致力于成为行业技术的先驱者。
+          - paragraph [ref=e42]: 职位分类：底盘 车身＆内外饰 热管理 电池开发 动力驱动 增程系统 整车集成 研发质量 虚拟开发与验证 制造工程 材料开发 座舱 空气动力 车载硬件 电子电器架构 硬件测试 工业化
+          - paragraph [ref=e43]: 查看19个职位
+        - generic [ref=e46] [cursor=pointer]:
+          - paragraph [ref=e47]: 算法与软件
+          - paragraph [ref=e48]: 让算法不断升级，赋予电动车智慧“大脑”；让软件不停进化，为用户创造全新交互体验。保障驾驶更智能，出行更安全，旅途更享受。
+          - paragraph [ref=e49]: 职位分类：算法 软件测试 技术运维 信息安全 车辆控制 前端开发 后端开发 操作系统及嵌入式开发 数据开发 数据分析
+          - paragraph [ref=e50]: 查看33个职位
+        - generic [ref=e53] [cursor=pointer]:
+          - paragraph [ref=e54]: 芯片研发
+          - paragraph [ref=e55]: 为智能产品提供AI算力支撑，挖掘产品智能化升级的原始需求，探索行业最前沿的AI芯片和软件技术，软硬协同实现算力效能最大化。
+          - paragraph [ref=e56]: 职位分类：芯片前端设计 芯片后端设计 软件设计 芯片架构
+          - paragraph [ref=e57]: 查看4个职位
+        - generic [ref=e60] [cursor=pointer]:
+          - paragraph [ref=e61]: 产品
+          - paragraph [ref=e62]: 汇集全球杰出产品经理，精准洞察用户，制定产品策略，掌控产品上线节奏。超越用户需求，对内、对外打造最卓越的产品，不断探索全新可能。
+          - paragraph [ref=e63]: 职位分类：软件产品 硬件产品 产品运营
+          - paragraph [ref=e64]: 查看6个职位
+        - generic [ref=e67] [cursor=pointer]:
+          - paragraph [ref=e68]: 供应链与智能制造
+          - paragraph [ref=e69]: 坚持自建智能制造基地，实现大规模自动化与无人化的生产制造；自建供应链体系，保障核心零部件供应，并开辟全球化供应商体系共同护航。
+          - paragraph [ref=e70]: 职位分类：质量安全 采购与供应计划 制造
+          - paragraph [ref=e71]: 查看5个职位
+        - generic [ref=e74] [cursor=pointer]:
+          - paragraph [ref=e75]: 销售与服务
+          - paragraph [ref=e76]: 搭建线上线下一体化的直营销售和服务系统，向用户直接提供更透明、更便捷、更高效的服务，创造让用户满意、让自己自豪的优质体验。
+          - paragraph [ref=e77]: 职位分类：储备管理 零售 交付 质量运营 售后运营 商业拓展 销售规划与运营
+          - paragraph [ref=e78]: 查看79个职位
+        - generic [ref=e81] [cursor=pointer]:
+          - paragraph [ref=e82]: 充电网络
+          - paragraph [ref=e83]: 运用先进技术和数据运营能力，开发光、储、充一体的智能补能产品，让未来的电动车补能体验更方便，实现安全、便捷、高效的自由出行。
+          - paragraph [ref=e84]: 职位分类：商务拓展 工程建设 策略分析
+          - paragraph [ref=e85]: 查看8个职位
+        - generic [ref=e88] [cursor=pointer]:
+          - paragraph [ref=e89]: 项目管理
+          - paragraph [ref=e90]: 负责不同车型的全生命周期管理或建设工程管理，推动项目通过关键里程碑，识别风险，拉动资源协调上下游，驱动项目高效、稳定运行。
+          - paragraph [ref=e91]: 职位分类：项目管理
+          - paragraph [ref=e92]: 查看0个职位
+        - generic [ref=e95] [cursor=pointer]:
+          - paragraph [ref=e96]: 设计
+          - paragraph [ref=e97]: Future Avantgarde、Halo Design 星环是我们的独特艺术；来自整车造型、UI、动效、交互、视觉、空间的设计师，共同为用户打造极致体验。
+          - paragraph [ref=e98]: 职位分类：设计
+          - paragraph [ref=e99]: 查看7个职位
+        - generic [ref=e102] [cursor=pointer]:
+          - paragraph [ref=e103]: 职能与综合管理
+          - paragraph [ref=e104]: 围绕整个组织提供支撑与服务，全面保障业务运行与发展，以专业优势和全局视角帮助实现组织升级，紧密配合业务确保达成战略目标。
+          - paragraph [ref=e105]: 职位分类：行政管理 法务与风险管理 财务 投资与金融 人力资源 战略管理 品牌与市场 政府关系 工程管理 专利
+          - paragraph [ref=e106]: 查看28个职位
+    - generic [ref=e107]:
+      - paragraph [ref=e108]: 招聘流程
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - img [ref=e113]
+            - paragraph [ref=e114]: 网申/内推
+          - img [ref=e116]
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - img [ref=e120]
+            - paragraph [ref=e121]: 笔试
+          - img [ref=e123]
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - img [ref=e127]
+            - paragraph [ref=e128]: 面试
+          - img [ref=e130]
+        - generic [ref=e132]:
+          - img [ref=e134]
+          - paragraph [ref=e135]: Offer
+      - generic [ref=e136]:
+        - button "查看Q&A" [ref=e137] [cursor=pointer]
+        - button "新人培养" [ref=e138] [cursor=pointer]
+        - button "宣讲动态" [ref=e139] [cursor=pointer]
+  - contentinfo [ref=e142]:
+    - generic [ref=e143]:
+      - paragraph [ref=e146]:
+        - generic [ref=e147] [cursor=pointer]: 在线客服
+        - generic [ref=e148] [cursor=pointer]:
+          - text: "|"
+          - 'link "客服电话: 400-686-0900" [ref=e149]':
+            - /url: tel:4006860900
+        - generic [ref=e150] [cursor=pointer]:
+          - text: "|"
+          - 'link "媒体咨询: press@lixiang.com" [ref=e151]':
+            - /url: mailto:press@lixiang.com
+        - generic [ref=e152] [cursor=pointer]:
+          - text: "|"
+          - 'link "举报邮箱: compliance@lixiang.com" [ref=e153]':
+            - /url: mailto:compliance@lixiang.com
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - link "维修与环保信息 |" [ref=e156] [cursor=pointer]:
+            - /url: javascript:;
+          - link "法律与安全 |" [ref=e157] [cursor=pointer]:
+            - /url: /agreement/legal.html
+          - link "合规与举报 |" [ref=e158] [cursor=pointer]:
+            - /url: /help/compliance/root/1748.html
+          - link "隐私政策 |" [ref=e159] [cursor=pointer]:
+            - /url: /agreement/privacy.html
+          - link "用户协议 |" [ref=e160] [cursor=pointer]:
+            - /url: /agreement/register.html
+          - link "钣喷中心招募 |" [ref=e161] [cursor=pointer]:
+            - /url: /help/topic/spray.html
+          - link "二手车服务商招募 |" [ref=e162] [cursor=pointer]:
+            - /url: /help/topic/esczm10.html
+          - link "备案信息" [ref=e163] [cursor=pointer]:
+            - /url: /manual/sign/webbeian.html
+        - generic [ref=e164]:
+          - link "" [ref=e165] [cursor=pointer]:
+            - /url: javascript:;
+            - generic [ref=e166]: 
+          - link "" [ref=e167] [cursor=pointer]:
+            - /url: javascript:;
+            - generic [ref=e168]: 
+          - link "" [ref=e169] [cursor=pointer]:
+            - /url: https://weibo.com/u/6001272153
+            - generic [ref=e170]: 
+      - generic [ref=e173]:
+        - link "©2026 京ICP备19003172号" [ref=e175] [cursor=pointer]:
+          - /url: https://beian.miit.gov.cn/
+        - link "京公网安备11011302001865号" [ref=e178] [cursor=pointer]:
+          - /url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302001865
+        - generic [ref=e179]: 北京车励行信息技术有限公司@版权所有
+        - generic [ref=e180]: 增值电信业务经营许可证：编号京B2-20191092/编号B2-20196074
+        - link "营业执照" [ref=e182] [cursor=pointer]:
+          - /url: https://www.lixiang.com/picture/preview.html?path=https://p.ampmake.com/fed/image/png/bf2586abadf6d4ce70338b8b3dd6f906.png
+        - link "广播电视节目制作经营许可证（京）字第18667号" [ref=e184] [cursor=pointer]:
+          - /url: https://s.ampmake.com/fed/cdn/Broadcasting-License/1.0.0/20230626-142911.jpeg
+        - generic [ref=e185]: 北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区)

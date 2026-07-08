@@ -1,0 +1,357 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - paragraph [ref=e8]: 武汉
+          - link "[切换]" [ref=e9] [cursor=pointer]:
+            - /url: https://www.zhaopin.com/citymap
+        - navigation [ref=e10]:
+          - list [ref=e11]:
+            - listitem [ref=e12] [cursor=pointer]:
+              - link "首页" [ref=e13]:
+                - /url: https://www.zhaopin.com
+            - listitem [ref=e15] [cursor=pointer]:
+              - link "职位" [ref=e16]:
+                - /url: https://www.zhaopin.com/recommend
+            - listitem [ref=e17] [cursor=pointer]:
+              - link "武汉站" [ref=e18]:
+                - /url: //www.zhaopin.com/wuhan/
+            - listitem [ref=e19] [cursor=pointer]:
+              - link "找副业" [ref=e20]:
+                - /url: https://xiancai.zhaopin.com
+            - listitem [ref=e21] [cursor=pointer]:
+              - link "政企" [ref=e22]:
+                - /url: https://govjob.zhaopin.com
+            - listitem [ref=e23] [cursor=pointer]:
+              - link "校招" [ref=e24]:
+                - /url: //xiaoyuan.zhaopin.com
+            - listitem [ref=e25] [cursor=pointer]:
+              - link "高薪" [ref=e26]:
+                - /url: https://highpin.zhaopin.com/?fromType=1132
+            - listitem [ref=e27] [cursor=pointer]:
+              - link "海归" [ref=e28]:
+                - /url: https://overseas.zhaopin.com
+            - listitem [ref=e29] [cursor=pointer]:
+              - link "驻外" [ref=e30]:
+                - /url: https://www.zhaopin.com/foreign
+            - listitem [ref=e31] [cursor=pointer]:
+              - link "测评" [ref=e32]:
+                - /url: https://td.zhaopin.com
+            - listitem [ref=e33] [cursor=pointer]:
+              - link "职Q" [ref=e34]:
+                - /url: //zq.zhaopin.com?utm_source=%E9%A6%96%E9%A1%B5&utm_medium=button&utm_campaign=&utm_term=&utm_content=
+      - generic [ref=e35]:
+        - link "我要招人" [ref=e36] [cursor=pointer]:
+          - /url: javascript:;
+        - link "登录/注册" [ref=e37] [cursor=pointer]:
+          - /url: javascript:;
+  - generic [ref=e40]:
+    - link "智联招聘logo" [ref=e41] [cursor=pointer]:
+      - /url: https://www.zhaopin.com
+      - img "智联招聘logo" [ref=e42]
+    - generic [ref=e43]:
+      - textbox "搜索职位、公司" [ref=e44]
+      - link "搜索" [ref=e45] [cursor=pointer]:
+        - /url: https://www.zhaopin.com/sou/jl736
+        - img [ref=e46]
+        - text: 搜索
+    - generic [ref=e48]:
+      - generic [ref=e51] [cursor=pointer]:
+        - paragraph [ref=e52]: 关注公众号
+        - paragraph [ref=e53]: 掌握最新求职动态
+      - generic [ref=e56] [cursor=pointer]:
+        - paragraph [ref=e57]: 下载APP
+        - paragraph [ref=e58]: 随时随地找工作
+  - main [ref=e59]:
+    - generic [ref=e60]:
+      - generic [ref=e62]:
+        - list [ref=e64]:
+          - listitem [ref=e65]
+          - listitem [ref=e66]
+        - list [ref=e68]:
+          - listitem [ref=e69] [cursor=pointer]:
+            - generic [ref=e71]: 销售
+          - listitem [ref=e74] [cursor=pointer]:
+            - generic [ref=e76]: 人事/行政/党群
+          - listitem [ref=e79] [cursor=pointer]:
+            - generic [ref=e81]: 财务/法务
+          - listitem [ref=e84] [cursor=pointer]:
+            - generic [ref=e86]: 技术
+          - listitem [ref=e89] [cursor=pointer]:
+            - generic [ref=e91]: 电子/通信/半导体
+          - listitem [ref=e94] [cursor=pointer]:
+            - generic [ref=e96]: 产品
+          - listitem [ref=e99] [cursor=pointer]:
+            - generic [ref=e101]: 设计
+          - listitem [ref=e104] [cursor=pointer]:
+            - generic [ref=e106]: 游戏
+          - listitem [ref=e109] [cursor=pointer]:
+            - generic [ref=e111]: 运营/客服
+          - listitem [ref=e114] [cursor=pointer]:
+            - generic [ref=e116]: 市场/公关/广告
+          - listitem [ref=e119] [cursor=pointer]:
+            - generic [ref=e121]: 项目管理
+          - listitem [ref=e124] [cursor=pointer]:
+            - generic [ref=e126]: 高级管理
+          - listitem [ref=e129] [cursor=pointer]:
+            - generic [ref=e131]: 房地产/建筑
+          - listitem [ref=e134] [cursor=pointer]:
+            - generic [ref=e136]: 金融
+          - listitem [ref=e139] [cursor=pointer]:
+            - generic [ref=e141]: 采购/贸易
+          - listitem [ref=e144] [cursor=pointer]:
+            - generic [ref=e146]: 物流/仓储/司机
+          - listitem [ref=e149] [cursor=pointer]:
+            - generic [ref=e151]: 汽车
+          - listitem [ref=e154] [cursor=pointer]:
+            - generic [ref=e156]: 普工/技工
+          - listitem [ref=e159] [cursor=pointer]:
+            - generic [ref=e161]: 生产制造
+          - listitem [ref=e164] [cursor=pointer]:
+            - generic [ref=e166]: 能源/环保
+          - listitem [ref=e169] [cursor=pointer]:
+            - generic [ref=e171]: 农/林/牧/渔
+          - listitem [ref=e174] [cursor=pointer]:
+            - generic [ref=e176]: 医疗健康
+          - listitem [ref=e179] [cursor=pointer]:
+            - generic [ref=e181]: 教育培训
+          - listitem [ref=e184] [cursor=pointer]:
+            - generic [ref=e186]: 直播/影视/传媒
+          - listitem [ref=e189] [cursor=pointer]:
+            - generic [ref=e191]: 咨询/翻译/法律
+          - listitem [ref=e194] [cursor=pointer]:
+            - generic [ref=e196]: 生活服务
+          - listitem [ref=e199] [cursor=pointer]:
+            - generic [ref=e201]: 餐饮
+          - listitem [ref=e204] [cursor=pointer]:
+            - generic [ref=e206]: 管培生/非企业从业者
+      - article [ref=e209]:
+        - list [ref=e211]:
+          - listitem [ref=e212] [cursor=pointer]:
+            - img "https://storage-public.zhaopin.cn/information/team/public/1776154295537253489/CPC-%25E9%25A6%2596%25E9%25A1%25B5Banner2x.jpg" [ref=e214]
+            - img [ref=e215]
+          - listitem [ref=e216] [cursor=pointer]:
+            - img "https://storage-public.zhaopin.cn/information/team/public/1782435325237535313/%25E5%25B9%25BF%25E5%2591%258A%25E5%259B%25BE.jpg" [ref=e218]
+            - img [ref=e219]
+      - img "正在加载" [ref=e227]
+    - generic [ref=e229]:
+      - generic [ref=e230]:
+        - heading "本季热招企业" [level=3] [ref=e231]
+        - list [ref=e232]:
+          - listitem [ref=e233] [cursor=pointer]:
+            - generic [ref=e234]:
+              - img [ref=e235]
+              - paragraph [ref=e237]: 丝元投资有限责任公司
+              - img [ref=e238]
+          - listitem [ref=e239] [cursor=pointer]:
+            - generic [ref=e240]:
+              - img [ref=e241]
+              - paragraph [ref=e243]: 河北移动雄安公司2026夏季校园招聘
+              - img [ref=e244]
+          - listitem [ref=e245] [cursor=pointer]:
+            - generic [ref=e246]:
+              - img [ref=e247]
+              - paragraph [ref=e249]: 智联招聘
+              - img [ref=e250]
+      - generic [ref=e251]:
+        - heading "星推名企" [level=3] [ref=e252]
+        - list [ref=e253]:
+          - listitem [ref=e254] [cursor=pointer]:
+            - generic [ref=e255]:
+              - img [ref=e256]
+              - paragraph [ref=e258]: 北京市海淀区西北旺镇股份经济合作联合社
+              - img [ref=e259]
+          - listitem [ref=e260] [cursor=pointer]:
+            - generic [ref=e261]:
+              - img [ref=e262]
+              - paragraph [ref=e264]: 中国光大银行北京分行
+              - img [ref=e265]
+          - listitem [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]:
+              - img [ref=e268]
+              - generic [ref=e269]:
+                - img [ref=e270]
+                - paragraph [ref=e271]: 中国南方电网有限责任公司
+              - img [ref=e272]
+          - listitem [ref=e273] [cursor=pointer]:
+            - generic [ref=e274]:
+              - img [ref=e275]
+              - paragraph [ref=e277]: 中国邮政广西分公司
+              - img [ref=e278]
+          - listitem [ref=e279] [cursor=pointer]:
+            - generic [ref=e280]:
+              - img [ref=e281]
+              - paragraph [ref=e283]: 赣州银行股份有限公司
+              - img [ref=e284]
+  - generic [ref=e285]:
+    - heading "求职资讯" [level=3] [ref=e286]
+    - list [ref=e287]:
+      - listitem [ref=e288]:
+        - generic [ref=e289]:
+          - generic [ref=e290]:
+            - img "求职干货" [ref=e291]
+            - heading "求职干货" [level=4] [ref=e292]
+          - link "哪些人不会离职？领导早就知道了！ 哪些人不会离职？领导早就知道了！" [ref=e294] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/kfDijwrdtVOO7P1BdWi07A
+            - img "哪些人不会离职？领导早就知道了！" [ref=e295]
+            - paragraph [ref=e296]
+            - heading "哪些人不会离职？领导早就知道了！" [level=5] [ref=e297]
+          - generic [ref=e298]:
+            - link "有了“厌班”情绪，如何治？" [ref=e299] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/uoDJIiVuLg5qxoM-OMZqew
+            - link "为什么“职场废物”人设，越来越流行？" [ref=e300] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/KbhgrjzAvPkneD2XUxbXPg
+            - link "朋友圈仅三天可见，被领导当众批评？" [ref=e301] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/rI7Jk5cO6b61VtaVL6mYNA
+            - link "“离职”心态上班，治好了我的焦虑症" [ref=e302] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/5hNZLUfwtep1vNcTPDDGFw
+            - link "别傻了！真正的高手都这样离职！" [ref=e303] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/FkWscu-sOeZElzvqix3o9A
+      - listitem [ref=e304]:
+        - generic [ref=e305]:
+          - generic [ref=e306]:
+            - img "数据调研" [ref=e307]
+            - heading "数据调研" [level=4] [ref=e308]
+          - link "2024中国城市新质人才竞争力指数报告 2024中国城市新质人才竞争力指数报告" [ref=e310] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/lR9biS8TrhLeS0W82tjnPQ
+            - img "2024中国城市新质人才竞争力指数报告" [ref=e311]
+            - paragraph [ref=e312]
+            - heading "2024中国城市新质人才竞争力指数报告" [level=5] [ref=e313]
+          - generic [ref=e314]:
+            - link "中国企业出海趋势与人才生态构建" [ref=e315] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/Ajpmnm0SCTQpkC1xfagS6Q
+            - link "从就业数据看中国经济稳中向好发展态势" [ref=e316] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/Z5nXvIWsnI7SKdn5kYbuBw
+            - link "2025年春季职场人跳槽情况调查报告" [ref=e317] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/D6dhAcL_8PzhdsHc3jXVCg
+            - link "2025中国女性职场现状调查报告" [ref=e318] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/pA2Q8qCFEXphjLCyv2MILg
+            - link "2024中国新型灵活就业报告" [ref=e319] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/isj2bmoVSj3W6zdqdA-thQ
+      - listitem [ref=e320]:
+        - generic [ref=e321]:
+          - generic [ref=e322]:
+            - img "品牌动向" [ref=e323]
+            - heading "品牌动向" [level=4] [ref=e324]
+          - link "好工作，都是面出来的！ 好工作，都是面出来的！" [ref=e326] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/A8bbxeaMMn-NiOx1EPUDRA
+            - img "好工作，都是面出来的！" [ref=e327]
+            - paragraph [ref=e328]
+            - heading "好工作，都是面出来的！" [level=5] [ref=e329]
+          - generic [ref=e330]:
+            - link "35岁就业歧视何时休？" [ref=e331] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/BEwCWcpV7sNA6jjobp8rzg
+            - link "“AI Prompt优化赛”启动，就等你" [ref=e332] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/aoxwCcyDy6MeSbFjtC9Cng
+            - link "智联招聘携手鸿蒙生态，助力高效求职" [ref=e333] [cursor=pointer]:
+              - /url: https://c.m.163.com/news/a/J0V0RGI500099BK0.html?spss=newsapp&spsnuid=&spsdevid=48F170E1-906D-4B94-8251-45C63D2B7DD0&spsvid=&spsshare=wx&spsts=1714386653912&spstoken=h0HGHaVGD%2BHfVuTymPFtKdqXpUl7W5YNx3U8UXR5rFgrx3TZ089VXq1h8PtbWGFc&spssid=ffc031405c6f2e8938e1c07b02933f3c&spsw=3&isFromH5Share=article
+            - link "智联招聘创意招聘市集落地杭州" [ref=e334] [cursor=pointer]:
+              - /url: https://tidenews.com.cn/news.html?id=2780576
+            - link "关于凝聚合力，共促稳就业的倡议书" [ref=e335] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/badGSJyInHxBKQwTQsBzOQ
+  - list [ref=e337]:
+    - listitem [ref=e338]:
+      - link [ref=e339] [cursor=pointer]:
+        - /url: javascript:#;
+  - generic [ref=e340]:
+    - generic [ref=e341]: 城市导航
+    - list [ref=e342]:
+      - listitem [ref=e343] [cursor=pointer]: A
+      - listitem [ref=e344] [cursor=pointer]: B
+      - listitem [ref=e345] [cursor=pointer]: C
+      - listitem [ref=e346] [cursor=pointer]: D
+      - listitem [ref=e347] [cursor=pointer]: E
+      - listitem [ref=e348] [cursor=pointer]: F
+      - listitem [ref=e349] [cursor=pointer]: G
+      - listitem [ref=e350] [cursor=pointer]: H
+      - listitem [ref=e351] [cursor=pointer]: J
+      - listitem [ref=e352] [cursor=pointer]: K
+      - listitem [ref=e353] [cursor=pointer]: L
+      - listitem [ref=e354] [cursor=pointer]: M
+      - listitem [ref=e355] [cursor=pointer]: "N"
+      - listitem [ref=e356] [cursor=pointer]: P
+      - listitem [ref=e357] [cursor=pointer]: Q
+      - listitem [ref=e358] [cursor=pointer]: R
+      - listitem [ref=e359] [cursor=pointer]: S
+      - listitem [ref=e360] [cursor=pointer]: T
+      - listitem [ref=e361] [cursor=pointer]: W
+      - listitem [ref=e362] [cursor=pointer]: X
+      - listitem [ref=e363] [cursor=pointer]: "Y"
+      - listitem [ref=e364] [cursor=pointer]: Z
+  - contentinfo [ref=e365]:
+    - generic [ref=e366]:
+      - generic [ref=e367]:
+        - generic [ref=e368]:
+          - term [ref=e369]: 关于我们
+          - definition [ref=e370] [cursor=pointer]:
+            - link "公司介绍" [ref=e371]:
+              - /url: //webapp.zhaopin.com/2024/hd/zzgyw0201ZL68537/
+          - definition [ref=e372] [cursor=pointer]:
+            - link "联系我们" [ref=e373]:
+              - /url: //webapp.zhaopin.com/2024/hd/zzgyw0201ZL68537/contact/index.html
+          - definition [ref=e374] [cursor=pointer]:
+            - link "诚聘英才" [ref=e375]:
+              - /url: //webapp.zhaopin.com/2024/hd/zzgyw0201ZL68537/join/index.html
+        - generic [ref=e376]:
+          - term [ref=e377]: 产品与服务
+          - definition [ref=e378] [cursor=pointer]:
+            - link "人才招聘" [ref=e379]:
+              - /url: //www.zhaopin.com/jobs
+          - definition [ref=e380] [cursor=pointer]:
+            - link "企业招聘" [ref=e381]:
+              - /url: //passport.zhaopin.com/org/login?bkurl=https%3A%2F%2Frd5.zhaopin.com%2F
+        - generic [ref=e382]:
+          - term [ref=e383]: 使用与帮助
+          - definition [ref=e384]: 账号注销
+          - definition [ref=e385] [cursor=pointer]:
+            - link "发票制度" [ref=e386]:
+              - /url: https://www.zhaopin.com/invoice-system
+          - definition [ref=e387] [cursor=pointer]:
+            - link "防骗指南" [ref=e388]:
+              - /url: //110.zhaopin.com/
+          - definition [ref=e389] [cursor=pointer]:
+            - link "法律协议" [ref=e390]:
+              - /url: https://rd6.zhaopin.com/aboutus/legal
+          - definition [ref=e391] [cursor=pointer]:
+            - link "资质公示" [ref=e392]:
+              - /url: https://rd6.zhaopin.com/aboutus
+        - generic [ref=e393]:
+          - term [ref=e394]: 联系方式
+          - definition [ref=e395] [cursor=pointer]: 电话：400-885-9898
+          - definition [ref=e396] [cursor=pointer]:
+            - link "客服中心" [ref=e397]:
+              - /url: //dianping.zhaopin.com/jobseeker
+      - generic [ref=e398]:
+        - paragraph [ref=e399]: 智联招聘，更懂你的价值
+        - generic:
+          - generic [ref=e400]: 官方微信
+          - generic [ref=e401]: 企业版APP
+          - generic [ref=e402]: 智联APP
+          - generic [ref=e403]: 小程序
+    - generic [ref=e405]:
+      - generic [ref=e406]:
+        - paragraph [ref=e407]: 未经 Zhaopin.com 同意，不得转载本网站之所有招聘信息及作品 智联招聘网版权所有
+        - paragraph [ref=e408]:
+          - link "京ICP备12025925号" [ref=e409] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn
+          - link "京ICP证010207号" [ref=e410] [cursor=pointer]:
+            - /url: https://rd6.zhaopin.com/aboutus?tab=value-added-telecom
+        - paragraph [ref=e411]: 北京智联三珂人才服务有限公司
+        - paragraph [ref=e412]:
+          - link "京公网安备 11010502059392号" [ref=e413] [cursor=pointer]:
+            - /url: https://beian.mps.gov.cn/#/query/webSearch?code=11010502059392
+          - link "人力资源许可证:1101051996081号" [ref=e414] [cursor=pointer]:
+            - /url: https://rd6.zhaopin.com/aboutus?tab=human-resource-service
+        - paragraph [ref=e415]:
+          - link "网上有害信息举报专区" [ref=e416] [cursor=pointer]:
+            - /url: https://www.12377.cn
+          - text: 违法不良信息举报电话:400-885-9898 关爱未成年举报热线:400-885-9898-3
+        - paragraph [ref=e417]: 朝阳区人力资源与社会保障局监督电话
+      - generic [ref=e418]:
+        - link "网络110报警服务" [ref=e419] [cursor=pointer]:
+          - /url: http://cyberpolice.mps.gov.cn/wfjb/
+          - generic [ref=e421]: 网络110报警服务
+        - link "电子营业执照" [ref=e422] [cursor=pointer]:
+          - /url: https://rd6.zhaopin.com/aboutus?tab=electronic-business
+          - generic [ref=e424]: 电子营业执照

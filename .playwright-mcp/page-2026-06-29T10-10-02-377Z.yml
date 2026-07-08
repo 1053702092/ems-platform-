@@ -1,0 +1,499 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e4]:
+    - link "猎聘" [ref=e5] [cursor=pointer]:
+      - /url: https://www.liepin.com
+      - img "猎聘" [ref=e6]
+    - list [ref=e7]:
+      - listitem [ref=e8]:
+        - link "首页" [ref=e9] [cursor=pointer]:
+          - /url: https://www.liepin.com
+      - listitem [ref=e10]:
+        - link "职位" [ref=e11] [cursor=pointer]:
+          - /url: https://www.liepin.com/zhaopin/?inputFrom=head_navigation&scene=init&workYearCode=0&ckId=hzdfvunj9x2ct10hpbpmrc5o25q2y2ua
+      - listitem [ref=e12]:
+        - link "校园" [ref=e13] [cursor=pointer]:
+          - /url: https://www.liepin.com/campus/?t=1
+      - listitem [ref=e14]:
+        - link "海归" [ref=e15] [cursor=pointer]:
+          - /url: https://www.liepin.com/returnee/
+      - listitem [ref=e16]:
+        - link "简历优化" [ref=e18] [cursor=pointer]:
+          - /url: https://vas.liepin.com/v/view-intro?utm_content=pcjuhexiala&imscid=R000014437
+      - listitem [ref=e19]: 猎聘APP
+    - list [ref=e21]:
+      - listitem [ref=e22]:
+        - link "我是猎头" [ref=e23] [cursor=pointer]:
+          - /url: https://h.liepin.com/?imscid=R002017570#sfrom=click-pc_homepage-front_navigation-hunter_new
+      - listitem [ref=e24]:
+        - link "我是招聘方" [ref=e25] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - img [ref=e26]:
+          - generic [ref=e29]: NEW
+      - listitem [ref=e30]: 登录/注册
+  - generic [ref=e32]:
+    - generic [ref=e34] [cursor=pointer]:
+      - img [ref=e36]
+      - paragraph [ref=e41]: 邀请应聘
+    - generic [ref=e43] [cursor=pointer]:
+      - img [ref=e45]
+      - paragraph [ref=e54]: 我的投递
+    - generic [ref=e56] [cursor=pointer]:
+      - img [ref=e58]
+      - paragraph [ref=e66]: 我的收藏
+    - generic [ref=e68] [cursor=pointer]:
+      - img [ref=e70]
+      - paragraph [ref=e89]: 猎聘APP
+    - paragraph [ref=e94] [cursor=pointer]: 投诉建议
+    - img [ref=e97] [cursor=pointer]
+  - generic [ref=e101]:
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - generic [ref=e105]: BMS算法
+        - generic [ref=e106]: 25-55k·14薪
+      - generic [ref=e107]:
+        - text: 深圳-南山区
+        - text: 3年以上
+        - text: 硕士
+        - text: 招1人
+        - text: 今日更新
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - link "投简历" [ref=e114] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - generic [ref=e115] [cursor=pointer]: 聊一聊
+      - generic [ref=e116]:
+        - link "收藏" [ref=e117] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - emphasis [ref=e118]
+          - text: 收藏
+        - generic [ref=e119]:
+          - emphasis [ref=e120]
+          - text: 微信分享扫码
+  - generic [ref=e123]:
+    - generic [ref=e124]: 五险一金
+    - generic [ref=e125]: 年终奖金
+    - generic [ref=e126]: 带薪年假
+    - generic [ref=e127]: 餐费补贴
+    - generic [ref=e128]: 加班补贴
+    - generic [ref=e129]: 领导好
+    - generic [ref=e130]: 发展空间大
+    - generic [ref=e131]: 弹性工作
+    - generic [ref=e132]: 岗位晋升
+  - main [ref=e133]:
+    - generic [ref=e134]:
+      - generic [ref=e135]:
+        - img "avator" [ref=e137]
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - text: 刘先生 1小时前在线
+            - generic [ref=e140]: 已认证
+          - generic [ref=e141]:
+            - text: 招聘培训主管
+            - link "· 地芯引力" [ref=e143] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/10097581/
+        - link "聊一聊" [ref=e144] [cursor=pointer]:
+          - /url: javascript:;
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - term [ref=e147]: 职位介绍
+          - definition [ref=e148]: 消费电子类、小家电及小型无人机BMS算法 岗位职责： 1、制定算法验证方案，完成算法仿真测试、电池&整机算法测试要求与全工况精度调优，定位并解决电量估算异常问题 2、前沿算法研究，析锂、膨胀、内短路等算法研究 3 、负责电池 SOC/SOH/SOE/SOP 等电量计核心算法的设计、建模、仿真优化与量产落地 4 、负责完成相关设计方案、测试报告等技术文档撰写 任职要求 1、硕士及3年以上经验，电气工程、控制科学、自动化、车辆工程、电化学等相关专业，能力突出者可放宽至本科 2 、熟练掌握锂离子电池原理与 BMS 系统架构，熟练掌握安时积分、OCV、阻抗跟踪、CEDV电量计等算法，具备电池建模与参数辨识能力 3 、熟练使用相关软件掌握 C 语言，具备嵌入式算法移植能力（软件能力） 4、 熟练掌握算法验证案例（电量计相关优先） 5、工作严谨细致，逻辑清晰，具备较强的问题排查能力与跨部门协作意识 加分项： 1、具备三元、磷酸铁锂、硅碳等多电芯体系算法适配经验优先 2 、有 TI BQ、美信、瑞萨 等电量计芯片应用开发经验优先 3 、有电化学模型、数据驱动融合算法研发经验优先
+        - generic [ref=e149]:
+          - term [ref=e150]: 其他信息
+          - definition [ref=e151]: 行业要求：全部行业
+      - generic [ref=e152]:
+        - heading "公司简介" [level=2] [ref=e153]
+        - generic [ref=e154]:
+          - generic [ref=e155]: 一、公司简介 浙江地芯引力科技有限公司成立于 2019 年 6 月，注册资本 1142.97 万元， 由国家万人计划人才王敏创立。公司专注于消费电子、信息安全等半导体 集成电路细分领域，是一家以科技创新为动力，精通产品开发和市场运营的数 模混合集成电路雏鹰企业。公司座落于杭州市萧山区数字经济新硅谷——杭州 湾信息港，并于深圳、成都分别设立销售服务支持中心及研发分中心。 公司主营产品涵盖电源管理芯片、信息安全芯片、信号链芯片等领域。公司部分产品的市场份额已位居国内前列，与多家行业知名大客户建立稳定合作。现有研发场地约 3000 余平方米。公司核心创始团队具备 15 年以上的芯片设计和产品开发经验。 企业荣誉资质方面， 先后被评为国家重点集成电路设计企业、国家高新技术企业、国家科技型中小 企业、“专精特新”中小企业、准独角兽企业、杭州市雏鹰计划企业、杭州市 专利试点企业、“双软”认证企业、萧山区金凤凰企业等荣誉称号，取得团体标准起草人（USB 充电线通用技术要求）等行业标准化资质荣誉，在消费电子 芯片和信息安全芯片细分领域具备全球隐形独角兽的实力。 产学研校企合作方面，公司已与多家院校成立联合实验室，已开展多项横向项目合作，将本着 “先进科研赋能产业化”的宗旨，进一步围绕数字电源、第三代半导体等方向探索产学研技术成果转化与合作、联合培养人才与定向输送等模式，不断加快 专业人才梯队建设，提升研发创新储备能力。 知识产权方面，地芯引力总计申请200多项知识产权。包括发明专利 164项（授权 81项），实用新型37项（授权 32项），商标 60项（已注册43 项），软件著作权 14 项，集成电路布图设计专有权 28项（授权 28项）， PCT 申请 3件。 二、公司研发技术 公司核心创始团队具备15年以上的芯片设计和产品开发经验。以成熟稳重的80后为骨干、朝气蓬勃的90后为主体。公司为每一位员工量身定制适合的晋升通道及职级体系、广阔的发展空间、多样的人才激励政策等。
+          - link "查看全部" [ref=e156] [cursor=pointer]:
+            - /url: javascript:;
+      - generic [ref=e157]:
+        - heading "猎聘温馨提示：" [level=3] [ref=e158]:
+          - emphasis [ref=e159]
+          - text: 猎聘温馨提示：
+        - generic [ref=e160]:
+          - term [ref=e161]:
+            - text: 1. 如您发现平台内招聘方存在以下违规行为的，请立即
+            - link "举报" [ref=e162] [cursor=pointer]:
+              - /url: javascript:void(0)
+          - definition [ref=e163]:
+            - list [ref=e164]:
+              - listitem [ref=e165]: · 扣押您的身份证件或者其他证件；
+              - listitem [ref=e166]: · 要求您提供担保人、担保金或者以其他名义向您收取财物（ 如培训费、体检费、资料费、置装费、押金等）；
+              - listitem [ref=e167]: · 强迫您入股或者向您集资；
+              - listitem [ref=e168]: · 以招聘名义牟取不正当利益；
+              - listitem [ref=e169]: · 发布虚假招聘广告信息；
+              - listitem [ref=e170]: · 工作时长违反劳动法规定；
+              - listitem [ref=e171]: · 存在其他损害您的合法权益的行为。
+          - term [ref=e172]: 2. 如您应聘的岗位属于涉外劳务合作/海外岗位的，请务必核实招聘方对外劳务合作资质取得情况，同时注意自身资金安全，防范招聘欺诈。
+          - definition [ref=e173]:
+            - link "了解更多安全防范知识>" [ref=e174] [cursor=pointer]:
+              - /url: https://wow.liepin.com/t1013881/pc.html?mscid=Fc5P1I2a
+          - term [ref=e175]: 3. 本平台招聘方不向求职者提供任何收费服务。
+        - link "查看全部" [ref=e176] [cursor=pointer]:
+          - /url: javascript:;
+      - generic [ref=e177]:
+        - heading "猜你喜欢" [level=2] [ref=e178]
+        - generic [ref=e179]:
+          - generic [ref=e181]:
+            - generic [ref=e183]:
+              - link "算法专家（汽车电子）-EVB(J19422) 【 深圳-光明区 】 35-55k·14薪" [ref=e184] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1979872245.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_79872245%3A1%3Agw.14f1f730-435669034
+                - generic [ref=e185]:
+                  - generic [ref=e186]:
+                    - generic "算法专家（汽车电子）-EVB(J19422)" [ref=e187]
+                    - generic [ref=e188]:
+                      - generic [ref=e189]: 【
+                      - generic [ref=e190]: 深圳-光明区
+                      - generic [ref=e191]: 】
+                  - generic [ref=e192]: 35-55k·14薪
+              - link "欣旺达动力科技股份有限公司 欣旺达动力科技股份有限公司 新能源 B轮 10000人以上" [ref=e194] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/10262313/
+                - generic [ref=e196]:
+                  - img "欣旺达动力科技股份有限公司" [ref=e198]
+                  - generic [ref=e199]: 欣旺达动力科技股份有限公司
+                  - generic [ref=e200]: 新能源 B轮 10000人以上
+            - generic [ref=e204]:
+              - generic [ref=e205]: 刘女士
+              - generic [ref=e206]: 招聘资深工程师
+          - generic [ref=e208]:
+            - generic [ref=e210]:
+              - link "无人车业务部-高级BMS系统工程师 【 深圳-龙华区 】 25-35k·15薪" [ref=e211] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1978893753.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_78893753%3A1%3Agw.14f1f730-435669034
+                - generic [ref=e212]:
+                  - generic [ref=e213]:
+                    - generic "无人车业务部-高级BMS系统工程师" [ref=e214]
+                    - generic [ref=e215]:
+                      - generic [ref=e216]: 【
+                      - generic [ref=e217]: 深圳-龙华区
+                      - generic [ref=e218]: 】
+                  - generic [ref=e219]: 25-35k·15薪
+              - link "美团 美团 生活服务 已上市 10000人以上" [ref=e221] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/2036768/
+                - generic [ref=e223]:
+                  - img "美团" [ref=e225]
+                  - generic [ref=e226]: 美团
+                  - generic [ref=e227]: 生活服务 已上市 10000人以上
+            - generic [ref=e231]:
+              - generic [ref=e232]: 张女士
+              - generic [ref=e233]: HR
+          - generic [ref=e235]:
+            - generic [ref=e237]:
+              - link "电池BMS软件工程师 【 深圳-南山区 】 20-45k·20薪" [ref=e238] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1980887843.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_80887843%3A1%3Agw.14f1f730-435669034
+                - generic [ref=e239]:
+                  - generic [ref=e240]:
+                    - generic "电池BMS软件工程师" [ref=e241]
+                    - generic [ref=e242]:
+                      - generic [ref=e243]: 【
+                      - generic [ref=e244]: 深圳-南山区
+                      - generic [ref=e245]: 】
+                  - generic [ref=e246]: 20-45k·20薪
+              - link "京东商城 京东商城 互联网 已上市 10000人以上" [ref=e248] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/9747025/
+                - generic [ref=e250]:
+                  - img "京东商城" [ref=e252]
+                  - generic [ref=e253]: 京东商城
+                  - generic [ref=e254]: 互联网 已上市 10000人以上
+            - generic [ref=e258]:
+              - generic [ref=e259]: 徐女士
+              - generic [ref=e260]: HRBP
+          - generic [ref=e262]:
+            - generic [ref=e264]:
+              - link "高级电池算法工程师 (MJ005027) 【 深圳-南山区 】 25-50k·16薪" [ref=e265] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1983048353.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_83048353%3A1%3Agw.14f1f730-435669034
+                - generic [ref=e266]:
+                  - generic [ref=e267]:
+                    - generic "高级电池算法工程师 (MJ005027)" [ref=e268]
+                    - generic [ref=e269]:
+                      - generic [ref=e270]: 【
+                      - generic [ref=e271]: 深圳-南山区
+                      - generic [ref=e272]: 】
+                  - generic [ref=e273]: 25-50k·16薪
+              - link "DJI 大疆 DJI 大疆 智能硬件/消费电子 C轮 10000人以上" [ref=e275] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/2495108/
+                - generic [ref=e277]:
+                  - img "DJI 大疆" [ref=e279]
+                  - generic [ref=e280]: DJI 大疆
+                  - generic [ref=e281]: 智能硬件/消费电子 C轮 10000人以上
+            - generic [ref=e285]:
+              - generic [ref=e286]: 闫女士
+              - generic [ref=e287]: 招聘
+          - generic [ref=e289]:
+            - generic [ref=e291]:
+              - link "bms算法工程师 【 深圳-光明区 】 20-30k·14薪" [ref=e292] [cursor=pointer]:
+                - /url: https://www.liepin.com/job/1982570673.shtml?pgRef=c_pc_job_detail_page%3Ac_pc_job_detail_like_job_listcard%402_82570673%3A1%3Agw.14f1f730-435669034
+                - generic [ref=e293]:
+                  - generic [ref=e294]:
+                    - generic "bms算法工程师" [ref=e295]
+                    - generic [ref=e296]:
+                      - generic [ref=e297]: 【
+                      - generic [ref=e298]: 深圳-光明区
+                      - generic [ref=e299]: 】
+                  - generic [ref=e300]: 20-30k·14薪
+              - link "欣旺达动力科技股份有限公司 欣旺达动力科技股份有限公司 新能源 B轮 10000人以上" [ref=e302] [cursor=pointer]:
+                - /url: https://www.liepin.com/company/10262313/
+                - generic [ref=e304]:
+                  - img "欣旺达动力科技股份有限公司" [ref=e306]
+                  - generic [ref=e307]: 欣旺达动力科技股份有限公司
+                  - generic [ref=e308]: 新能源 B轮 10000人以上
+            - generic [ref=e312]:
+              - generic [ref=e313]: 徐先生
+              - generic [ref=e314]: 招聘专员
+        - generic [ref=e315]:
+          - generic [ref=e316] [cursor=pointer]: "1"
+          - generic [ref=e317] [cursor=pointer]: "2"
+          - generic [ref=e318] [cursor=pointer]: "3"
+          - generic [ref=e319] [cursor=pointer]: "4"
+      - generic [ref=e326]:
+        - textbox "搜索职位、公司" [ref=e327]
+        - generic [ref=e328] [cursor=pointer]: 搜索
+    - complementary [ref=e329]:
+      - generic [ref=e333]:
+        - generic [ref=e337]:
+          - generic [ref=e338] [cursor=pointer]: 登录/注册
+          - generic [ref=e339] [cursor=pointer]: 密码登录
+        - generic [ref=e342]:
+          - generic [ref=e349]:
+            - generic [ref=e353]:
+              - generic [ref=e354]: "+86"
+              - img "down" [ref=e357]:
+                - img [ref=e358]
+            - textbox "手机号" [ref=e360]
+          - generic [ref=e367]:
+            - textbox "短信验证码" [ref=e368]
+            - generic [ref=e370] [cursor=pointer]: 获取验证码
+          - button "登 录" [ref=e371] [cursor=pointer]:
+            - generic [ref=e372]: 登 录
+        - generic [ref=e374]:
+          - generic [ref=e375] [cursor=pointer]:
+            - checkbox "同意猎聘" [ref=e377]
+            - generic [ref=e379]: 同意猎聘
+          - link "《猎聘用户服务协议》" [ref=e380] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0001
+          - text: 及
+          - link "《个人信息保护政策》" [ref=e381] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0002
+      - generic [ref=e382]:
+        - heading "公司信息" [level=2] [ref=e383]
+        - generic [ref=e384]:
+          - img "logo" [ref=e385] [cursor=pointer]
+          - generic [ref=e387] [cursor=pointer]: 地芯引力
+          - link "关注" [ref=e389] [cursor=pointer]:
+            - /url: javascript:void(0);
+        - generic [ref=e390]:
+          - generic [ref=e391]: 企业行业： 电子/半导体/集成电路
+          - generic [ref=e392]: 融资阶段： B轮
+          - generic [ref=e393]: 人数规模： 100-499人
+          - generic [ref=e394]: 职位地址： 深圳-南山区乐普大厦西塔27楼2703-2707
+        - generic [ref=e395]:
+          - generic [ref=e396]: 注册时间： 2019年06月
+          - generic [ref=e397]: 注册资本： 1257.96万人民币
+          - generic [ref=e398]: 经营期限： 2019年06月11日-9999年09月09日
+          - generic [ref=e399]: 经营范围： 生产：计算机软（硬）件、集成电路、电子产品；技术开发、技术服务、成果转让：计算机软（硬）件、集成电路、电子产品；货物及技术进出口**（依法须经批准的项目，经相关部门批准后方可开展经营活动）
+        - link "数据来源： 天眼查" [ref=e400] [cursor=pointer]:
+          - /url: https://www.tianyancha.com/
+          - text: 数据来源：
+          - img "天眼查" [ref=e401]
+      - generic [ref=e402]:
+        - heading "推荐企业" [level=2] [ref=e403]
+        - list [ref=e404]:
+          - listitem [ref=e405]:
+            - link "comp 芯海科技" [ref=e406] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/2106738/
+              - img "comp" [ref=e407]
+              - generic [ref=e408]: 芯海科技
+          - listitem [ref=e409]:
+            - link "comp 联芸科技(杭州)有限公司" [ref=e410] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/9247159/
+              - img "comp" [ref=e411]
+              - generic [ref=e412]: 联芸科技(杭州)有限公司
+          - listitem [ref=e413]:
+            - link "comp 玉之泉精密" [ref=e414] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/13568181/
+              - img "comp" [ref=e415]
+              - generic [ref=e416]: 玉之泉精密
+          - listitem [ref=e417]:
+            - link "comp 北京盛景能源有限公司" [ref=e418] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/13391721/
+              - img "comp" [ref=e419]
+              - generic [ref=e420]: 北京盛景能源有限公司
+          - listitem [ref=e421]:
+            - link "comp 迪福润丝" [ref=e422] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/12431079/
+              - img "comp" [ref=e423]
+              - generic [ref=e424]: 迪福润丝
+          - listitem [ref=e425]:
+            - link "comp 赛昉半导体" [ref=e426] [cursor=pointer]:
+              - /url: https://www.liepin.com/company/12391471/
+              - img "comp" [ref=e427]
+              - generic [ref=e428]: 赛昉半导体
+  - generic [ref=e430]:
+    - generic [ref=e431]:
+      - list [ref=e432]:
+        - listitem [ref=e433] [cursor=pointer]: 相关推荐
+        - listitem [ref=e434] [cursor=pointer]: 相关公司
+        - listitem [ref=e435] [cursor=pointer]: 热门城市
+        - listitem [ref=e436] [cursor=pointer]: 热门招聘
+      - generic [ref=e437]:
+        - link "深圳SLAM算法工程师招聘" [ref=e438] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpslamsuanfagongchengshi03/
+        - link "深圳算法高级工程师招聘" [ref=e439] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpsfgjgcs/
+        - link "深圳实习算法工程师招聘" [ref=e440] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpsxsfgcs1i6w/
+        - link "深圳数值算法工程师招聘" [ref=e441] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpszsfgcs9i5q/
+        - link "深圳部署算法工程师招聘" [ref=e442] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpbssfgcs2j7i/
+        - link "深圳算法开发工程师招聘" [ref=e443] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpsfkfgcs/
+        - link "深圳感知算法高级工程师招聘" [ref=e444] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpgzsfgjgcs1o7d/
+        - link "深圳因果推断算法工程师招聘" [ref=e445] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpygtdsfgcsitcaaid/
+        - link "深圳应届算法工程师招聘" [ref=e446] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpyjsfgcsx4y3/
+        - link "深圳CT算法工程师招聘" [ref=e447] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpctsfgcsn4n3/
+        - link "深圳研究算法工程师招聘" [ref=e448] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpyjsfgcs10o5b/
+        - link "深圳AGV系统工程师招聘" [ref=e449] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpagvxtgcsd9j6/
+        - link "深圳机器人规控工程师招聘" [ref=e450] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpjqrgkgcs3t1i/
+        - link "深圳五分类算法工程师招聘" [ref=e451] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpwflsfgcsx1o6/
+        - link "深圳定位跟踪算法工程师招聘" [ref=e452] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpdwgzsfgcs4f7g/
+        - link "深圳规划决策算法工程师招聘" [ref=e453] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpghjcsfgcs4s8d/
+        - link "深圳资深算法研发工程师招聘" [ref=e454] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpzssfyfgcs9kf5/
+        - link "深圳数据处理算法工程师招聘" [ref=e455] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpsjclsfgcs9ce7/
+        - link "深圳融合感知算法工程师招聘" [ref=e456] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zprhgzsfgcs4tm2/
+        - link "深圳异构计算算法工程师招聘" [ref=e457] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpygjssfgcs3vp5/
+        - link "深圳高级SLAM工程师招聘" [ref=e458] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpgjslamgcs1f6o/
+        - link "深圳算法框架开发工程师招聘" [ref=e459] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpsfkjkfgcs1kt5/
+        - link "深圳高级机械臂算法工程师招聘" [ref=e460] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpgjjxbsfgcsy6m5/
+        - link "深圳计算光学招聘" [ref=e461] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpjsgxh2w7g/
+        - link "深圳音乐信息检索算法工程师招聘" [ref=e462] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpylxxjssfgcsf5z8/
+        - link "深圳激光测厚软件工程师招聘" [ref=e463] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpjgchrjgcsjcsysw/
+        - link "深圳隐私计算算法研发工程师招聘" [ref=e464] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpysjssfyfgcso65a/
+        - link "深圳感知算法总监招聘" [ref=e465] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpgzsfzjg5i2/
+        - link "深圳数字人工程师招聘" [ref=e466] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpszrgcsj4r5/
+        - link "深圳高级并网工程师招聘" [ref=e467] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/zpgjbwgcs3m7c/
+    - generic [ref=e468]:
+      - generic [ref=e469]: 当前位置：
+      - generic [ref=e470]:
+        - link "深圳招聘网" [ref=e471] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/
+        - text: ">"
+        - link "深圳算法工程师招聘" [ref=e472] [cursor=pointer]:
+          - /url: https://www.liepin.com/city-sz/career/suanfakaifa/
+        - text: ">"
+        - link "BMS算法招聘" [ref=e473] [cursor=pointer]:
+          - /url: https://www.liepin.com/job/1979903143.shtml
+  - generic [ref=e474]: 更新时间：2026-06-29
+  - iframe [ref=e475]:
+    - contentinfo [ref=f14e2]:
+      - generic [ref=f14e4]:
+        - generic [ref=f14e7]:
+          - generic [ref=f14e8]: 企业服务热线和算法推荐/未成年人举报渠道：
+          - generic [ref=f14e9]:
+            - strong [ref=f14e10]: 400-6212-266
+            - paragraph [ref=f14e11]: 工作日9:00-19:00
+          - paragraph [ref=f14e12]:
+            - link "jubao@liepin.com" [ref=f14e13] [cursor=pointer]:
+              - /url: mailto:jubao@liepin.com
+              - strong [ref=f14e14]: jubao@liepin.com
+        - generic [ref=f14e15]:
+          - generic [ref=f14e16]:
+            - term [ref=f14e17]: 投资者关系
+            - definition [ref=f14e18]:
+              - link "公司简介" [ref=f14e19] [cursor=pointer]:
+                - /url: //ir.liepin.com/index.html
+            - definition [ref=f14e20]:
+              - link "信息披露" [ref=f14e21] [cursor=pointer]:
+                - /url: //ir.liepin.com/disclosure.html
+            - definition [ref=f14e22]:
+              - link "企业管制" [ref=f14e23] [cursor=pointer]:
+                - /url: //ir.liepin.com/management.html
+            - definition [ref=f14e24]:
+              - link "投资者关系联络" [ref=f14e25] [cursor=pointer]:
+                - /url: //ir.liepin.com/relationalnetwork.html
+          - generic [ref=f14e26]:
+            - term [ref=f14e27]: 共赢
+            - definition [ref=f14e28]:
+              - link "网站合作" [ref=f14e29] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1007623/index.html
+            - definition [ref=f14e30]:
+              - link "加入猎聘" [ref=f14e31] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1006107/index.html?mscid=Favsk7rH
+            - definition [ref=f14e32]:
+              - link "代理加盟" [ref=f14e33] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1014307/index.html
+            - definition [ref=f14e34]:
+              - link "猎聘HRO" [ref=f14e35] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1014857/50159328.html
+          - generic [ref=f14e36]:
+            - term [ref=f14e37]: 产品与服务
+            - definition [ref=f14e38]:
+              - link "香港招聘" [ref=f14e39] [cursor=pointer]:
+                - /url: //wow.liepin.com/t1011439/daf73a6d.html
+            - definition [ref=f14e40]:
+              - link "算法推荐服务说明" [ref=f14e41] [cursor=pointer]:
+                - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0018
+            - definition [ref=f14e42]:
+              - link "算法备案信息" [ref=f14e43] [cursor=pointer]:
+                - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0057
+            - definition [ref=f14e44]:
+              - link "安全防范指南" [ref=f14e45] [cursor=pointer]:
+                - /url: https://wow.liepin.com/t1013881/pc.html?mscid=Fc5P1I2a
+            - definition [ref=f14e46]:
+              - link "企业培训" [ref=f14e47] [cursor=pointer]:
+                - /url: //www.lebanban.com
+        - figure "下载猎聘APP" [ref=f14e49]:
+          - generic [ref=f14e50]: 下载猎聘APP
+          - paragraph [ref=f14e51]:
+            - link "关注猎聘" [ref=f14e52] [cursor=pointer]:
+              - /url: http://weibo.com/lietouwang
+              - text: 关注猎聘
+              - img [ref=f14e53]
+      - separator [ref=f14e60]
+      - generic [ref=f14e62]:
+        - paragraph [ref=f14e63]:
+          - link "津ICP备15007986号-11" [ref=f14e64] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn/#/Integrated/index
+          - link "ICP经营许可证：合字B2-20160007" [ref=f14e65] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0053
+          - link "人力资源服务许可证" [ref=f14e66] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0054
+          - link "营业执照" [ref=f14e67] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0055
+          - link "安备京公网安备 11010502035189号" [ref=f14e68] [cursor=pointer]:
+            - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502035189
+            - img "安备" [ref=f14e69]
+            - text: 京公网安备 11010502035189号
+          - link "个人信息保护政策" [ref=f14e70] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?mscid=Fb1dVVx_&agreementType=A0002
+          - link "猎聘用户服务协议" [ref=f14e71] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?mscid=Fb1dVVx_&agreementType=A0001
+          - link "投诉举报制度" [ref=f14e72] [cursor=pointer]:
+            - /url: https://wow.liepin.com/t1008237/index.html?agreementType=A0056
+        - paragraph [ref=f14e73]:
+          - text: Copyright © 2006-2026 liepin.com All Rights Reserved
+          - link "违法和不良信息举报" [ref=f14e74] [cursor=pointer]:
+            - /url: https://www.12377.cn/

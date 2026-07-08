@@ -1,0 +1,52 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "中文 |" [ref=e4] [cursor=pointer]:
+      - /url: login?service=http%3A%2F%2Fwww.career.zju.edu.cn%2Fjyxt%2Fsczp%2Fzpxx%2Fzpxxb%2Fzpgl.zf%3FemployerName%3D%25E7%2590%2586%25E6%2583%25B3%25E6%25B1%25BD%25E8%25BD%25A6&locale=zh_CN
+    - link "English" [ref=e5] [cursor=pointer]:
+      - /url: login?service=http%3A%2F%2Fwww.career.zju.edu.cn%2Fjyxt%2Fsczp%2Fzpxx%2Fzpxxb%2Fzpgl.zf%3FemployerName%3D%25E7%2590%2586%25E6%2583%25B3%25E6%25B1%25BD%25E8%25BD%25A6&locale=en
+  - img "浙江大学" [ref=e7]
+  - generic [ref=e8]:
+    - generic "浙大通行证" [ref=e10]
+    - generic [ref=e12]:
+      - list [ref=e13]:
+        - listitem [ref=e14]:
+          - img "Image about qcode" [ref=e16]
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]:
+              - heading [ref=e22]
+              - generic [ref=e23]:
+                - img "user" [ref=e25]
+                - textbox "职工号/学号/邮箱/别名" [ref=e26]
+                - link "点击激活用户" [ref=e27] [cursor=pointer]:
+                  - /url: https://zjuam.zju.edu.cn/zjuam-main/security/activateUser/index
+            - generic [ref=e29]:
+              - img "lock" [ref=e31]
+              - textbox "输入密码" [ref=e32]
+              - link "忘记登录密码 ?" [ref=e33] [cursor=pointer]:
+                - /url: https://zjuam.zju.edu.cn/zjuam-main/security/retakepwdUser/index
+            - generic [ref=e34]:
+              - button "登 录" [ref=e36] [cursor=pointer]
+              - generic [ref=e37]:
+                - checkbox "记住我" [ref=e38]
+                - generic [ref=e39] [cursor=pointer]: 记住我
+          - generic [ref=e40]:
+            - paragraph [ref=e41]
+            - generic [ref=e42]:
+              - heading "国际校区师生登录" [level=3] [ref=e43]
+              - link "国际校区" [ref=e44] [cursor=pointer]:
+                - /url: https://login.microsoftonline.com/292620c5-ae10-4553-accf-68ec80325008/oauth2/v2.0/authorize?client_id=b85e9cdb-5584-4536-9108-5136aa1db133&response_type=code&redirect_uri=https%3a%2f%2fzjuam.zju.edu.cn%2fcas%2flogin%3fclient_name%3dAdfsClient&scope=https%3A%2F%2Fgraph.microsoft.com%2FUser.read
+                - img "国际校区" [ref=e45]
+            - generic [ref=e46]:
+              - heading "第三方账号登录" [level=3] [ref=e47]
+              - link "钉钉" [ref=e48] [cursor=pointer]:
+                - /url: "#"
+              - link "" [ref=e50] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e51]: 
+              - link "" [ref=e52] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e53]: 
+            - paragraph [ref=e54]: 统一身份认证咨询电话 0571-87951669
+        - text: 

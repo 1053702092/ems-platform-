@@ -1,0 +1,12 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - heading "404" [level=1] [ref=e5]
+    - paragraph [ref=e6]: 你似乎来到了没有知识存在的荒原
+    - link "去往首页" [ref=e7] [cursor=pointer]:
+      - /url: https://www.zhihu.com
+    - generic [ref=e8]:
+      - text: 或者
+      - button "返回上页" [ref=e9] [cursor=pointer]:
+        - text: 返回上页
+        - img [ref=e10]
+  - img "page error" [ref=e13]

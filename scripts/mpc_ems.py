@@ -123,7 +123,7 @@ def mpc_sim(P_load, SOC_0=0.6, N_p=N_P_DEFAULT, w_soc=W_SOC,
 
         # ── 预测工况 ──
         horizon = min(N_p, N - k)
-        p_load_pred = P_load[k : k + horizon]
+        p_load_pred = P_load[k : k + horizon]   #因为已知的工况，预测值变成真实值
 
         # ── 枚举所有候选控制 ──
         J_best = np.inf
@@ -139,7 +139,7 @@ def mpc_sim(P_load, SOC_0=0.6, N_p=N_P_DEFAULT, w_soc=W_SOC,
 
             for i in range(horizon):
                 p_load_i = p_load_pred[i]
-                p_bat_i = p_load_i - p_fc_cand
+                p_bat_i = p_load_i - p_fc_cand #p-fc当前在区间内是恒定不变的
 
                 # 单步氢耗
                 J_total += h2_cand * DT
@@ -193,7 +193,6 @@ def mpc_sim(P_load, SOC_0=0.6, N_p=N_P_DEFAULT, w_soc=W_SOC,
         'fc_efficiency': eff_arr,
     }
 
-
 # ====================================================================
 # 4. N_p 敏感性分析
 # ====================================================================
@@ -208,6 +207,8 @@ def mpc_n_p_scan(P_load, N_p_values=None, SOC_0=0.6):
     Returns
     -------
     DataFrame — N_p, H2_total, SOC_end
+     N_p 敏感性分析揭示了 MPC 的核心权衡：
+     更长的预测时域 = 更好的性能 + 更多的计算量。实际应用中需找到"够好"而非"最好"的 N_p。
     """
     if N_p_values is None:
         N_p_values = [10, 20, 30, 50, 80, 120, 200]
@@ -228,7 +229,6 @@ def mpc_n_p_scan(P_load, N_p_values=None, SOC_0=0.6):
         print(f'  N_p={n_p:4d}: H2={res["m_H2_cumul_kg"][-1]:.4f} kg, SOC_end={res["SOC_end"]:.3f}')
 
     return pd.DataFrame(results)
-
 
 # ====================================================================
 # 5. 四方法对比可视化

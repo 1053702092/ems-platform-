@@ -1,0 +1,234 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e12]:
+        - generic [ref=e13] [cursor=pointer]: 车型
+        - generic [ref=e14] [cursor=pointer]: 技术
+        - generic [ref=e15] [cursor=pointer]: 充电
+        - generic [ref=e16] [cursor=pointer]: 眼镜
+        - generic [ref=e17] [cursor=pointer]: 零售中心
+        - generic [ref=e18] [cursor=pointer]: 服务中心
+        - generic [ref=e19] [cursor=pointer]: 关于我们
+      - generic [ref=e20]:
+        - generic [ref=e21] [cursor=pointer]: 预约试驾
+        - generic [ref=e22] [cursor=pointer]: 登录
+        - generic [ref=e25] [cursor=pointer]: 
+  - generic [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: 加入我们
+      - generic [ref=e33]:
+        - paragraph [ref=e34] [cursor=pointer]: 发现理想
+        - paragraph [ref=e35] [cursor=pointer]: 校园招聘与实习
+        - paragraph [ref=e36] [cursor=pointer]: 社会招聘
+        - paragraph [ref=e37] [cursor=pointer]: 我的档案
+    - img [ref=e39]
+    - generic [ref=e41]:
+      - generic [ref=e42] [cursor=pointer]: 宣讲会
+      - generic [ref=e43] [cursor=pointer]: 招聘流程
+      - generic [ref=e44] [cursor=pointer]: 问题答疑
+      - generic [ref=e45] [cursor=pointer]: 新人培养
+    - generic [ref=e46]:
+      - paragraph [ref=e47]: 理想汽车校园招聘答疑
+      - generic [ref=e49]:
+        - list [ref=e257]:
+          - listitem [ref=e258] [cursor=pointer]: 关于简历投递
+          - listitem [ref=e259] [cursor=pointer]: 关于内推
+          - listitem [ref=e260] [cursor=pointer]: 关于笔试
+          - listitem [ref=e261] [cursor=pointer]: 关于面试
+          - listitem [ref=e262] [cursor=pointer]: 关于测评
+          - listitem [ref=e263] [cursor=pointer]: 关注我们
+        - generic [ref=e55]:
+          - generic [ref=e264]:
+            - paragraph [ref=e265]: 关于简历投递
+            - generic [ref=e266]:
+              - paragraph [ref=e267]: "Q: 理想汽车2026校园招聘的招聘节奏和时间线是什么？"
+              - paragraph [ref=e269]: "A: 投递时间：8月21日正式开启投递； 笔试及面试时间：9月初陆续启动； Offer发放时间：10月中下旬陆续启动。"
+            - generic [ref=e270]:
+              - paragraph [ref=e271]: "Q: 2026校园招聘的招聘对象是？"
+              - paragraph [ref=e273]: "A: 理想汽车2026校园招聘面向在2025年9月-2026年8月期间毕业，且毕业后无全职工作经历的海内外高校同学。非中国大陆地区以学位证时间为准。 *“理想+”项目面向在2025年1月-2026年8月期间毕业，且毕业后无全职工作经历的海内外高校同学。"
+            - generic [ref=e274]:
+              - paragraph [ref=e275]: "Q: 2026校招是否对于应届毕业生学历有要求？"
+              - paragraph [ref=e277]: "A: 校招岗位不限学历，欢迎26届本科、硕士及博士研究生踊跃投递。"
+            - generic [ref=e278]:
+              - paragraph [ref=e279]: "Q: 2026校园招聘项目最多能投递几个职位？"
+              - paragraph [ref=e281]: "A: 每位同学在2026校园招聘项目中可同时投递最多2个职位。若2个职位均在流程中，此时将无法再次投递；当原职位流程终止后，可继续投递其他心仪职位。"
+            - generic [ref=e282]:
+              - paragraph [ref=e283]: "Q: “理想+”项目和正式批校招是否冲突？"
+              - paragraph [ref=e285]: "A: “理想+”职位的投递和应聘结果均不影响2026正式批校招流程。若“理想+”岗位流程终止，可继续投递正式批校招岗位；并且我们会把未通过 “理想+”项目筛选的简历流转至正式批校招做进一步匹配。"
+            - generic [ref=e286]:
+              - paragraph [ref=e287]: "Q: 投递后，还可以修改意向职位吗？"
+              - paragraph [ref=e289]: "A: 一旦成功投递简历，将无法修改意向职位，请同学们谨慎投递。"
+            - generic [ref=e290]:
+              - paragraph [ref=e291]: "Q: 投递后，还可以修改简历/邮箱/手机号吗？"
+              - paragraph [ref=e293]: "A: 一旦成功投递简历，将无法修改简历/邮箱/手机号，请同学们谨慎投递。"
+            - generic [ref=e294]:
+              - paragraph [ref=e295]: "Q: 此前投递过理想汽车但是失败了，是否可以投递本次项目？"
+              - paragraph [ref=e297]: "A: 可以再次投递，历史投递记录不影响本次项目。"
+            - generic [ref=e298]:
+              - paragraph [ref=e299]: "Q: 如何知道我的应聘进度呢？"
+              - paragraph [ref=e301]: "A: 同学们可以在理想汽车招聘官网【我的档案】页面查询进度，或关注【理想汽车招聘】微信公众号，从【校园招聘】菜单栏，进入【我的-我的投递】查看应聘进度。请确保投递时填写的手机号和邮箱信息正确。通过内推渠道投递的简历，可通过内推人进行进度查询。"
+            - generic [ref=e302]:
+              - paragraph [ref=e303]: "Q: 投递简历后多久会有后续通知？"
+              - paragraph [ref=e305]: "A: 若您进入到面试环节，我们会通过短信/邮件形式告知详情。具体时间根据职位进展情况而定，请您确保简历中的联系方式填写正确且保持联系方式畅通。"
+          - generic [ref=e306]:
+            - paragraph [ref=e307]: 关于内推
+            - generic [ref=e308]:
+              - paragraph [ref=e309]: "Q: 此次校招可以内推吗?如何参加校招内推?"
+              - paragraph [ref=e311]: "A: 所有校招职位均可参加内推。同学们可以联系理想汽车在职的学长学姐获取TA的校招内推链接并进行投递，更深入地了解公司及部门情况。"
+            - generic [ref=e312]:
+              - paragraph [ref=e313]: "Q: 如何了解内推进度?"
+              - paragraph [ref=e315]: "A: 同学们可以联系自己的内推人了解具体内推进度。"
+            - generic [ref=e316]:
+              - paragraph [ref=e317]: "Q: 为什么内推投递时提示我“已在其他渠道投递，无法参加内推”？"
+              - paragraph [ref=e319]: "A: 因为您一年内已通过其他渠道参与了理想汽车的招聘，所以无法参加内推。您仍可以通过官网以非内推形式投递您的意向职位。"
+          - generic [ref=e321]:
+            - paragraph [ref=e322]: 关于笔试
+            - generic [ref=e323]:
+              - paragraph [ref=e324]: "Q: 所有岗位都有笔试吗？"
+              - paragraph [ref=e326]: "A: 笔试安排视具体岗位情况而定，请以您收到的邮件、短信通知为准。"
+          - generic [ref=e328]:
+            - paragraph [ref=e329]: 关于面试
+            - generic [ref=e330]:
+              - paragraph [ref=e331]: "Q: 我如何获取我的面试信息？"
+              - paragraph [ref=e333]: "A: 若您通过了职位的简历筛选，我们会尽快为您安排面试，请以您收到的邮件/短信通知为准。"
+            - generic [ref=e334]:
+              - paragraph [ref=e335]: "Q: 如何调整面试时间？"
+              - paragraph [ref=e337]: "A: 请尽量按照规定时间参加面试。若确有特殊情况无法参加面试，请提前通过面试通知邮件中的HR联系方式进行沟通，调整面试时间。"
+            - generic [ref=e338]:
+              - paragraph [ref=e339]: "Q: 应聘状态很久没有更新，说明流程已经结束了吗？"
+              - paragraph [ref=e341]: "A: 关于后续招聘流程，可以咨询通知邮件中的HR。仅当应聘状态显示【流程终止】说明流程结束。"
+            - generic [ref=e342]:
+              - paragraph [ref=e343]: "Q: 为什么我投递的岗位和被通知面试的岗位不一致呢？"
+              - paragraph [ref=e345]: "A: 在同学申请投递后，若HR综合评估后认为您的简历更适合其他方向，可能会出现内部流转及重新匹配的情况。若您对当前岗位无意向，可与面试联系人进行沟通，拒绝面试或重新投递其他岗位。"
+          - generic [ref=e347]:
+            - paragraph [ref=e348]: 关于测评
+            - generic [ref=e349]:
+              - paragraph [ref=e350]: "Q: 哪些同学需要参加测评？"
+              - paragraph [ref=e352]: "A: 测评安排视具体岗位情况而定。如您的职位需要参加测评，HR会提前与您沟通，请注意查收短信和邮件通知。"
+            - generic [ref=e353]:
+              - paragraph [ref=e354]: "Q: 我想申请重新做一遍测评，可以吗？"
+              - paragraph [ref=e356]: "A: 测评是人才筛选的一个重要环节，每人仅有1次机会，如有特殊情况请联系你的职位HR进行说明。"
+          - generic [ref=e358]:
+            - paragraph [ref=e359]: 关注我们
+            - generic [ref=e360]:
+              - paragraph [ref=e361]: "Q: 如何获取理想汽车校园招聘相关动态呢？"
+              - paragraph [ref=e363]: "A: 欢迎关注【理想汽车招聘】微信公众号，第一时间掌握校招最新进展，了解理想汽车重要资讯和校招生成长经历，感受未来的职场生活。"
+            - generic [ref=e364]:
+              - paragraph [ref=e365]: "Q: 如果应聘过程中我有什么问题，该向谁咨询？"
+              - paragraph [ref=e367]: "A: 更多校招问题答疑，可发送邮件至lixiangcampus@lixiang.com咨询。"
+  - generic [ref=e110]:
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - heading "车型" [level=3] [ref=e114]
+        - list [ref=e115] [cursor=pointer]:
+          - listitem [ref=e116]: 理想i6
+          - listitem [ref=e117]: 理想i8
+          - listitem [ref=e118]: 理想MEGA
+          - listitem [ref=e119]: 理想L6
+          - listitem [ref=e120]: 全新理想L8
+          - listitem [ref=e121]: 全新理想L9
+      - generic [ref=e122]:
+        - heading "技术" [level=3] [ref=e123]
+        - list [ref=e124] [cursor=pointer]:
+          - listitem [ref=e125]: 辅助驾驶
+          - listitem [ref=e126]: 智能空间
+          - listitem [ref=e127]: 理想同学
+          - listitem [ref=e128]: 完全体线控底盘
+          - listitem [ref=e129]: 增程技术
+          - listitem [ref=e130]: 纯电技术
+          - listitem [ref=e131]: 堡垒安全车身
+          - listitem [ref=e132]: 电子电气架构
+          - listitem [ref=e133]: 理想OTA
+          - listitem [ref=e134]: 星环OS
+          - listitem [ref=e135]: 理想隐私安全
+      - generic [ref=e136]:
+        - heading "充电" [level=3] [ref=e137]
+        - list [ref=e138] [cursor=pointer]:
+          - listitem [ref=e139]: 充电体验
+          - listitem [ref=e140]: 充电地图
+      - generic [ref=e141]:
+        - heading "眼镜" [level=3] [ref=e142]
+        - list [ref=e143] [cursor=pointer]:
+          - listitem [ref=e144]: 理想AI眼镜 Livis
+      - generic [ref=e145]:
+        - heading "零售与服务" [level=3] [ref=e146]
+        - list [ref=e147] [cursor=pointer]:
+          - listitem [ref=e148]: 零售中心
+          - listitem [ref=e149]: 服务中心
+      - generic [ref=e150]:
+        - heading "共创" [level=3] [ref=e151]
+        - list [ref=e152] [cursor=pointer]:
+          - listitem [ref=e153]: 用户口碑
+      - generic [ref=e154]:
+        - heading "成长" [level=3] [ref=e155]
+        - list [ref=e156] [cursor=pointer]:
+          - listitem [ref=e157]: 关于我们
+          - listitem [ref=e158]: 加入我们
+          - listitem [ref=e159]: 媒体中心
+          - listitem [ref=e160]: 发布会回放
+          - listitem [ref=e161]: 投资者关系
+      - generic [ref=e162]:
+        - heading "帮助" [level=3] [ref=e163]
+        - list [ref=e164] [cursor=pointer]:
+          - listitem [ref=e165]: 帮助中心
+          - listitem [ref=e166]: 金融试算器
+          - listitem [ref=e167]: 置换服务
+          - listitem [ref=e168]: 全景看车
+    - contentinfo [ref=e169]:
+      - generic [ref=e170]:
+        - paragraph [ref=e173]:
+          - generic [ref=e174] [cursor=pointer]: 在线客服
+          - generic [ref=e175] [cursor=pointer]:
+            - text: "|"
+            - 'link "客服电话: 400-686-0900" [ref=e176]':
+              - /url: tel:4006860900
+          - generic [ref=e177] [cursor=pointer]:
+            - text: "|"
+            - 'link "媒体咨询: press@lixiang.com" [ref=e178]':
+              - /url: mailto:press@lixiang.com
+          - generic [ref=e179] [cursor=pointer]:
+            - text: "|"
+            - 'link "举报邮箱: compliance@lixiang.com" [ref=e180]':
+              - /url: mailto:compliance@lixiang.com
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - link "维修与环保信息 |" [ref=e183] [cursor=pointer]:
+              - /url: javascript:;
+            - link "法律与安全 |" [ref=e184] [cursor=pointer]:
+              - /url: /agreement/legal.html
+            - link "合规与举报 |" [ref=e185] [cursor=pointer]:
+              - /url: /help/compliance/root/1748.html
+            - link "隐私政策 |" [ref=e186] [cursor=pointer]:
+              - /url: /agreement/privacy.html
+            - link "用户协议 |" [ref=e187] [cursor=pointer]:
+              - /url: /agreement/register.html
+            - link "钣喷中心招募 |" [ref=e188] [cursor=pointer]:
+              - /url: /help/topic/spray.html
+            - link "二手车服务商招募 |" [ref=e189] [cursor=pointer]:
+              - /url: /help/topic/esczm10.html
+            - link "备案信息" [ref=e190] [cursor=pointer]:
+              - /url: /manual/sign/webbeian.html
+          - generic [ref=e191]:
+            - link "" [ref=e192] [cursor=pointer]:
+              - /url: javascript:;
+              - generic [ref=e193]: 
+            - link "" [ref=e194] [cursor=pointer]:
+              - /url: javascript:;
+              - generic [ref=e195]: 
+            - link "" [ref=e196] [cursor=pointer]:
+              - /url: https://weibo.com/u/6001272153
+              - generic [ref=e197]: 
+        - generic [ref=e200]:
+          - link "©2026 京ICP备19003172号" [ref=e202] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn/
+          - link "京公网安备11011302001865号" [ref=e205] [cursor=pointer]:
+            - /url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302001865
+          - generic [ref=e206]: 北京车励行信息技术有限公司@版权所有
+          - generic [ref=e207]: 增值电信业务经营许可证：编号京B2-20191092/编号B2-20196074
+          - link "营业执照" [ref=e209] [cursor=pointer]:
+            - /url: https://www.lixiang.com/picture/preview.html?path=https://p.ampmake.com/fed/image/png/bf2586abadf6d4ce70338b8b3dd6f906.png
+          - link "广播电视节目制作经营许可证（京）字第18667号" [ref=e211] [cursor=pointer]:
+            - /url: https://s.ampmake.com/fed/cdn/Broadcasting-License/1.0.0/20230626-142911.jpeg
+          - generic [ref=e212]: 北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区)

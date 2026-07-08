@@ -1,0 +1,37 @@
+- generic [ref=e741]:
+  - generic [ref=e744]:
+    - generic [ref=e745]:
+      - link [ref=e746] [cursor=pointer]:
+        - /url: "#/index"
+        - img [ref=e747]
+      - paragraph [ref=e749] [cursor=pointer]: 招聘网站
+    - menu [ref=e750]:
+      - menuitem "首页" [ref=e751] [cursor=pointer]
+      - menuitem "招聘公告" [ref=e752] [cursor=pointer]
+      - menuitem "校园招聘" [ref=e753] [cursor=pointer]
+      - menuitem "社会招聘" [ref=e754] [cursor=pointer]
+      - menuitem "招聘动态" [ref=e755] [cursor=pointer]
+      - menuitem "应聘指南" [ref=e756] [cursor=pointer]
+      - menuitem "联系我们" [ref=e757] [cursor=pointer]
+    - button "登录/注册" [ref=e758] [cursor=pointer]:
+      - generic: 登录/注册
+  - generic [ref=e762]:
+    - generic [ref=e764]:
+      - generic [ref=e766]: 南方电网公司 2026 年校园招聘
+      - link "投递简历" [ref=e769] [cursor=pointer]:
+        - /url: "#/recruitment-campus"
+    - region "Video Player" [ref=e770]:
+      - application [ref=e771]
+      - text:             
+  - generic [ref=e773]:
+    - generic [ref=e774]:
+      - generic [ref=e777]: 公司首页
+      - generic [ref=e780]: 常见问题
+      - generic [ref=e783]: 官方微博
+      - generic [ref=e787]: 官方微信
+      - generic [ref=e791]: APP下载
+    - paragraph [ref=e792]: 中国南方电网有限责任公司版权所有Copyight@2003-2026ChinaSouthernPowerGrid(csg).Allrightsreserved
+    - paragraph [ref=e793]: 技术支持：南方电网数字电网集团有限公司
+    - paragraph [ref=e794] [cursor=pointer]:
+      - text: ICP备：06044847号
+      - img [ref=e795]

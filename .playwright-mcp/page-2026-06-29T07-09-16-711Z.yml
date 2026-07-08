@@ -1,0 +1,511 @@
+- generic [ref=e1]:
+  - link [ref=e3] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=e5]:
+    - generic [ref=e8]:
+      - link "网站首页" [ref=e9] [cursor=pointer]:
+        - /url: http://www.csg.cn/
+        - text: 网站首页
+      - link "关于我们" [ref=e12] [cursor=pointer]:
+        - /url: ./gywm/
+        - text: 关于我们
+      - link "党的声音" [ref=e14] [cursor=pointer]:
+        - /url: http://www.csg.cn/xwzx/yjsjd_web/
+        - text: 党的声音
+      - link "新闻中心" [ref=e17] [cursor=pointer]:
+        - /url: https://www.csg.cn/xwzx/
+        - text: 新闻中心
+      - link "在线服务" [ref=e20] [cursor=pointer]:
+        - /url: javascript:;
+        - text: 在线服务
+      - link "企业文化" [ref=e22] [cursor=pointer]:
+        - /url: ./gywm/nwzg/
+        - text: 企业文化
+      - link "社会责任" [ref=e24] [cursor=pointer]:
+        - /url: ./shzr/
+        - text: 社会责任
+      - link "企业公告" [ref=e26] [cursor=pointer]:
+        - /url: ./xwzx/qygg/
+        - text: 企业公告
+    - generic [ref=e28]:
+      - link "繁体" [ref=e30] [cursor=pointer]:
+        - /url: javascript:translatePage();
+      - link "English" [ref=e32] [cursor=pointer]:
+        - /url: http://eng.csg.cn/h5.html
+  - generic [ref=e34]:
+    - link "永远把伟大建党精神继承下去、发扬光大 ——习近平总书记引领弘扬光荣传统、赓续红色血脉" [ref=e38] [cursor=pointer]:
+      - /url: http://politics.people.com.cn/n1/2026/0629/c461001-40749101.html
+      - text: 永远把伟大建党精神继承下去、发扬光大
+      - text: ——习近平总书记引领弘扬光荣传统、赓续红色血脉
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - link "重磅丨“全球南方”电力合作伙伴发展论坛在香港举行" [ref=e43] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/mXdPACLwiM9UwqvUkA5Tug
+            - generic [ref=e44]: 重磅丨“全球南方”电力合作伙伴发展论坛在香港举行
+          - link "第十届澜湄国家电力企业高峰会在香港举办" [ref=e46] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/KBh1LztpqReKPKuUwLCBMA
+            - generic [ref=e47]: 第十届澜湄国家电力企业高峰会在香港举办
+          - link "圆桌论坛｜电力发展成果如何惠及更多发展中国家和地区" [ref=e49] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/c5aiNQJTUsl-VQ8cxzUYnw
+            - generic [ref=e50]: 圆桌论坛｜电力发展成果如何惠及更多发展中国家和地区
+          - link "圆桌论坛｜“全球南方”电力低碳转型前瞻与务实合作" [ref=e52] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/0yP9vBSNhVTn2TL6ZebO0Q
+            - generic [ref=e53]: 圆桌论坛｜“全球南方”电力低碳转型前瞻与务实合作
+          - link "中国南方电网深化“全球南方”电力合作" [ref=e55] [cursor=pointer]:
+            - /url: https://mp.weixin.qq.com/s/O90yyVHCPN8TIQq6FOc2qQ
+            - generic [ref=e56]: 中国南方电网深化“全球南方”电力合作
+        - generic [ref=e57]:
+          - button "Go to slide 1" [ref=e58] [cursor=pointer]
+          - button "Go to slide 2" [ref=e59] [cursor=pointer]
+          - button "Go to slide 3" [ref=e60] [cursor=pointer]
+          - button "Go to slide 4" [ref=e61] [cursor=pointer]
+          - button "Go to slide 5" [ref=e62] [cursor=pointer]
+      - generic [ref=e63]:
+        - generic [ref=e64] [cursor=pointer]:
+          - link "党的声音" [ref=e65]:
+            - /url: ./xwzx/yjsjd_web/
+          - link "公司要闻" [ref=e66]:
+            - /url: ./xwzx/2026/2026gsyw/
+          - link "媒体关注" [ref=e67]:
+            - /url: ./xwzx/2026/2026mtgz/
+          - link [ref=e69]:
+            - /url: ./xwzx/2026/2026gsyw/
+        - generic [ref=e70]:
+          - text: • • • • • • • • • •
+          - list [ref=e71]:
+            - listitem [ref=e72]:
+              - text: •
+              - link "习近平党建思想指引南方电网公司广大党员干部凝心聚力奋进新征程" [ref=e73] [cursor=pointer]:
+                - /url: ./xwzx/2026/2026gsyw/202606/t20260623_355832.html
+            - listitem [ref=e74]:
+              - text: •
+              - link "重磅丨“全球南方”电力合作伙伴发展论坛在香港举行" [ref=e75] [cursor=pointer]:
+                - /url: https://mp.weixin.qq.com/s/mXdPACLwiM9UwqvUkA5Tug
+            - listitem [ref=e76]:
+              - text: •
+              - link "钱朝阳拜会香港中联办副主任张勇" [ref=e77] [cursor=pointer]:
+                - /url: https://mp.weixin.qq.com/s/jTFOUZVwNGN7gZ102I-O3Q
+            - listitem [ref=e78]:
+              - text: •
+              - link "钱朝阳走访慰问公司老领导老党员并致“七一”节日问候" [ref=e79] [cursor=pointer]:
+                - /url: ./xwzx/2026/2026gsyw/202606/t20260626_355932.html
+            - listitem [ref=e80]:
+              - text: •
+              - link "南方电网公司开展“全球南方”电力合作伙伴发展论坛会见会谈活动" [ref=e81] [cursor=pointer]:
+                - /url: https://mp.weixin.qq.com/s/1H7if5nZpducfknYRxtTQA
+            - listitem [ref=e82]:
+              - text: •
+              - link "中国南方电网深化“全球南方”电力合作" [ref=e83] [cursor=pointer]:
+                - /url: https://mp.weixin.qq.com/s/O90yyVHCPN8TIQq6FOc2qQ
+            - listitem [ref=e84]:
+              - text: •
+              - link "南方电网公司扎实推进“十五五”开局之年工作述评②" [ref=e85] [cursor=pointer]:
+                - /url: ./xwzx/2026/2026gsyw/202606/t20260626_355931.html
+            - listitem [ref=e86]:
+              - text: •
+              - link "全国发电装机规模突破40亿千瓦" [ref=e87] [cursor=pointer]:
+                - /url: ./xwzx/2026/2026gsyw/202606/t20260626_355930.html
+            - listitem [ref=e88]:
+              - text: •
+              - link "南网数字人民币创新成果亮相2026中国国际金融展" [ref=e89] [cursor=pointer]:
+                - /url: ./xwzx/2026/2026gsyw/202606/t20260626_355926.html
+            - listitem [ref=e90]:
+              - text: •
+              - link "全国首个新型电力系统国家质检中心通过验收" [ref=e91] [cursor=pointer]:
+                - /url: ./xwzx/2026/2026gsyw/202606/t20260626_355929.html
+          - text: • • • • • • • • • •
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - heading "国资动态" [level=3] [ref=e95]:
+            - link "国资动态" [ref=e96] [cursor=pointer]:
+              - /url: ./xwzx/gzdt/
+          - definition [ref=e97]:
+            - link "more" [ref=e98] [cursor=pointer]:
+              - /url: ./xwzx/gzdt/
+              - img "more" [ref=e99]
+        - generic [ref=e100] [cursor=pointer]:
+          - link [ref=e101]:
+            - /url: http://www.sasac.gov.cn/n4470048/n29955503/n30994949/index.html
+          - link "习近平总书记的国企足迹" [ref=e103]:
+            - /url: http://www.sasac.gov.cn/n4470048/n29955503/n30994949/index.html
+        - list [ref=e104]:
+          - listitem [ref=e105]:
+            - text: •
+            - link "国务院国资委党委认真传达学习贯彻习近平总书记近期重要讲话重要指示批示精神" [ref=e106] [cursor=pointer]:
+              - /url: http://www.sasac.gov.cn/n2588025/n2643314/c35424219/content.html
+          - listitem [ref=e107]:
+            - text: •
+            - link "《习近平经济思想研究》刊发张玉卓署名文章：加快推进国资央企高质量发展 为中国式现代化建设贡献更大力量" [ref=e108] [cursor=pointer]:
+              - /url: http://www.sasac.gov.cn/n2588025/n2643314/c35421405/content.html
+          - listitem [ref=e109]:
+            - text: •
+            - link "国务院国资委成功举办企业数字化转型分论坛" [ref=e110] [cursor=pointer]:
+              - /url: http://www.sasac.gov.cn/n2588025/n2643314/c35420807/content.html
+          - listitem [ref=e111]:
+            - text: •
+            - link "国务院国资委召开中央企业一季度经济运行情况通报暨2026年度经营业绩责任书签订会议" [ref=e112] [cursor=pointer]:
+              - /url: http://www.sasac.gov.cn/n2588025/n2643314/c35411325/content.html
+          - listitem [ref=e113]:
+            - text: •
+            - link "中央企业低空经济产业发展专题推进会召开" [ref=e114] [cursor=pointer]:
+              - /url: http://www.sasac.gov.cn/n2588025/n2643314/c35409085/content.html
+          - listitem [ref=e115]:
+            - text: •
+            - link "国务院国资委党委2026年第一轮巡视完成进驻" [ref=e116] [cursor=pointer]:
+              - /url: http://www.sasac.gov.cn/n2588025/n2643314/c35406629/content.html
+      - generic [ref=e117]:
+        - heading "专题专栏" [level=3] [ref=e119]
+        - generic [ref=e120]:
+          - list [ref=e122]:
+            - listitem [ref=e123] [cursor=pointer]: "1"
+            - listitem [ref=e124] [cursor=pointer]: "2"
+            - listitem [ref=e125] [cursor=pointer]: "3"
+            - listitem [ref=e126] [cursor=pointer]: "4"
+            - listitem [ref=e127] [cursor=pointer]: "5"
+            - listitem [ref=e128] [cursor=pointer]: "6"
+            - listitem [ref=e129] [cursor=pointer]: "7"
+            - listitem [ref=e130] [cursor=pointer]: "8"
+            - listitem [ref=e131] [cursor=pointer]: "9"
+          - list [ref=e134]:
+            - listitem [ref=e135]:
+              - link [ref=e136] [cursor=pointer]:
+                - /url: https://www.csg.cn/xwzx/zhuanlan/djxxjy_2024rmt
+                - img [ref=e137]
+            - listitem [ref=e138]:
+              - link [ref=e139] [cursor=pointer]:
+                - /url: http://www.csg.cn/newzt/2023/xuexi/
+                - img [ref=e140]
+            - listitem [ref=e141]:
+              - link [ref=e142] [cursor=pointer]:
+                - /url: https://www.csg.cn/newzt/2025zt/shisiwu/index.html
+                - img [ref=e143]
+            - listitem [ref=e144]:
+              - link [ref=e145] [cursor=pointer]:
+                - /url: https://www.csg.cn/newzt/2026zt/ztjy/
+                - img [ref=e146]
+            - listitem [ref=e147]:
+              - link [ref=e148] [cursor=pointer]:
+                - /url: https://www.csg.cn/xwzx/zhuanlan/zsjzyzs/
+                - img [ref=e149]
+            - listitem [ref=e150]:
+              - link [ref=e151] [cursor=pointer]:
+                - /url: https://www.csg.cn/xwzx/zhuanlan/wzzktz2026/
+                - img [ref=e152]
+            - listitem [ref=e153]:
+              - link [ref=e154] [cursor=pointer]:
+                - /url: https://www.12377.cn
+                - img [ref=e155]
+            - listitem [ref=e156]:
+              - link [ref=e157] [cursor=pointer]:
+                - /url: https://www.csg.cn/xwzx/zhuanlan/ggshtsznwsj/
+                - img [ref=e158]
+            - listitem [ref=e159]:
+              - link [ref=e160] [cursor=pointer]:
+                - /url: https://www.csg.cn/xwzx/zhuanlan/xxdlxt_2024rmtzt
+                - img [ref=e161]
+            - listitem [ref=e162]:
+              - link [ref=e163] [cursor=pointer]:
+                - /url: https://www.csg.cn/xwzx/zhuanlan/djxxjy_2024rmt
+                - img [ref=e164]
+            - listitem [ref=e165]:
+              - link [ref=e166] [cursor=pointer]:
+                - /url: http://www.csg.cn/newzt/2023/xuexi/
+                - img [ref=e167]
+            - listitem [ref=e168]:
+              - link [ref=e169] [cursor=pointer]:
+                - /url: https://www.csg.cn/newzt/2025zt/shisiwu/index.html
+                - img [ref=e170]
+            - listitem [ref=e171]:
+              - link [ref=e172] [cursor=pointer]:
+                - /url: https://www.csg.cn/newzt/2026zt/ztjy/
+                - img [ref=e173]
+      - generic [ref=e174]:
+        - generic [ref=e175]:
+          - heading "能源观察" [level=3] [ref=e176]:
+            - link "能源观察" [ref=e177] [cursor=pointer]:
+              - /url: ./xwzx/nygc/
+          - definition [ref=e178]:
+            - link "more" [ref=e179] [cursor=pointer]:
+              - /url: ./xwzx/nygc/
+              - img "more" [ref=e180]
+        - generic [ref=e181] [cursor=pointer]:
+          - link [ref=e182]:
+            - /url: ./xwzx/nygc/202605/t20260508_355098.html
+          - link "脑机，从科幻走向电力工人身边" [ref=e184]:
+            - /url: ./xwzx/nygc/202605/t20260508_355098.html
+        - list [ref=e185]:
+          - listitem [ref=e186]:
+            - text: •
+            - link "电力市场监管的经济学逻辑、国际经验与中国路径" [ref=e187] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/xpowyRCFczQPBnAP0hj1pg
+          - listitem [ref=e188]:
+            - text: •
+            - link "国家能源局：4月份全社会用电量同比增长6.0%" [ref=e189] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/wGOMcfcBkIbL-WM8XGyzeg
+          - listitem [ref=e190]:
+            - text: •
+            - link "2026年一季度光伏发电建设情况出炉！" [ref=e191] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/9GvJk2o-odVqbWcR1glU4w
+          - listitem [ref=e192]:
+            - text: •
+            - link "南方区域电力市场5份文件同期征求意见" [ref=e193] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/2rqAM7_SWP232YNfR1KpeQ
+          - listitem [ref=e194]:
+            - text: •
+            - link "赛道降温，绿氢发展需寻找真正落地场景" [ref=e195] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/Zmiuj42M8k0I5aBR-zcrfA
+          - listitem [ref=e196]:
+            - text: •
+            - link "从交流到直流，AI需求驱动供电技术变革" [ref=e197] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/J3o3fcqssFpCKCBHrO7MZg
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - generic [ref=e200]:
+          - heading "一线传真" [level=3] [ref=e201]:
+            - link "一线传真" [ref=e202] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/
+          - definition [ref=e203]:
+            - link "more" [ref=e204] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/
+              - img "more" [ref=e205]
+        - generic [ref=e206] [cursor=pointer]:
+          - link [ref=e207]:
+            - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355940.html
+          - link "贵州电网公司以“下基层、上一线”推动安全生产季走深走实" [ref=e209]:
+            - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355940.html
+        - list [ref=e210]:
+          - listitem [ref=e211]:
+            - text: •
+            - link "云南实现全省居民漏电监测全覆盖" [ref=e212] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355939.html
+          - listitem [ref=e213]:
+            - text: •
+            - link "全国首个新型电力系统国家质检中心通过验收" [ref=e214] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355938.html
+          - listitem [ref=e215]:
+            - text: •
+            - link "贵州举行电力监控系统综合应急演练" [ref=e216] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355936.html
+          - listitem [ref=e217]:
+            - text: •
+            - link "广西电网公司首个电鸿物联智慧示范仓库投产" [ref=e218] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355937.html
+          - listitem [ref=e219]:
+            - text: •
+            - link "兴安直流累计送电突破3000亿千瓦时" [ref=e220] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355935.html
+          - listitem [ref=e221]:
+            - text: •
+            - link "云南电网自主研发规划智能体“云睿”" [ref=e222] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxcz/202606/t20260626_355934.html
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - heading "影像南网" [level=3] [ref=e225]:
+            - link "影像南网" [ref=e226] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxnw/
+          - definition [ref=e227]:
+            - link "more" [ref=e228] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxnw/
+              - img "more" [ref=e229]
+        - generic [ref=e230] [cursor=pointer]:
+          - link [ref=e231]:
+            - /url: ./xwzx/2026/2026yxnw/202606/t20260612_355735.html
+          - link "洪水中的保电人" [ref=e233]:
+            - /url: ./xwzx/2026/2026yxnw/202606/t20260612_355735.html
+        - list [ref=e234]:
+          - listitem [ref=e235]:
+            - text: •
+            - link "迎“烤”验 送清凉" [ref=e236] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxnw/202605/t20260530_355522.html
+          - listitem [ref=e237]:
+            - text: •
+            - link "风雨无阻保供电" [ref=e238] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxnw/202605/t20260519_355286.html
+          - listitem [ref=e239]:
+            - text: •
+            - link "海空一体护安澜" [ref=e240] [cursor=pointer]:
+              - /url: ./xwzx/2026/2026yxnw/202605/t20260508_355142.html
+          - listitem [ref=e241]:
+            - text: •
+            - link "《奇迹中国》见证“中国奇迹”：《电力先锋之云端行者》" [ref=e242] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/O2GBwnklWT57VBKQgJ5KXg
+          - listitem [ref=e243]:
+            - text: •
+            - link "央视《大国工匠》丨从实地巡线到算法攻坚 他为电网装上AI大脑" [ref=e244] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/tbFREirisGPu3c3f2NIRAA
+          - listitem [ref=e245]:
+            - text: •
+            - link "从“邻避”到“邻利”，变电站何以变成“网红打卡地”？" [ref=e246] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/N8g3WgR1K7VcEWlQ2TmIuw
+      - generic [ref=e247]:
+        - generic [ref=e248]:
+          - heading "English News" [level=3] [ref=e249]:
+            - link "English News" [ref=e250] [cursor=pointer]:
+              - /url: ./xwzx/enews/
+          - definition [ref=e251]:
+            - link "more" [ref=e252] [cursor=pointer]:
+              - /url: ./xwzx/enews/
+              - img "more" [ref=e253]
+        - generic [ref=e254] [cursor=pointer]:
+          - link [ref=e255]:
+            - /url: ./xwzx/enews/202605/t20260518_355253.html
+          - link "China's 1st provincial-level new energy weather, capacity forecasting platform promoted in Guizhou" [ref=e257]:
+            - /url: ./xwzx/enews/202605/t20260518_355253.html
+        - list [ref=e258]:
+          - listitem [ref=e259]:
+            - link "Active grid inertia monitoring system applied in Yunnan" [ref=e260] [cursor=pointer]:
+              - /url: ./xwzx/enews/202605/t20260518_355252.html
+          - listitem [ref=e261]:
+            - link "China-Laos 500 kV interconnection project goes into operation" [ref=e262] [cursor=pointer]:
+              - /url: ./xwzx/enews/202605/t20260518_355251.html
+          - listitem [ref=e263]:
+            - link "China-Laos 500 kV interconnection dispatch agreement signed" [ref=e264] [cursor=pointer]:
+              - /url: ./xwzx/enews/202605/t20260518_355250.html
+          - listitem [ref=e265]:
+            - link "Beibu Gulf's 1st 220 kV cross-sea power link goes live" [ref=e266] [cursor=pointer]:
+              - /url: ./xwzx/enews/202605/t20260518_355249.html
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - generic [ref=e269]: 在线服务
+        - table [ref=e270]:
+          - rowgroup [ref=e271]:
+            - row "企业公告 网上营业厅" [ref=e272]:
+              - cell "企业公告" [ref=e273] [cursor=pointer]:
+                - link "企业公告" [ref=e274]:
+                  - /url: ./xwzx/qygg/
+                  - generic [ref=e276]: 企业公告
+              - cell "网上营业厅" [ref=e277] [cursor=pointer]:
+                - link "网上营业厅" [ref=e278]:
+                  - /url: http://95598.csg.cn/
+                  - generic [ref=e280]: 网上营业厅
+            - row "招投标 招聘" [ref=e281]:
+              - cell "招投标" [ref=e282] [cursor=pointer]:
+                - link "招投标" [ref=e283]:
+                  - /url: http://www.bidding.csg.cn/
+                  - generic [ref=e285]: 招投标
+              - cell "招聘" [ref=e286] [cursor=pointer]:
+                - link "招聘" [ref=e287]:
+                  - /url: http://zhaopin.csg.cn/
+                  - generic [ref=e289]: 招聘
+      - generic [ref=e290]:
+        - generic [ref=e291]: 信息公开
+        - table [ref=e292]:
+          - rowgroup [ref=e293]:
+            - row "公司概况 公司领导" [ref=e294]:
+              - cell "公司概况" [ref=e295] [cursor=pointer]:
+                - link "公司概况" [ref=e296]:
+                  - /url: ./gywm/gsjs/
+                  - generic [ref=e298]: 公司概况
+              - cell "公司领导" [ref=e299] [cursor=pointer]:
+                - link "公司领导" [ref=e300]:
+                  - /url: ./gywm/gsld/
+                  - generic [ref=e302]: 公司领导
+            - row "组织机构 发展成果" [ref=e303]:
+              - cell "组织机构" [ref=e304] [cursor=pointer]:
+                - link "组织机构" [active] [ref=e305]:
+                  - /url: ./gywm/gsjs/index.html#zg
+                  - generic [ref=e307]: 组织机构
+              - cell "发展成果" [ref=e308] [cursor=pointer]:
+                - link "发展成果" [ref=e309]:
+                  - /url: ./gywm/gsjs/index.html#cg
+                  - generic [ref=e311]: 发展成果
+            - row "经营管理 服务承诺" [ref=e312]:
+              - cell "经营管理" [ref=e313] [cursor=pointer]:
+                - link "经营管理" [ref=e314]:
+                  - /url: ./gywm/gsjs/index.html#gl
+                  - generic [ref=e316]: 经营管理
+              - cell "服务承诺" [ref=e317] [cursor=pointer]:
+                - link "服务承诺" [ref=e318]:
+                  - /url: ./xxgk/gdfw/fwcn/
+                  - generic [ref=e320]: 服务承诺
+      - generic [ref=e321]:
+        - generic [ref=e322]: 网上信箱
+        - table [ref=e323]:
+          - rowgroup [ref=e324]:
+            - row [ref=e325]:
+              - cell [ref=e326] [cursor=pointer]:
+                - link [ref=e327]:
+                  - /url: http://wsxf.csg.cn/hall/redirect?id=1111
+                  - img [ref=e328]
+            - row [ref=e329]:
+              - cell [ref=e330] [cursor=pointer]:
+                - img [ref=e332]
+              - cell [ref=e333] [cursor=pointer]:
+                - img [ref=e334]
+            - row [ref=e335]:
+              - cell [ref=e336] [cursor=pointer]:
+                - link [ref=e337]:
+                  - /url: ./index/12398/
+                  - img [ref=e338]
+              - cell [ref=e339] [cursor=pointer]:
+                - img [ref=e340]
+    - generic [ref=e341]:
+      - generic [ref=e342]:
+        - generic [ref=e343] [cursor=pointer]: 公司简介
+        - generic [ref=e344] [cursor=pointer]: 社会责任
+        - generic [ref=e345] [cursor=pointer]: 文化理念
+      - generic [ref=e346]:
+        - generic:
+          - generic [ref=e349]:
+            - text: 中国南方电网有限责任公司（简称“中国南方电网”，英文缩写：CSG）成立于2002年12月29日，是中央管理的关系国家安全、国民经济命脉的国有重要骨干企业。公司负责投资、建设和经营管理南方区域电网，参与投资、建设和经营相关跨区域输变电和联网工程，为广东、广西、云南、贵州、海南五省区和港澳地区提供电力供应服务保障，以输配电业务为核心，协同发展新兴业务、国际业务、产业金融、共享服务等，共五大战略单元。
+            - link "[详细内容]" [ref=e350] [cursor=pointer]:
+              - /url: ./gywm/gsjs/
+          - link [ref=e352] [cursor=pointer]:
+            - /url: ./gywm/gsjs/
+    - generic [ref=e353]:
+      - generic [ref=e354]:
+        - generic [ref=e355] [cursor=pointer]: 南网知行书屋
+        - link [ref=e357] [cursor=pointer]:
+          - /url: https://mp.weixin.qq.com/s/nRGd29GsaKZK9J6Pyas-NQ
+      - generic [ref=e358]:
+        - paragraph [ref=e359]: 媒体矩阵
+        - generic [ref=e360]:
+          - link "南方电网报" [ref=e362] [cursor=pointer]:
+            - /url: https://www.csg.cn/epaper/epaper/nfdwb/
+            - img "南方电网报" [ref=e363]
+          - img "官网（中文+英文）" [ref=e365]
+          - link "南网50Hz" [ref=e367] [cursor=pointer]:
+            - /url: http://www.csg.cn/index/gsmt/201512/t20151202_109174.html
+            - img "南网50Hz" [ref=e368]
+          - link "南网新闻" [ref=e370] [cursor=pointer]:
+            - /url: http://www.csg.cn/index/gsmt/201512/t20151202_109176.html
+            - img "南网新闻" [ref=e371]
+          - link "南网知行" [ref=e373] [cursor=pointer]:
+            - /url: ./index/gsmt/201908/t20190816_303035.html
+            - img "南网知行" [ref=e374]
+          - link "知行南网" [ref=e376] [cursor=pointer]:
+            - /url: http://www.csg.cn/index/gsmt/201907/t20190721_302337.html
+            - img "知行南网" [ref=e377]
+          - link "南网求知" [ref=e379] [cursor=pointer]:
+            - /url: https://www.csg.cn/index/gsmt/202605/t20260519_355254.html
+            - img "南网求知" [ref=e380]
+          - link "EO杂志" [ref=e382] [cursor=pointer]:
+            - /url: http://www.csg.cn/index/gsmt/201512/t20151202_109175.html
+            - img "EO杂志" [ref=e383]
+          - link "青春南网" [ref=e385] [cursor=pointer]:
+            - /url: http://www.csg.cn/index/gsmt/201907/t20190718_302262.html
+            - img "青春南网" [ref=e386]
+          - img "南网脸书" [ref=e388]
+  - generic [ref=e391]:
+    - generic [ref=e393]:
+      - paragraph [ref=e395]: 政府机构
+      - paragraph [ref=e397]: 友情链接
+    - generic [ref=e398]:
+      - generic [ref=e399]:
+        - link "友情链接" [ref=e400] [cursor=pointer]:
+          - /url: ./index/link/yq/
+        - text: "|"
+        - link "网站地图" [ref=e401] [cursor=pointer]:
+          - /url: ./footer/wzdt/
+        - text: "|"
+        - link "服务条款" [ref=e402] [cursor=pointer]:
+          - /url: ./footer/fwtk/
+      - paragraph [ref=e403]: 中国南方电网有限责任公司 www.csg.cn 版权所有 Copyright © 2003-2022 China Southern Power Grid (csg).All rights reserved
+      - paragraph [ref=e404]:
+        - generic [ref=e405]: 网站运营：南方电网数字传媒科技有限公司
+      - link "粤ICP备06044847号" [ref=e406] [cursor=pointer]:
+        - /url: https://beian.miit.gov.cn/
+        - paragraph [ref=e407]: 粤ICP备06044847号
+      - img [ref=e408]

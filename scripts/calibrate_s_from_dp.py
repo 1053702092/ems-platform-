@@ -8,7 +8,9 @@ calibrate_s_from_dp.py — DP 反推标定等效因子 s₀
 
   从 DP 代价矩阵 J 计算 costate λ_k = ∂J_k/∂SOC (沿最优轨迹)
   再近似换算为最优等效因子 s₀
-
+  `λ` 表示"当前 SOC 再高 1 单位，还能省多少氢耗"——这就是电池的边际价值
+  `s` 表示"1 kWh 电能值多少克氢"——这就是等效因子
+   s = -λ * 1000 / (V_oc * Q_bat)
 用法：
   python scripts/calibrate_s_from_dp.py --cycle wltc
 """

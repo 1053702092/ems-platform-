@@ -1,0 +1,493 @@
+- generic [ref=e1]:
+  - link "欢迎进入 九个月宝宝半夜哭闹怎么办？ - 知乎,盲人用户使用操作智能引导，请按快捷键Ctrl+Alt+R；阅读详细操作说明请按快捷键Ctrl+Alt+问号键。":
+    - /url: javascript:void(0)
+    - img [ref=e2] [cursor=pointer]
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - link "知乎" [ref=e8] [cursor=pointer]:
+          - /url: https://www.zhihu.com
+          - img [ref=e9]
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - navigation [ref=e15]:
+              - link "关注" [ref=e16] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Ffollow
+                - generic [ref=e17]: 关注
+              - link "推荐" [ref=e18] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2F
+                - generic [ref=e19]: 推荐
+              - link "热榜" [ref=e20] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Fhot
+                - generic [ref=e21]: 热榜
+              - link "专栏" [ref=e22] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Fcolumn-square
+                - generic [ref=e23]: 专栏
+              - link "圈子" [ref=e24] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Fring-feeds
+                - generic [ref=e25]: 圈子
+              - link "AI Works Beta" [ref=e27] [cursor=pointer]:
+                - /url: https://www.zhihu.com/project/square
+                - generic [ref=e28]:
+                  - text: AI Works
+                  - generic [ref=e29]: Beta
+              - link "故事" [ref=e30] [cursor=pointer]:
+                - /url: https://www.zhihu.com/fiore/h5/vip-web
+                - generic [ref=e31]: 故事
+            - generic [ref=e32]:
+              - search [ref=e33]:
+                - generic [ref=e37]:
+                  - combobox "搜索" [ref=e38]
+                  - button "搜索" [ref=e39] [cursor=pointer]:
+                    - img [ref=e41]
+                - link "直答" [ref=e43] [cursor=pointer]:
+                  - /url: https://zhida.zhihu.com/
+                  - img [ref=e44]
+                  - text: 直答
+              - generic [ref=e47]:
+                - generic [ref=e49] [cursor=pointer]: 切换模式
+                - button "登录/注册" [ref=e51] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - heading "九个月宝宝半夜哭闹怎么办？" [level=1]
+                  - generic:
+                    - generic:
+                      - button "关注问题"
+                      - button "写回答":
+                        - generic:
+                          - img
+                        - text: 写回答
+                      - generic:
+                        - button:
+                          - img
+                    - generic:
+                      - generic:
+                        - button "登录/注册"
+    - main [ref=e53]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic:
+            - generic:
+              - log
+            - generic:
+              - log
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]:
+                - generic [ref=e62]:
+                  - link "育儿" [ref=e65] [cursor=pointer]:
+                    - /url: //www.zhihu.com/topic/19554405
+                    - generic [ref=e66]: 育儿
+                  - link "宝宝" [ref=e69] [cursor=pointer]:
+                    - /url: //www.zhihu.com/topic/19587587
+                    - generic [ref=e70]: 宝宝
+                  - link "宝宝哭闹" [ref=e73] [cursor=pointer]:
+                    - /url: //www.zhihu.com/topic/26012115
+                    - generic [ref=e74]: 宝宝哭闹
+                - heading "九个月宝宝半夜哭闹怎么办？" [level=1] [ref=e75]
+              - generic [ref=e80]:
+                - generic [ref=e82]:
+                  - generic [ref=e83]: 关注者
+                  - strong [ref=e84]: "4"
+                - generic [ref=e86]:
+                  - generic [ref=e87]: 被浏览
+                  - strong [ref=e88]: 2,427
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - button "关注问题" [ref=e93] [cursor=pointer]
+                - button "写回答" [ref=e94] [cursor=pointer]:
+                  - img [ref=e96]
+                  - text: 写回答
+              - generic [ref=e98]:
+                - button "邀请回答" [ref=e99] [cursor=pointer]:
+                  - img [ref=e101]
+                  - text: 邀请回答
+                - button "好问题" [ref=e104] [cursor=pointer]:
+                  - img [ref=e106]
+                  - text: 好问题
+                - button "添加评论" [ref=e109] [cursor=pointer]:
+                  - img [ref=e111]
+                  - text: 添加评论
+                - button "分享" [ref=e115] [cursor=pointer]:
+                  - img [ref=e117]
+                  - text: 分享
+                - button "更多" [ref=e120] [cursor=pointer]:
+                  - img [ref=e122]
+        - generic [ref=e124]:
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e130]:
+                - generic [ref=e131]:
+                  - heading "5 个回答" [level=4] [ref=e132]:
+                    - generic [ref=e133]: 5 个回答
+                  - combobox [ref=e136] [cursor=pointer]:
+                    - generic [ref=e137]: 默认排序
+                    - img [ref=e138]
+                - list [ref=e141]:
+                  - listitem
+                  - generic [ref=e144]:
+                    - generic [ref=e145]:
+                      - generic [ref=e146]:
+                        - generic [ref=e147]:
+                          - link "定风波" [ref=e150] [cursor=pointer]:
+                            - /url: //www.zhihu.com/people/ding-feng-bo-23-45
+                            - img "定风波" [ref=e151]
+                          - generic [ref=e152]:
+                            - link "定风波" [ref=e156] [cursor=pointer]:
+                              - /url: //www.zhihu.com/people/ding-feng-bo-23-45
+                            - generic [ref=e159]: 爱和尊重孩子，辅助孩子成为更好的自己
+                        - button "关注" [ref=e160] [cursor=pointer]:
+                          - img [ref=e162]
+                          - text: 关注
+                      - generic [ref=e166] [cursor=pointer]:
+                        - generic [ref=e167]: 3 人赞同了该回答
+                        - img [ref=e168]
+                    - generic [ref=e170]:
+                      - generic [ref=e175]:
+                        - paragraph
+                        - figure [ref=e176]:
+                          - img [ref=e178]
+                        - paragraph [ref=e179]: 干拢9个月宝宝夜间睡眠的原因可能有如下几点！
+                        - paragraph [ref=e180]: 1、环境。光线、温度、噪声、湿度、以及睡衣、寝具是否合适？都要认真检查一下。
+                        - paragraph [ref=e181]: 2、是否有及时更换纸尿裤！
+                        - paragraph [ref=e182]:
+                          - text: 3、检查是否有因为喂养不当，而导致的腹部不适。因为九个月的孩子是处在，正式
+                          - link "辅食添加" [ref=e184] [cursor=pointer]:
+                            - /url: https://zhida.zhihu.com/search?content_id=567253963&content_type=Answer&match_order=1&q=%E8%BE%85%E9%A3%9F%E6%B7%BB%E5%8A%A0&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3ODI4OTA4MzIsInEiOiLovoXpo5_mt7vliqAiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjo1NjcyNTM5NjMsImNvbnRlbnRfdHlwZSI6IkFuc3dlciIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.WU0RJXvlpK3nYJ_Aaic32oM_A6ap1WjA0WsYre1izkQ&zhida_source=entity
+                            - text: 辅食添加
+                            - img [ref=e185]
+                          - text: 的初期，有可能家长对于辅食添加过于着急，而添加的过多或过杂，都会引起孩子腹部不适感。
+                        - paragraph [ref=e187]: 4、缺乏维生素D。
+                        - paragraph [ref=e188]: 其他原因还可能有，例如蚊虫叮咬。白天过于兴奋。饮水过多等等。但无论是哪种原因，都需要家长静下心来，不要着急，耐心轻柔的安抚孩子！千万不要孩子闹你就急，从而导致恶性循环。
+                      - link "发布于2023-03-26 17:10" [ref=e191] [cursor=pointer]:
+                        - /url: //www.zhihu.com/question/583846105/answer/2954431456
+                      - generic [ref=e193]:
+                        - generic [ref=e194]:
+                          - button "赞同 3" [ref=e196] [cursor=pointer]:
+                            - img [ref=e198]
+                            - text: 赞同 3
+                          - button "反对" [ref=e200] [cursor=pointer]:
+                            - img [ref=e202]
+                        - button "1 条评论" [ref=e204] [cursor=pointer]:
+                          - img [ref=e206]
+                          - text: 1 条评论
+                        - button "收藏" [ref=e208] [cursor=pointer]:
+                          - img [ref=e210]
+                          - text: 收藏
+                        - button "喜欢" [ref=e212] [cursor=pointer]:
+                          - img [ref=e214]
+                          - text: "3"
+                        - button "分享" [ref=e218] [cursor=pointer]:
+                          - img [ref=e220]
+                          - text: 分享
+                        - button [ref=e222] [cursor=pointer]:
+                          - img [ref=e224]
+                        - button "收起" [ref=e227] [cursor=pointer]:
+                          - text: 收起
+                          - img [ref=e229]
+                  - generic [ref=e233]:
+                    - generic [ref=e235]:
+                      - generic [ref=e236]:
+                        - link "平卡邱" [ref=e239] [cursor=pointer]:
+                          - /url: //www.zhihu.com/people/huang-gu-niang-38-18
+                          - img "平卡邱" [ref=e240]
+                        - generic [ref=e241]:
+                          - link "平卡邱" [ref=e245] [cursor=pointer]:
+                            - /url: //www.zhihu.com/people/huang-gu-niang-38-18
+                          - generic [ref=e248]: 爱分享搞笑玩具，逗逗孩子以及全家人开心
+                      - button "关注" [ref=e249] [cursor=pointer]:
+                        - img [ref=e251]
+                        - text: 关注
+                    - generic [ref=e254]:
+                      - generic [ref=e259]:
+                        - paragraph [ref=e260]: 1、先分析一下为什么哭闹，饿了？尿了？肚子胀？或者身体不舒服？
+                        - paragraph [ref=e261]: 2、如果以上都不是，如果选择给孩子用睡袋入睡或者给孩子安抚奶嘴
+                        - paragraph
+                      - link "发布于2023-02-16 23:59" [ref=e264] [cursor=pointer]:
+                        - /url: //www.zhihu.com/question/583846105/answer/2896934727
+                      - generic [ref=e265]:
+                        - generic [ref=e266]:
+                          - button "赞同 0" [ref=e268] [cursor=pointer]:
+                            - img [ref=e270]
+                            - text: 赞同
+                          - button "反对" [ref=e272] [cursor=pointer]:
+                            - img [ref=e274]
+                        - button "添加评论" [ref=e276] [cursor=pointer]:
+                          - img [ref=e278]
+                          - text: 添加评论
+                        - button "收藏" [ref=e280] [cursor=pointer]:
+                          - img [ref=e282]
+                          - text: 收藏
+                        - button "喜欢" [ref=e284] [cursor=pointer]:
+                          - img [ref=e286]
+                          - text: "3"
+                        - button "分享" [ref=e290] [cursor=pointer]:
+                          - img [ref=e292]
+                          - text: 分享
+                        - button [ref=e294] [cursor=pointer]:
+                          - img [ref=e296]
+                        - button "收起" [ref=e299] [cursor=pointer]:
+                          - text: 收起
+                          - img [ref=e301]
+                  - generic [ref=e305]:
+                    - generic [ref=e308]:
+                      - link "知乎用户" [ref=e311] [cursor=pointer]:
+                        - /url: //www.zhihu.com/people/9a0b39faa4d42fdda64fcbf9df8abfcd
+                        - img "知乎用户" [ref=e312]
+                      - link "知乎用户" [ref=e317] [cursor=pointer]:
+                        - /url: //www.zhihu.com/people/9a0b39faa4d42fdda64fcbf9df8abfcd
+                    - generic [ref=e319] [cursor=pointer]:
+                      - generic [ref=e323]:
+                        - generic:
+                          - paragraph: 我大宝五岁，小宝1岁，切身经历过夜不能寐的阶段，从自己个人经历的角度分析一下吧。
+                          - paragraph: 9个月宝宝半夜哭闹，可能是这些原因：
+                          - paragraph: 1、睡前没吃饱。我家大宝就很厌食挑食，经常晚饭不认真吃，夜里有时候就会饿醒了，翻来覆去闹腾人。小宝1岁，如果睡前没喂饱，夜里会哭闹的比较严重，当然，我家小宝太小了，基本上每天晚上都会醒很多次。可怜老母亲，很久没睡整夜觉了。
+                          - paragraph: 2、缺钙。9个月宝宝身体长得快，有可能缺钙，及时给宝宝补补钙吧。我记得我弟弟小时候，就因为身高长得太快，夜里睡不着，腿疼。
+                          - paragraph: 3、惊吓。有可能宝宝近期看了什么恐怖的动画片、电影什么的，有点受到惊吓了。我家大宝看了千与千寻，被里面的无脸男吓得好几天睡不好。
+                          - paragraph: 4、受凉。最近季节变化，温差比较大，孩子很容易受凉，受凉的小孩夜里容易睡不好。买个那个肚脐贴，贴肚脐上面，会好点。
+                      - button "阅读全文" [ref=e324]:
+                        - text: 阅读全文
+                        - img [ref=e326]
+                      - generic [ref=e328]:
+                        - generic [ref=e329]:
+                          - button "赞同 0" [ref=e331]:
+                            - img [ref=e333]
+                            - text: 赞同
+                          - button "反对" [ref=e335]:
+                            - img [ref=e337]
+                        - button "添加评论" [ref=e339]:
+                          - img [ref=e341]
+                          - text: 添加评论
+                        - button "收藏" [ref=e343]:
+                          - img [ref=e345]
+                          - text: "1"
+                        - button "喜欢" [ref=e347]:
+                          - img [ref=e349]
+                          - text: "4"
+                        - button "分享" [ref=e353]:
+                          - img [ref=e355]
+                          - text: 分享
+                  - listitem
+              - generic [ref=e357] [cursor=pointer]: 查看剩余 2 条回答
+            - button "写回答" [ref=e359] [cursor=pointer]:
+              - img [ref=e361]
+              - text: 写回答
+          - generic [ref=e363]:
+            - generic "边栏锚点"
+            - generic [ref=e364]:
+              - link "QR Code of Downloading Zhihu App 下载知乎客户端 与世界分享知识、经验和见解" [ref=e366] [cursor=pointer]:
+                - /url: https://s.zhihu.com/BDXoI
+                - generic [ref=e367]:
+                  - img "QR Code of Downloading Zhihu App" [ref=e368]
+                  - generic [ref=e369]:
+                    - generic [ref=e370]: 下载知乎客户端
+                    - generic [ref=e371]: 与世界分享知识、经验和见解
+              - generic [ref=e373]:
+                - link "广告 广告" [ref=e374] [cursor=pointer]:
+                  - /url: http://www.doubao.com/download/desktop?ug_apk_token=NhJew&ad_platform_id=zhihu_feed_lead&ug_callback_url=https%3A%2F%2Fsugar.zhihu.com%2Fplutus_adreaper_callback%3Fsi%3D12b4bc08-fa57-4629-bcda-3ce0a9bbbabb%26os%3D3%26zid%3D3%26zaid%3D3761188%26zcid%3D3759422%26cid%3D3759422%26event%3D__EVENTTYPE__%26value%3D__EVENTVALUE__%26ts%3D__TIMESTAMP__%26cts%3D__TS__%26mh%3D__MEMBERHASHID__%26adv%3D791271%26ocg%3D0%26cp%3D0%26ocs%3D0%26aic%3D0%26atp%3D0%26ct%3D0%26ed%3DGiBNJgVzfCMmUW9XFyEvRA8xBGxJICwkOhh0FlwxKw1Gdx87VSAsMi9Cb0oDdj1dByRedwtlKy0iVm9XFyU5WQ94CH0Kcmt5eRFmUQVheANYdx8lViYzJHMVdAtEbXwM98zgYy7lCQ%3D%3D&cb=https%3A%2F%2Fsugar.zhihu.com%2Fplutus_adreaper_callback%3Fsi%3D12b4bc08-fa57-4629-bcda-3ce0a9bbbabb%26os%3D3%26zid%3D3%26zaid%3D3761188%26zcid%3D3759422%26cid%3D3759422%26event%3D__EVENTTYPE__%26value%3D__EVENTVALUE__%26ts%3D__TIMESTAMP__%26cts%3D__TS__%26mh%3D__MEMBERHASHID__%26adv%3D791271%26ocg%3D0%26cp%3D0%26ocs%3D0%26aic%3D0%26atp%3D0%26ct%3D0%26ed%3DGiBNJgVzfCMmUW9XFyEvRA8xBGxJICwkOhh0FlwxKw1Gdx87VSAsMi9Cb0oDdj1dByRedwtlKy0iVm9XFyU5WQ94CH0Kcmt5eRFmUQVheANYdx8lViYzJHMVdAtEbXwM98zgYy7lCQ%3D%3D&ug_semver=v1.0.0&spu=biz%3D0%26ci%3D3759422%26si%3Dbc737962-cef7-40a9-b401-c6baf05e6b22%26ts%3D1782718032%26zid%3D3
+                  - generic [ref=e375]: 广告
+                  - img "广告" [ref=e377]
+                - img [ref=e379]
+              - complementary "相关问题" [ref=e381]:
+                - generic [ref=e383]: 相关问题
+                - generic [ref=e384]:
+                  - generic [ref=e385]:
+                    - link "16个月的宝宝半夜哭闹不止怎么办？" [ref=e386] [cursor=pointer]:
+                      - /url: /question/407800730
+                    - text: 5 个回答
+                  - generic [ref=e387]:
+                    - link "宝宝半夜一直哭闹该如何解决？" [ref=e388] [cursor=pointer]:
+                      - /url: /question/449646313
+                    - text: 4 个回答
+              - generic [ref=e389]:
+                - generic [ref=e390]:
+                  - img
+                  - generic [ref=e391]:
+                    - img [ref=e392]
+                    - generic [ref=e394]: 大家都在搜
+                    - button "换一换" [ref=e395] [cursor=pointer]:
+                      - img [ref=e396]
+                      - text: 换一换
+                  - generic [ref=e398]:
+                    - generic [ref=e399] [cursor=pointer]:
+                      - link "疑小米资深员工发表置身米内2.0 331 万" [ref=e401]:
+                        - /url: /search?q=%E7%96%91%E5%B0%8F%E7%B1%B3%E8%B5%84%E6%B7%B1%E5%91%98%E5%B7%A5%E5%8F%91%E8%A1%A8%E7%BD%AE%E8%BA%AB%E7%B1%B3%E5%86%852.0&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "疑小米资深员工发表置身米内2.0" [ref=e402]
+                        - generic [ref=e403]: 331 万
+                      - generic [ref=e404]: 热
+                    - generic [ref=e405] [cursor=pointer]:
+                      - link "央视揭露手机测评「特调机」作弊 331 万" [ref=e407]:
+                        - /url: /search?q=%E5%A4%AE%E8%A7%86%E6%8F%AD%E9%9C%B2%E6%89%8B%E6%9C%BA%E6%B5%8B%E8%AF%84%E3%80%8C%E7%89%B9%E8%B0%83%E6%9C%BA%E3%80%8D%E4%BD%9C%E5%BC%8A&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "央视揭露手机测评「特调机」作弊" [ref=e408]
+                        - generic [ref=e409]: 331 万
+                      - generic [ref=e410]: 热
+                    - generic [ref=e411] [cursor=pointer]:
+                      - link "韩国队主教练辞职 331 万" [ref=e413]:
+                        - /url: /search?q=%E9%9F%A9%E5%9B%BD%E9%98%9F%E4%B8%BB%E6%95%99%E7%BB%83%E8%BE%9E%E8%81%8C&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "韩国队主教练辞职" [ref=e414]
+                        - generic [ref=e415]: 331 万
+                      - generic [ref=e416]: 热
+                    - generic [ref=e417] [cursor=pointer]:
+                      - link "李在明怒批韩国队世界杯出局 331 万" [ref=e419]:
+                        - /url: /search?q=%E6%9D%8E%E5%9C%A8%E6%98%8E%E6%80%92%E6%89%B9%E9%9F%A9%E5%9B%BD%E9%98%9F%E4%B8%96%E7%95%8C%E6%9D%AF%E5%87%BA%E5%B1%80&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "李在明怒批韩国队世界杯出局" [ref=e420]
+                        - generic [ref=e421]: 331 万
+                      - generic [ref=e422]: 热
+                    - generic [ref=e423] [cursor=pointer]:
+                      - link "韩国网友怒骂德国故意输球 330 万" [ref=e425]:
+                        - /url: /search?q=%E9%9F%A9%E5%9B%BD%E7%BD%91%E5%8F%8B%E6%80%92%E9%AA%82%E5%BE%B7%E5%9B%BD%E6%95%85%E6%84%8F%E8%BE%93%E7%90%83&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "韩国网友怒骂德国故意输球" [ref=e426]
+                        - generic [ref=e427]: 330 万
+                      - generic [ref=e428]: 热
+                    - generic [ref=e429] [cursor=pointer]:
+                      - link "派出所集体去 KTV 招陪侍被抓现行 322 万" [ref=e431]:
+                        - /url: /search?q=%E6%B4%BE%E5%87%BA%E6%89%80%E9%9B%86%E4%BD%93%E5%8E%BB+KTV+%E6%8B%9B%E9%99%AA%E4%BE%8D%E8%A2%AB%E6%8A%93%E7%8E%B0%E8%A1%8C&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "派出所集体去 KTV 招陪侍被抓现行" [ref=e432]
+                        - generic [ref=e433]: 322 万
+                      - generic [ref=e434]: 热
+                    - link "欧洲热浪已致上百人死亡 317 万" [ref=e437] [cursor=pointer]:
+                      - /url: /search?q=%E6%AC%A7%E6%B4%B2%E7%83%AD%E6%B5%AA%E5%B7%B2%E8%87%B4%E4%B8%8A%E7%99%BE%E4%BA%BA%E6%AD%BB%E4%BA%A1&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                      - generic "欧洲热浪已致上百人死亡" [ref=e438]
+                      - generic [ref=e439]: 317 万
+                    - link "世界杯32强对阵出炉 313 万" [ref=e442] [cursor=pointer]:
+                      - /url: /search?q=%E4%B8%96%E7%95%8C%E6%9D%AF32%E5%BC%BA%E5%AF%B9%E9%98%B5%E5%87%BA%E7%82%89&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                      - generic "世界杯32强对阵出炉" [ref=e443]
+                      - generic [ref=e444]: 313 万
+                    - generic [ref=e445] [cursor=pointer]:
+                      - link "博主诋毁袁隆平三系杂交技术 306 万" [ref=e447]:
+                        - /url: /search?q=%E5%8D%9A%E4%B8%BB%E8%AF%8B%E6%AF%81%E8%A2%81%E9%9A%86%E5%B9%B3%E4%B8%89%E7%B3%BB%E6%9D%82%E4%BA%A4%E6%8A%80%E6%9C%AF&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "博主诋毁袁隆平三系杂交技术" [ref=e448]
+                        - generic [ref=e449]: 306 万
+                      - generic [ref=e450]: 热
+                    - generic [ref=e451] [cursor=pointer]:
+                      - link "四川宜宾地震 298 万" [ref=e453]:
+                        - /url: /search?q=%E5%9B%9B%E5%B7%9D%E5%AE%9C%E5%AE%BE%E5%9C%B0%E9%9C%87&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                        - generic "四川宜宾地震" [ref=e454]
+                        - generic [ref=e455]: 298 万
+                      - generic [ref=e456]: 热
+                - generic [ref=e458]:
+                  - link "广告 广告" [ref=e459] [cursor=pointer]:
+                    - /url: https://click.aliyun.com/m/1000414441/?spu=biz%3D0%26ci%3D3754315%26si%3D77d2df0f-6284-4029-aa04-fd4d09095be5%26ts%3D1782718033%26zid%3D4
+                    - generic [ref=e460]: 广告
+                    - img "广告" [ref=e462]
+                  - img [ref=e464]
+                - contentinfo [ref=e466]:
+                  - generic [ref=e467]:
+                    - generic [ref=e468]:
+                      - img [ref=e469]
+                      - generic [ref=e471]: 帮助中心
+                    - generic [ref=e472]:
+                      - generic [ref=e473]: 服务热线：400-919-0001
+                      - link "帮助与客服" [ref=e474] [cursor=pointer]:
+                        - /url: /help-center
+                      - link "联系我们" [ref=e475] [cursor=pointer]:
+                        - /url: /contact
+                      - button "更多" [ref=e476] [cursor=pointer]
+                  - generic [ref=e477]:
+                    - generic [ref=e478]:
+                      - img [ref=e479]
+                      - generic [ref=e481]: 举报中心
+                    - generic [ref=e482]:
+                      - generic [ref=e483]: 违法和不良信息举报：010-82716601
+                      - link "我的举报" [ref=e484] [cursor=pointer]:
+                        - /url: /community?source=zhihu_default
+                      - button "更多" [ref=e485] [cursor=pointer]
+                  - generic [ref=e486]:
+                    - generic [ref=e487]:
+                      - img [ref=e488]
+                      - generic [ref=e490]: 关于知乎
+                    - generic [ref=e491]:
+                      - link "知乎个人信息保护指引" [ref=e492] [cursor=pointer]:
+                        - /url: /term/privacy
+                      - link "知乎协议" [ref=e493] [cursor=pointer]:
+                        - /url: /term/zhihu-terms
+                      - link "下载知乎" [ref=e494] [cursor=pointer]:
+                        - /url: https://www.zhihu.com/app/
+                      - link "Investor Relations" [ref=e495] [cursor=pointer]:
+                        - /url: https://ir.zhihu.com
+                      - button "网站资质信息" [ref=e496] [cursor=pointer]
+                      - button "更多" [ref=e497] [cursor=pointer]
+                  - listitem [ref=e498]
+                  - generic [ref=e499]:
+                    - link "京ICP证110745号" [ref=e500] [cursor=pointer]:
+                      - /url: https://tsm.miit.gov.cn/dxxzsp/
+                    - text: ·
+                    - link "京ICP备13052560号-1" [ref=e501] [cursor=pointer]:
+                      - /url: https://beian.miit.gov.cn/
+                    - text: ·
+                    - link "京公网安备 11010802020088 号" [ref=e502] [cursor=pointer]:
+                      - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020088
+                    - text: ·
+                    - link "京网文[2025]0422-132 号" [ref=e503] [cursor=pointer]:
+                      - /url: https://www.zhihu.com/certificates
+                    - text: ·
+                    - link "药品医疗器械网络信息服务备案（京）网药械信息备字（2022）第00334号" [ref=e504] [cursor=pointer]:
+                      - /url: https://picx.zhimg.com/80/v2-7475facab3f2d2eda6faddaca4901d20_720w.png
+                  - img "本站提供适老化无障碍服务" [ref=e506]
+    - complementary:
+      - button "回到顶部" [ref=e507] [cursor=pointer]:
+        - img [ref=e508]
+  - generic [active] [ref=e512]:
+    - generic [ref=e515]:
+      - generic [ref=e518]:
+        - img [ref=e519]
+        - generic [ref=e529]: 登录知乎，问答干货一键收藏
+      - generic [ref=e530]:
+        - generic [ref=e531]:
+          - generic [ref=e532]:
+            - generic [ref=e533]:
+              - generic [ref=e534]: 打开知乎App
+              - generic [ref=e535]: 在「我的页」右上角打开扫一扫
+              - generic [ref=e540]: 其他扫码方式：微信
+            - generic [ref=e541]:
+              - button "下载知乎App" [ref=e543] [cursor=pointer]
+              - button "无障碍模式" [ref=e545] [cursor=pointer]
+          - generic [ref=e547]:
+            - generic [ref=e549]:
+              - generic [ref=e550]:
+                - generic [ref=e551]:
+                  - button "验证码登录" [ref=e552] [cursor=pointer]
+                  - button "密码登录" [ref=e553] [cursor=pointer]
+                  - link "开通机构号" [ref=e554] [cursor=pointer]:
+                    - /url: /org/signup
+                - generic [ref=e555]:
+                  - combobox [ref=e558] [cursor=pointer]:
+                    - generic [ref=e559]: 中国 +86
+                    - img [ref=e560]
+                  - textbox [ref=e565]:
+                    - /placeholder: 手机号
+                - generic [ref=e566]:
+                  - textbox [ref=e569]:
+                    - /placeholder: 输入 6 位短信验证码
+                  - button "获取短信验证码" [ref=e570] [cursor=pointer]
+                - generic [ref=e571]:
+                  - button
+                  - button "忘记密码" [ref=e572] [cursor=pointer]:
+                    - generic [ref=e573]: 忘记密码
+                - button "登录/注册" [ref=e574] [cursor=pointer]
+              - generic:
+                - log
+            - generic [ref=e577]: 其他方式登录
+            - generic [ref=e580]:
+              - button [ref=e581] [cursor=pointer]:
+                - img [ref=e582]
+              - button [ref=e584] [cursor=pointer]:
+                - img [ref=e585]
+              - button [ref=e587] [cursor=pointer]:
+                - img [ref=e588]
+            - generic [ref=e590]:
+              - text: 未注册手机验证后自动登录，注册即代表同意
+              - link "《知乎协议》" [ref=e591] [cursor=pointer]:
+                - /url: https://www.zhihu.com/term/zhihu-terms
+              - link "《隐私保护指引》" [ref=e592] [cursor=pointer]:
+                - /url: https://www.zhihu.com/term/privacy
+        - generic:
+          - paragraph: 扫码下载知乎 App
+          - button "关闭二维码":
+            - img
+            - text: 关闭二维码
+    - button "关闭" [ref=e593] [cursor=pointer]:
+      - img [ref=e594]

@@ -1,0 +1,31 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - heading "Error 1009" [level=1] [ref=e5]
+    - generic [ref=e6]: "Ray ID: a1342b38df9a2ad9 •"
+    - generic [ref=e7]: 2026-06-29 10:15:14 UTC
+    - heading "Access denied" [level=2] [ref=e8]
+  - generic [ref=e10]:
+    - heading "What happened?" [level=2] [ref=e11]
+    - paragraph [ref=e12]: The owner of this website (www.atl.com) has banned the country or region your IP address is in (CN) from accessing this website.
+    - paragraph [ref=e13]:
+      - text: Please see
+      - link "https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1009/" [ref=e14] [cursor=pointer]:
+        - /url: https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1009/
+      - text: for more details.
+  - generic [ref=e16]:
+    - text: Was this page helpful?
+    - button "Yes" [ref=e17] [cursor=pointer]
+    - button "No" [ref=e18] [cursor=pointer]
+  - paragraph [ref=e20]:
+    - generic [ref=e21]:
+      - text: "Cloudflare Ray ID:"
+      - strong [ref=e22]: a1342b38df9a2ad9
+    - text: •
+    - generic [ref=e23]:
+      - text: "Your IP:"
+      - button "Click to reveal" [ref=e24] [cursor=pointer]
+      - text: •
+    - generic [ref=e25]:
+      - text: Performance & security by
+      - link "Cloudflare" [ref=e26] [cursor=pointer]:
+        - /url: https://www.cloudflare.com/5xx-error-landing

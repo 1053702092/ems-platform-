@@ -1,0 +1,9 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - heading "Error!" [level=2] [ref=e5]
+    - paragraph [ref=e6]: 如果您看见该页，可能有以下几个原因：
+    - list [ref=e7]:
+      - listitem [ref=e8]: 您访问的站点出错
+      - listitem [ref=e9]: 页面已经被移走
+      - listitem [ref=e10]: 您请求的页面不存在
+  - paragraph [ref=e12]: "@2002-2012北森.人才管理软件及解决方案"

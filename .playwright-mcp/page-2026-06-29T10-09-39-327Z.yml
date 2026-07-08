@@ -1,0 +1,935 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - link "BOSS直聘" [ref=e6] [cursor=pointer]:
+        - /url: https://www.zhipin.com/
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "首页" [ref=e10] [cursor=pointer]:
+            - /url: https://www.zhipin.com/
+        - listitem [ref=e11]:
+          - link "职位" [ref=e12] [cursor=pointer]:
+            - /url: https://www.zhipin.com/web/geek/jobs
+        - list [ref=e13]:
+          - listitem [ref=e14]:
+            - link "公司" [ref=e15] [cursor=pointer]:
+              - /url: https://www.zhipin.com/gongsi/
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "校园" [ref=e18] [cursor=pointer]:
+              - /url: https://www.zhipin.com/school/
+          - listitem [ref=e20]:
+            - link "海归" [ref=e21] [cursor=pointer]:
+              - /url: https://www.zhipin.com/returnee_jobs/
+        - listitem [ref=e22]:
+          - link "APP" [ref=e23] [cursor=pointer]:
+            - /url: https://app.zhipin.com/
+        - listitem [ref=e24]:
+          - link "有了" [ref=e25] [cursor=pointer]:
+            - /url: https://youle.zhipin.com/recommend/selected/
+        - listitem [ref=e26]:
+          - link "海外" [ref=e27] [cursor=pointer]:
+            - /url: https://www.zhipin.com/overseas/
+        - listitem [ref=e28]:
+          - link "无障碍专区" [ref=e29] [cursor=pointer]:
+            - /url: https://www.zhipin.com/accessible_job/
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - link "我要招聘" [ref=e33] [cursor=pointer]:
+            - /url: https://www.zhipin.com/web/user/?intent=1
+          - link "我要找工作" [ref=e34] [cursor=pointer]:
+            - /url: https://www.zhipin.com/web/user/?intent=0
+        - link "登录/注册" [ref=e35] [cursor=pointer]:
+          - /url: https://www.zhipin.com/web/user/
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e44] [cursor=pointer]: 深圳
+            - generic [ref=e48] [cursor=pointer]: 公司行业
+            - generic [ref=e52] [cursor=pointer]: 职位类型
+            - paragraph [ref=e54]:
+              - textbox "搜索职位、公司" [ref=e55]: BMS能源算法
+          - button "搜索" [ref=e56] [cursor=pointer]
+        - link "登录，查看更多职位" [ref=e58] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - text: 登录，查看更多职位
+      - generic [ref=e60]:
+        - definition [ref=e62]:
+          - link "深圳" [ref=e63]:
+            - /url: javascript:;
+          - emphasis [ref=e64]
+          - link "不限" [ref=e65] [cursor=pointer]:
+            - /url: javascript:;
+          - emphasis [ref=e66]
+          - text: 热门城市：
+          - link "全国" [ref=e67] [cursor=pointer]:
+            - /url: /c100010000/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "北京" [ref=e68] [cursor=pointer]:
+            - /url: /c101010100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "上海" [ref=e69] [cursor=pointer]:
+            - /url: /c101020100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "广州" [ref=e70] [cursor=pointer]:
+            - /url: /c101280100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "深圳" [ref=e71] [cursor=pointer]:
+            - /url: /c101280600/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "杭州" [ref=e72] [cursor=pointer]:
+            - /url: /c101210100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "天津" [ref=e73] [cursor=pointer]:
+            - /url: /c101030100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "西安" [ref=e74] [cursor=pointer]:
+            - /url: /c101110100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "苏州" [ref=e75] [cursor=pointer]:
+            - /url: /c101190400/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "武汉" [ref=e76] [cursor=pointer]:
+            - /url: /c101200100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "厦门" [ref=e77] [cursor=pointer]:
+            - /url: /c101230200/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "长沙" [ref=e78] [cursor=pointer]:
+            - /url: /c101250100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "成都" [ref=e79] [cursor=pointer]:
+            - /url: /c101270100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "郑州" [ref=e80] [cursor=pointer]:
+            - /url: /c101180100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "重庆" [ref=e81] [cursor=pointer]:
+            - /url: /c101040100/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+          - link "全部城市" [ref=e82] [cursor=pointer]:
+            - /url: javascript:;
+        - definition [ref=e84]:
+          - link "不限" [ref=e85] [cursor=pointer]:
+            - /url: /c101280600/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+      - generic [ref=e86]:
+        - textbox [ref=e89] [cursor=pointer]: 工作经验
+        - textbox [ref=e93] [cursor=pointer]: 学历要求
+        - textbox [ref=e97] [cursor=pointer]: 薪资要求
+        - textbox [ref=e101] [cursor=pointer]: 融资阶段
+        - textbox [ref=e105] [cursor=pointer]: 公司规模
+        - link "清空筛选条件" [ref=e107] [cursor=pointer]:
+          - /url: /c101280600/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - generic [ref=e112]:
+          - heading "各大行业职位任你选" [level=3] [ref=e115]
+          - generic [ref=e116]: 首次验证通过即注册BOSS直聘账号
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - emphasis [ref=e121] [cursor=pointer]: "+86"
+              - textbox "手机号" [ref=e124]
+            - generic: 正在加载中
+            - generic [ref=e125]:
+              - textbox "短信验证码" [ref=e128]
+              - button "发送验证码" [ref=e129] [cursor=pointer]
+            - button "登录/注册" [ref=e131] [cursor=pointer]
+            - generic [ref=e132]:
+              - checkbox [ref=e133]
+              - text: 已阅读并同意BOSS直聘
+              - link "《用户协议》" [ref=e134] [cursor=pointer]:
+                - /url: https://about.zhipin.com/agreement?id=registerprotocol
+              - link "《隐私政策》" [ref=e135] [cursor=pointer]:
+                - /url: https://about.zhipin.com/agreement?id=personalinfopro
+              - text: ，允许BOSS直聘统一管理本人账号信息
+        - link [ref=e137] [cursor=pointer]:
+          - /url: https://app.zhipin.com/
+        - link [ref=e139] [cursor=pointer]:
+          - /url: /user/login.html?initType=3
+      - generic [ref=e140]:
+        - list [ref=e141]:
+          - listitem [ref=e142] [cursor=pointer]:
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]:
+                    - link "bms软件高级工程师-欣动能源" [ref=e149]:
+                      - /url: /job_detail/9039d6f5a85b1b5b1HN83Nq-FVdZ.html
+                    - generic [ref=e150]:
+                      - text: "["
+                      - generic [ref=e151]: 深圳·宝安区·石岩
+                      - text: "]"
+                  - generic [ref=e152]:
+                    - paragraph [ref=e153]:
+                      - text: 5-10年
+                      - emphasis [ref=e154]
+                      - text: 本科
+                    - heading "张女士 HR" [level=3] [ref=e156]:
+                      - img [ref=e157]
+                      - text: 张女士
+                      - emphasis [ref=e158]
+                      - text: HR
+                - generic [ref=e159]:
+                  - generic [ref=e160]:
+                    - heading "欣旺达" [level=3] [ref=e161]:
+                      - link "欣旺达" [ref=e162]:
+                        - /url: /gongsi/a0c582e6997cffe90Xd93tq-.html
+                    - paragraph [ref=e163]:
+                      - link "其他行业" [ref=e164]:
+                        - /url: /i101304/
+                      - emphasis [ref=e165]
+                      - text: 已上市
+                      - emphasis [ref=e166]
+                      - text: 10000人以上
+                  - link:
+                    - /url: /gongsi/a0c582e6997cffe90Xd93tq-.html
+              - generic [ref=e167]:
+                - generic [ref=e168]:
+                  - generic [ref=e169]: 通信相关专业
+                  - generic [ref=e170]: 电气电气/自动化相关专业
+                - generic [ref=e171]: 股票期权，五险一金，节日福利，加班补助，年终奖，通讯补贴，补充医疗保险，员工旅游，全勤奖，带薪年假，免费班车
+          - listitem [ref=e172] [cursor=pointer]:
+            - generic [ref=e173]:
+              - generic [ref=e174]:
+                - generic [ref=e176]:
+                  - generic [ref=e177]:
+                    - link "产品经理（新能源，BMS电源）" [ref=e179]:
+                      - /url: /job_detail/3ff0b1adbd839482031809y9FVpU.html
+                    - generic [ref=e180]:
+                      - text: "["
+                      - generic [ref=e181]: 深圳·南山区·科技园
+                      - text: "]"
+                  - generic [ref=e182]:
+                    - paragraph [ref=e183]:
+                      - text: 5-10年
+                      - emphasis [ref=e184]
+                      - text: 本科
+                    - heading "王女士 HRBP" [level=3] [ref=e186]:
+                      - img [ref=e187]
+                      - text: 王女士
+                      - emphasis [ref=e188]
+                      - text: HRBP
+                - generic [ref=e189]:
+                  - generic [ref=e190]:
+                    - heading "沛城科技" [level=3] [ref=e191]:
+                      - link "沛城科技" [ref=e192]:
+                        - /url: /gongsi/b0633876b90ffc201HR_3d26FFo~.html
+                    - paragraph [ref=e193]:
+                      - link "储能" [ref=e194]:
+                        - /url: /i101209/
+                      - emphasis [ref=e195]
+                      - text: A轮
+                      - emphasis [ref=e196]
+                      - text: 500-999人
+                  - link:
+                    - /url: /gongsi/b0633876b90ffc201HR_3d26FFo~.html
+              - generic [ref=e197]:
+                - generic [ref=e198]:
+                  - generic [ref=e199]: B端产品
+                  - generic [ref=e200]: 产品定义
+                  - generic [ref=e201]: 方案公司
+                  - generic [ref=e202]: BMS
+                  - generic [ref=e203]: 产品规划管理
+                  - generic [ref=e204]: 储能
+                - generic [ref=e205]: 团建聚餐，免费工装，生日福利，年终奖，五险一金，节日福利，零食下午茶，带薪年假，员工旅游
+          - listitem [ref=e206] [cursor=pointer]:
+            - generic [ref=e207]:
+              - generic [ref=e208]:
+                - generic [ref=e210]:
+                  - generic [ref=e211]:
+                    - link "高级BMS算法工程师" [ref=e213]:
+                      - /url: /job_detail/25392ec1cfaf1f8f1Hx-3925FlRY.html
+                    - generic [ref=e214]:
+                      - text: "["
+                      - generic [ref=e215]: 深圳·南山区·科技园
+                      - text: "]"
+                  - generic [ref=e216]:
+                    - paragraph [ref=e217]:
+                      - text: 5-10年
+                      - emphasis [ref=e218]
+                      - text: 硕士
+                    - heading "周女士 招聘HR" [level=3] [ref=e220]:
+                      - img [ref=e221]
+                      - text: 周女士
+                      - emphasis [ref=e222]
+                      - text: 招聘HR
+                    - generic [ref=e223]: 在线
+                - generic [ref=e224]:
+                  - generic [ref=e225]:
+                    - heading "芯海科技" [level=3] [ref=e226]:
+                      - link "芯海科技" [ref=e227]:
+                        - /url: /gongsi/b388b8ea36ef4c341nd93N-_Flo~.html
+                    - paragraph [ref=e228]:
+                      - link "半导体/芯片" [ref=e229]:
+                        - /url: /i101405/
+                      - emphasis [ref=e230]
+                      - text: 已上市
+                      - emphasis [ref=e231]
+                      - text: 500-999人
+                  - link:
+                    - /url: /gongsi/b388b8ea36ef4c341nd93N-_Flo~.html
+              - generic [ref=e232]:
+                - generic [ref=e233]:
+                  - generic [ref=e234]: BMS
+                  - generic [ref=e235]: 电池管理
+                  - generic [ref=e236]: 电量计
+                  - generic [ref=e237]: 嵌入式开发
+                  - generic [ref=e238]: 优秀开源项目经历
+                - generic [ref=e239]: 员工旅游，带薪年假，年终奖，团建聚餐，股票期权，零食下午茶，五险一金，定期体检，定期体检，生日福利，节日福利
+          - listitem [ref=e240] [cursor=pointer]:
+            - generic [ref=e241]:
+              - generic [ref=e242]:
+                - generic [ref=e244]:
+                  - generic [ref=e245]:
+                    - link "软件开发工程师-BMS" [ref=e247]:
+                      - /url: /job_detail/7eb264f4e09986e803Z739W9F1tS.html
+                    - generic [ref=e248]:
+                      - text: "["
+                      - generic [ref=e249]: 深圳·南山区·科技园
+                      - text: "]"
+                  - generic [ref=e250]:
+                    - paragraph [ref=e251]:
+                      - text: 3-5年
+                      - emphasis [ref=e252]
+                      - text: 本科
+                    - heading "车女士 HR" [level=3] [ref=e254]:
+                      - img [ref=e255]
+                      - text: 车女士
+                      - emphasis [ref=e256]
+                      - text: HR
+                    - generic [ref=e257]: 在线
+                - generic [ref=e258]:
+                  - generic [ref=e259]:
+                    - heading "RAK瑞科慧联" [level=3] [ref=e260]:
+                      - link "RAK瑞科慧联" [ref=e261]:
+                        - /url: /gongsi/b37995a5a451608b1nN82966GVc~.html
+                    - paragraph [ref=e262]:
+                      - link "通信/网络设备" [ref=e263]:
+                        - /url: /i100024/
+                      - emphasis [ref=e264]
+                      - text: B轮
+                      - emphasis [ref=e265]
+                      - text: 100-499人
+                  - link:
+                    - /url: /gongsi/b37995a5a451608b1nN82966GVc~.html
+              - generic [ref=e266]:
+                - generic [ref=e267]:
+                  - generic [ref=e268]: C++
+                  - generic [ref=e269]: C
+                  - generic [ref=e270]: 电气电气/自动化相关专业
+                - generic [ref=e271]: 节日福利，五险一金，零食下午茶，带薪年假，年终奖，员工旅游，补充医疗保险，定期体检
+          - listitem [ref=e272] [cursor=pointer]:
+            - generic [ref=e273]:
+              - generic [ref=e274]:
+                - generic [ref=e276]:
+                  - generic [ref=e277]:
+                    - link "储能bms软件工程师" [ref=e279]:
+                      - /url: /job_detail/8790c8377005f1740nR_2tq0E1RX.html
+                    - generic [ref=e280]:
+                      - text: "["
+                      - generic [ref=e281]: 深圳·龙华区·龙华
+                      - text: "]"
+                  - generic [ref=e282]:
+                    - paragraph [ref=e283]:
+                      - text: 3-5年
+                      - emphasis [ref=e284]
+                      - text: 本科
+                    - heading "黄女士 HR" [level=3] [ref=e286]:
+                      - img [ref=e287]
+                      - text: 黄女士
+                      - emphasis [ref=e288]
+                      - text: HR
+                    - generic [ref=e289]: 在线
+                - generic [ref=e290]:
+                  - generic [ref=e291]:
+                    - heading "长风动力" [level=3] [ref=e292]:
+                      - link "长风动力" [ref=e293]:
+                        - /url: /gongsi/adadc948b15d698f3nR-09m5Ew~~.html
+                    - paragraph [ref=e294]:
+                      - link "储能" [ref=e295]:
+                        - /url: /i101209/
+                      - emphasis [ref=e296]
+                      - text: 不需要融资
+                      - emphasis [ref=e297]
+                      - text: 500-999人
+                  - link:
+                    - /url: /gongsi/adadc948b15d698f3nR-09m5Ew~~.html
+              - generic [ref=e298]:
+                - generic [ref=e299]:
+                  - generic [ref=e300]: C++
+                  - generic [ref=e301]: 电气电气/自动化相关专业
+                  - generic [ref=e302]: 嵌入式/单片机开发经验
+                - generic [ref=e303]: 法定节假日，底薪加提成，职称补贴，股票期权，餐补，团建聚餐，绩效奖金，协调住宿，年度两次调薪，带薪年假，节日福利，夜班补助，学历补贴
+          - listitem [ref=e304] [cursor=pointer]:
+            - generic [ref=e305]:
+              - generic [ref=e306]:
+                - generic [ref=e308]:
+                  - generic [ref=e309]:
+                    - link "高级bms软件工程师" [ref=e311]:
+                      - /url: /job_detail/666fa30a6742f0601HN60tm1GFFS.html
+                    - generic [ref=e312]:
+                      - text: "["
+                      - generic [ref=e313]: 深圳·宝安区·沙井
+                      - text: "]"
+                  - generic [ref=e314]:
+                    - paragraph [ref=e315]:
+                      - text: 3-5年
+                      - emphasis [ref=e316]
+                      - text: 本科
+                    - heading "周先生 hr" [level=3] [ref=e318]:
+                      - img [ref=e319]
+                      - text: 周先生
+                      - emphasis [ref=e320]
+                      - text: hr
+                - generic [ref=e321]:
+                  - generic [ref=e322]:
+                    - heading "力创同达" [level=3] [ref=e323]:
+                      - link "力创同达" [ref=e324]:
+                        - /url: /gongsi/59323d80994809811X1y2N-9GVs~.html
+                    - paragraph [ref=e325]:
+                      - link "电子/半导体/集成电路" [ref=e326]:
+                        - /url: /i100026/
+                      - emphasis [ref=e327]
+                      - text: 100-499人
+                  - link:
+                    - /url: /gongsi/59323d80994809811X1y2N-9GVs~.html
+              - generic [ref=e329]:
+                - generic [ref=e330]: C
+                - generic [ref=e331]: C++
+                - generic [ref=e332]: ARM开发
+                - generic [ref=e333]: 计算机相关专业
+                - generic [ref=e334]: 嵌入式/单片机开发经验
+                - generic [ref=e335]: 英语读写能力良好
+          - listitem [ref=e336] [cursor=pointer]:
+            - generic [ref=e337]:
+              - generic [ref=e338]:
+                - generic [ref=e340]:
+                  - generic [ref=e341]:
+                    - link "高级bms软件工程师" [ref=e343]:
+                      - /url: /job_detail/e29a66e6d2c38d040nR72Nu8EVdX.html
+                    - generic [ref=e344]:
+                      - text: "["
+                      - generic [ref=e345]: 深圳·龙岗区·龙岗宝荷
+                      - text: "]"
+                  - generic [ref=e346]:
+                    - paragraph [ref=e347]:
+                      - text: 5-10年
+                      - emphasis [ref=e348]
+                      - text: 本科
+                    - heading "蓝先生 人力资源部总监" [level=3] [ref=e350]:
+                      - img [ref=e351]
+                      - text: 蓝先生
+                      - emphasis [ref=e352]
+                      - text: 人力资源部总监
+                    - generic [ref=e353]: 在线
+                - generic [ref=e354]:
+                  - generic [ref=e355]:
+                    - heading "瑞诺技术" [level=3] [ref=e356]:
+                      - link "瑞诺技术" [ref=e357]:
+                        - /url: /gongsi/b75f51fbaf4cb0301n1939y8ElU~.html
+                    - paragraph [ref=e358]:
+                      - link "储能" [ref=e359]:
+                        - /url: /i101209/
+                      - emphasis [ref=e360]
+                      - text: 未融资
+                      - emphasis [ref=e361]
+                      - text: 100-499人
+                  - link:
+                    - /url: /gongsi/b75f51fbaf4cb0301n1939y8ElU~.html
+              - generic [ref=e362]:
+                - generic [ref=e363]:
+                  - generic [ref=e364]: C++
+                  - generic [ref=e365]: C
+                  - generic [ref=e366]: 嵌入式/单片机开发经验
+                  - generic [ref=e367]: 电气电气/自动化相关专业
+                  - generic [ref=e368]: 英语读写能力良好
+                - generic [ref=e369]: 零食下午茶，五险一金，带薪年假，员工旅游，年终奖，节日福利，定期体检，补充医疗保险
+          - listitem [ref=e370] [cursor=pointer]:
+            - generic [ref=e371]:
+              - generic [ref=e372]:
+                - generic [ref=e374]:
+                  - generic [ref=e375]:
+                    - link "能源AI算法负责人（负荷预测/储能优化）" [ref=e377]:
+                      - /url: /job_detail/ba3f80e4af9d0ce70nF70968E1FT.html
+                    - generic [ref=e378]:
+                      - text: "["
+                      - generic [ref=e379]: 深圳
+                      - text: "]"
+                  - generic [ref=e380]:
+                    - paragraph [ref=e381]:
+                      - text: 5-10年
+                      - emphasis [ref=e382]
+                      - text: 硕士
+                    - heading "池女士 HR" [level=3] [ref=e384]:
+                      - img [ref=e385]
+                      - text: 池女士
+                      - emphasis [ref=e386]
+                      - text: HR
+                    - generic [ref=e387]: 在线
+                - generic [ref=e388]:
+                  - generic [ref=e389]:
+                    - heading "融安网络" [level=3] [ref=e390]:
+                      - link "融安网络" [ref=e391]:
+                        - /url: /gongsi/5a0372ed03fc274f0HNz3N25GA~~.html
+                    - paragraph [ref=e392]:
+                      - link "计算机软件" [ref=e393]:
+                        - /url: /i100021/
+                      - emphasis [ref=e394]
+                      - text: C轮
+                      - emphasis [ref=e395]
+                      - text: 100-499人
+                  - link:
+                    - /url: /gongsi/5a0372ed03fc274f0HNz3N25GA~~.html
+              - generic [ref=e396]:
+                - generic [ref=e397]:
+                  - generic [ref=e398]: 强化学习
+                  - generic [ref=e399]: Python
+                  - generic [ref=e400]: 负荷预测
+                  - generic [ref=e401]: 储能优化
+                  - generic [ref=e402]: 时序模型
+                - generic [ref=e403]: 股票期权，年终奖，有无线网，员工旅游，定期体检，五险一金，餐补，交通补助，带薪年假，团建聚餐，通讯补贴，节日福利，零食下午茶，加班补助
+          - listitem [ref=e404] [cursor=pointer]:
+            - generic [ref=e405]:
+              - generic [ref=e406]:
+                - generic [ref=e408]:
+                  - generic [ref=e409]:
+                    - link "电机控制算法工程师（新能源）" [ref=e411]:
+                      - /url: /job_detail/1f248d58048ff8fa1HV70tS5FVFV.html
+                    - generic [ref=e412]:
+                      - text: "["
+                      - generic [ref=e413]: 深圳·南山区·科技园
+                      - text: "]"
+                  - generic [ref=e414]:
+                    - paragraph [ref=e415]:
+                      - text: 3-5年
+                      - emphasis [ref=e416]
+                      - text: 本科
+                    - heading "邱女士 HRBP人事经理" [level=3] [ref=e418]:
+                      - img [ref=e419]
+                      - text: 邱女士
+                      - emphasis [ref=e420]
+                      - text: HRBP人事经理
+                    - generic [ref=e421]: 在线
+                - generic [ref=e422]:
+                  - generic [ref=e423]:
+                    - heading "麦格米特" [level=3] [ref=e424]:
+                      - link "麦格米特" [ref=e425]:
+                        - /url: /gongsi/f02f77c82e0a59360Hxz3tm7.html
+                    - paragraph [ref=e426]:
+                      - link "电子/硬件开发" [ref=e427]:
+                        - /url: /i101406/
+                      - emphasis [ref=e428]
+                      - text: 已上市
+                      - emphasis [ref=e429]
+                      - text: 10000人以上
+                  - link:
+                    - /url: /gongsi/f02f77c82e0a59360Hxz3tm7.html
+              - generic [ref=e430]:
+                - generic [ref=e431]:
+                  - generic [ref=e432]: 电机控制
+                  - generic [ref=e433]: 伺服
+                  - generic [ref=e434]: 新能源
+                - generic [ref=e435]: 五险一金，节日福利，年终奖，团建聚餐，有无线网，员工旅游，股票期权，零食下午茶，定期体检，带薪年假
+          - listitem [ref=e436] [cursor=pointer]:
+            - generic [ref=e437]:
+              - generic [ref=e438]:
+                - generic [ref=e440]:
+                  - generic [ref=e441]:
+                    - link "bms软件工程师" [ref=e443]:
+                      - /url: /job_detail/a8571a4248cecb811HF809q0EFtV.html
+                    - generic [ref=e444]:
+                      - text: "["
+                      - generic [ref=e445]: 深圳·南山区·华侨城
+                      - text: "]"
+                  - generic [ref=e446]:
+                    - paragraph [ref=e447]:
+                      - text: 3-5年
+                      - emphasis [ref=e448]
+                      - text: 本科
+                    - heading "崔先生 研发部长" [level=3] [ref=e450]:
+                      - img [ref=e451]
+                      - text: 崔先生
+                      - emphasis [ref=e452]
+                      - text: 研发部长
+                - generic [ref=e453]:
+                  - generic [ref=e454]:
+                    - heading "卡奥斯" [level=3] [ref=e455]:
+                      - link "卡奥斯" [ref=e456]:
+                        - /url: /gongsi/f6771f0b506af7391nd709--F1M~.html
+                    - paragraph [ref=e457]:
+                      - link "互联网" [ref=e458]:
+                        - /url: /i100020/
+                      - emphasis [ref=e459]
+                      - text: B轮
+                      - emphasis [ref=e460]
+                      - text: 1000-9999人
+                  - link:
+                    - /url: /gongsi/f6771f0b506af7391nd709--F1M~.html
+              - generic [ref=e461]:
+                - generic [ref=e462]:
+                  - generic [ref=e463]: C
+                  - generic [ref=e464]: RTOS
+                  - generic [ref=e465]: 计算机相关专业
+                  - generic [ref=e466]: 电气电气/自动化相关专业
+                  - generic [ref=e467]: 嵌入式/单片机开发经验
+                  - generic [ref=e468]: BMS
+                - generic [ref=e469]: 节日福利，补充医疗保险，餐补，交通补助，带薪年假，年终奖，五险一金，通讯补贴，定期体检
+          - listitem [ref=e470] [cursor=pointer]:
+            - generic [ref=e471]:
+              - generic [ref=e472]:
+                - generic [ref=e474]:
+                  - generic [ref=e475]:
+                    - link "BMS 销售" [ref=e477]:
+                      - /url: /job_detail/e56aaaa7915e92a903J62tS-ElpZ.html
+                    - generic [ref=e478]:
+                      - text: "["
+                      - generic [ref=e479]: 深圳·宝安区·西乡
+                      - text: "]"
+                  - generic [ref=e480]:
+                    - paragraph [ref=e481]:
+                      - text: 1-3年
+                      - emphasis [ref=e482]
+                      - text: 大专
+                    - heading "余先生 总经理" [level=3] [ref=e484]:
+                      - img [ref=e485]
+                      - text: 余先生
+                      - emphasis [ref=e486]
+                      - text: 总经理
+                - generic [ref=e487]:
+                  - generic [ref=e488]:
+                    - heading "深圳市屹能科技有..." [level=3] [ref=e489]:
+                      - link "深圳市屹能科技有..." [ref=e490]:
+                        - /url: /gongsi/11a4c2bf6b6d4d811nJ53tm9Els~.html
+                    - paragraph [ref=e491]:
+                      - link "电子/硬件开发" [ref=e492]:
+                        - /url: /i101406/
+                      - emphasis [ref=e493]
+                      - text: 未融资
+                      - emphasis [ref=e494]
+                      - text: 0-20人
+                  - link:
+                    - /url: /gongsi/11a4c2bf6b6d4d811nJ53tm9Els~.html
+              - generic [ref=e495]:
+                - generic [ref=e496]:
+                  - generic [ref=e497]: 电话销售
+                  - generic [ref=e498]: 面销/陌拜
+                  - generic [ref=e499]: 其他产品/服务
+                  - generic [ref=e500]: 先进制造
+                  - generic [ref=e501]: 对企业/机构（To B）销售经验
+                  - generic [ref=e502]: 企业（To B）
+                  - generic [ref=e503]: 面销/陌拜经验
+                - generic [ref=e504]: 绩效奖金，年终奖
+          - listitem [ref=e505] [cursor=pointer]:
+            - generic [ref=e506]:
+              - generic [ref=e507]:
+                - generic [ref=e509]:
+                  - generic [ref=e510]:
+                    - link "技术总工-能源科技" [ref=e512]:
+                      - /url: /job_detail/872648e48744a56a1HJy0tm6F1tU.html
+                    - generic [ref=e513]:
+                      - text: "["
+                      - generic [ref=e514]: 深圳·光明区·公明
+                      - text: "]"
+                  - generic [ref=e515]:
+                    - paragraph [ref=e516]:
+                      - text: 10年以上
+                      - emphasis [ref=e517]
+                      - text: 本科
+                    - heading "肖女士 人力资源高级经理" [level=3] [ref=e519]:
+                      - img [ref=e520]
+                      - text: 肖女士
+                      - emphasis [ref=e521]
+                      - text: 人力资源高级经理
+                - generic [ref=e522]:
+                  - generic [ref=e523]:
+                    - heading "深圳市欣旺达能源科技" [level=3] [ref=e524]:
+                      - link "深圳市欣旺达能源科技" [ref=e525]:
+                        - /url: /gongsi/0b60366f8193424c1Xdy2N65Fls~.html
+                    - paragraph [ref=e526]:
+                      - link "储能" [ref=e527]:
+                        - /url: /i101209/
+                      - emphasis [ref=e528]
+                      - text: 已上市
+                      - emphasis [ref=e529]
+                      - text: 1000-9999人
+                  - link:
+                    - /url: /gongsi/0b60366f8193424c1Xdy2N65Fls~.html
+              - generic [ref=e530]:
+                - generic [ref=e532]: 能源/化工/环保
+                - generic [ref=e533]: 意外险，全勤奖，年终奖，宿舍有空调，高温补贴，团建聚餐，股票期权，绩效奖金，五险一金，节日福利，工龄奖，通讯补贴
+          - listitem [ref=e534] [cursor=pointer]:
+            - generic [ref=e535]:
+              - generic [ref=e536]:
+                - generic [ref=e538]:
+                  - generic [ref=e539]:
+                    - link "BMS软件工程师" [ref=e541]:
+                      - /url: /job_detail/c7cf948726e1a06003J52t28ElFS.html
+                    - generic [ref=e542]:
+                      - text: "["
+                      - generic [ref=e543]: 深圳·龙岗区·龙岗宝荷
+                      - text: "]"
+                  - generic [ref=e544]:
+                    - paragraph [ref=e545]:
+                      - text: 3-5年
+                      - emphasis [ref=e546]
+                      - text: 大专
+                    - heading "郑女士 人事" [level=3] [ref=e548]:
+                      - img [ref=e549]
+                      - text: 郑女士
+                      - emphasis [ref=e550]
+                      - text: 人事
+                    - generic [ref=e551]: 在线
+                - generic [ref=e552]:
+                  - generic [ref=e553]:
+                    - heading "菲尼基科技" [level=3] [ref=e554]:
+                      - link "菲尼基科技" [ref=e555]:
+                        - /url: /gongsi/6888ab405ca951671nd42tq7FFs~.html
+                    - paragraph [ref=e556]:
+                      - link "其他新能源" [ref=e557]:
+                        - /url: /i101212/
+                      - emphasis [ref=e558]
+                      - text: 未融资
+                      - emphasis [ref=e559]
+                      - text: 100-499人
+                  - link:
+                    - /url: /gongsi/6888ab405ca951671nd42tq7FFs~.html
+              - generic [ref=e560]:
+                - generic [ref=e561]:
+                  - generic [ref=e562]: C
+                  - generic [ref=e563]: C++
+                  - generic [ref=e564]: RS
+                  - generic [ref=e565]: BMS
+                - generic [ref=e566]: 免费工装，全勤奖，节日福利，五险一金，带薪年假，补充医疗保险，零食下午茶
+          - listitem [ref=e567] [cursor=pointer]:
+            - generic [ref=e568]:
+              - generic [ref=e569]:
+                - generic [ref=e571]:
+                  - generic [ref=e572]:
+                    - link "bms软件工程师" [ref=e574]:
+                      - /url: /job_detail/8099e5a53bbfb8881HJ829W1EFJW.html
+                    - generic [ref=e575]:
+                      - text: "["
+                      - generic [ref=e576]: 深圳·宝安区·松岗
+                      - text: "]"
+                  - generic [ref=e577]:
+                    - paragraph [ref=e578]:
+                      - text: 3-5年
+                      - emphasis [ref=e579]
+                      - text: 大专
+                    - heading "翁女士 行政专员" [level=3] [ref=e581]:
+                      - img [ref=e582]
+                      - text: 翁女士
+                      - emphasis [ref=e583]
+                      - text: 行政专员
+                - generic [ref=e584]:
+                  - generic [ref=e585]:
+                    - heading "海川伟业" [level=3] [ref=e586]:
+                      - link "海川伟业" [ref=e587]:
+                        - /url: /gongsi/4bdaadd3cdb4212f33N53N2_FA~~.html
+                    - paragraph [ref=e588]:
+                      - link "电子/硬件开发" [ref=e589]:
+                        - /url: /i101406/
+                      - emphasis [ref=e590]
+                      - text: 不需要融资
+                      - emphasis [ref=e591]
+                      - text: 20-99人
+                  - link:
+                    - /url: /gongsi/4bdaadd3cdb4212f33N53N2_FA~~.html
+              - generic [ref=e592]:
+                - generic [ref=e593]:
+                  - generic [ref=e594]: CATIA
+                  - generic [ref=e595]: 中级工程师职称
+                  - generic [ref=e596]: 研发工程师
+                  - generic [ref=e597]: 磷酸铁锂电池
+                  - generic [ref=e598]: 电池热管理
+                  - generic [ref=e599]: 三元锂电池
+                  - generic [ref=e600]: 汽车制造
+                  - generic [ref=e601]: 材料相关专业
+                  - generic [ref=e602]: 英语可用于工作
+                  - generic [ref=e603]: 熟悉电池/BMS/充放电标准
+                  - generic [ref=e604]: Simulink
+                  - generic [ref=e605]: 模组
+                  - generic [ref=e606]: 电池PACK
+                  - generic [ref=e607]: 锂电池
+                  - generic [ref=e608]: 电气/电力/电子专业
+                  - generic [ref=e609]: UG
+                  - generic [ref=e610]: 钴酸锂电池
+                  - generic [ref=e611]: 电芯
+                  - generic [ref=e612]: 锰酸锂电池
+                  - generic [ref=e613]: 工程师职称
+                  - generic [ref=e614]: Creo
+                  - generic [ref=e615]: 高级工程师职称
+                  - generic [ref=e616]: SolidWorks
+                  - generic [ref=e617]: 软件/编程工程师
+                - generic [ref=e618]: 员工旅游，年终奖，零食下午茶，五险一金，全勤奖
+          - listitem [ref=e619] [cursor=pointer]:
+            - generic [ref=e620]:
+              - generic [ref=e621]:
+                - generic [ref=e623]:
+                  - generic [ref=e624]:
+                    - link "BMS硬件工程师" [ref=e626]:
+                      - /url: /job_detail/5221ded23bf9356f1HR539W1FlZQ.html
+                    - generic [ref=e627]:
+                      - text: "["
+                      - generic [ref=e628]: 深圳·龙岗区·坪地
+                      - text: "]"
+                  - generic [ref=e629]:
+                    - paragraph [ref=e630]:
+                      - text: 3-5年
+                      - emphasis [ref=e631]
+                      - text: 本科
+                    - heading "李先生 高级HRBP" [level=3] [ref=e633]:
+                      - img [ref=e634]
+                      - text: 李先生
+                      - emphasis [ref=e635]
+                      - text: 高级HRBP
+                    - generic [ref=e636]: 在线
+                - generic [ref=e637]:
+                  - generic [ref=e638]:
+                    - heading "安培时代数字能源科技" [level=3] [ref=e639]:
+                      - link "安培时代数字能源科技" [ref=e640]:
+                        - /url: /gongsi/add82cfdeb2573e21XV62Ni-Elc~.html
+                    - paragraph [ref=e641]:
+                      - link "储能" [ref=e642]:
+                        - /url: /i101209/
+                      - emphasis [ref=e643]
+                      - text: 未融资
+                      - emphasis [ref=e644]
+                      - text: 500-999人
+                  - link:
+                    - /url: /gongsi/add82cfdeb2573e21XV62Ni-Elc~.html
+              - generic [ref=e645]:
+                - generic [ref=e647]: BMS
+                - generic [ref=e648]: 团建聚餐，午休椅，补充医疗保险，宿舍有空调，带薪年假，五险一金，零食下午茶，微波炉，员工旅游，保底工资，通讯补贴，绩效奖金
+        - generic [ref=e649]:
+          - link [ref=e650] [cursor=pointer]:
+            - /url: /c101280600/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95&page=0
+          - link "1" [ref=e651] [cursor=pointer]:
+            - /url: javascript:;
+          - link "2" [ref=e652] [cursor=pointer]:
+            - /url: /c101280600/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95&page=2
+          - link "3" [ref=e653] [cursor=pointer]:
+            - /url: /c101280600/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95&page=3
+          - generic [ref=e654]: ...
+          - link [ref=e655] [cursor=pointer]:
+            - /url: /c101280600/?query=BMS%E8%83%BD%E6%BA%90%E7%AE%97%E6%B3%95&page=2
+      - generic [ref=e656]:
+        - generic [ref=e657]: 对搜索结果是否满意？
+        - generic [ref=e658] [cursor=pointer]: 不满意
+        - generic [ref=e659] [cursor=pointer]: 一般
+        - generic [ref=e660] [cursor=pointer]: 满意
+        - textbox "请填写更多反馈建议..." [ref=e661]
+        - button "提交" [disabled] [ref=e662]
+      - generic [ref=e663]:
+        - link "深圳BOSS直聘招聘" [ref=e664] [cursor=pointer]:
+          - /url: /shenzhen/
+        - text: ">"
+        - heading "深圳招聘" [level=1] [ref=e665]:
+          - link "深圳招聘" [ref=e666] [cursor=pointer]:
+            - /url: /c101280600/
+    - generic [ref=e667]:
+      - generic [ref=e668]:
+        - generic [ref=e669]:
+          - generic [ref=e670] [cursor=pointer]: 热门职位
+          - generic [ref=e671] [cursor=pointer]: 热门城市
+          - generic [ref=e672] [cursor=pointer]: 热门企业
+          - generic [ref=e673] [cursor=pointer]: 附近城市
+        - generic [ref=e675]:
+          - link "深圳物流总监招聘" [ref=e676] [cursor=pointer]:
+            - /url: /c101280600-p240402/
+          - link "深圳茶艺师招聘" [ref=e677] [cursor=pointer]:
+            - /url: /c101280600-p290210/
+          - link "深圳生产跟单/文员招聘" [ref=e678] [cursor=pointer]:
+            - /url: /c101280600-p300108/
+          - link "深圳培训策划招聘" [ref=e679] [cursor=pointer]:
+            - /url: /c101280600-p190107/
+          - link "深圳政策研究招聘" [ref=e680] [cursor=pointer]:
+            - /url: /c101280600-p140801/
+          - link "深圳录入员招聘" [ref=e681] [cursor=pointer]:
+            - /url: /c101280600-p170106/
+          - link "深圳珠宝设计招聘" [ref=e682] [cursor=pointer]:
+            - /url: /c101280600-p120606/
+          - link "深圳舞蹈老师招聘" [ref=e683] [cursor=pointer]:
+            - /url: /c101280600-p190701/
+          - link "深圳客服主管招聘" [ref=e684] [cursor=pointer]:
+            - /url: /c101280600-p130306/
+          - link "深圳财务经理/主管招聘" [ref=e685] [cursor=pointer]:
+            - /url: /c101280600-p150402/
+          - link "深圳采购总监招聘" [ref=e686] [cursor=pointer]:
+            - /url: /c101280600-p250101/
+          - link "深圳投资经理招聘" [ref=e687] [cursor=pointer]:
+            - /url: /c101280600-p180101/
+          - link "深圳给排水工程师招聘" [ref=e688] [cursor=pointer]:
+            - /url: /c101280600-p220214/
+          - link "深圳线下拓展运营招聘" [ref=e689] [cursor=pointer]:
+            - /url: /c101280600-p130116/
+          - link "深圳厂务招聘" [ref=e690] [cursor=pointer]:
+            - /url: /c101280600-p300110/
+          - link "深圳汽车零部件设计招聘" [ref=e691] [cursor=pointer]:
+            - /url: /c101280600-p230107/
+          - link "深圳射频工程师招聘" [ref=e692] [cursor=pointer]:
+            - /url: /c101280600-p100816/
+          - link "深圳缝纫工招聘" [ref=e693] [cursor=pointer]:
+            - /url: /c101280600-p300629/
+          - link "深圳礼仪/迎宾/接待招聘" [ref=e694] [cursor=pointer]:
+            - /url: /c101280600-p290107/
+          - link "深圳销售总监招聘" [ref=e695] [cursor=pointer]:
+            - /url: /c101280600-p140402/
+      - generic [ref=e696]:
+        - heading "深圳招聘频道介绍" [level=3] [ref=e697]
+        - paragraph [ref=e698]: BOSS直聘深圳招聘频道，展示深圳招聘信息，百万Boss在线直聘，直接开聊，在线面试，深圳找工作就上BOSS直聘网站或APP！
+    - generic [ref=e700]:
+      - generic [ref=e701]:
+        - paragraph [ref=e702]: 企业服务热线和算法/未成年人等举报渠道 400 065 5799
+        - paragraph [ref=e703]: 老年人直连热线400 661 6030
+        - paragraph [ref=e704]: 工作日 8:00 - 22:00
+        - paragraph [ref=e705]: 休息日 8:00 - 22:00
+        - paragraph [ref=e706]:
+          - link [ref=e707] [cursor=pointer]:
+            - /url: https://www.weibo.com/bosszhipin
+          - link [ref=e708] [cursor=pointer]:
+            - /url: javascript:;
+          - link [ref=e709] [cursor=pointer]:
+            - /url: https://app.zhipin.com
+          - link "boss直聘电脑端下载" [ref=e710] [cursor=pointer]:
+            - /url: https://www.zhipin.com/desktop/
+      - generic [ref=e711]:
+        - generic [ref=e712]:
+          - term [ref=e713]: 企业服务
+          - definition [ref=e714]:
+            - link "职位搜索" [ref=e715] [cursor=pointer]:
+              - /url: https://www.zhipin.com/job_detail/
+            - link "BOSS直聘APP" [ref=e716] [cursor=pointer]:
+              - /url: https://app.zhipin.com/
+            - link "投资者关系 Investor Relations" [ref=e717] [cursor=pointer]:
+              - /url: https://ir.zhipin.com/
+            - link "直品公益基金会" [ref=e718] [cursor=pointer]:
+              - /url: https://gongyi.zhipin.com/home
+            - link "求职技巧" [ref=e719] [cursor=pointer]:
+              - /url: https://www.zhipin.com/web/common/geo/article-list.html
+        - generic [ref=e720]:
+          - term [ref=e721]: 使用与帮助
+          - definition [ref=e722]:
+            - link "协议与规则" [ref=e723] [cursor=pointer]:
+              - /url: https://about.zhipin.com/agreement
+            - link "隐私政策" [ref=e724] [cursor=pointer]:
+              - /url: https://about.zhipin.com/agreement?id=personalinfopro
+            - link "防骗指南" [ref=e725] [cursor=pointer]:
+              - /url: https://www.zhipin.com/web/common/protocol/cheat-guide.html
+            - link "使用帮助" [ref=e726] [cursor=pointer]:
+              - /url: https://www.zhipin.com/web/common/protocol/use-help.html
+        - generic [ref=e727]:
+          - term [ref=e728]: 联系BOSS直聘
+          - definition [ref=e729]:
+            - paragraph [ref=e730]: 北京华品博睿网络技术有限公司
+            - paragraph [ref=e731]: 公司地址 北京市朝阳区太阳宫中路16号院1号楼18层1801内09
+            - paragraph [ref=e732]:
+              - text: 违法和不良信息举报邮箱/未成年人举报渠道
+              - link "jubao@kanzhun.com" [ref=e733] [cursor=pointer]:
+                - /url: mailto:jubao@kanzhun.com
+      - paragraph [ref=e735]:
+        - generic [ref=e736]: Copyright © 2026 BOSS直聘
+        - link "京ICP备14013441号-5" [ref=e738] [cursor=pointer]:
+          - /url: https://beian.miit.gov.cn/
+        - generic [ref=e739]: 京ICP证150923号
+        - link "电子营业执照" [ref=e741] [cursor=pointer]:
+          - /url: https://www.zhipin.com/web/common/protocol/business-license.html
+        - link "京公网安备11010502032801" [ref=e743] [cursor=pointer]:
+          - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502032801
+        - link "朝阳网警" [ref=e745] [cursor=pointer]:
+          - /url: https://sdwj.zhipin.com/web/index.html
+        - link "人力资源服务许可证" [ref=e747] [cursor=pointer]:
+          - /url: https://www.zhipin.com/web/common/protocol/hr-service.html
+        - link "网上有害信息举报专区" [ref=e749] [cursor=pointer]:
+          - /url: https://www.12377.cn
+        - generic [ref=e750] [cursor=pointer]: 朝阳区人社局监督电话
+        - link "算法备案信息" [ref=e752] [cursor=pointer]:
+          - /url: https://about.zhipin.com/agreement?id=b9f73536711c4928bde84337cb53aa91
+    - text: 正在加载中 正在加载中
+  - iframe

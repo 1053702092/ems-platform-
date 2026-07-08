@@ -92,12 +92,12 @@ def ecms_sim(P_load, SOC_0=0.6, s_factor=S_FACTOR_DEFAULT):
         # ★ 修正：用 abs(P_bat) 确保充放电都产生正成本，避免充电时等效氢耗虚假降低
         #   单位：s [g/kWh] × |P_bat| [kW] ÷ 3600 → g/s
         H_eq = H_fc + s_factor * np.abs(P_bat_candidates) / 3600.0
-
+        #s 的单位是 g/kWh，P_bat 的单位是 kW，相乘得 g/h，再除以 3600 得到 g/s。
         # ── SOC 约束筛选（预计算所有候选的下一时刻 SOC）──
         soc_next_all = state_transition(SOC[k], PFC_GRID, P_load[k], DT)
 
         # ── 终端 SOC 惩罚：后段辅助 SOC 维持 ──
-        penalty_start = int(N * PENALTY_START_RATIO)
+        penalty_start = int(N * PENALTY_START_RATIO) #只在70%之后生效
         if k >= penalty_start:
             # SOC 偏离惩罚：高 SOC 时放电（P_fc 小），低 SOC 时充电（P_fc 大）
             soc_dev = SOC[k] - SOC_REF
@@ -253,7 +253,7 @@ def scan_s_factor(P_load, SOC_0=0.6, cycle_name='wltc'):
     print(f'[保存] 扫描结果: {csv_path}')
     print_scan_summary(df, cycle_name)
     return df
-
+    #扫描 s 对不同 SOC 的影响，找到氢耗最低且 SOC_end 接近 0.6 的 s。
 
 def print_scan_summary(df, cycle_name='wltc'):
     """打印扫描结果摘要表格"""

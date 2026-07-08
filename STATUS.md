@@ -1,7 +1,8 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-07-07
-> 当前阶段：**第8周：传统EMS四方法大对比报告 ✅ v2（含 MPC+EKF SOC 估计集成）** → 第9周即将开始（PyTorch 入门）
+> 更新日期：2026-07-08
+> 当前阶段：**第8周：传统EMS四方法大对比报告 ✅ v2（含 MPC+EKF SOC 估计集成） → 第9周：PyTorch 入门 🚀**
+> 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
 >
@@ -194,10 +195,16 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
 
 ### 第3个月 — PyTorch + 强化学习（A→C过渡，PPO为主）
 
-- [ ] **第9周：PyTorch 入门**
-  - Tensor/Autograd/nn.Module
-  - 用 PyTorch 重写简单 MLP 做功率预测
-  - **并行：强化学习基础（MDP/Bellman/策略迭代）**
+- [ ] **第9周：PyTorch 入门** 🚀 推进中
+  - [x] **环境搭建**：PyTorch 2.12.1+cpu 安装完成
+  - [x] **Part 1: Tensor 基础** — 创建/索引/广播/设备
+  - [x] **Part 2: Autograd 自动求导** — backward() / 梯度 / no_grad
+  - [x] **Part 3: nn.Module + MLP** — 两层 MLP 193参数
+  - [x] **Part 4: MLP 功率预测** — FC 功率时序预测
+    - 脚本：`scripts/week9_pytorch_intro.py`
+    - 结果：Test MAE=1.80 kW, RMSE=2.28 kW
+    - 输出：`results/week9_mlp_power_prediction.png`
+  - [ ] **并行：强化学习基础（MDP/Bellman/策略迭代）**
 - [ ] **第10周：RL基础 + DQN/SAC概念对照**
   - DQN 原理（经验回放/目标网络）只学概念和面试表达，不做完整项目
   - SAC 原理只学最大熵思想和适用场景，不做完整项目
