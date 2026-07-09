@@ -204,11 +204,20 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
     - 脚本：`scripts/week9_pytorch_intro.py`
     - 结果：Test MAE=1.80 kW, RMSE=2.28 kW
     - 输出：`results/week9_mlp_power_prediction.png`
-  - [ ] **并行：强化学习基础（MDP/Bellman/策略迭代）**
-- [ ] **第10周：RL基础 + DQN/SAC概念对照**
-  - DQN 原理（经验回放/目标网络）只学概念和面试表达，不做完整项目
-  - SAC 原理只学最大熵思想和适用场景，不做完整项目
-  - 目标：能讲清楚为什么 EMS 连续动作更适合 PPO/SAC，而本项目选择 PPO 落地
+  - [x] **并行：强化学习基础（MDP/Bellman/策略迭代）** ✅新增
+  - 脚本：`scripts/week9_rl_basics.py`（478 行）
+  - GridWorld 4×4 MDP：16 状态 × 4 动作，随机转移（80/20）
+  - Bellman 期望方程 vs 最优方程，V^π(s) 与 V*(s) 对比
+  - 策略迭代：4 轮收敛到最优策略
+  - 值迭代：133 轮收敛，与策略迭代一致（ΔV < 1e-5）
+  - 产出：`results/week9_bellman_value.png`、`results/week9_optimal_policy.png`、`results/week9_value_iteration_convergence.png`
+  - 文档：`docs/Week9_RL基础_MDP_Bellman_策略迭代_值迭代.docx`、`docs/Week9_RL基础_逐行代码分析.docx`
+- [x] **第10周：RL基础 + DQN/SAC概念对照** ✅已准备
+  - 脚本：scripts/week10_dqn_sac_concepts.py（概念说明打印）
+  - 文档：docs/Week10_DQN_SAC概念对照.docx（含面试问答30秒/2分钟版）
+  - DQN：经验回放/目标网络/ε-greedy/Q值高估/只能离散动作
+  - SAC：最大熵框架/Actor-Critic/Double Q/自动温度调节α
+  - 面试准备：为什么EMS选PPO（连续动作+训练稳定+实现简单）
 - [ ] **第11周：PPO + PyTorch 实现（主实现）**
   - Policy Gradient → PPO 原理
   - PyTorch 实现 PPO
