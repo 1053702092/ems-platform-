@@ -81,7 +81,7 @@ def mpc_step_soc(soc_k, p_fc, p_load_k, dt=DT):
     i = np.clip(i, -300, 300)
     soc_next = soc_k - i / (Q_BAT * 3600) * dt
     if not np.isfinite(soc_next) or soc_next < SOC_MIN or soc_next > SOC_MAX:
-        return None
+        return None #数值稳定性检查
     return soc_next
 
 
@@ -91,7 +91,7 @@ def soc_equivalent_h2(raw_h2_kg, soc_end, soc_ref=SOC_REF, s_factor=S_MPC):
 
     约定：SOC_end < soc_ref 代表多用了电池能量，应加回等效氢耗；
     SOC_end > soc_ref 代表保留了更多电池能量，等效氢耗可扣减。
-    这是报告层面的可比性指标，不替代真实氢耗。
+    这是报告层面的可比性指标，不替代真实氢耗。 理解成最终氢耗的等效加减
     """
     delta_soc = soc_ref - soc_end
     e_bat_kwh = Q_BAT * np.mean(OCV_LU) * delta_soc / 1000.0
@@ -115,7 +115,7 @@ def soc_tracking_penalty(soc, is_terminal, is_route_end,
     excess = max(abs_dev - soc_deadband, 0.0)
     penalty = w_soc * excess ** 2 * DT
 
-    low_gap = max(soc_soft_min - soc, 0.0)
+    low_gap = max(soc_soft_min - soc, 0.0)  #soc小于0.57运行
     penalty += w_soc_low * low_gap ** 2 * DT
 
     if is_terminal:
@@ -176,7 +176,7 @@ def mpc_sim(P_load, SOC_0=0.6, N_p=N_P_DEFAULT, w_soc=W_SOC,
         soc_k = SOC[k]
 
         # ── 预测工况 ──
-        horizon = min(N_p, N - k)
+        horizon = min(N_p, N - k)  #末尾区间取不到np则缩小预测区间
         p_load_pred = P_load[k : k + horizon]
 
         # ── 枚举所有候选控制 ──

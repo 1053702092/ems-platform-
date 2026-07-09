@@ -56,9 +56,9 @@ PFC_GRID = np.linspace(PFC_MIN, PFC_MAX, N_PFC)
 SOC_REF = 0.6
 
 # EKF 默认参数
-Q_EKF_DEFAULT = 5e-5          # 过程噪声
-R_EKF_DEFAULT = 0.03          # 测量噪声
-P0_EKF_DEFAULT = 0.1          # 初始协方差
+Q_EKF_DEFAULT = 5e-5          # 过程噪声   物理含义：安时积分模型的不确定性。
+R_EKF_DEFAULT = 0.03          # 测量噪声   物理含义：安时积分模型的不确定性。
+P0_EKF_DEFAULT = 0.1          # 初始协方差 物理含义：初始 SOC 估计的不确定性
 
 # 传感器噪声默认值（仿真环境）
 CURRENT_BIAS_DEFAULT = 2.0    # 电流传感器偏置 (A)
