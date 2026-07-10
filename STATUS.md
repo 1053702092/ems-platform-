@@ -1,7 +1,7 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-07-08
-> 当前阶段：**第8周：传统EMS四方法大对比报告 ✅ v2（含 MPC+EKF SOC 估计集成） → 第9周：PyTorch 入门 🚀**
+> 更新日期：2026-07-10
+> 当前阶段：**第9周：PyTorch + RL 基础 完整通关 ✅ → 第10周：DQN/SAC 概念对照 ✅（已准备）→ 第11周：PPO 实现 🚀**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
@@ -195,24 +195,18 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
 
 ### 第3个月 — PyTorch + 强化学习（A→C过渡，PPO为主）
 
-- [ ] **第9周：PyTorch 入门** 🚀 推进中
-  - [x] **环境搭建**：PyTorch 2.12.1+cpu 安装完成
-  - [x] **Part 1: Tensor 基础** — 创建/索引/广播/设备
-  - [x] **Part 2: Autograd 自动求导** — backward() / 梯度 / no_grad
-  - [x] **Part 3: nn.Module + MLP** — 两层 MLP 193参数
-  - [x] **Part 4: MLP 功率预测** — FC 功率时序预测
-    - 脚本：`scripts/week9_pytorch_intro.py`
-    - 结果：Test MAE=1.80 kW, RMSE=2.28 kW
-    - 输出：`results/week9_mlp_power_prediction.png`
-  - [x] **并行：强化学习基础（MDP/Bellman/策略迭代）** ✅新增
-  - 脚本：`scripts/week9_rl_basics.py`（478 行）
-  - GridWorld 4×4 MDP：16 状态 × 4 动作，随机转移（80/20）
-  - Bellman 期望方程 vs 最优方程，V^π(s) 与 V*(s) 对比
-  - 策略迭代：4 轮收敛到最优策略
-  - 值迭代：133 轮收敛，与策略迭代一致（ΔV < 1e-5）
-  - 产出：`results/week9_bellman_value.png`、`results/week9_optimal_policy.png`、`results/week9_value_iteration_convergence.png`
-  - 文档：`docs/Week9_RL基础_MDP_Bellman_策略迭代_值迭代.docx`、`docs/Week9_RL基础_逐行代码分析.docx`
-- [x] **第10周：RL基础 + DQN/SAC概念对照** ✅已准备
+- [x] **第9周：PyTorch + RL 基础 完整通关（已完成 ✅）**
+  - **统一脚本**：`scripts/week9_complete.py`（Part 1-8 递进打通，698行）
+    - Part 1-4: Tensor → Autograd → nn.Module → MLP 功率预测
+    - Part 5-8: MDP → Bellman → 策略迭代 → 值迭代
+    - 两端验证一致：V(0)=3.3419, ΔV<1e-5
+  - **逐行精讲文档**：
+    - `docs/Week9_完整逐行精讲_全篇合并_v2.docx` — 全文件698行逐行分析（55KB）
+    - 覆盖：Tensor/Autograd/MLP/功率预测/MDP/Bellman/策略迭代/值迭代 + 收敛可视化 + 优化器概念详解
+  - **架构思路文档**：
+    - `docs/Week9_架构设计思路详解.docx` — 不讲代码讲"为什么这么设计"（架构决策/权衡/取舍）
+  - **结果图**：`results/week9_complete_mlp_power_prediction.png` / `_bellman_value.png` / `_optimal_policy.png` / `_value_iteration_convergence.png`
+- [x] **第10周：RL基础 + DQN/SAC概念对照（已完成 ✅）**
   - 脚本：scripts/week10_dqn_sac_concepts.py（概念说明打印）
   - 文档：docs/Week10_DQN_SAC概念对照.docx（含面试问答30秒/2分钟版）
   - DQN：经验回放/目标网络/ε-greedy/Q值高估/只能离散动作
