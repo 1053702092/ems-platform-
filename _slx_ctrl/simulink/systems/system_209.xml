@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[8, 8, 1930, 1177]</P>
+  <P Name="ZoomFactor">300</P>
+  <Block BlockType="Inport" Name="In" SID="240">
+    <P Name="Position">[-40, 178, -10, 192]</P>
+    <P Name="ZOrder">265</P>
+  </Block>
+  <Block BlockType="Abs" Name="Abs1" SID="241">
+    <P Name="Position">[15, 170, 45, 200]</P>
+    <P Name="ZOrder">270</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="242">
+    <P Name="Position">[60, 190, 175, 210]</P>
+    <P Name="ZOrder">268</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="Value">alpha_soc</P>
+  </Block>
+  <Block BlockType="Math" Name="Power" SID="243">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[190, 177, 220, 208]</P>
+    <P Name="ZOrder">267</P>
+    <P Name="Operator">pow</P>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="244">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[235, 173, 260, 257]</P>
+    <P Name="ZOrder">264</P>
+  </Block>
+  <Block BlockType="Signum" Name="Sign" SID="245">
+    <P Name="Position">[190, 220, 220, 250]</P>
+    <P Name="ZOrder">40</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out" SID="246">
+    <P Name="Position">[275, 208, 305, 222]</P>
+    <P Name="ZOrder">266</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">241#out:1</P>
+    <P Name="Dst">243#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">243#out:1</P>
+    <P Name="Points">[10, 0]</P>
+    <P Name="Dst">244#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">242#out:1</P>
+    <P Name="Dst">243#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">244#out:1</P>
+    <P Name="Dst">246#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">240#out:1</P>
+    <P Name="Points">[5, 0]</P>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Points">[0, 50]</P>
+      <P Name="Dst">245#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Dst">241#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">245#out:1</P>
+    <P Name="Points">[10, 0]</P>
+    <P Name="Dst">244#in:2</P>
+  </Line>
+</System>

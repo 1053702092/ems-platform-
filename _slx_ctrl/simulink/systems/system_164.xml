@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">175</P>
+  <Block BlockType="Inport" Name="P_load_act" SID="227">
+    <P Name="Position">[-10, 68, 20, 82]</P>
+    <P Name="ZOrder">-1</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_est</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="t_act" SID="228">
+    <P Name="Position">[-10, 113, 20, 127]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="TriggerPort" Name="function" SID="229">
+    <PortCounts/>
+    <P Name="Position">[190, -20, 210, 0]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="TriggerType">function-call</P>
+    <P Name="VariantControl">(inherit)</P>
+    <P Name="StatesWhenEnabling">held</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Variant Subsystem" SID="285">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[110, 51, 285, 144]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Variant">on</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_285"/>
+  </Block>
+  <Block BlockType="Outport" Name="P_load_pred" SID="231">
+    <P Name="Position">[355, 93, 385, 107]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="PortDimensions">[1,N_pred+1]</P>
+    <P Name="InitialOutput">[zeros(1,N_pred+1)]</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">228#out:1</P>
+    <P Name="Dst">285#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">285#out:1</P>
+    <P Name="Dst">231#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">227#out:1</P>
+    <P Name="Dst">285#in:1</P>
+  </Line>
+</System>

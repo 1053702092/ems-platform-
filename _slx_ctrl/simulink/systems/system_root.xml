@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">150</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">312</P>
+  <Block BlockType="SubSystem" Name="Centralized Controller" SID="17">
+    <PortCounts in="2" out="2"/>
+    <P Name="Position">[575, 187, 835, 298]</P>
+    <P Name="ZOrder">25</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Mask>
+      <Display RunInitForIconRedraw="off"/>
+      <MaskParameter Name="FC_Param" Type="edit">
+        <Prompt>FC Parameter Set</Prompt>
+        <Value>0</Value>
+      </MaskParameter>
+      <MaskParameter Name="Bat_Param" Type="edit">
+        <Prompt>Bat Parameter Set</Prompt>
+        <Value>0</Value>
+      </MaskParameter>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Group" Name="ParameterGroupVar">
+        <Prompt>Parameters</Prompt>
+        <DialogControl Type="Edit" Name="FC_Param">
+          <Prompt>FC Parameter Set</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="Bat_Param">
+          <Prompt>Bat Parameter Set</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+      </DialogControl>
+    </Mask>
+    <System Ref="system_17"/>
+  </Block>
+</System>

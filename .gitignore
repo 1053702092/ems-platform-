@@ -37,3 +37,11 @@ results/figures/
 # Config override (keep template, ignore local)
 config/local_override.yaml
 ~
+
+# Playwright MCP auto-generated logs
+.playwright-mcp/
+# Temp directories
+_slx_analyze/
+_organize_*.py
+# Dataset downloads (large, not versioned)
+datasets/*.zip

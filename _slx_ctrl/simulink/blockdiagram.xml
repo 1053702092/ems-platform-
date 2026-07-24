@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInformation Version="1.0">
+  <Library>
+    <P Name="ModelUUID">3c606699-d73a-4e29-bf09-4324a739ab40</P>
+    <P Name="LibraryType">BlockLibrary</P>
+    <P Name="SLXCompressionType">Normal</P>
+    <P Name="LastSavedArchitecture">win64</P>
+    <ConfigManagerSettings>
+      <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
+      <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.35&gt;</P>
+    </ConfigManagerSettings>
+    <EditorSettings>
+      <P Name="BrowserShowLibraryLinks">on</P>
+      <P Name="BrowserLookUnderMasks">on</P>
+    </EditorSettings>
+    <SimulationSettings>
+      <P Name="SimulationMode">normal</P>
+    </SimulationSettings>
+    <EngineSettings>
+      <P Name="ConfigurableSubsystemUsage">warning</P>
+    </EngineSettings>
+    <System Ref="system_root"/>
+  </Library>
+</ModelInformation>

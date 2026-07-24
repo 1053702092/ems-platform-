@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">152</P>
+  <Block BlockType="Inport" Name="P_load_act" SID="295">
+    <P Name="Position">[-5, 23, 25, 37]</P>
+    <P Name="ZOrder">3</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_est</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="t_act" SID="296">
+    <P Name="Position">[-5, 263, 25, 277]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Constant Prediction" SID="307">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[155, 16, 310, 74]</P>
+    <P Name="ZOrder">7</P>
+    <P Name="VariantControl">Prediction_Mode==0</P>
+    <System Ref="system_307"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Data-Driven Prediction" SID="302">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[155, 226, 310, 284]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="VariantControl">Prediction_Mode==2</P>
+    <System Ref="system_302"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Perfect Prediction" SID="287">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[155, 121, 310, 179]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="VariantControl">Prediction_Mode==1</P>
+    <System Ref="system_287"/>
+  </Block>
+  <Block BlockType="Outport" Name="P_load_pred" SID="297">
+    <P Name="Position">[420, 143, 450, 157]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="PortDimensions">[1,N_pred+1]</P>
+    <P Name="InitialOutput">[zeros(1,N_pred+1)]</P>
+  </Block>
+</System>

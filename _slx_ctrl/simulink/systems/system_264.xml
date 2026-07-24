@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">300</P>
+  <Block BlockType="Inport" Name="P_load_act" SID="276">
+    <P Name="Position">[40, 83, 70, 97]</P>
+    <P Name="ZOrder">16455</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_pred</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="P_FC_act" SID="277">
+    <P Name="Position">[40, 118, 70, 132]</P>
+    <P Name="ZOrder">16456</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoC" SID="278">
+    <P Name="Position">[40, 153, 70, 167]</P>
+    <P Name="ZOrder">16457</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="TriggerPort" Name="function" SID="279">
+    <PortCounts/>
+    <P Name="Position">[210, 15, 230, 35]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="TriggerType">function-call</P>
+    <P Name="VariantControl">(inherit)</P>
+    <P Name="StatesWhenEnabling">held</P>
+    <P Name="SampleTime">Ts_mpc</P>
+  </Block>
+  <Block BlockType="MATLABFcn" Name="Interpreted MATLAB&#xA;Function" SID="280">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[185, 75, 260, 175]</P>
+    <P Name="ZOrder">16459</P>
+    <P Name="MATLABFcn">run_ecms(u(1),u(2),u(3))</P>
+    <P Name="OutputDimensions">1</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="282">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[125, 73, 130, 177]</P>
+    <P Name="ZOrder">16460</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Outport" Name="dPdt_opt" SID="283">
+    <P Name="Position">[315, 118, 345, 132]</P>
+    <P Name="ZOrder">16458</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">276#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">282#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">278#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">282#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">280#out:1</P>
+    <P Name="Dst">283#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">277#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">282#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">282#out:1</P>
+    <P Name="Dst">280#in:1</P>
+  </Line>
+</System>

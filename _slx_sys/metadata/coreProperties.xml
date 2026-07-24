@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cp:category>library</cp:category>
+  <dcterms:created xsi:type="dcterms:W3CDTF">2023-06-28T10:56:49Z</dcterms:created>
+  <dc:creator>tkopka</dc:creator>
+  <cp:lastModifiedBy>tkopka</cp:lastModifiedBy>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-12-03T10:15:01Z</dcterms:modified>
+  <cp:revision>1.80</cp:revision>
+  <cp:version>R2022b</cp:version>
+</cp:coreProperties>

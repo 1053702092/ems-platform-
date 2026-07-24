@@ -1,0 +1,1881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="Open">on</P>
+  <P Name="ZoomFactor">125</P>
+  <Block BlockType="Inport" Name="Bus_CC_out" SID="246">
+    <P Name="Position">[130, 208, 160, 222]</P>
+    <P Name="ZOrder">15763</P>
+    <P Name="OutDataTypeStr">Bus: Bus_CC</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add" SID="13">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[2445, 166, 2480, 244]</P>
+    <P Name="ZOrder">15618</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+-</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">I_out_Bat_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Sum" Name="Add2" SID="357">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[2470, 951, 2515, 1144]</P>
+    <P Name="ZOrder">15860</P>
+    <P Name="IconShape">rectangular</P>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="324">
+    <PortCounts in="8" out="1"/>
+    <P Name="Position">[4900, 63, 4905, 297]</P>
+    <P Name="ZOrder">15827</P>
+    <P Name="Inputs">8</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="OutDataTypeStr">Bus: Bus_FC_Plant</P>
+    <P Name="InheritFromInputs">off</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">Bus_FC_A</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator4" SID="329">
+    <PortCounts in="8" out="1"/>
+    <P Name="Position">[4900, 305, 4905, 545]</P>
+    <P Name="ZOrder">15832</P>
+    <P Name="Inputs">8</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="OutDataTypeStr">Bus: Bus_Bat_Plant</P>
+    <P Name="InheritFromInputs">off</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">Bus_Bat_A</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector" SID="341">
+    <PortCounts in="1" out="6"/>
+    <P Name="Position">[1620, 620, 1625, 775]</P>
+    <P Name="ZOrder">15844</P>
+    <P Name="OutputSignals">V_FC,eta_stack,dmdt_H2,P_BOP,dV_stat,dV_dyn</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">&lt;V_FC&gt;</P>
+      </Port>
+      <Port Type="out" Index="2">
+        <P Name="Name">&lt;eta_stack&gt;</P>
+      </Port>
+      <Port Type="out" Index="3">
+        <P Name="Name">&lt;dmdt_H2&gt;</P>
+      </Port>
+      <Port Type="out" Index="4">
+        <P Name="Name">&lt;P_BOP&gt;</P>
+      </Port>
+      <Port Type="out" Index="5">
+        <P Name="Name">&lt;dV_stat&gt;</P>
+      </Port>
+      <Port Type="out" Index="6">
+        <P Name="Name">&lt;dV_dyn&gt;</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector1" SID="506">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[260, 196, 265, 234]</P>
+    <P Name="ZOrder">16021</P>
+    <P Name="OutputSignals">I_FC_ref</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">&lt;I_FC_ref&gt;</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector4" SID="372">
+    <PortCounts in="1" out="3"/>
+    <P Name="Position">[2605, 643, 2610, 757]</P>
+    <P Name="ZOrder">15869</P>
+    <P Name="OutputSignals">V_Bat,SoC,Ri_nom</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">&lt;V_Bat&gt;</P>
+      </Port>
+      <Port Type="out" Index="2">
+        <P Name="Name">&lt;SoC&gt;</P>
+      </Port>
+      <Port Type="out" Index="3">
+        <P Name="Name">&lt;Ri_nom&gt;</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Clock" Name="Clock" SID="15">
+    <P Name="Position">[3650, 80, 3670, 100]</P>
+    <P Name="ZOrder">15527</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="486">
+    <P Name="Position">[2450, 295, 2480, 325]</P>
+    <P Name="ZOrder">16001</P>
+    <P Name="Value">false</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">fault_Bat_A</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="473">
+    <P Name="Position">[2645, 1057, 2715, 1073]</P>
+    <P Name="ZOrder">15990</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="Value">load_filter</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="484">
+    <P Name="Position">[1420, 870, 1480, 890]</P>
+    <P Name="ZOrder">15999</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="Value">V_DC_ref</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="487">
+    <P Name="Position">[2450, 255, 2480, 285]</P>
+    <P Name="ZOrder">16002</P>
+    <P Name="Value">0</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">C_Bat_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Constant" Name="Constant4" SID="489">
+    <P Name="Position">[1505, 295, 1535, 325]</P>
+    <P Name="ZOrder">16015</P>
+    <P Name="Value">false</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">fault_FC_A</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Constant" Name="Constant5" SID="490">
+    <P Name="Position">[1505, 255, 1535, 285]</P>
+    <P Name="ZOrder">16016</P>
+    <P Name="Value">0</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">C_FC_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Product" Name="Divide" SID="19">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[2630, 1307, 2660, 1383]</P>
+    <P Name="ZOrder">15614</P>
+    <P Name="Inputs">*/</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">I_load_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Product" Name="Divide1" SID="479">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[2450, 79, 2480, 141]</P>
+    <P Name="ZOrder">15994</P>
+    <P Name="Inputs">*/</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">I_in_Bat_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Product" Name="Divide2" SID="491">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[1505, 79, 1535, 141]</P>
+    <P Name="ZOrder">16010</P>
+    <P Name="Inputs">*/</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">I_in_FC_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From" SID="480">
+    <P Name="Position">[2130, 40, 2220, 70]</P>
+    <P Name="ZOrder">15995</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_Bat_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="483">
+    <P Name="Position">[2130, 75, 2220, 105]</P>
+    <P Name="ZOrder">15998</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_DC_act</P>
+  </Block>
+  <Block BlockType="From" Name="From10" SID="517">
+    <P Name="Position">[3650, 995, 3740, 1025]</P>
+    <P Name="ZOrder">16032</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_BOP_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_BOP</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From114" SID="38">
+    <P Name="Position">[4700, 455, 4790, 485]</P>
+    <P Name="ZOrder">15725</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">SoC_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">SoC</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From116" SID="40">
+    <P Name="Position">[4700, 305, 4790, 335]</P>
+    <P Name="ZOrder">15721</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_Bat</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From118" SID="42">
+    <P Name="Position">[4700, 395, 4790, 425]</P>
+    <P Name="ZOrder">15723</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_Bat_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From119" SID="43">
+    <P Name="Position">[4700, 335, 4790, 365]</P>
+    <P Name="ZOrder">15724</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_in_Bat_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From127" SID="334">
+    <P Name="Position">[4700, 120, 4790, 150]</P>
+    <P Name="ZOrder">15837</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_DC_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_DC_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From131" SID="338">
+    <P Name="Position">[4700, 365, 4790, 395]</P>
+    <P Name="ZOrder">15841</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_DC_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_DC_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From133" SID="355">
+    <P Name="Position">[2230, 985, 2340, 1015]</P>
+    <P Name="ZOrder">15858</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_prop_act</P>
+  </Block>
+  <Block BlockType="From" Name="From134" SID="358">
+    <P Name="Position">[2230, 1080, 2340, 1110]</P>
+    <P Name="ZOrder">15861</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_BOP_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_BOP</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From135" SID="360">
+    <P Name="Position">[2465, 1310, 2555, 1340]</P>
+    <P Name="ZOrder">15863</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_load_act</P>
+  </Block>
+  <Block BlockType="From" Name="From139" SID="378">
+    <P Name="Position">[4700, 485, 4790, 515]</P>
+    <P Name="ZOrder">15875</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">R_Bat_A_est</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">Ri_nom</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From142" SID="382">
+    <P Name="Position">[1185, 110, 1275, 140]</P>
+    <P Name="ZOrder">15879</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_FC</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From160" SID="420">
+    <P Name="Position">[4700, 515, 4790, 545]</P>
+    <P Name="ZOrder">15916</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">fault_Bat_A</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">fault_Bat_A</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From161" SID="421">
+    <P Name="Position">[4700, 270, 4790, 300]</P>
+    <P Name="ZOrder">15917</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">fault_FC_A</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">fault_FC_A</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From18" SID="54">
+    <P Name="Position">[1280, 685, 1370, 715]</P>
+    <P Name="ZOrder">15594</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_in_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="485">
+    <P Name="Position">[2130, 110, 2220, 140]</P>
+    <P Name="ZOrder">16000</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_Bat_A_act</P>
+  </Block>
+  <Block BlockType="From" Name="From22" SID="59">
+    <P Name="Position">[2180, 685, 2270, 715]</P>
+    <P Name="ZOrder">15598</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_in_Bat_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="505">
+    <P Name="Position">[2130, 210, 2220, 240]</P>
+    <P Name="ZOrder">16020</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From30" SID="270">
+    <P Name="Position">[3650, 650, 3740, 680]</P>
+    <P Name="ZOrder">15787</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_in_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From31" SID="68">
+    <P Name="Position">[1185, 190, 1275, 220]</P>
+    <P Name="ZOrder">15608</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_ref</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_FC_A_ref</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="493">
+    <P Name="Position">[1185, 75, 1275, 105]</P>
+    <P Name="ZOrder">16013</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_DC_act</P>
+  </Block>
+  <Block BlockType="From" Name="From40" SID="274">
+    <P Name="Position">[3650, 685, 3740, 715]</P>
+    <P Name="ZOrder">15791</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_in_Bat_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From42" SID="298">
+    <P Name="Position">[3650, 720, 3740, 750]</P>
+    <P Name="ZOrder">15803</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">SoC_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">SoC</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From44" SID="302">
+    <P Name="Position">[3650, 755, 3740, 785]</P>
+    <P Name="ZOrder">15807</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">eta_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">eta_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From45" SID="303">
+    <P Name="Position">[3650, 790, 3740, 820]</P>
+    <P Name="ZOrder">15808</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">dmdt_H2_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">dmdt_H2_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From48" SID="75">
+    <P Name="Position">[2465, 1350, 2555, 1380]</P>
+    <P Name="ZOrder">15615</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_DC_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_DC_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From49" SID="76">
+    <P Name="Position">[2130, 170, 2220, 200]</P>
+    <P Name="ZOrder">15617</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_load_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_load_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="502">
+    <P Name="Position">[1185, 40, 1275, 70]</P>
+    <P Name="ZOrder">16017</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_FC_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="511">
+    <P Name="Position">[3650, 860, 3740, 890]</P>
+    <P Name="ZOrder">16026</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">dV_stat_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">dV_stat</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From63" SID="91">
+    <P Name="Position">[3650, 470, 3740, 500]</P>
+    <P Name="ZOrder">15633</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From67" SID="95">
+    <P Name="Position">[3650, 540, 3740, 570]</P>
+    <P Name="ZOrder">15637</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_Bat_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From69" SID="97">
+    <P Name="Position">[3650, 115, 3740, 145]</P>
+    <P Name="ZOrder">15645</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_DC_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_DC_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From7" SID="512">
+    <P Name="Position">[3650, 825, 3740, 855]</P>
+    <P Name="ZOrder">16027</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">dV_dyn_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">dV_dyn</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From70" SID="99">
+    <P Name="Position">[3650, 610, 3740, 640]</P>
+    <P Name="ZOrder">15647</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_load_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_load_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From71" SID="100">
+    <P Name="Position">[3650, 340, 3740, 370]</P>
+    <P Name="ZOrder">15649</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_ref</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_FC_A_ref</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From75" SID="104">
+    <P Name="Position">[3650, 400, 3740, 430]</P>
+    <P Name="ZOrder">15653</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_Bat_A_ref</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_Bat_A_ref</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From77" SID="106">
+    <P Name="Position">[3650, 155, 3740, 185]</P>
+    <P Name="ZOrder">15661</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_FC</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From8" SID="515">
+    <P Name="Position">[3650, 915, 3740, 945]</P>
+    <P Name="ZOrder">16030</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_load_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From81" SID="111">
+    <P Name="Position">[3650, 190, 3740, 220]</P>
+    <P Name="ZOrder">15665</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_Bat_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_Bat</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From9" SID="516">
+    <P Name="Position">[3650, 955, 3740, 985]</P>
+    <P Name="ZOrder">16031</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_prop_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From90" SID="121">
+    <P Name="Position">[4700, 60, 4790, 90]</P>
+    <P Name="ZOrder">15689</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_FC</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From92" SID="123">
+    <P Name="Position">[4700, 150, 4790, 180]</P>
+    <P Name="ZOrder">15691</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_out_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From93" SID="124">
+    <P Name="Position">[4700, 90, 4790, 120]</P>
+    <P Name="ZOrder">15692</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">I_in_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From94" SID="125">
+    <P Name="Position">[4700, 210, 4790, 240]</P>
+    <P Name="ZOrder">15693</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">eta_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">eta_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From95" SID="126">
+    <P Name="Position">[4700, 240, 4790, 270]</P>
+    <P Name="ZOrder">15694</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">dmdt_H2_FC_A_act</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">dmdt_H2_FC_A_act</P>
+        <P Name="ShowPropagatedSignals">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="131">
+    <P Name="Position">[1505, 865, 1595, 895]</P>
+    <P Name="ZOrder">15535</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_DC_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="132">
+    <P Name="Position">[1705, 620, 1795, 650]</P>
+    <P Name="ZOrder">15542</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto13" SID="136">
+    <P Name="Position">[1670, 95, 1760, 125]</P>
+    <P Name="ZOrder">15566</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto14" SID="137">
+    <P Name="Position">[1670, 190, 1760, 220]</P>
+    <P Name="ZOrder">15567</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto15" SID="138">
+    <P Name="Position">[1670, 255, 1760, 285]</P>
+    <P Name="ZOrder">15568</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">C_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="476">
+    <P Name="Position">[2615, 95, 2705, 125]</P>
+    <P Name="ZOrder">15991</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_in_Bat_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto27" SID="151">
+    <P Name="Position">[2615, 255, 2705, 285]</P>
+    <P Name="ZOrder">15580</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">C_Bat_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="478">
+    <P Name="Position">[2615, 190, 2705, 220]</P>
+    <P Name="ZOrder">15993</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_Bat_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto32" SID="157">
+    <P Name="Position">[2650, 685, 2740, 715]</P>
+    <P Name="ZOrder">15585</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">SoC_Bat_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto39" SID="164">
+    <P Name="Position">[1705, 670, 1795, 700]</P>
+    <P Name="ZOrder">15592</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">dmdt_H2_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="507">
+    <P Name="Position">[2615, 155, 2705, 185]</P>
+    <P Name="ZOrder">16022</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_Bat_A_ref</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto40" SID="166">
+    <P Name="Position">[1705, 645, 1795, 675]</P>
+    <P Name="ZOrder">15593</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">eta_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto46" SID="342">
+    <P Name="Position">[1705, 695, 1795, 725]</P>
+    <P Name="ZOrder">15845</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_BOP_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto5" SID="172">
+    <P Name="Position">[2650, 645, 2740, 675]</P>
+    <P Name="ZOrder">15550</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">V_Bat_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto50" SID="354">
+    <P Name="Position">[1785, 1330, 1875, 1360]</P>
+    <P Name="ZOrder">15857</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_prop_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto51" SID="359">
+    <P Name="Position">[2865, 1050, 2955, 1080]</P>
+    <P Name="ZOrder">15862</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_load_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto52" SID="373">
+    <P Name="Position">[2650, 725, 2740, 755]</P>
+    <P Name="ZOrder">15870</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">R_Bat_A_est</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto53" SID="173">
+    <P Name="Position">[2730, 1330, 2820, 1360]</P>
+    <P Name="ZOrder">15616</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_load_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto54" SID="174">
+    <P Name="Position">[375, 200, 465, 230]</P>
+    <P Name="ZOrder">15733</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">I_out_FC_A_ref</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto56" SID="401">
+    <P Name="Position">[1670, 295, 1760, 325]</P>
+    <P Name="ZOrder">15897</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">fault_FC_A</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto6" SID="509">
+    <P Name="Position">[1705, 720, 1795, 750]</P>
+    <P Name="ZOrder">16024</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">dV_stat_FC_A_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto60" SID="411">
+    <P Name="Position">[2615, 295, 2705, 325]</P>
+    <P Name="ZOrder">15907</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">fault_Bat_A</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto7" SID="510">
+    <P Name="Position">[1705, 745, 1795, 775]</P>
+    <P Name="ZOrder">16025</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">dV_dyn_FC_A_act</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="451">
+    <P Name="Position">[4770, 185, 4790, 205]</P>
+    <P Name="ZOrder">15947</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground4" SID="455">
+    <P Name="Position">[4765, 430, 4785, 450]</P>
+    <P Name="ZOrder">15951</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="304">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[3880, 790, 3910, 820]</P>
+    <P Name="ZOrder">15809</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">m_H2_FC_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Njoya2009_PEMFC_BOP" SID="340">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[1440, 651, 1595, 749]</P>
+    <P Name="ZOrder">15843</P>
+    <P Name="LibraryVersion">1.30</P>
+    <P Name="SourceBlock">Njoya2009_PEMFC_BOP/Njoya2009_PEMFC_BOP</P>
+    <P Name="SourceType"/>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="Param">FC_A_Param.Sim_Param</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="482">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[2275, 39, 2305, 106]</P>
+    <P Name="ZOrder">15997</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="501">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[1330, 39, 1360, 106]</P>
+    <P Name="ZOrder">16012</P>
+  </Block>
+  <Block BlockType="RateLimiter" Name="Rate Limiter2" SID="463">
+    <P Name="Position">[2815, 1050, 2845, 1080]</P>
+    <P Name="ZOrder">15959</P>
+    <P Name="RisingSlewLimit">P_load_grad_lim</P>
+    <P Name="FallingSlewLimit">-P_load_grad_lim</P>
+    <P Name="SampleTimeMode">inherited</P>
+  </Block>
+  <Block BlockType="Reference" Name="Repeating&#xA;Sequence" SID="197">
+    <PortCounts out="1"/>
+    <P Name="Position">[1300, 1289, 1650, 1401]</P>
+    <P Name="ZOrder">15525</P>
+    <P Name="LibraryVersion">3.4</P>
+    <P Name="SourceBlock">simulink/Sources/Repeating
+Sequence</P>
+    <P Name="SourceType">Repeating table</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="rep_seq_t">load_profile.time</P>
+      <P Name="rep_seq_y">load_profile.power</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="SignalConversion" Name="Signal Copy" SID="504">
+    <P Name="Position">[1500, 184, 1540, 226]</P>
+    <P Name="ZOrder">16019</P>
+    <P Name="OverrideOpt">off</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">I_out_FC_A_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="SignalConversion" Name="Signal Copy1" SID="508">
+    <P Name="Position">[2545, 149, 2585, 191]</P>
+    <P Name="ZOrder">16023</P>
+    <P Name="OverrideOpt">off</P>
+  </Block>
+  <Block BlockType="Reference" Name="Simscape_Battery" SID="368">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[2310, 646, 2585, 754]</P>
+    <P Name="ZOrder">15867</P>
+    <P Name="LibraryVersion">1.21</P>
+    <P Name="SourceBlock">Simscape_Battery/Simscape_Battery</P>
+    <P Name="SourceType"/>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">off</P>
+      <P Name="P">Bat_A_Param.Sim_Param</P>
+      <P Name="soc_init">SoC_Bat_A_Init</P>
+      <P Name="N_parallel">Bat_A_Param.N_Parallel</P>
+      <P Name="N_series">Bat_A_Param.N_Series</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">V_stack</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="StateSpace" Name="State-Space" SID="466">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[1420, 113, 1465, 137]</P>
+    <P Name="ZOrder">15981</P>
+    <P Name="A">-1e3</P>
+    <P Name="B">1e3</P>
+    <P Name="D">0</P>
+    <P Name="InitialCondition">FC_A_Param.V_arr(1)</P>
+  </Block>
+  <Block BlockType="StateSpace" Name="State-Space1" SID="503">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[2315, 113, 2360, 137]</P>
+    <P Name="ZOrder">16018</P>
+    <P Name="A">-1e3</P>
+    <P Name="B">1e3</P>
+    <P Name="D">0</P>
+    <P Name="InitialCondition">Bat_A_Param.OCV_arr(1)</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch1" SID="474">
+    <P Name="Position">[2745, 1045, 2795, 1085]</P>
+    <P Name="ZOrder">15989</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace" SID="198">
+    <PortCounts in="1"/>
+    <P Name="Position">[1785, 1295, 1875, 1325]</P>
+    <P Name="ZOrder">15526</P>
+    <P Name="VariableName">P_propulsion</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace1" SID="199">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 75, 4295, 105]</P>
+    <P Name="ZOrder">15528</P>
+    <P Name="VariableName">time</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace10" SID="200">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 340, 4295, 370]</P>
+    <P Name="ZOrder">15655</P>
+    <P Name="VariableName">I_out_FC_A_ref</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace11" SID="520">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 995, 4295, 1025]</P>
+    <P Name="ZOrder">16035</P>
+    <P Name="VariableName">P_BOP_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace15" SID="205">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 400, 4295, 430]</P>
+    <P Name="ZOrder">15660</P>
+    <P Name="VariableName">I_out_Bat_A_ref</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace16" SID="206">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 155, 4295, 185]</P>
+    <P Name="ZOrder">15667</P>
+    <P Name="VariableName">V_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace2" SID="210">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 470, 4295, 500]</P>
+    <P Name="ZOrder">15639</P>
+    <P Name="VariableName">I_out_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace21" SID="212">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 190, 4295, 220]</P>
+    <P Name="ZOrder">15672</P>
+    <P Name="VariableName">V_Bat_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace28" SID="276">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 650, 4295, 680]</P>
+    <P Name="ZOrder">15793</P>
+    <P Name="VariableName">I_in_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace3" SID="513">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 860, 4295, 890]</P>
+    <P Name="ZOrder">16028</P>
+    <P Name="VariableName">dV_stat_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace33" SID="281">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 685, 4295, 715]</P>
+    <P Name="ZOrder">15798</P>
+    <P Name="VariableName">I_in_Bat_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace35" SID="301">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 720, 4295, 750]</P>
+    <P Name="ZOrder">15806</P>
+    <P Name="VariableName">SoC_Bat_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace36" SID="305">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 790, 4295, 820]</P>
+    <P Name="ZOrder">15810</P>
+    <P Name="VariableName">m_H2_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace37" SID="306">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 755, 4295, 785]</P>
+    <P Name="ZOrder">15811</P>
+    <P Name="VariableName">eta_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace4" SID="514">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 825, 4295, 855]</P>
+    <P Name="ZOrder">16029</P>
+    <P Name="VariableName">dV_dyn_FC_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace5" SID="518">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 915, 4295, 945]</P>
+    <P Name="ZOrder">16033</P>
+    <P Name="VariableName">P_load_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace6" SID="519">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 955, 4295, 985]</P>
+    <P Name="ZOrder">16034</P>
+    <P Name="VariableName">P_prop_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace7" SID="223">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 540, 4295, 570]</P>
+    <P Name="ZOrder">15644</P>
+    <P Name="VariableName">I_out_Bat_A_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace8" SID="224">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 115, 4295, 145]</P>
+    <P Name="ZOrder">15646</P>
+    <P Name="VariableName">V_DC_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="To Workspace9" SID="225">
+    <PortCounts in="1"/>
+    <P Name="Position">[4205, 610, 4295, 640]</P>
+    <P Name="ZOrder">15648</P>
+    <P Name="VariableName">I_load_act</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="FixptAsFi">on</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="TransferFcn" Name="Transfer Fcn1" SID="475">
+    <P Name="Position">[2570, 1032, 2630, 1068]</P>
+    <P Name="ZOrder">15988</P>
+    <P Name="Denominator">[tau_load_filter 1]</P>
+  </Block>
+  <Block BlockType="Reference" Name="powergui" SID="232">
+    <PortCounts/>
+    <P Name="Position">[3715, 40, 3796, 79]</P>
+    <P Name="ZOrder">15632</P>
+    <P Name="Priority">1</P>
+    <P Name="LibrarySourceBlock">sps_lib/powergui</P>
+    <P Name="LibraryVersion">9</P>
+    <P Name="SourceBlock">spspowerguiLib/powergui</P>
+    <P Name="SourceType">PSB option menu block</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="SimulationMode">Continuous</P>
+      <P Name="SampleTime">50e-6</P>
+      <P Name="frequency">60</P>
+      <P Name="Iterations">50</P>
+      <P Name="frequencyindice">0</P>
+      <P Name="Pbase">100e6</P>
+      <P Name="ErrMax">1e-4</P>
+      <P Name="UnitsV">kV</P>
+      <P Name="UnitsW">MW</P>
+      <P Name="buscounter">0</P>
+      <P Name="FunctionMessages">off</P>
+      <P Name="echomessages">off</P>
+      <P Name="EnableUseOfTLC">off</P>
+      <P Name="CurrentSourceSwitches">off</P>
+      <P Name="DisableSnubberDevices">off</P>
+      <P Name="DisableRonSwitches">off</P>
+      <P Name="DisableVfSwitches">off</P>
+      <P Name="DisplayEquations">off</P>
+      <P Name="AutomaticDiscreteSolvers">off</P>
+      <P Name="SolverType">Tustin/Backward Euler (TBE)</P>
+      <P Name="Interpol">off</P>
+      <P Name="ExternalGateDelay">off</P>
+      <P Name="methode">off</P>
+      <P Name="Ts">100</P>
+      <P Name="x0status">blocks</P>
+      <P Name="SPID">on</P>
+      <P Name="SwTol">0</P>
+      <P Name="HookPort">off</P>
+      <P Name="NonlinearTolerance">1e-4</P>
+      <P Name="nMaxIteration">100</P>
+      <P Name="ContinueOnMaxIteration">off</P>
+      <P Name="RestoreLinks">warning</P>
+      <P Name="ResistiveCurrentMeasurement">off</P>
+      <P Name="Frange">[0:2:500]</P>
+      <P Name="Ylog">off</P>
+      <P Name="Xlog">on</P>
+      <P Name="ShowGrid">off</P>
+      <P Name="save">off</P>
+      <P Name="variable">ZData</P>
+      <P Name="structure">0</P>
+      <P Name="ZoomFFT">off</P>
+      <P Name="StartTime">0.0</P>
+      <P Name="cycles">1</P>
+      <P Name="DisplayStyle">1</P>
+      <P Name="fundamental">60</P>
+      <P Name="FreqAxis">off</P>
+      <P Name="MaxFrequency">1000</P>
+      <P Name="frequencyindicesteady">1</P>
+      <P Name="RmsSteady">1</P>
+      <P Name="display">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Outport" Name="Bus_FC_A" SID="253">
+    <P Name="Position">[5145, 173, 5175, 187]</P>
+    <P Name="ZOrder">15770</P>
+  </Block>
+  <Block BlockType="Outport" Name="Bus_Bat_A" SID="257">
+    <P Name="Position">[5145, 418, 5175, 432]</P>
+    <P Name="ZOrder">15774</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="Name">&lt;V_FC&gt;</P>
+    <P Name="ZOrder">1333</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">341#out:1</P>
+    <P Name="Dst">132#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">78</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">97#out:1</P>
+    <P Name="Dst">224#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">I_in_FC_A_act</P>
+    <P Name="ZOrder">3373</P>
+    <P Name="Labels">[0, 1]</P>
+    <P Name="Src">491#out:1</P>
+    <P Name="Dst">136#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;SoC&gt;</P>
+    <P Name="ZOrder">1566</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">372#out:2</P>
+    <P Name="Dst">157#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">155</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">75#out:1</P>
+    <P Name="Dst">19#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3455</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">505#out:1</P>
+    <P Name="Dst">13#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">101</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">100#out:1</P>
+    <P Name="Dst">200#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Bus_Bat_A</P>
+    <P Name="ZOrder">910</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">329#out:1</P>
+    <P Name="Dst">257#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">I_load_act</P>
+    <P Name="ZOrder">2867</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">19#out:1</P>
+    <P Name="Dst">173#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">908</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">42#out:1</P>
+    <P Name="Dst">329#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">28</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">99#out:1</P>
+    <P Name="Dst">225#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Bus_FC_A</P>
+    <P Name="ZOrder">873</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">324#out:1</P>
+    <P Name="Dst">253#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">I_out_FC_A_act</P>
+    <P Name="ZOrder">3383</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">504#out:1</P>
+    <P Name="Dst">137#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">C_FC_A_act</P>
+    <P Name="ZOrder">3376</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">490#out:1</P>
+    <P Name="Dst">138#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;V_Bat&gt;</P>
+    <P Name="ZOrder">1565</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">372#out:1</P>
+    <P Name="Dst">172#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3534</P>
+    <P Name="Src">246#out:1</P>
+    <P Name="Dst">506#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">C_Bat_A_act</P>
+    <P Name="ZOrder">3361</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">487#out:1</P>
+    <P Name="Dst">151#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">906</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">43#out:1</P>
+    <P Name="Dst">329#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">123</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">106#out:1</P>
+    <P Name="Dst">206#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">872</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">124#out:1</P>
+    <P Name="Dst">324#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">175</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">91#out:1</P>
+    <P Name="Dst">210#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">169</P>
+    <P Name="Src">15#out:1</P>
+    <P Name="Dst">199#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1153</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">126#out:1</P>
+    <P Name="Dst">324#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">905</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">40#out:1</P>
+    <P Name="Dst">329#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">871</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">121#out:1</P>
+    <P Name="Dst">324#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1173</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">38#out:1</P>
+    <P Name="Dst">329#in:6</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3353</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">76#out:1</P>
+    <P Name="Dst">13#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;eta_stack&gt;</P>
+    <P Name="ZOrder">1334</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">341#out:2</P>
+    <P Name="Dst">166#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">54</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">111#out:1</P>
+    <P Name="Dst">212#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1558</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">59#out:1</P>
+    <P Name="Dst">368#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1156</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">123#out:1</P>
+    <P Name="Dst">324#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1154</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">125#out:1</P>
+    <P Name="Dst">324#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;dmdt_H2&gt;</P>
+    <P Name="ZOrder">1335</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">341#out:3</P>
+    <P Name="Dst">164#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2295</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">455#out:1</P>
+    <P Name="Dst">329#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">68</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">104#out:1</P>
+    <P Name="Dst">205#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">63</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">95#out:1</P>
+    <P Name="Dst">223#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2290</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">451#out:1</P>
+    <P Name="Dst">324#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3382</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">68#out:1</P>
+    <P Name="Dst">504#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">521</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">270#out:1</P>
+    <P Name="Dst">276#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">525</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">274#out:1</P>
+    <P Name="Dst">281#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1326</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">54#out:1</P>
+    <P Name="Dst">340#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">m_H2_FC_A_act</P>
+    <P Name="ZOrder">847</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">304#out:1</P>
+    <P Name="Dst">305#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">848</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">302#out:1</P>
+    <P Name="Dst">306#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">863</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">303#out:1</P>
+    <P Name="Dst">304#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1159</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">334#out:1</P>
+    <P Name="Dst">324#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1175</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">338#out:1</P>
+    <P Name="Dst">329#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1329</P>
+    <P Name="Src">340#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <P Name="Dst">341#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;P_BOP&gt;</P>
+    <P Name="ZOrder">1336</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">341#out:4</P>
+    <P Name="Dst">342#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1382</P>
+    <P Name="Src">355#out:1</P>
+    <P Name="Dst">357#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1385</P>
+    <P Name="Src">360#out:1</P>
+    <P Name="Dst">19#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1551</P>
+    <P Name="Src">358#out:1</P>
+    <P Name="Dst">357#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1564</P>
+    <P Name="Src">368#out:1</P>
+    <P Name="Dst">372#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;Ri_nom&gt;</P>
+    <P Name="ZOrder">1567</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">372#out:3</P>
+    <P Name="Dst">373#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1575</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">378#out:1</P>
+    <P Name="Dst">329#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2869</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">382#out:1</P>
+    <P Name="Dst">466#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">fault_FC_A</P>
+    <P Name="ZOrder">3375</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">489#out:1</P>
+    <P Name="Dst">401#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">fault_Bat_A</P>
+    <P Name="ZOrder">3360</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">486#out:1</P>
+    <P Name="Dst">411#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2053</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">420#out:1</P>
+    <P Name="Dst">329#in:8</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2060</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">421#out:1</P>
+    <P Name="Dst">324#in:8</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3080</P>
+    <P Name="Src">197#out:1</P>
+    <P Name="Points">[92, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3082</P>
+      <P Name="Points">[0, -35]</P>
+      <P Name="Dst">198#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3081</P>
+      <P Name="Dst">354#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2291</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">298#out:1</P>
+    <P Name="Dst">301#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2545</P>
+    <P Name="Src">463#out:1</P>
+    <P Name="Dst">359#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3356</P>
+    <P Name="Src">484#out:1</P>
+    <P Name="Dst">131#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3072</P>
+    <P Name="Src">473#out:1</P>
+    <P Name="Dst">474#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3084</P>
+    <P Name="Src">474#out:1</P>
+    <P Name="Dst">463#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3086</P>
+    <P Name="Src">357#out:1</P>
+    <P Name="Points">[14, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3264</P>
+      <P Name="Points">[0, 30; 211, 0]</P>
+      <P Name="Dst">474#in:3</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3087</P>
+      <P Name="Points">[36, 0]</P>
+      <P Name="Dst">475#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3079</P>
+    <P Name="Src">475#out:1</P>
+    <P Name="Dst">474#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">I_in_Bat_A_act</P>
+    <P Name="ZOrder">3359</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">479#out:1</P>
+    <P Name="Dst">476#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">I_out_Bat_A_act</P>
+    <P Name="ZOrder">3350</P>
+    <P Name="Src">13#out:1</P>
+    <P Name="Points">[21, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3538</P>
+      <P Name="Points">[0, -35]</P>
+      <P Name="Dst">508#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3537</P>
+      <P Name="Labels">[1, 1]</P>
+      <P Name="Dst">478#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3354</P>
+    <P Name="Src">480#out:1</P>
+    <P Name="Dst">482#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3355</P>
+    <P Name="Src">483#out:1</P>
+    <P Name="Dst">482#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3357</P>
+    <P Name="Src">482#out:1</P>
+    <P Name="Points">[83, 0; 0, 20]</P>
+    <P Name="Dst">479#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3380</P>
+    <P Name="Src">485#out:1</P>
+    <P Name="Dst">503#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3374</P>
+    <P Name="Src">466#out:1</P>
+    <P Name="Dst">491#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3363</P>
+    <P Name="Src">501#out:1</P>
+    <P Name="Points">[118, 0; 0, 20]</P>
+    <P Name="Dst">491#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3364</P>
+    <P Name="Src">493#out:1</P>
+    <P Name="Dst">501#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3378</P>
+    <P Name="Src">502#out:1</P>
+    <P Name="Dst">501#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3381</P>
+    <P Name="Src">503#out:1</P>
+    <P Name="Dst">479#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;I_FC_ref&gt;</P>
+    <P Name="ZOrder">3535</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">506#out:1</P>
+    <P Name="Dst">174#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3536</P>
+    <P Name="Src">508#out:1</P>
+    <P Name="Dst">507#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;dV_stat&gt;</P>
+    <P Name="ZOrder">3605</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">341#out:5</P>
+    <P Name="Dst">509#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;dV_dyn&gt;</P>
+    <P Name="ZOrder">3606</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">341#out:6</P>
+    <P Name="Dst">510#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3608</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">512#out:1</P>
+    <P Name="Dst">514#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3609</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">511#out:1</P>
+    <P Name="Dst">513#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3614</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">517#out:1</P>
+    <P Name="Dst">520#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3613</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">516#out:1</P>
+    <P Name="Dst">519#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3612</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">515#out:1</P>
+    <P Name="Dst">518#in:1</P>
+  </Line>
+  <Annotation SID="240">
+    <P Name="Name">IN</P>
+    <P Name="Position">[21, 23, 606, 1488]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="ForegroundColor">[0.968627, 0.925490, 0.976471]</P>
+    <P Name="BackgroundColor">[0.968627, 0.925490, 0.976471]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">7511</P>
+    <P Name="FontSize">36</P>
+  </Annotation>
+  <Annotation SID="241">
+    <P Name="Name">Recording</P>
+    <P Name="Position">[3477, 23, 4612, 1488]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">7513</P>
+    <P Name="FontSize">36</P>
+  </Annotation>
+  <Annotation SID="242">
+    <P Name="Name">OUT</P>
+    <P Name="Position">[4637, 23, 5217, 1488]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="ForegroundColor">[0.968627, 0.925490, 0.976471]</P>
+    <P Name="BackgroundColor">[0.968627, 0.925490, 0.976471]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">7514</P>
+    <P Name="FontSize">36</P>
+  </Annotation>
+  <Annotation SID="243">
+    <P Name="Name">Inner Control Loop</P>
+    <P Name="Position">[627, 23, 3442, 378]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="ForegroundColor">[0.901961, 0.960784, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.960784, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">7512</P>
+    <P Name="FontSize">36</P>
+  </Annotation>
+  <Annotation SID="244">
+    <P Name="Name">Physical Layer</P>
+    <P Name="Position">[627, 413, 3442, 1488]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="ForegroundColor">[0.992157, 0.937255, 0.913725]</P>
+    <P Name="BackgroundColor">[0.992157, 0.937255, 0.913725]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">7515</P>
+    <P Name="FontSize">36</P>
+  </Annotation>
+</System>

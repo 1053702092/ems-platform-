@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[223, 338, 826, 833]</P>
+  <P Name="SIDHighWatermark">41</P>
+  <Block BlockType="Inport" Name="P_load_act" SID="310::1">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">-1</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_est</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="310::40">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[270, 230, 320, 270]</P>
+    <P Name="ZOrder">27</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="310::39">
+    <P Name="Tag">Stateflow S-Function 5</P>
+    <PortCounts in="1" out="2"/>
+    <P Name="Position">[180, 100, 230, 160]</P>
+    <P Name="ZOrder">26</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="Parameters">N_pred</P>
+    <P Name="PortCounts">[1 2]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">off</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <PortProperties>
+      <Port Type="out" Index="2">
+        <P Name="Name">P_load_pred</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="310::41">
+    <P Name="Position">[460, 241, 480, 259]</P>
+    <P Name="ZOrder">28</P>
+  </Block>
+  <Block BlockType="Outport" Name="P_load_pred" SID="310::5">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">-5</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">310::1#out:1</P>
+    <P Name="Dst">310::39#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">P_load_pred</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">310::39#out:2</P>
+    <P Name="Dst">310::5#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">310::40#out:1</P>
+    <P Name="Dst">310::41#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">310::39#out:1</P>
+    <P Name="Dst">310::40#in:1</P>
+  </Line>
+</System>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">175</P>
+  <Block BlockType="Inport" Name="P_load_pred" SID="232">
+    <P Name="Position">[-10, 83, 20, 97]</P>
+    <P Name="ZOrder">16455</P>
+    <P Name="PortDimensions">[1,N_pred+1]</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_pred</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="P_act" SID="233">
+    <P Name="Position">[-10, 118, 20, 132]</P>
+    <P Name="ZOrder">16456</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoC" SID="234">
+    <P Name="Position">[-10, 153, 20, 167]</P>
+    <P Name="ZOrder">16457</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="TriggerPort" Name="function" SID="235">
+    <PortCounts/>
+    <P Name="Position">[210, 15, 230, 35]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="TriggerType">function-call</P>
+    <P Name="VariantControl">(inherit)</P>
+    <P Name="StatesWhenEnabling">held</P>
+    <P Name="SampleTime">Ts_mpc</P>
+  </Block>
+  <Block BlockType="MATLABFcn" Name="Interpreted MATLAB&#xA;Function" SID="236">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[185, 235, 260, 335]</P>
+    <P Name="ZOrder">16459</P>
+    <P Name="MATLABFcn">run_mpc(u(1:end-2),u(end-1),u(end))</P>
+    <P Name="OutputDimensions">1</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="MATLAB Function" SID="237">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[145, 73, 300, 177]</P>
+    <P Name="ZOrder">16454</P>
+    <P Name="Commented">on</P>
+    <P Name="LibrarySourceBlock">simulink/User-Defined
+Functions/MATLAB Function</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">dPdt_opt</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_237"/>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="238">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[120, 256, 125, 314]</P>
+    <P Name="ZOrder">16460</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Outport" Name="dPdt_opt" SID="239">
+    <P Name="Position">[405, 118, 435, 132]</P>
+    <P Name="ZOrder">16458</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">238#out:1</P>
+    <P Name="Dst">236#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">233#out:1</P>
+    <P Name="Points">[61, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Dst">237#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, 160]</P>
+      <P Name="Dst">238#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">236#out:1</P>
+    <P Name="Points">[87, 0; 0, -160]</P>
+    <P Name="Dst">239#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">234#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Dst">237#in:3</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Points">[0, 145]</P>
+      <P Name="Dst">238#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">232#out:1</P>
+    <P Name="Points">[78, 0]</P>
+    <Branch>
+      <P Name="ZOrder">10</P>
+      <P Name="Dst">237#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Points">[0, 175]</P>
+      <P Name="Dst">238#in:1</P>
+    </Branch>
+  </Line>
+</System>

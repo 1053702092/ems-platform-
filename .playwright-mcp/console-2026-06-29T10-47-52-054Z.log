@@ -1,5 +1,0 @@
-[     136ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ https://www.liepin.com/job/search.html?keyword=%E7%90%86%E6%83%B3%E6%B1%BD%E8%BD%A6+%E6%A0%A1%E6%8B%9B&dqsou__dpc%5B0%5D%5Bvalue%5D=110100:0
-[    4309ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ https://www.liepin.com/:0
-[    4616ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ about:blank:0
-[    5146ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ https://assets-cli.s2.udesk.cn/im_client/js/udeskApi.js:3
-[    5147ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ https://assets-cli.s2.udesk.cn/im_client/js/udeskApi.js:3

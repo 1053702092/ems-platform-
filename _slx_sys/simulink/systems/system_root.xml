@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">70</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">520</P>
+  <Block BlockType="SubSystem" Name="Subsystem" SID="245">
+    <PortCounts in="1" out="2"/>
+    <P Name="Position">[2665, 248, 4020, 877]</P>
+    <P Name="ZOrder">15763</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_245"/>
+  </Block>
+</System>

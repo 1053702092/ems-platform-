@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[223, 338, 826, 833]</P>
+  <P Name="SIDHighWatermark">33</P>
+  <Block BlockType="Inport" Name="P_load_pred" SID="237::1">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">-1</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_pred</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="P_act" SID="237::25">
+    <P Name="Position">[20, 136, 40, 154]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Port">2</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_act</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="SoC" SID="237::26">
+    <P Name="Position">[20, 171, 40, 189]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="Port">3</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">&lt;SoC_act&gt;</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="237::32">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[270, 230, 320, 270]</P>
+    <P Name="ZOrder">22</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="237::31">
+    <P Name="Tag">Stateflow S-Function 2</P>
+    <PortCounts in="3" out="2"/>
+    <P Name="Position">[180, 100, 230, 180]</P>
+    <P Name="ZOrder">21</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="Parameters">mpc_optimizer</P>
+    <P Name="PortCounts">[3 2]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">off</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <PortProperties>
+      <Port Type="out" Index="2">
+        <P Name="Name">dPdt_opt</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="237::33">
+    <P Name="Position">[460, 241, 480, 259]</P>
+    <P Name="ZOrder">23</P>
+  </Block>
+  <Block BlockType="Outport" Name="dPdt_opt" SID="237::5">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">-5</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">237::1#out:1</P>
+    <P Name="Points">[60, 0; 0, 5]</P>
+    <P Name="Dst">237::31#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">237::25#out:1</P>
+    <P Name="Points">[60, 0; 0, -5]</P>
+    <P Name="Dst">237::31#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">237::26#out:1</P>
+    <P Name="Points">[65, 0; 0, -15]</P>
+    <P Name="Dst">237::31#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">dPdt_opt</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">237::31#out:2</P>
+    <P Name="Points">[117, 0; 0, -50]</P>
+    <P Name="Dst">237::5#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">237::32#out:1</P>
+    <P Name="Dst">237::33#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">237::31#out:1</P>
+    <P Name="Points">[15, 0; 0, 130]</P>
+    <P Name="Dst">237::32#in:1</P>
+  </Line>
+</System>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">150</P>
+  <Block BlockType="Inport" Name="P_load_act" SID="298">
+    <P Name="Position">[615, -37, 645, -23]</P>
+    <P Name="ZOrder">4</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_est</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="t_act" SID="299">
+    <P Name="Position">[615, 8, 645, 22]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="MATLAB Function" SID="300">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[745, -54, 910, 39]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="LibrarySourceBlock">simulink/User-Defined
+Functions/MATLAB Function</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_load_pred</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_300"/>
+  </Block>
+  <Block BlockType="Outport" Name="P_load_pred" SID="301">
+    <P Name="Position">[980, -12, 1010, 2]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="PortDimensions">[1,N_pred+1]</P>
+    <P Name="InitialOutput">[zeros(1,N_pred+1)]</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">300#out:1</P>
+    <P Name="Dst">301#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">298#out:1</P>
+    <P Name="Dst">300#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">299#out:1</P>
+    <P Name="Dst">300#in:2</P>
+  </Line>
+</System>

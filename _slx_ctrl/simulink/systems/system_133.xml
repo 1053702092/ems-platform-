@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">127</P>
+  <Block BlockType="Inport" Name="P_load_act" SID="134">
+    <P Name="Position">[-20, 53, 10, 67]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Inport" Name="P_FC_act" SID="183">
+    <P Name="Position">[-20, 188, 10, 202]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoC_Bat_act" SID="184">
+    <P Name="Position">[-20, 318, 10, 332]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="ECMS" SID="247">
+    <PortCounts in="3" out="2"/>
+    <P Name="Position">[130, 156, 315, 234]</P>
+    <P Name="ZOrder">7</P>
+    <P Name="VariantControl">Control_Strategy==1</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_247"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Filter-based Controller" SID="135">
+    <PortCounts in="3" out="2"/>
+    <P Name="Position">[130, 46, 315, 124]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="VariantControl">Control_Strategy==0</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">P_FC_ref</P>
+      </Port>
+      <Port Type="out" Index="2">
+        <P Name="PropagatedSignals">P_load_pred</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_135"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Model Predictive Controller" SID="138">
+    <PortCounts in="3" out="2"/>
+    <P Name="Position">[130, 260, 315, 340]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="VariantControl">Control_Strategy==2</P>
+    <PortProperties>
+      <Port Type="out" Index="2">
+        <P Name="PropagatedSignals">P_load_pred</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_138"/>
+  </Block>
+  <Block BlockType="Outport" Name="P_FC_ref" SID="141">
+    <P Name="Position">[435, 98, 465, 112]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="Outport" Name="P_load_pred" SID="193">
+    <P Name="Position">[435, 273, 465, 287]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Port">2</P>
+  </Block>
+</System>

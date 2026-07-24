@@ -1,7 +1,7 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-07-10
-> 当前阶段：**第9周：PyTorch + RL 基础 完整通关 ✅ → 第10周：DQN/SAC 概念对照 ✅（已准备）→ 第11周：PPO 实现 🚀**
+> 更新日期：2026-07-24
+> 当前阶段：**第9-10周：PyTorch + RL 基础 ✅ / DQN/SAC 概念 ✅ → 第11周：PPO 实现 🚀**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
@@ -688,3 +688,76 @@ Week 12: PPO-EMS奖励函数 + SAC最大熵思想（概念）
 - Python 3.13.13 ✅
 - VS Code 1.122.1 ✅ (F:\vscode)
 - GitHub: https://github.com/1053702092/ems-platform-
+
+---
+
+## 工作区整理 & 数据集调研（2026-07-24）
+
+### 工作区重组
+
+对项目根目录和 `docs/` 进行了系统整理：
+
+```
+整理前：根目录散落 ~15 个文件，docs/ 堆叠 78 个 docx
+整理后：
+  root/        ← 仅保留 DERIVATION_PACKAGE.md + STATUS.md
+  scripts/tools/   ← download_datasets.py, gen_doc_*.py
+  scripts/tests/   ← test_bridge.m/py
+  docs/notes/      ← 18 篇逐日学习笔记
+  docs/reports/    ← 11 篇周报/月报
+  docs/techniques/ ← 31 篇技术专题（MPC/ECMS/DP/RL/SOC）
+  docs/research/   ← 7 篇研究资料
+  docs/interview/  ← 3 篇面试准备
+  datasets/        ← 下载的数据集（见下方）
+```
+
+- 删除了临时文件（`_tmp_*`、`~$*`、`.playwright-mcp/` 日志）
+- `.gitignore` 更新：新增 `.playwright-mcp/`、`datasets/*.zip`、`_slx_analyze/`
+
+### 公开实船功率负荷数据集调研
+
+**产出文档：** `docs/research/公开实船功率能耗数据集调研报告.docx`
+
+覆盖 15+ 数据源，按类型分类：
+- 实测船舶功率时间序列（Shifts、中国基础科学中心、Kaggle）
+- 燃料电池/混合动力专题（NAUTILUS SOFC+电池、TU Delft SH2IPDRIVE）
+- AIS 功率重构、学术论文实验数据、船级社工具
+
+### 已下载数据集
+
+| 数据集 | 大小 | 内容 | 许可 |
+|--------|------|------|------|
+| **TU Delft Ch.3 LPF-EMS** ⭐ | 11 MB | 8 条航线 Simulink 模型 + EMS 仿真结果 | CC BY 4.0 |
+| **TU Delft Ch.4 系统优化** | 508 KB | SCIP/Python 寿命成本优化 + 功率剖面约简 | CC BY 4.0 |
+| **TU Delft Degradation MPC** | 600 KB | 中心化 MPC + ECMS + 滤波三种 EMS 对比 | CC BY 4.0 |
+| **Shifts 功率预测（合成）** | 52 MB | 108MB 合成训练集，可做负荷预测 baseline | CC BY-NC-SA 4.0 |
+| **NAUTILUS SOFC+电池** | — | ❌ Restricted，需向 DLR 申请 | — |
+
+### TU Delft 数据集内部结构
+
+```
+datasets/TU_Delft_Ch3_LPF_EMS/
+├── Matlab_Simulink_Models_Ch3/
+│   ├── LPF_EMS.m                   ← 低通滤波 EMS 主脚本
+│   └── *.slx (12 个)              ← 不同航线的 Simulink 模型
+├── Results_and_Plots_ch3/
+│   ├── Results_ch3.xlsx            ← EMS 仿真结果汇总
+│   ├── FuelConsumption.xlsx
+│   ├── Round_trip.xlsx
+│   └── PLOTS.m
+└── Chapter 3_readme.txt
+
+datasets/TU_Delft_Ch4_Optimization/
+├── Optimization_code_Ch4.zip       ← Python 寿命/稳定性优化代码
+├── Power_Profile_Synthesis_Ch4.zip ← 功率剖面约简算法
+└── Chapter 4_readme.txt
+
+datasets/TU_Delft_Degradation_MPC/
+└── CentMPC_model.zip               ← MPC/ECMS/滤波对比 Simulink 模型
+```
+
+### 下一步
+
+- [ ] 用 TU Delft Ch.3 LPFE-EMS 框架替换自定义负荷数据跑对比实验
+- [ ] Shifts synthetic 数据训练负荷预测 baseline
+- [ ] 提取 NAUTILUS 论文中的 SOFC 功率特性作为 FC 模型参数参考

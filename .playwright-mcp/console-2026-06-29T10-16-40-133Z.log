@@ -1,2 +1,0 @@
-[    1561ms] [LOG] 本地cookie已存在城市信息 @ https://fecdn1.zhaopin.cn/www_zhaopin_com/sou/chunk-vendors.web.d7133ba072624a6e695e08e4933c6c7d.js:0
-[    1651ms] [ERROR] WebSocket connection to 'wss://www.zhaopin.com/sou/jl736/itsgonnafail' failed: Error during WebSocket handshake: Unexpected response code: 200 @ :0

@@ -1,2 +1,0 @@
-[     133ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://www.zhipin.com/wapi/zpgeek/search/joblist.xml?query=BMS%20%E5%AF%BC%E8%88%AA%20%E7%9B%AE%E6%A0%87%E8%B7%9F%E8%B8%AA&city=1012101000&industry=&position=&page=1&zoom=&company=&salary=&job_type=1&report=none:0
-[     156ms] [LOG] %c数星埋点初始化成功 color: #00bebd @ https://www.zhipin.com/wapi/zpgeek/search/joblist.xml?query=BMS%20%E5%AF%BC%E8%88%AA%20%E7%9B%AE%E6%A0%87%E8%B7%9F%E8%B8%AA&city=1012101000&industry=&position=&page=1&zoom=&company=&salary=&job_type=1&report=none:120

@@ -19,7 +19,13 @@ RL 基础篇 (Part 5-8)
 输出: results/week9_complete_*.png
 """
 
-import os, sys, itertools
+import os, sys, itertools, argparse
+
+# 强制 stdout/err 用 UTF-8，避免 Windows GBK 终端 Unicode 报错
+if sys.stdout.encoding and sys.stdout.encoding.upper() in ('GBK', 'GB2312', 'CP936'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if sys.stderr.encoding and sys.stderr.encoding.upper() in ('GBK', 'GB2312', 'CP936'):
+    sys.stderr.reconfigure(encoding='utf-8')
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -27,6 +33,16 @@ import matplotlib.pyplot as plt
 
 RESULTS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'results')
 os.makedirs(RESULTS_DIR, exist_ok=True)
+
+# ── 命令行参数 ──
+parser = argparse.ArgumentParser(description='Week 9 — PyTorch + RL 基础 逐 Part 学习')
+parser.add_argument('--part', type=int, default=0, choices=[0,1,2,3,4,5,6,7,8],
+                    help='跑指定 Part (1-8)，默认 0=跑全部')
+args = parser.parse_args()
+
+def should_run(part_num):
+    """判断当前 Part 是否需要执行。"""
+    return args.part == 0 or args.part == part_num
 
 # 中文字体（Windows）
 plt.rcParams['font.family'] = 'sans-serif'
@@ -173,7 +189,7 @@ def part4_power_prediction():
         return np.array(X), np.array(y)
 
     SEQ_LEN = 10
-    X, y = create_sequences(power, SEQ_LEN)
+    X, y = create_sequences(  power, SEQ_LEN)
     split = int(0.8 * len(X))
     X_train, X_test = X[:split], X[split:]
     y_train, y_test = y[:split], y[split:]
@@ -623,75 +639,95 @@ def extra_convergence_plot():
 # 主程序
 # ═══════════════════════════════════════════════════════════════
 if __name__ == '__main__':
-    print('=' * 60)
-    print('  Week 9 — PyTorch + RL 基础 完整通关')
-    print('  Part 1-4: PyTorch 入门')
-    print('  Part 5-8: RL 基础 (MDP / Bellman / 策略迭代 / 值迭代)')
-    print('=' * 60)
+    # 通知模式
+    if args.part > 0:
+        print(f'>> 单 Part 模式: 只跑 Part {args.part}\n')
+    else:
+        print('=' * 60)
+        print('  Week 9 — PyTorch + RL 基础 完整通关')
+        print('  Part 1-4: PyTorch 入门')
+        print('  Part 5-8: RL 基础 (MDP / Bellman / 策略迭代 / 值迭代)')
+        print('=' * 60)
+
+    # 占位变量（处理 Part 间依赖）
+    mdp = None; pi_result = None; vi_result = None
 
     # ── PyTorch 篇 ──
-    print('\n' + '=' * 60)
-    print('Part 1: Tensor 基础')
-    print('=' * 60)
-    device = part1_tensor_basics()
+    if should_run(1):
+        print('\n' + '=' * 60)
+        print('Part 1: Tensor 基础')
+        print('=' * 60)
+        device = part1_tensor_basics()
 
-    print('\n' + '=' * 60)
-    print('Part 2: Autograd 自动求导')
-    print('=' * 60)
-    part2_autograd()
+    if should_run(2):
+        print('\n' + '=' * 60)
+        print('Part 2: Autograd 自动求导')
+        print('=' * 60)
+        part2_autograd()
 
-    print('\n' + '=' * 60)
-    print('Part 3: nn.Module + MLP')
-    print('=' * 60)
-    model = part3_mlp_module()
+    if should_run(3):
+        print('\n' + '=' * 60)
+        print('Part 3: nn.Module + MLP')
+        print('=' * 60)
+        model = part3_mlp_module()
 
-    print('\n' + '=' * 60)
-    print('Part 4: MLP 功率预测')
-    print('=' * 60)
-    predictor = part4_power_prediction()
+    if should_run(4):
+        print('\n' + '=' * 60)
+        print('Part 4: MLP 功率预测')
+        print('=' * 60)
+        predictor = part4_power_prediction()
 
     # ── RL 基础篇 ──
-    print('\n' + '=' * 60)
-    print('Part 5: MDP 五元组 — GridWorld')
-    print('=' * 60)
-    mdp = part5_mdp_gridworld()
+    if should_run(5):
+        print('\n' + '=' * 60)
+        print('Part 5: MDP 五元组 — GridWorld')
+        print('=' * 60)
+        mdp = part5_mdp_gridworld()
 
-    print('\n' + '=' * 60)
-    print('Part 6: Bellman 方程')
-    print('=' * 60)
-    values = part6_bellman(mdp)
+    # Part 6-8 依赖 Part 5 的 mdp；单独跑时自动触发 Part 5
+    if args.part in (6, 7, 8) and mdp is None:
+        print('\n  [auto] Part 6-8 依赖 Part 5 的 MDP，先跑 Part 5...')
+        mdp = part5_mdp_gridworld()
 
-    print('\n' + '=' * 60)
-    print('Part 7: 策略迭代')
-    print('=' * 60)
-    pi_result = part7_policy_iteration(mdp)
+    if should_run(6):
+        print('\n' + '=' * 60)
+        print('Part 6: Bellman 方程')
+        print('=' * 60)
+        values = part6_bellman(mdp)
 
-    print('\n' + '=' * 60)
-    print('Part 8: 值迭代')
-    print('=' * 60)
-    vi_result = part8_value_iteration(mdp)
+    if should_run(7):
+        print('\n' + '=' * 60)
+        print('Part 7: 策略迭代')
+        print('=' * 60)
+        pi_result = part7_policy_iteration(mdp)
 
-    # ── Extra ──
-    print('\n' + '=' * 60)
-    print('Extra: 收敛过程可视化')
-    print('=' * 60)
-    extra_convergence_plot()
+    if should_run(8):
+        print('\n' + '=' * 60)
+        print('Part 8: 值迭代')
+        print('=' * 60)
+        vi_result = part8_value_iteration(mdp)
 
-    # ── 验证 ──
-    print('\n' + '=' * 60)
-    print('验证: 策略迭代 vs 值迭代')
-    print('=' * 60)
-    s0_pi = pi_result['V'][0]
-    s0_vi = vi_result['V'][0]
-    print(f'  策略迭代 V(0) = {s0_pi:.4f}')
-    print(f'  值迭代   V(0) = {s0_vi:.4f}')
-    print(f'  差值     ΔV   = {abs(s0_pi - s0_vi):.6f}')
-    if abs(s0_pi - s0_vi) < 1e-4:
-        print('  [OK] 一致！策略迭代与值迭代收敛到同一最优值函数')
-    else:
-        print('  ⚠️ 有偏差, 检查收敛容差')
+    # ── Extra（仅全部跑时附带；单 Part 模式不跑）──
+    if args.part == 0:
+        print('\n' + '=' * 60)
+        print('Extra: 收敛过程可视化')
+        print('=' * 60)
+        extra_convergence_plot()
 
-    print('\n' + '=' * 60)
-    print('  Week 9 全部完成！[OK]')
-    print('  下一步: Week 10 DQN/SAC 概念对照')
-    print('=' * 60)
+    # ── 验证（仅全部跑或同时有 Part 7+8）──
+    if args.part == 0 or (args.part in (7, 8) and pi_result and vi_result):
+        if pi_result and vi_result:
+            print('\n' + '=' * 60)
+            print('验证: 策略迭代 vs 值迭代')
+            print('=' * 60)
+            s0_pi = pi_result['V'][0]
+            s0_vi = vi_result['V'][0]
+            print(f'  策略迭代 V(0) = {s0_pi:.4f}')
+            print(f'  值迭代   V(0) = {s0_vi:.4f}')
+            print(f'  差值     ΔV   = {abs(s0_pi - s0_vi):.6f}')
+            if abs(s0_pi - s0_vi) < 1e-4:
+                print('  [OK] 一致！策略迭代与值迭代收敛到同一最优值函数')
+            else:
+                print('  ⚠️ 有偏差, 检查收敛容差')
+
+    print(f'\n  Part {args.part if args.part > 0 else "1-8"} 完成！[OK]')

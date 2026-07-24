@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1041]</P>
+  <P Name="ZoomFactor">125</P>
+  <Block BlockType="Inport" Name="P_load_act" SID="250">
+    <P Name="Position">[15, 98, 45, 112]</P>
+    <P Name="ZOrder">33010</P>
+  </Block>
+  <Block BlockType="Inport" Name="P_FC_act" SID="251">
+    <P Name="Position">[15, 133, 45, 147]</P>
+    <P Name="ZOrder">33019</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoC_Bat_act" SID="252">
+    <P Name="Position">[15, 168, 45, 182]</P>
+    <P Name="ZOrder">33018</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="284">
+    <P Name="Position">[930, 150, 970, 170]</P>
+    <P Name="ZOrder">33038</P>
+    <P Name="Value">0</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">P_load_pred</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="255">
+    <P Name="Position">[240, 92, 320, 118]</P>
+    <P Name="ZOrder">33015</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_load_act</P>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="257">
+    <P Name="Position">[930, 112, 1010, 138]</P>
+    <P Name="ZOrder">33022</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_FC_ref</P>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="259">
+    <P Name="Position">[240, 127, 320, 153]</P>
+    <P Name="ZOrder">32999</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_FC_act</P>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="260">
+    <P Name="Position">[240, 162, 320, 188]</P>
+    <P Name="ZOrder">33000</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">SoC_Bat_act</P>
+  </Block>
+  <Block BlockType="Reference" Name="Function-Call&#xA;Generator" SID="261">
+    <PortCounts out="1"/>
+    <P Name="Position">[534, 35, 556, 55]</P>
+    <P Name="ZOrder">33002</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">left</P>
+    <P Name="LibraryVersion">3.4</P>
+    <P Name="SourceBlock">simulink/Ports &amp;
+Subsystems/Function-Call
+Generator</P>
+    <P Name="SourceType">Function-Call Generator</P>
+    <InstanceData>
+      <P Name="MultithreadedSim">auto</P>
+      <P Name="sample_time">Ts_ecms</P>
+      <P Name="numberOfIterations">1</P>
+      <P Name="DisallowWideOutput">off</P>
+      <P Name="ShowEnablePort">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="SubSystem" Name="Function-Call Optimization" SID="264">
+    <PortCounts in="3" out="1" trigger="1"/>
+    <P Name="Position">[400, 90, 695, 190]</P>
+    <P Name="ZOrder">33001</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_264"/>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="265">
+    <P Name="Position">[120, 127, 200, 153]</P>
+    <P Name="ZOrder">33013</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_FC_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="266">
+    <P Name="Position">[120, 92, 200, 118]</P>
+    <P Name="ZOrder">33016</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_load_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="268">
+    <P Name="Position">[120, 162, 200, 188]</P>
+    <P Name="ZOrder">33017</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">SoC_Bat_act</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="269">
+    <P Name="Position">[795, 127, 875, 153]</P>
+    <P Name="ZOrder">33021</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">P_FC_ref</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="271">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[730, 125, 760, 155]</P>
+    <P Name="ZOrder">33003</P>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation1" SID="272">
+    <P Name="Position">[345, 160, 375, 190]</P>
+    <P Name="ZOrder">33004</P>
+    <P Name="UpperLimit">SoC_max</P>
+    <P Name="LowerLimit">SoC_min</P>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation2" SID="273">
+    <P Name="Position">[345, 125, 375, 155]</P>
+    <P Name="ZOrder">33005</P>
+    <P Name="UpperLimit">FC_Param.P_max</P>
+    <P Name="LowerLimit">0</P>
+  </Block>
+  <Block BlockType="Outport" Name="P_FC_ref" SID="274">
+    <P Name="Position">[1080, 118, 1110, 132]</P>
+    <P Name="ZOrder">33020</P>
+  </Block>
+  <Block BlockType="Outport" Name="P_load_pred" SID="275">
+    <P Name="Position">[1080, 153, 1110, 167]</P>
+    <P Name="ZOrder">33023</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">264#out:1</P>
+    <P Name="Dst">271#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">251#out:1</P>
+    <P Name="Dst">265#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">252#out:1</P>
+    <P Name="Dst">268#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">257#out:1</P>
+    <P Name="Dst">274#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">260#out:1</P>
+    <P Name="Dst">272#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">272#out:1</P>
+    <P Name="Dst">264#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">250#out:1</P>
+    <P Name="Dst">266#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">259#out:1</P>
+    <P Name="Dst">273#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">273#out:1</P>
+    <P Name="Dst">264#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">261#out:1</P>
+    <P Name="Dst">264#trigger</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">271#out:1</P>
+    <P Name="Dst">269#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">255#out:1</P>
+    <P Name="Dst">264#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">P_load_pred</P>
+    <P Name="ZOrder">26</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">284#out:1</P>
+    <P Name="Dst">275#in:1</P>
+  </Line>
+</System>

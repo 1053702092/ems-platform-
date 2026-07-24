@@ -1,7 +1,0 @@
-[     178ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ https://www.liepin.com/:0
-[     521ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ about:blank:0
-[    1479ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ https://assets-cli.s2.udesk.cn/im_client/js/udeskApi.js:3
-[    1480ms] [ERROR] The source list for the Content Security Policy directive 'frame-src' contains an invalid source: 'bytedance://dispatch_message'. It will be ignored. @ https://assets-cli.s2.udesk.cn/im_client/js/udeskApi.js:3
-[    2551ms] [LOG] /./ @ https://concat.lietou-static.com/fe-lib-pc/v6/security/1.0.0/security.min.js:0
-[    2557ms] [TABLE] [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ https://concat.lietou-static.com/fe-lib-pc/v6/security/1.0.0/security.min.js:0
-[    2561ms] [LOG] [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ https://concat.lietou-static.com/fe-lib-pc/v6/security/1.0.0/security.min.js:0
