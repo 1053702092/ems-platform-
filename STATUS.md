@@ -1,6 +1,6 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-07-24
+> 更新日期：2026-07-27
 > 当前阶段：**第9-10周：PyTorch + RL 基础 ✅ / DQN/SAC 概念 ✅ → 第11周：PPO 实现 🚀**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
@@ -20,8 +20,9 @@
 
 - [x] **第1个月：工程底座 + DP入门（已完成 ✅）**
 - [x] **第2个月：传统EMS策略 + C++基础（已完成 ✅）**
-- [ ] **第8周：四方法大对比报告** ← 当前
-- [ ] **第3个月：PyTorch + 强化学习**
+- [x] **第8周：四方法大对比报告（已完成 ✅）**
+- [x] **第9-10周：PyTorch + RL 基础 / DQN/SAC 概念（已完成 ✅）**
+- [ ] **第11周：PPO 轻量实现（主实现）** ← 当前
 - [ ] **第4个月：RL调优 + RL-EMS项目落地**
 - [ ] **第5个月：C++强化 + 工程化部署**
 - [ ] **第6个月：求职 + 项目履历重构**
@@ -193,13 +194,25 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
     - 用 pandoc 3.9 重新生成，所有 253 个公式转为 Word OMML 原生方程式（可编辑）
     - 工具：pypandoc_binary（内置 pandoc）+ `--mathml` 参数
 
-### 第3-4个月 — PPO 轻量实现 + 求职冲刺（时间线调整 @2026-07-24）
+### 第3-4个月 — PPO 轻量实现 + 求职冲刺（时间线调整 @2026-07-27）
 
 > **调整背景：** 现有 EMS-PLATFORM（DP/ECMS/MPC 从零实现 + 四方法对比）已是够用的主力项目。
 > TU Delft 扩展锦上添花但不必须，PPO 跑通即可，不做深度调优。
 > **8月底完成所有技术积累，9月起全力投递。**
 
 - [x] **第9-10周：PyTorch + RL 基础 / DQN/SAC 概念（已完成 ✅）**
+  - Week 9: PyTorch 基础 + MLP + MDP + Bellman + DP 策略迭代/值迭代 ✅
+  - Week 10: Q-learning GridWorld 代码 + DQN 代码 + SAC 最大熵概念 ✅
+  - 产出：
+    - `scripts/week10_qlearning_gridworld.py` — Q-learning 完整实现
+    - `scripts/week10_dqn_gridworld.py` — DQN 完整实现（神经网络代替 Q 表）
+    - `scripts/week10_dqn_sac_concepts.py` — DQN/SAC 概念总结
+    - `docs/notes/Week10_DQN_GridWorld_逐行精讲.docx` — DQN 逐行代码解析
+    - `docs/notes/DQN_SAC_逐级详解.docx` — 从 Q-learning 到 DQN/SAC 逐步推导
+    - `docs/notes/DQN_SAC_深度学习原理解析.docx` — DL 视角原理
+    - `results/week10_qlearning_training.csv` — Q-learning 训练记录
+    - `results/week10_qlearning_qtable.csv` — Q-learning 训练好的 Q 表
+    - `results/week10_dqn_training.csv` — DQN 训练记录
 - [ ] **第11周：PPO 轻量实现（主实现）** ← 简化，2周
   - Policy Gradient → PPO 原理理解
   - PyTorch 实现 PPO（参考现成框架，不从头造轮子）

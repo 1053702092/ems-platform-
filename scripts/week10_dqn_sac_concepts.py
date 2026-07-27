@@ -436,7 +436,7 @@ if __name__ == '__main__':
     print('\n' + '=' * 70)
     print('  Week 10 — DQN / SAC 概念对照')
     print('=' * 70)
-    print('  📖 此脚本只打印概念说明，不跑数值实验')
+    print('  [INFO] 此脚本只打印概念说明，不跑数值实验')
     print('  学习目标：能讲清楚为什么 EMS 选 PPO 而不是 DQN')
     print('=' * 70)
 
