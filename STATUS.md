@@ -1,7 +1,7 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-07-27
-> 当前阶段：**第9-10周：PyTorch + RL 基础 ✅ / DQN/SAC 概念 ✅ → 第11周：PPO 实现 🚀**
+> 更新日期：2026-07-28
+> 当前阶段：**第9-10周：PyTorch + RL 基础 ✅ / DQN/SAC 概念 ✅ → 第11周：PPO 实现 ✅ → 第12周：简历打磨 + 笔面试准备 🚀**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
@@ -213,11 +213,19 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
     - `results/week10_qlearning_training.csv` — Q-learning 训练记录
     - `results/week10_qlearning_qtable.csv` — Q-learning 训练好的 Q 表
     - `results/week10_dqn_training.csv` — DQN 训练记录
-- [ ] **第11周：PPO 轻量实现（主实现）** ← 简化，2周
-  - Policy Gradient → PPO 原理理解
-  - PyTorch 实现 PPO（参考现成框架，不从头造轮子）
-  - 在简化 EMS 环境跑通训练闭环
-  - 产出：PPO-EMS 训练曲线 + 与 Rule 的简要对比
+- [x] **第11周：PPO 轻量实现（已完成 ✅）**
+  - REINFORCE → Actor-Critic → PPO 递进实现
+  - 连续动作 EMS 环境（含 DQN 为什么不行演示）
+  - 三种方法同一环境对比实验
+  - 产出：
+    - `scripts/week11_continuous_env.py` — 连续动作 EMS 环境
+    - `scripts/week11_reinforce.py` — REINFORCE
+    - `scripts/week11_actor_critic.py` — Actor-Critic
+    - `scripts/week11_ppo.py` — PPO
+    - `scripts/week11_compare.py` — 三种方法对比
+    - `docs/notes/Week11_连续动作RL对比报告.docx`
+    - `results/week11_comparison.png`
+    - `results/week11_{reinforce,ac,ppo}_training.png`
 - [ ] **第12周：简历打磨 + 笔面试准备** ← 提前到8月中
   - EMS-PLATFORM 项目叙事定稿（已生成 docs/interview/EMS项目叙事_简历面试版.docx）
   - 中石化/中海油/发电集团笔试准备（综合知识 60% + 专业 40%）

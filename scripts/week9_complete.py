@@ -189,11 +189,11 @@ def part4_power_prediction():
         return np.array(X), np.array(y)
 
     SEQ_LEN = 10
-    X, y = create_sequences(  power, SEQ_LEN)
+    X, y = create_sequences( power, SEQ_LEN)
     split = int(0.8 * len(X))
     X_train, X_test = X[:split], X[split:]
     y_train, y_test = y[:split], y[split:]
-
+    #unsqueeze 加一个维度
     X_train_t = torch.tensor(X_train, dtype=torch.float32).unsqueeze(-1)
     y_train_t = torch.tensor(y_train, dtype=torch.float32).unsqueeze(-1)
     X_test_t = torch.tensor(X_test, dtype=torch.float32).unsqueeze(-1)
@@ -234,7 +234,7 @@ def part4_power_prediction():
         train_losses.append(loss.item())
         if (epoch + 1) % 50 == 0:
             model.eval()
-            with torch.no_grad():
+            with torch.no_grad():  #测试
                 test_loss = loss_fn(model(X_test_t), y_test_t)
             print(f"Epoch {epoch+1:3d}: train_loss={loss.item():.6f}, test_loss={test_loss.item():.6f}")
 
@@ -287,8 +287,8 @@ def part5_mdp_gridworld():
 
     GOAL = (3, 3)
     TRAP = (1, 1)
-    GOAL_IDX = GOAL[0] * SIZE + GOAL[1]
-    TRAP_IDX = TRAP[0] * SIZE + TRAP[1]
+    GOAL_IDX = GOAL[0] * SIZE + GOAL[1] #15  pos_to_idx
+    TRAP_IDX = TRAP[0] * SIZE + TRAP[1] #5   pos_to_idx
 
     action_delta = {
         '↑': (-1, 0), '↓': (1, 0),
@@ -304,7 +304,7 @@ def part5_mdp_gridworld():
     R = {s: {a: 0.0 for a in range(n_actions)} for s in range(n_states)}
     P = {s: {a: {} for a in range(n_actions)} for s in range(n_states)}
 
-    for r, c in itertools.product(range(SIZE), range(SIZE)):
+    for r, c in itertools.product(range(SIZE), range(SIZE)):  #双重遍历16
         s = pos_to_idx(r, c)
         if s == GOAL_IDX or s == TRAP_IDX:
             for a in range(n_actions):
@@ -345,37 +345,37 @@ def part5_mdp_gridworld():
 # ═══════════════════════════════════════════════════════════════
 def part6_bellman(mdp):
     """用 Bellman 方程计算 V(s) 和 Q(s,a)"""
-    n_states = mdp['n_states']
-    n_actions = mdp['n_actions']
+    n_states = mdp['n_states']   #16
+    n_actions = mdp['n_actions'] #4
     gamma = mdp['gamma']
     R = mdp['R']
     P = mdp['P']
 
-    # 随机策略
+    # 随机策略  4个0.25
     policy = np.ones((n_states, n_actions)) / n_actions
 
     # 策略评估：迭代求解 V^π
     V = np.zeros(n_states)
     theta = 1e-6
-    max_iter = 1000
+    max_iter = 1000  #迭代轮次最大值
     for i in range(max_iter):
         delta = 0
         for s in range(n_states):
             v_old = V[s]
             v_new = 0
             for a in range(n_actions):
-                p_a = policy[s, a]
+                p_a = policy[s, a]  #a是代表动作，有80%几率走对，20%几率走错方向
                 if p_a == 0:
                     continue
                 bellman_sum = R[s][a]
                 for s_next, prob in P[s][a].items():
-                    bellman_sum += gamma * prob * V[s_next]
+                    bellman_sum += gamma * prob * V[s_next]  #下一步方向可能性*衰减系数
                 v_new += p_a * bellman_sum
             V[s] = v_new
             delta = max(delta, abs(v_old - v_new))
         if delta < theta:
             break
-
+#外层 p_a是"我有多大概率选这个动作"，内层 prob是"选了之后环境有多大概率把我送到某个状态"
     # 最优值函数 V*
     V_opt = np.zeros(n_states)
     for i in range(max_iter):
@@ -388,7 +388,7 @@ def part6_bellman(mdp):
                 for s_next, prob in P[s][a].items():
                     q += gamma * prob * V_opt[s_next]
                 q_values.append(q)
-            V_opt[s] = max(q_values)
+            V_opt[s] = max(q_values)  #可以选择方向
             delta = max(delta, abs(v_old - V_opt[s]))
         if delta < theta:
             break
@@ -430,7 +430,7 @@ def part7_policy_iteration(mdp):
     gamma = mdp['gamma']
     R = mdp['R']
     P = mdp['P']
-
+    #随机初始化策略。对每个状态随机选一个动作（0-3），是确定性策略
     policy = np.random.randint(0, n_actions, size=n_states)
     V = np.zeros(n_states)
 
@@ -459,7 +459,7 @@ def part7_policy_iteration(mdp):
                 for s_next, prob in P[s][a].items():
                     q += gamma * prob * V[s_next]
                 q_values.append(q)
-            policy[s] = int(np.argmax(q_values))
+            policy[s] = int(np.argmax(q_values))  #选 Q 值最大的动作。
             if old_action != policy[s]:
                 policy_stable = False
         return policy, policy_stable

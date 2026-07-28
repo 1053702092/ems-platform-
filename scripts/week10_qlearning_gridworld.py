@@ -37,7 +37,7 @@ def step(s, a):
     模拟 80% 目标方向 / 20% 随机滑走
     """
     global GOAL_IDX, TRAP_IDX
-    r, c = divmod(s, SIZE)
+    r, c = divmod(s, SIZE)   #坐标值
 
     # 80% 走选的方向
     if random.random() < 0.8:
@@ -96,7 +96,7 @@ def q_learning(episodes=5000, lr=0.1, epsilon_start=1.0, epsilon_end=0.01, epsil
         steps = 0
 
         while True:
-            # ε-贪心选动作
+            # ε-贪心选动作  epsilon属于0-1
             if random.random() < epsilon:
                 a = random.randint(0, N_ACTIONS - 1)    # 探索
             else:

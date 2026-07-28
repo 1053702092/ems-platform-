@@ -84,10 +84,10 @@ def dqn(episodes=5000, lr=0.01, epsilon_start=1.0, epsilon_end=0.01, epsilon_dec
     print()
 
     # 创建网络 + 优化器
-    q_network = DQN()
-    target_network = DQN()
+    q_network = DQN()      #1) 选动作时算 Q 值；2) 训练时实时更新参数。
+    target_network = DQN()  #算 target（训练目标），参数不频繁更新
     target_network.load_state_dict(q_network.state_dict())  # 初始参数相同
-    optimizer = optim.Adam(q_network.parameters(), lr=lr)
+    optimizer = optim.Adam(q_network.parameters(), lr=lr)   #优化器自动更新全部 644 个参数
     loss_fn = nn.MSELoss()
 
     # 经验回放缓冲区
