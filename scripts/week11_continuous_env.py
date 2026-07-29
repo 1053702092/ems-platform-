@@ -49,7 +49,7 @@ class EMSEnv:
     def reset(self):
         """重置环境，返回初始状态"""
         self.soc = 0.6  # 初始 SOC = 60%
-        self.p_load = 0.5  # 初始负载
+        self.p_load = 0.5  # 初始负载（KW）
         self.steps = 0
         self.max_steps = 200
         return self._get_state()
