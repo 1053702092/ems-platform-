@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """生成 Q-learning vs DQN 大 GridWorld 对比报告 docx"""
+from pathlib import Path
+
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
-import os
 
-OUT_DIR = r'F:\CLAUDE\research\ems-platform\docs\notes'
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+OUT_DIR = PROJECT_ROOT / 'docs' / 'notes'
+RESULTS_DIR = PROJECT_ROOT / 'results'
 doc = Document()
 style = doc.styles['Normal']
 style.font.name = '微软雅黑'
@@ -59,8 +62,9 @@ def note(text):
     run.italic = True
 
 def img(path, width=15):
-    if os.path.exists(path):
-        doc.add_picture(path, width=Cm(width))
+    path = Path(path)
+    if path.exists():
+        doc.add_picture(str(path), width=Cm(width))
     else:
         p(f'[图片未找到: {path}]', color=RGBColor(0xC0,0x39,0x2B))
 
@@ -76,14 +80,13 @@ brk()
 # 第一章：实验设置
 # ================================================================
 h('一、实验设置', 1)
-p('同一个 GridWorld 环境，两种算法，三种规模：')
+p('同一个 GridWorld 环境，两种算法，两种规模：')
 p('')
 tbl(
     ['Grid 大小', '状态数', 'QL 参数', 'DQN 参数', '训练局数'],
     [
         ['4×4', '16', '64 (16×4)', '1348', '5000'],
         ['8×8', '64', '256 (64×4)', '4420', '5000'],
-        ['12×12', '144', '576 (144×4)', '~9500', '8000（未跑完）'],
     ]
 )
 p('')
@@ -102,7 +105,7 @@ tbl(
     ['', 'Q-learning', 'DQN'],
     [
         ['参数数量', '64', '1348（21 倍）'],
-        ['训练时间', '0.3s', '248s'],
+        ['训练时间', '0.18s', '218.50s'],
     ]
 )
 
@@ -110,22 +113,22 @@ h('2.2 训练结果', 2)
 tbl(
     ['指标', 'Q-learning', 'DQN'],
     [
-        ['最后 200 局平均奖励', '+0.83', '+0.82'],
-        ['到达终点比例', '91.5%', '91.0%'],
+        ['最后 200 局平均奖励', '+0.81', '+0.78'],
+        ['到达终点比例', '90.5%', '89.0%'],
     ]
 )
 p('')
-p('两个方法效果几乎一样。DQN 参数多 21 倍、慢 800 倍，但最终策略都能走到终点。', bold=True, color=RGBColor(0x1F,0x3A,0x5F))
+p('两个方法效果接近。DQN 参数多 21 倍、慢约 1200 倍，但最终策略也能较稳定走到终点。', bold=True, color=RGBColor(0x1F,0x3A,0x5F))
 
 h('2.3 策略对比', 2)
 p('Q-learning 策略:', bold=True)
-code(' →  →  →  ↓ \n ↓  X  →  ↓ \n ↓  ↓  →  ↓ \n →  →  →  G ')
+code(' →  →  →  ↓ \n ↑  X  →  ↓ \n ↓  ↓  ↓  ↓ \n →  →  →  G ')
 p('DQN 策略:', bold=True)
-code(' ↑  →  →  ↓ \n ↓  X  ↓  ↓ \n ↓  ↓  →  ↓ \n →  →  →  G ')
+code(' ↓  →  →  → \n ↓  X  →  → \n →  →  →  → \n →  →  →  G ')
 p('两种策略都能到终点，只是路径略有不同。')
 
 h('2.4 收敛曲线', 2)
-img(r'F:\CLAUDE\research\ems-platform\results\compare_4x4_ql_vs_dqn.png')
+img(RESULTS_DIR / 'compare_4x4_ql_vs_dqn.png')
 
 note('4×4 结论：小 Grid 上 QL 完胜。参数少、速度快、效果好。DQN 多余。')
 brk()
@@ -140,7 +143,7 @@ tbl(
     ['', 'Q-learning', 'DQN'],
     [
         ['参数数量', '256', '4420（17 倍）'],
-        ['训练时间', '0.78s', '835s'],
+        ['训练时间', '0.45s', '851.14s'],
     ]
 )
 
@@ -148,21 +151,21 @@ h('3.2 训练结果', 2)
 tbl(
     ['指标', 'Q-learning', 'DQN'],
     [
-        ['最后 200 局平均奖励', '+0.76', '+0.40'],
-        ['到达终点比例', '88%', '70%'],
+        ['最后 200 局平均奖励', '+0.81', '+0.50'],
+        ['到达终点比例', '90.5%', '75.0%'],
     ]
 )
 
 h('3.3 策略对比', 2)
 p('Q-learning 策略:', bold=True)
-code(' →  →  →  →  ↓  ↓  ↓  ↓ \n ↓  X  ↓  →  ↓  ↓  ↓  ↓ \n ↓  →  →  ↓  ↓  →  ↓  ↓ \n →  →  →  →  →  →  ↓  ↓ ')
+code(' ↓  →  →  →  →  ↓  ↓  ↓ \n ↓  X  ↓  →  →  ↓  ↓  ↓ \n ↓  ↓  ↓  →  →  →  ↓  ↓ \n ↓  →  ↓  ↓  ↓  →  ↓  ↓ ')
 p('DQN 策略:', bold=True)
-code(' ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓ \n ↑  X  ↓  ↓  ↓  ↓  ↓  ↓ \n ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓ \n ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓ ')
+code(' →  →  →  →  →  →  →  → \n →  X  →  →  →  →  →  → \n →  →  →  →  →  →  →  → \n →  →  →  →  →  →  →  → ')
 
 p('')
-p('⚠️ 关键发现：DQN 策略退化', bold=True, color=RGBColor(0xC0,0x39,0x2B))
-bullet('DQN 学到的策略是"一路往下走"——走 8 步到最底行')
-bullet('虽然到不了终点，但也不撞陷阱——成了 DQN 的"局部最优解"')
+p('关键发现：DQN 策略退化', bold=True, color=RGBColor(0xC0,0x39,0x2B))
+bullet('DQN 学到的策略偏向"一路向右"，能避开陷阱，但缺少 Q-learning 那样稳定的绕行路径')
+bullet('最后 200 局到达率：Q-learning 90.5%，DQN 75.0%，说明 DQN 在 8×8 上效率明显下降')
 bullet('Q-learning 仍然能学会绕路到终点')
 p('')
 p('原因分析：', bold=True)
@@ -171,9 +174,9 @@ bullet('Q 表只有 256 个格子，5000 局足够填满')
 bullet('DQN 的学习率 lr=0.01 可能偏大，对 8×8 网络需要更精细调参')
 
 h('3.4 收敛曲线', 2)
-img(r'F:\CLAUDE\research\ems-platform\results\compare_8x8_ql_vs_dqn.png', width=15)
+img(RESULTS_DIR / 'compare_8x8_ql_vs_dqn.png', width=15)
 
-note('8×8 结论：状态数翻 4 倍后，DQN 开始掉队。参数多了但没学好，策略退化到"只会往下走"。Q-learning 仍然稳定。但 Q 表参数已达 256，再多状态就开始装不下了。')
+note('8×8 结论：状态数翻 4 倍后，DQN 开始掉队。参数多了但没学好，策略退化到"偏向单一方向"。Q-learning 仍然稳定。但 Q 表参数已达 256，再多状态就开始装不下了。')
 brk()
 
 # ================================================================
@@ -185,9 +188,8 @@ h('4.1 三张表看趋势', 2)
 tbl(
     ['Grid', '状态数', 'Q 表参数', 'DQN 参数', 'QL 奖励', 'DQN 奖励', 'QL 时间', 'DQN 时间'],
     [
-        ['4×4', '16', '64', '1,348', '+0.83', '+0.82', '0.3s', '248s'],
-        ['8×8', '64', '256', '4,420', '+0.76', '+0.40', '0.8s', '835s'],
-        ['12×12', '144', '576', '~9,476', '—', '—', '—', '—'],
+        ['4×4', '16', '64', '1,348', '+0.81', '+0.78', '0.18s', '218.50s'],
+        ['8×8', '64', '256', '4,420', '+0.81', '+0.50', '0.45s', '851.14s'],
     ]
 )
 p('')
@@ -224,11 +226,11 @@ h('五、核心记忆点', 1)
 p('1. DQN = Q-learning + 神经网络 + 经验回放 + 目标网络', bold=True, sz=12, color=RGBColor(0x1F,0x3A,0x5F))
 p('2. 核心改动只有一行：QL 改一个格子 → DQN 梯度下降改全部参数', sz=12)
 p('3. 在小问题上 DQN 没优势（甚至更差），但 Q 表的最大问题是泛化能力为 0', sz=12)
-p('4. 面试回答用 8×8 结果作为例子：DQN 策略退化的原因就是参数多、调参难', sz=12)
+p('4. 面试回答用 8×8 结果作为例子：DQN 策略退化的原因就是参数多、样本效率低、调参难', sz=12)
 note(f'实验日期: 2026-07-28')
 
 # 保存
-os.makedirs(OUT_DIR, exist_ok=True)
-path = os.path.join(OUT_DIR, 'QL_vs_DQN_大Grid对比报告.docx')
-doc.save(path)
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+path = OUT_DIR / 'QL_vs_DQN_大Grid对比报告.docx'
+doc.save(str(path))
 print(f'OK: {path}')

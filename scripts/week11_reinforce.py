@@ -12,17 +12,21 @@ Week 11 Step 2: REINFORCE (策略梯度)
   好动作 → 增大概率，坏动作 → 减小概率
 """
 
+import argparse
+from pathlib import Path
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.distributions as dist
-import os
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
-RESULTS_DIR = r'F:\CLAUDE\research\ems-platform\results'
+from week11_common import configure_matplotlib, ensure_results_dir, set_seed
+
+configure_matplotlib()
 
 # ===================== 环境（复用 Step 1） =====================
 class EMSEnv:
@@ -195,8 +199,6 @@ def test_policy(policy, episodes=10):
     total_rewards = []
 
     for ep in range(episodes):
-        s = env_reset = EMSEnv().reset()
-        # 手动重置，不用类方法
         env = EMSEnv()
         s = env.reset()
         total_r = 0
@@ -218,7 +220,7 @@ def test_policy(policy, episodes=10):
 
 
 # ===================== 画训练曲线 =====================
-def plot_results(rewards, label='REINFORCE'):
+def plot_results(rewards, label='REINFORCE', output_dir: str | Path | None = None):
     plt.figure(figsize=(10, 4))
 
     # 原始曲线
@@ -244,14 +246,23 @@ def plot_results(rewards, label='REINFORCE'):
     plt.grid(alpha=0.3)
 
     plt.tight_layout()
-    path = os.path.join(RESULTS_DIR, 'week11_reinforce_training.png')
+    path = ensure_results_dir(output_dir) / 'week11_reinforce_training.png'
     plt.savefig(path, dpi=150)
     print(f"\n训练曲线已保存: {path}")
     plt.close()
 
 
 # ===================== 主程序 =====================
-if __name__ == '__main__':
+def main() -> None:
+    parser = argparse.ArgumentParser(description='Week 11 REINFORCE demo on a simplified continuous EMS environment')
+    parser.add_argument('--episodes', type=int, default=500, help='Training episodes')
+    parser.add_argument('--lr', type=float, default=0.001, help='Learning rate')
+    parser.add_argument('--seed', type=int, default=42, help='Random seed')
+    parser.add_argument('--output-dir', type=Path, default=None, help='Directory for generated figures')
+    args = parser.parse_args()
+
+    set_seed(args.seed)
+
     print()
     print("╔══════════════════════════════════════════════════════╗")
     print("║  Week 11 Step 2: REINFORCE (策略梯度)              ║")
@@ -259,9 +270,9 @@ if __name__ == '__main__':
     print("╚══════════════════════════════════════════════════════╝")
     print()
 
-    policy, rewards, lengths = reinforce(episodes=500, lr=0.001)
+    policy, rewards, lengths = reinforce(episodes=args.episodes, lr=args.lr)
     test_policy(policy)
-    plot_results(rewards)
+    plot_results(rewards, output_dir=args.output_dir)
 
     print()
     print("=" * 65)
@@ -277,3 +288,7 @@ if __name__ == '__main__':
     print("  REINFORCE 的问题：要等整局跑完才能更新")
     print("  → 下一节 Actor-Critic 解决这个问题")
     print()
+
+
+if __name__ == '__main__':
+    main()

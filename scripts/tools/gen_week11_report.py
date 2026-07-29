@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """生成 Week 11 — 连续动作 RL 对比报告 docx"""
+import datetime
+from pathlib import Path
+
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
-import datetime, os
 
-OUT_DIR = r'F:\CLAUDE\research\ems-platform\docs\notes'
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+OUT_DIR = PROJECT_ROOT / 'docs' / 'notes'
+RESULTS_DIR = PROJECT_ROOT / 'results'
 doc = Document()
 style = doc.styles['Normal']
 style.font.name = '微软雅黑'; style.font.size = Pt(11)
@@ -58,6 +62,16 @@ def note(text):
     run.font.name = '微软雅黑'; run.font.size = Pt(10)
     run.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
     run.italic = True
+
+def img(path, width=15):
+    path = Path(path)
+    if path.exists():
+        pa = doc.add_paragraph()
+        pa.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        run = pa.add_run()
+        run.add_picture(str(path), width=Cm(width))
+    else:
+        p(f'[图片未找到: {path}]', color=RGBColor(0xC0,0x39,0x2B))
 
 # ======================== 封面 ========================
 for _ in range(3): doc.add_paragraph('')
@@ -142,6 +156,14 @@ bullet("AC 学得最好（-31.3），已经接近理论最优（-30，即纯燃�
 bullet('PPO 目前最低，因为熵奖励鼓励探索，需要更多局数收敛')
 bullet('但 PPO 的优势在更复杂的问题上才体现：稳定、安全、不会突然崩')
 
+p('实验图：三种连续动作 RL 方法训练对比', bold=True)
+img(RESULTS_DIR / 'week11_comparison.png', width=16)
+
+p('单算法训练曲线：', bold=True)
+img(RESULTS_DIR / 'week11_reinforce_training.png', width=14.5)
+img(RESULTS_DIR / 'week11_ac_training.png', width=14.5)
+img(RESULTS_DIR / 'week11_ppo_training.png', width=14.5)
+
 brk()
 
 h('四、三种方法核心公式对比', 1)
@@ -187,7 +209,7 @@ p('4. EMS 选 PPO 原因：连续动作 + 训练稳定 + 实现适中', sz=12, c
 note(f'生成日期: {datetime.date.today().isoformat()}')
 
 # 保存
-os.makedirs(OUT_DIR, exist_ok=True)
-path = os.path.join(OUT_DIR, 'Week11_连续动作RL对比报告.docx')
-doc.save(path)
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+path = OUT_DIR / 'Week11_连续动作RL对比报告.docx'
+doc.save(str(path))
 print(f'OK: {path}')

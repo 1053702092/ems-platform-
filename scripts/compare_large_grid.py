@@ -11,15 +11,22 @@
   20×20:  Q 表 400×4 = 1600 参数，网络 ~1.1 万参数 → Q 表填不满
 """
 
-import numpy as np
+import argparse
 import random
+import time
+from pathlib import Path
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import os
-import time
 
-RESULTS_DIR = r'F:\CLAUDE\research\ems-platform\results'
+from week11_common import configure_matplotlib, ensure_results_dir, set_seed
+
+configure_matplotlib()
 
 # ===================== 可配置的 GridWorld 环境 =====================
 class GridWorld:
@@ -272,7 +279,14 @@ def print_comparison(results_q, results_dqn, grid_size):
     print(f"  {'-'*52}")
     print(f"  {'训练时间':<20} {results_q['time']:<8.2f}s{'':>6} {results_dqn['time']:<8.2f}s")
     print(f"  {'最后200局平均奖励':<20} {results_q['final_avg_reward']:<+8.4f}{'':>8} {results_dqn['final_avg_reward']:<+8.4f}")
-    print(f"  {'到达终点比例':<20} {sum(1 for r in results_q['rewards'][-200:] if r > 0)/2:<8.1%}{'':>8} {sum(1 for r in results_dqn['rewards'][-200:] if r > 0)/2:<8.1%}")
+
+    def recent_success_rate(rewards, window=200):
+        recent = rewards[-window:]
+        if not recent:
+            return 0.0
+        return sum(1 for r in recent if r > 0) / len(recent)
+
+    print(f"  {'到达终点比例':<20} {recent_success_rate(results_q['rewards']):<8.1%}{'':>8} {recent_success_rate(results_dqn['rewards']):<8.1%}")
 
     # 策略可视化（只看前几行 + 关键位置）
     print(f"\n【策略对比】（只打印关键行，G=终点 X=陷阱）")
@@ -302,16 +316,21 @@ def print_comparison(results_q, results_dqn, grid_size):
                 row += f" {ACTION_NAMES[results_dqn['policy'][s]]} "
         print(row)
 
-    # 收敛曲线简图
-    print(f"\n【收敛曲线（每500局平均奖励）】")
     q_rewards = results_q['rewards']
     dqn_rewards = results_dqn['rewards']
+    curve_chunk = min(500, max(len(q_rewards), len(dqn_rewards), 1))
 
-    def print_curve(data, label, width=40):
+    # 收敛曲线简图
+    print(f"\n【收敛曲线（每{curve_chunk}局平均奖励）】")
+
+    def print_curve(data, label, width=40, chunk=500):
         """打印 ASCII 曲线"""
-        chunk = 500
-        n_chunks = len(data) // chunk
-        values = [np.mean(data[i*chunk:(i+1)*chunk]) for i in range(n_chunks)]
+        if not data:
+            print(f"  {label}: 无训练数据")
+            return
+
+        chunk = min(chunk, len(data))
+        values = [np.mean(data[i:i + chunk]) for i in range(0, len(data), chunk)]
         min_v, max_v = min(values), max(values)
         rng = max_v - min_v if max_v != min_v else 1
 
@@ -321,12 +340,17 @@ def print_comparison(results_q, results_dqn, grid_size):
             bar = '█' * bar_len
             print(f"    第{i*chunk:5d}局 | {bar} {v:+.2f}")
 
-    print_curve(q_rewards, "Q-learning")
-    print_curve(dqn_rewards, "DQN")
+    print_curve(q_rewards, "Q-learning", chunk=curve_chunk)
+    print_curve(dqn_rewards, "DQN", chunk=curve_chunk)
 
 
 # ===================== 主函数 =====================
-def run_all():
+def run_all(
+    sizes: list[int],
+    episodes: int,
+    large_episodes: int,
+    output_dir: str | Path | None = None,
+):
     print("╔══════════════════════════════════════════════════════════╗")
     print("║    大 GridWorld 对比：Q-learning vs DQN                ║")
     print("║    看 Q 表膨胀 vs 网络泛化的区别                       ║")
@@ -335,30 +359,28 @@ def run_all():
 
     results_all = {}
 
-    for size in [4, 8, 12]:
+    output_path = ensure_results_dir(output_dir)
+
+    for size in sizes:
         print(f"{'='*60}")
         print(f"  开始测试 {size}×{size} GridWorld（{size*size} 个状态）")
         print(f"{'='*60}")
         print()
 
         env = GridWorld(size=size)
-        episodes = 5000 if size <= 8 else 8000
+        n_episodes = episodes if size <= 8 else large_episodes
 
-        print(f"  --- Q-learning 训练中（{episodes}局）---")
-        r_q = run_qlearning(env, episodes=episodes, verbose=True)
+        print(f"  --- Q-learning 训练中（{n_episodes}局）---")
+        r_q = run_qlearning(env, episodes=n_episodes, verbose=True)
 
-        print(f"  --- DQN 训练中（{episodes}局）---")
-        r_d = run_dqn(env, episodes=episodes, verbose=True)
+        print(f"  --- DQN 训练中（{n_episodes}局）---")
+        r_d = run_dqn(env, episodes=n_episodes, verbose=True)
 
         print_comparison(r_q, r_d, size)
         results_all[size] = {'q': r_q, 'dqn': r_d}
 
         # 画出趋势对比图
         try:
-            import matplotlib
-            matplotlib.use('Agg')
-            import matplotlib.pyplot as plt
-
             fig, axes = plt.subplots(1, 2, figsize=(14, 5))
 
             for label, data, color in [('Q-learning', r_q, 'blue'), ('DQN', r_d, 'red')]:
@@ -381,7 +403,7 @@ def run_all():
             axes[1].grid(alpha=0.3)
 
             plt.tight_layout()
-            path = os.path.join(RESULTS_DIR, f'compare_{size}x{size}_ql_vs_dqn.png')
+            path = output_path / f'compare_{size}x{size}_ql_vs_dqn.png'
             fig.savefig(path, dpi=150)
             plt.close()
             print(f"\n  图片已保存: {path}")
@@ -397,7 +419,7 @@ def run_all():
     print("=" * 60)
     print(f"\n{'Grid':<10} {'方法':<12} {'参数':<10} {'时间(s)':<10} {'最后200局奖励':<15} {'QL/DQN参数比'}")
     print(f"  {'-'*65}")
-    for size in [4, 8, 12]:
+    for size in sizes:
         r_q = results_all[size]['q']
         r_d = results_all[size]['dqn']
         ratio = r_d['params'] / r_q['params']
@@ -406,11 +428,30 @@ def run_all():
         print()
 
     print("结论：")
-    print("  4×4:   QL 参数少、学得快 → QL 完胜")
-    print("  8×8:   QL 参数多起来，DQN 开始追上")
-    print("  12×12: QL 参数继续膨胀，DQN 泛化优势显现")
+    print("  小 Grid: QL 参数少、学得快 → QL 更划算")
+    print("  Grid 变大: DQN 参数多、调参难，短训练下可能策略退化")
+    print("  更大/连续状态: Q 表会失去泛化能力，需要神经网络近似")
     print("  真正大问题（图像、连续状态）：QL 不可能，DQN 必须")
 
 
+def main() -> None:
+    parser = argparse.ArgumentParser(description='Compare Q-learning and DQN on larger GridWorlds')
+    parser.add_argument('--sizes', default='4,8', help='Comma-separated grid sizes, e.g. 4,8 or 4,8,12')
+    parser.add_argument('--episodes', type=int, default=5000, help='Episodes for grid sizes <= 8')
+    parser.add_argument('--large-episodes', type=int, default=8000, help='Episodes for grid sizes > 8')
+    parser.add_argument('--seed', type=int, default=42, help='Random seed')
+    parser.add_argument('--output-dir', type=Path, default=None, help='Directory for generated figures')
+    args = parser.parse_args()
+
+    sizes = [int(item.strip()) for item in args.sizes.split(',') if item.strip()]
+    set_seed(args.seed)
+    run_all(
+        sizes=sizes,
+        episodes=args.episodes,
+        large_episodes=args.large_episodes,
+        output_dir=args.output_dir,
+    )
+
+
 if __name__ == '__main__':
-    run_all()
+    main()

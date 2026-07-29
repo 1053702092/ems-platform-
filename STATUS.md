@@ -3,7 +3,6 @@
 > 更新日期：2026-07-28
 > 当前阶段：**第9-10周：PyTorch + RL 基础 ✅ / DQN/SAC 概念 ✅ → 第11周：PPO 实现 ✅ → 第12周：简历打磨 + 笔面试准备 🚀**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
-> 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
 >
 > **关键决策（2026-06-22）：体制内优先级上调** — 央企国企好岗是应届一次性窗口，卡28岁，社招要专家。私企的RL/MPC深度学了也有用，但体制内好岗一旦错过再也进不去。两条线并行：技术深度 + 国企笔试准备。
@@ -13,6 +12,10 @@
 > **决策更新（2026-06-29）：宁德系岗位分析报告完成** — CATL成功率低（~30%）不作为主线，ATL相对更值得投（专业更包容），重点仍放在其他央企 + 中小型储能公司。学习计划微调：RL只学PPO一个，其余时间补电池系统知识。
 >
 > **调研完成（2026-06-29）：三大渠道深度分析 + 国网可行性分析完成。** 渠道策略：其他央企(50%) + 市场化私企(35%) + 比亚迪(10%) + 国网(3%) + 冲刺(2%)。
+>
+> **仓库同步（2026-07-28）：已从 GitHub 更新 `origin/feat/soc-estimation-research`。** 本地 HEAD 已快进至 `7d790c3`（Week 11 REINFORCE / Actor-Critic / PPO + QL_vs_DQN 大 Grid 对比 + 临时文件清理），当前 ahead/behind = 0/0。
+>
+> **SOC 项目本地增强（2026-07-28）：已保留并恢复 v0.5 版本。** `scripts/soc_estimator/` 继续保留 Open-loop / EKF / AEKF / 1RC-EKF / RLS / 外部 CSV / LG 18650HG2 SOC 标签验证能力；下一步是 1RC/HPPC 参数标定。
 
 ---
 
@@ -24,8 +27,21 @@
 - [x] **第9-10周：PyTorch + RL 基础 / DQN/SAC 概念（已完成 ✅）**
 - [x] **第11周：PPO 轻量实现（已完成 ✅）**
 - [ ] **第12周：简历打磨 + 笔面试准备** ← 当前
+- [x] **BMS侧：SOC 估计器独立项目 v0.5（公开数据 + SOC 标签验证完成 ✅）**
+- [ ] **第4个月：RL调优 + RL-EMS项目落地**
 - [ ] **第5个月：C++强化 + 工程化部署**
 - [ ] **第6个月：求职 + 项目履历重构**
+
+---
+
+## SOC 独立项目更新（2026-07-28）
+
+- [x] 独立入口与基础估计器：`scripts/soc_estimator/run.py`、`battery_model.py`、`estimator.py`；支持 Open-loop、EKF、AEKF。
+- [x] 1RC Thevenin + RC-EKF + RLS 参数辨识：`rc_model.py`、`run_rc.py`、`rls.py`；动态工况下 1RC-EKF RMSE=0.0101，OCV-EKF RMSE=0.0535。
+- [x] 外部 CSV/公开电池数据验证：`run_dataset.py`；BulyK47/BSE001 LiFePO4 曲线验证中 EKF RMSE=0.0473，开环 RMSE=0.0966。
+- [x] LG 18650HG2 带 SOC 标签公开数据验证：`run_dataset.py --preset lg-hg2-prepared`；25°C 测试集 EKF RMSE=0.0465（开环 0.1213，2.61x），10°C 测试集 AEKF RMSE=0.0499（开环 0.2064，4.13x）。
+- [x] 汇总结果：`results/soc_estimator_dataset/lg_hg2_soc_label_summary.csv`；学习手册与验证报告位于 `docs/soc-estimation/doc/`。
+- [ ] 下一步：升级为 1RC/HPPC 标定版，使用 LG HG2 HPPC 文件辨识 `R0/R1/C1`，解决低温/高倍率下 OCV-only EKF 的模型失配问题。
 
 ---
 
@@ -224,8 +240,18 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
     - `scripts/week11_ppo.py` — PPO
     - `scripts/week11_compare.py` — 三种方法对比
     - `docs/notes/Week11_连续动作RL对比报告.docx`
+    - `docs/notes/Week11_完整介绍与学习路线.docx` — Week11 学习说明、文件地图、面试口径与 ChatGPT 接力提示
     - `results/week11_comparison.png`
     - `results/week11_{reinforce,ac,ppo}_training.png`
+  - 复查与工程化修复（2026-07-28）：
+    - 新增 `scripts/week11_common.py`，统一项目根目录、`results/` 输出目录、随机种子、Windows 控制台编码与 matplotlib 中文字体配置
+    - 移除 Week11 脚本中的 `F:\CLAUDE\research\ems-platform\results` 硬编码路径，统一改为仓库相对路径
+    - `week11_reinforce.py` / `week11_actor_critic.py` / `week11_ppo.py` / `week11_compare.py` / `week11_continuous_env.py` 增加 CLI 参数，支持 `--episodes`、`--seed`、`--output-dir`
+    - 修复 `week11_compare.py` 曲线图例重复、终止奖励判断不清晰、Windows 终端 Unicode 输出报错等问题
+    - 重新生成 Week11 四张核心图：`week11_comparison.png`、`week11_reinforce_training.png`、`week11_ac_training.png`、`week11_ppo_training.png`；中文图表已复查不再显示方框
+    - 重新生成 `docs/notes/Week11_连续动作RL对比报告.docx`，已确认嵌入 4 张图片，并通过 LibreOffice 渲染为 10 页抽查
+    - `scripts/compare_large_grid.py` 与 `scripts/tools/gen_compare_grid_report.py` 已同步改为项目相对路径，并修复少于 500 episode 的 smoke test 收敛曲线为空崩溃问题
+    - QL_vs_DQN 大 Grid 已全量重跑（4×4/8×8 各 5000 episode，seed=42）：4×4 最后200局平均奖励 QL=+0.81、DQN=+0.78；8×8 QL=+0.81、DQN=+0.50；已重新生成 `results/compare_4x4_ql_vs_dqn.png`、`results/compare_8x8_ql_vs_dqn.png` 与 `docs/notes/QL_vs_DQN_大Grid对比报告.docx`
 - [ ] **第12周：简历打磨 + 笔面试准备** ← 提前到8月中
   - EMS-PLATFORM 项目叙事定稿（已生成 docs/interview/EMS项目叙事_简历面试版.docx）
   - 中石化/中海油/发电集团笔试准备（综合知识 60% + 专业 40%）

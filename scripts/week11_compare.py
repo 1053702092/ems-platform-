@@ -11,18 +11,22 @@ REINFORCE vs Actor-Critic vs PPO
   这个版本统一了功率量纲（kW），让环境可学。
 """
 
+import argparse
+import time
+from pathlib import Path
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.distributions as dist
-import os, time
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-plt.rcParams['font.family'] = 'DejaVu Sans'
 
-RESULTS_DIR = r'F:\CLAUDE\research\ems-platform\results'
+from week11_common import configure_matplotlib, ensure_results_dir, set_seed
+
+configure_matplotlib()
 
 # ===================== 修复后的环境 =====================
 # P_load: 10-20 kW，P_fc: 0-30 kW（同量纲）
@@ -60,8 +64,10 @@ class EMSEnv:
         soc_penalty = -2.0 * (self.soc - 0.5) ** 2
         done_bonus = 0.0
 
-        done = (self.soc <= self.soc_min or self.soc >= self.soc_max or self.t >= self.max_steps)
-        if not done and self.t >= self.max_steps:
+        done_by_soc = self.soc <= self.soc_min or self.soc >= self.soc_max
+        done_by_steps = self.t >= self.max_steps
+        done = done_by_soc or done_by_steps
+        if done_by_steps and not done_by_soc:
             done_bonus = 1.0  # 跑完全程奖励
 
         reward = fuel_cost + tracking + soc_penalty + done_bonus
@@ -294,18 +300,17 @@ def run_ppo(env_fn, episodes=300, lr=0.0003):
 
 
 # ===================== 画对比图 =====================
-def plot_comparison(results):
+def plot_comparison(results, output_dir: str | Path | None = None):
     fig, axes = plt.subplots(2, 2, figsize=(14, 8))
 
     colors = {'REINFORCE': '#2196F3', 'Actor-Critic': '#4CAF50', 'PPO': '#F44336'}
 
     # 原始曲线 + 平滑
-    for ax in [axes[0, 0], axes[0, 1]]:
-        for name, rewards, final, t in results:
-            ax.plot(rewards, color=colors[name], alpha=0.2, linewidth=1)
-            window = 20
-            smooth = np.convolve(rewards, np.ones(window)/window, mode='valid')
-            axes[0, 0].plot(smooth, color=colors[name], label=name, linewidth=2)
+    for name, rewards, final, t in results:
+        axes[0, 0].plot(rewards, color=colors[name], alpha=0.2, linewidth=1)
+        window = 20
+        smooth = np.convolve(rewards, np.ones(window) / window, mode='valid')
+        axes[0, 0].plot(smooth, color=colors[name], label=name, linewidth=2)
 
     axes[0, 0].set_xlabel('局数')
     axes[0, 0].set_ylabel('总奖励')
@@ -347,14 +352,22 @@ def plot_comparison(results):
         axes[1, 1].text(i, v, f'{v:.1f}s', ha='center', va='bottom')
 
     plt.tight_layout()
-    path = os.path.join(RESULTS_DIR, 'week11_comparison.png')
+    path = ensure_results_dir(output_dir) / 'week11_comparison.png'
     fig.savefig(path, dpi=150)
     print(f'对比图已保存: {path}')
     plt.close()
 
 
 # ===================== 主程序 =====================
-if __name__ == '__main__':
+def main() -> None:
+    parser = argparse.ArgumentParser(description='Week 11 continuous-action RL comparison')
+    parser.add_argument('--episodes', type=int, default=500, help='Training episodes per algorithm')
+    parser.add_argument('--seed', type=int, default=42, help='Random seed')
+    parser.add_argument('--output-dir', type=Path, default=None, help='Directory for generated figures')
+    args = parser.parse_args()
+
+    set_seed(args.seed)
+
     print()
     print("╔══════════════════════════════════════════════════════════╗")
     print("║  Week 11: 连续动作 RL 三种方法对比                     ║")
@@ -362,7 +375,7 @@ if __name__ == '__main__':
     print("╚══════════════════════════════════════════════════════════╝")
     print()
 
-    N = 500  # 每算法 500 局
+    N = args.episodes  # 每算法训练局数
     results = []
 
     for name, fn in [('REINFORCE', run_reinforce),
@@ -389,7 +402,7 @@ if __name__ == '__main__':
     print()
 
     # 画对比图
-    plot_comparison([(r[0], r[3], r[2], r[1]) for r in results])
+    plot_comparison([(r[0], r[3], r[2], r[1]) for r in results], output_dir=args.output_dir)
 
     print()
     print("=" * 60)
@@ -397,3 +410,7 @@ if __name__ == '__main__':
     print("  学习路径：DQN(离散) → REINFORCE(连续MC) → AC(连续TD) → PPO(连续+clip)")
     print("  面试重点：能讲清楚 PPO 的 clip 机制 — 为什么它训练更稳定")
     print("=" * 60)
+
+
+if __name__ == '__main__':
+    main()

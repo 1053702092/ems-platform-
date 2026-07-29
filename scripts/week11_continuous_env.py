@@ -13,14 +13,15 @@ Week 11 Step 1: 连续动作环境 — EMS 简化版
 对比 DQN 在这个环境上为什么会失败。
 """
 
+import random
+import argparse
+
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import random
-import os
 
-RESULTS_DIR = r'F:\CLAUDE\research\ems-platform\results'
+from week11_common import set_seed
 
 # ===================== 连续动作环境 =====================
 class EMSEnv:
@@ -235,7 +236,14 @@ def test_env():
     print()
 
 
-if __name__ == '__main__':
+def main() -> None:
+    parser = argparse.ArgumentParser(description='Week 11 simplified continuous-action EMS environment demo')
+    parser.add_argument('--seed', type=int, default=42, help='Random seed')
+    parser.add_argument('--skip-dqn-demo', action='store_true', help='Only run the environment smoke test')
+    args = parser.parse_args()
+
+    set_seed(args.seed)
+
     print()
     print("╔══════════════════════════════════════════════════════╗")
     print("║  Week 11 Step 1: 连续动作环境                     ║")
@@ -244,4 +252,9 @@ if __name__ == '__main__':
     print()
 
     test_env()
-    demo_dqn_failure()
+    if not args.skip_dqn_demo:
+        demo_dqn_failure()
+
+
+if __name__ == '__main__':
+    main()
