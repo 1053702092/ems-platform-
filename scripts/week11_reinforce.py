@@ -82,7 +82,7 @@ class PolicyNet(nn.Module):
         self.mean_head = nn.Linear(hidden, action_dim)
         self.log_std = nn.Parameter(torch.zeros(action_dim))  # 可训练的标准差
 
-    def forward(self, x):
+    def forward(self, x):  
         x = torch.relu(self.fc1(x))
         x = torch.relu(self.fc2(x))
         mean = torch.tanh(self.mean_head(x))  # tanh → [-1, 1]
