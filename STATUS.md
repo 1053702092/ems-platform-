@@ -45,6 +45,20 @@
 - [x] 汇总结果：`results/soc_estimator_dataset/lg_hg2_soc_label_summary.csv`；学习手册与验证报告位于 `docs/soc-estimation/doc/`。
 - [ ] 下一步：升级为 1RC/HPPC 标定版，使用 LG HG2 HPPC 文件辨识 `R0/R1/C1`，解决低温/高倍率下 OCV-only EKF 的模型失配问题。
 
+### SOC 升级方案 A：PyBaMM 物理模型（2026-07-31 启动）
+
+> 目的：把 SOC 项目从"等效电路 EKF"升级为"电化学物理模型（DFN/P2D）对比"，简历拔高一档。
+> 调研来源：anysearch 开源项目扫描发现 PyBaMM（电池物理建模行业标准，NumFOCUS 赞助）。
+
+- [x] **pybamm 26.7.1 已安装**（清华镜像；官方源因大 wheel 下载超时卡死，换镜像解决）
+- [x] **`scripts/soc_estimator/run_pybamm_synth.py` 已跑通**：pybamm DFN（Chen2020 NMC 参数）生成合成充放电数据 → 现有 EKF 估计 → 对比出图。结果：EKF SOC RMSE=0.1129（前半 0.134 含收敛 / 后半 0.087），终点误差 0.0124。产出 `results/soc_pybamm_synth/`（CSV + PNG）
+- [x] **跑通过程发现 3 个真实工程问题**（都是简历/面试素材）：
+  1. 电流符号约定不一致（pybamm 放电为正 vs EKF 期望为负）
+  2. 现有 EKF 写死 100Ah 容量 + 300~360 OCV 表（针对 MPC 演示，无法直接对物理模型）→ 需用 pybamm C/20 慢放提取真实 OCV 曲线标定
+  3. 现有 EKF `lookup_docv_dsoc` 在 SOC=1.0 边界出现 0/0 除零 nan（初始估计设 0.95 规避）
+- [x] **LG HG2 数据集下载指南已生成**：`docs/soc-estimation/doc/SOC估计器_LG_HG2_数据集下载指南.docx`（Mendeley DOI 10.17632/cp3473x7xv.3，208 CSV/490万行/2GB，含 HPPC + 5 温度 + 真实驾驶循环；用户用另一台电脑下载）
+- [ ] **待数据到位后**：解析 CSV → HPPC 辨识 R0/R1/C1 → 真实数据跑 EKF → PyBaMM DFN 物理模型对比 → 出对比报告
+
 ---
 
 ## 调整说明（2026-06-11）
