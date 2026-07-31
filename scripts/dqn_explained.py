@@ -97,7 +97,7 @@ class TinyDQN(nn.Module):
         # 一个隐藏层就够了，因为 GridWorld 很简单
         self.fc1 = nn.Linear(16, 32)   # 16维 → 32维
         self.relu = nn.ReLU()
-        self.fc2 = nn.Linear(32, 4)    # 32维 → 4维（4个Q值）
+        self.fc2 = nn.Linear(32, 4)    # 32维 → 4维（4个Q值）  132 个参数
 
     def forward(self, x):
         # x: 状态 s 的 one-hot 编码 [batch, 16]

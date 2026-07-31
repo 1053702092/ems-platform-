@@ -12,7 +12,6 @@ Week 11 Step 1: 连续动作环境 — EMS 简化版
 
 对比 DQN 在这个环境上为什么会失败。
 """
-
 import random
 import argparse
 
@@ -86,7 +85,7 @@ class EMSEnv:
         soc_penalty = -0.5 * (self.soc - 0.6) ** 2
 
         # 3) SOC 越界惩罚
-        soc_bound_penalty = 0.0
+        soc_bound_penalty = 0.0  #0.2-0.9
         if self.soc <= self.soc_min or self.soc >= self.soc_max:
             soc_bound_penalty = -1.0
 

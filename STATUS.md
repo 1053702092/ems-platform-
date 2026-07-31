@@ -13,9 +13,11 @@
 >
 > **调研完成（2026-06-29）：三大渠道深度分析 + 国网可行性分析完成。** 渠道策略：其他央企(50%) + 市场化私企(35%) + 比亚迪(10%) + 国网(3%) + 冲刺(2%)。
 >
-> **仓库同步（2026-07-28）：已从 GitHub 更新 `origin/feat/soc-estimation-research`。** 本地 HEAD 已快进至 `7d790c3`（Week 11 REINFORCE / Actor-Critic / PPO + QL_vs_DQN 大 Grid 对比 + 临时文件清理），当前 ahead/behind = 0/0。
+> **仓库同步（2026-07-31）：已从 GitHub 更新 `origin/feat/soc-estimation-research`，并提交本周产出。** 本地 HEAD 已快进至 `7ce1316`（Week 11 完整介绍与学习路线 + 工程化修复），随后提交 Week11 逐行精讲 v2 重写 + Step0 新增，当前 ahead/behind = 0/0。
 >
 > **SOC 项目本地增强（2026-07-28）：已保留并恢复 v0.5 版本。** `scripts/soc_estimator/` 继续保留 Open-loop / EKF / AEKF / 1RC-EKF / RLS / 外部 CSV / LG 18650HG2 SOC 标签验证能力；下一步是 1RC/HPPC 参数标定。
+>
+> **Week11 逐行精讲 v2（2026-07-31）：5 份文档全部重写/新增。** 针对 v1"太粗"的问题：① 同步最新代码行号（脚本已加 CLI 参数）；② 从"只挑关键行"升级为"覆盖全部代码逐行精讲"；③ 新增函数级【功能/输入/输出】、数学推导、训练流程走查、数值示例、面试要点、FAQ；④ 新增 Step0 `week11_common.py` 公共底座分析（被 6 个脚本共用）。产出：`docs/notes/Week11_Step{0,1,2,3,4}_逐行精讲.docx` + 生成脚本 `scripts/tools/gen_week11_detailed_explain.py`（v2）。
 
 ---
 
@@ -241,6 +243,8 @@ C 辅线：RL 算法 → RL-EMS 融合项目（既算A方向也算法C方向经�
     - `scripts/week11_compare.py` — 三种方法对比
     - `docs/notes/Week11_连续动作RL对比报告.docx`
     - `docs/notes/Week11_完整介绍与学习路线.docx` — Week11 学习说明、文件地图、面试口径与 ChatGPT 接力提示
+    - `docs/notes/Week11_Step0_Common_逐行精讲.docx` — week11_common 公共底座逐行精讲（v2 新增）
+    - `docs/notes/Week11_Step{1,2,3,4}_逐行精讲.docx` — 连续环境 / REINFORCE / AC / PPO 逐行精讲（v2 重写，全代码覆盖 + 推导 + 走查 + 面试 + FAQ）
     - `results/week11_comparison.png`
     - `results/week11_{reinforce,ac,ppo}_training.png`
   - 复查与工程化修复（2026-07-28）：
