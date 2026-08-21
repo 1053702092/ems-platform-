@@ -1,7 +1,7 @@
 # EMS-PLAN 进度跟踪
 
-> 更新日期：2026-07-28
-> 当前阶段：**第9-10周：PyTorch + RL 基础 ✅ / DQN/SAC 概念 ✅ → 第11周：PPO 实现 ✅ → 第12周：简历打磨 + 笔面试准备 🚀**
+> 更新日期：2026-08-22
+> 当前阶段：**第9-10周：PyTorch + RL 基础 ✅ / DQN/SAC 概念 ✅ → 第11周：PPO 实现 ✅ → 第12周：简历打磨 + 笔面试准备 🚀 / 本地 PyTorch 环境补齐 ✅**
 > 定位：**A（EMS/BMS 算法）为主 + 其他央企为另一主赛道**
 > 就业面：最广（其他央企铁饭碗 + 市场化私企高薪）
 >
@@ -18,6 +18,8 @@
 > **SOC 项目本地增强（2026-07-28）：已保留并恢复 v0.5 版本。** `scripts/soc_estimator/` 继续保留 Open-loop / EKF / AEKF / 1RC-EKF / RLS / 外部 CSV / LG 18650HG2 SOC 标签验证能力；下一步是 1RC/HPPC 参数标定。
 >
 > **Week11 逐行精讲 v2（2026-07-31）：5 份文档全部重写/新增。** 针对 v1"太粗"的问题：① 同步最新代码行号（脚本已加 CLI 参数）；② 从"只挑关键行"升级为"覆盖全部代码逐行精讲"；③ 新增函数级【功能/输入/输出】、数学推导、训练流程走查、数值示例、面试要点、FAQ；④ 新增 Step0 `week11_common.py` 公共底座分析（被 6 个脚本共用）。产出：`docs/notes/Week11_Step{0,1,2,3,4}_逐行精讲.docx` + 生成脚本 `scripts/tools/gen_week11_detailed_explain.py`（v2）。
+>
+> **环境更新（2026-08-22）：工作区本地 `.venv` 已补齐 PyTorch 运行环境。** 使用 Python 3.12.13 创建项目虚拟环境，安装并验证 `torch 2.13.0+cpu`、`numpy 2.5.1`、`matplotlib 3.11.0`；smoke test 已通过（张量计算 + autograd 正常）。当前为 CPU 版，`torch.cuda.is_available() = False`，后续如需 GPU 版需单独处理 RTX 2060 驱动/CUDA 匹配。
 
 ---
 
@@ -29,6 +31,7 @@
 - [x] **第9-10周：PyTorch + RL 基础 / DQN/SAC 概念（已完成 ✅）**
 - [x] **第11周：PPO 轻量实现（已完成 ✅）**
 - [ ] **第12周：简历打磨 + 笔面试准备** ← 当前
+- [x] **本地 PyTorch 环境安装验证（2026-08-22）**
 - [x] **BMS侧：SOC 估计器独立项目 v0.5（公开数据 + SOC 标签验证完成 ✅）**
 - [ ] **第4个月：RL调优 + RL-EMS项目落地**
 - [ ] **第5个月：C++强化 + 工程化部署**
@@ -722,6 +725,9 @@ Week 12: PPO-EMS奖励函数 + SAC最大熵思想（概念）
 
 - MATLAB R2024b + Simulink ✅ (F:\Matlab)
 - Python 3.13.13 ✅
+- 项目本地虚拟环境 `.venv` ✅：`D:\CHAT\_projects\EMS-paltform\.venv`（Python 3.12.13）
+- PyTorch 环境 ✅：`torch 2.13.0+cpu`、`numpy 2.5.1`、`matplotlib 3.11.0`；已验证张量计算和 autograd 正常
+- CUDA 状态：当前 PyTorch 为 CPU 版，`torch.cuda.is_available() = False`；如需 GPU 训练，后续单独做 NVIDIA 驱动/CUDA/PyTorch 版本匹配
 - VS Code 1.122.1 ✅ (F:\vscode)
 - GitHub: https://github.com/1053702092/ems-platform-
 
